@@ -5,7 +5,8 @@
 
 \header{
   title = "Brother John"
-	composer = "Yusef Lateef"
+	composer = "Yusef Lateef (jl durrieu argt.)"
+  
 }
 
 global= {
