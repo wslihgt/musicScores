@@ -3,10 +3,9 @@
 
 \version "2.16.0"
 
-\header{
-  title = "Brother John"
-	composer = "Yusef Lateef (jl durrieu argt.)"
-  
+\header{title = "Brother John"
+	composer = "Yusef Lateef"
+  arranger = "jl durrieu (transcription)"
 }
 
 global= {
@@ -23,7 +22,6 @@ Violinone = \new Voice { \relative c''{
 
   r2. | r2. | r2. | r2. | 
   r2. | r2. | r2. | r2. |
-
 
 \repeat volta 2 {b2.\segno | fis'2. | e8 fis e4.. a16 | fis2. | 
   \grace { cis8 ~ } d2. | b2. | cis8 d cis2 | } 
@@ -58,8 +56,8 @@ Violintwo = \new Voice { \relative c''{
 }
 \alternative{{gis4 r2 |}{gis4 r2 \bar "||" }}
 
-cis2 d8 e | cis2 d8 e | cis2 b8 ais | cis2 r4 |
-cis2 d8 e | fis2 g8 fis | d2 cis8 b | g2 fis4 \bar "||"
+cis,2. | d | e | d |
+cis    | d | e | r4 ais2 \bar "||"
 
   r4. fis4. | gis4 r2 | r4 fis4 gis~ | gis r2 |
   r4. fis4. | gis4 r2 | r4 fis4 gis~ | gis4 r2  \bar "||"
@@ -83,8 +81,8 @@ Viola = \new Voice { \relative c' {
 }
 \alternative{{e4 r2 |}{e4 r2 \bar "||" }}
 
-cis2 d8 e | cis2 d8 e | cis2 b8 ais | cis2 r4 |
-cis2 d8 e | fis2 g8 fis | d2 cis8 b | g2 fis4 \bar "||"
+ais,2. | b | cis | b |
+ais   | b | cis | r4 e2 \bar "||"
 
   r4. d4. | e4 r2 | r4 d4 e~ | e r2 |
   r4. d4. | e4 r2 | r4 d4 e~ | e4 r2 \bar "||"
@@ -108,11 +106,11 @@ Cello = \new Voice { \relative c' {
 }
 \alternative{{d4 cis fis, | } {d'4 cis fis, \bar "||"  }}
 
-cis2 d8 e |cis2 d8 e | cis2 b8 ais | cis2 r4 |
-cis2 d8 e | fis2 g8 fis | d2 cis8 b | g2 fis4 \bar "||"
+r4 fis2 | r4 fis2 | r4 fis2 | r4 fis2 | 
+r4 fis2 | r4 fis2 | r4 fis2 | r4 fis2 | \bar "||"
 
   b,4. fis'4 b8 | d2. | b,4. fis'4 b8 | d4 cis fis, | 
-  b,4. fis'4 b8 | d2. | b,4. fis'4 b8 | d'4 cis fis, \bar "||"
+  b,4. fis'4 b8 | d2. | b,4. fis'4 b8 | d4 cis fis, \bar "||"
 
   r4 b b | cis b b | r8 gis4. a4 | b2 r4 |
   r4 b b | cis b b | r8 gis4. a4 | gis2 r4 |

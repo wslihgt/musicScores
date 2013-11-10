@@ -1,13 +1,29 @@
+
 \include "lateefYusef_brotherJohn_quartets_parts.ly"
 
-#(set-global-staff-size 14)
+\paper{
+  print-all-headers = "true"
+}
+
+#(set-global-staff-size 20)
 
 \score {
   \new StaffGroup \keepWithTag #'score \music
-  \layout { }
+  \layout { 
+    #(layout-set-staff-size 14)}
   \midi { }
-  
+  \header{instrumentName ="Brother John, Quartet"}
 }
+
+\pageBreak
+
+% #(set-global-staff-size 20) %14 
+\score {
+  \keepWithTag #'vn1 \music
+  \layout { }
+  \header{instrumentName="Brother John, Oboe/Violin"}
+}
+
 
 
 
