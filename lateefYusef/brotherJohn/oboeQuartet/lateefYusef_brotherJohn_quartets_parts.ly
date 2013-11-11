@@ -1,7 +1,7 @@
 %%%%% piece.ly
 %%%%% (This is the global definitions file)
 
-\version "2.15.0"
+\version "2.16.0"
 
 \header{title = "Brother John"
 	composer = "Yusef Lateef"
@@ -18,6 +18,17 @@ global= {
 chordSequence = {
   \chordmode {
     b2.:m | e: | b2.:m | e: | 
+    b2.:m | e: | b2.:m | e: | 
+
+    \repeat volta 2 {
+      b2.:m | e: | b2.:m | e: | 
+      b2.:m | e: | b2.:m | 
+    }
+      
+      \alternative {
+	{ e: | }
+	{ fis: \bar "||" }
+      }
   }
 }
 
@@ -128,8 +139,12 @@ music = {
   <<
     \context ChordNames { \chordSequence }
     \tag #'score \tag #'vn1 \new Staff { << \global \Violinone >> }
-    \tag #'score \tag #'vn2 \new Staff { << \global \Violintwo>> }
-    \tag #'score \tag #'vla \new Staff { << \global \Viola>> }
-    \tag #'score \tag #'vlc \new Staff { << \global \Cello>> }
+    \tag #'score \tag #'vn2 \new Staff { << \global \Violintwo >> }
+    \tag #'score \tag #'vla \new Staff { << \global \Viola >> }
+    \tag #'score \tag #'vlc \new Staff { << \global \Cello >> }
   >>
 }
+
+%%% Local Variables:
+%%% LilyPond-master-file: "lateefYusef_brotherJohn_quartets_score.ly"
+%%% End:
