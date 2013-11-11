@@ -24,6 +24,36 @@
   \header{instrumentName="Brother John, Oboe/Violin"}
 }
 
+\pageBreak
+
+% #(set-global-staff-size 20) %14 
+\score {
+  \keepWithTag #'vn2 \music
+  \layout { }
+  \header{instrumentName="Brother John, Violin II"}
+}
+
+\pageBreak
+
+% #(set-global-staff-size 20) %14 
+\score {
+  \keepWithTag #'vla \music
+  \layout { }
+  \header{instrumentName="Brother John, Viola"}
+}
+
+
+\pageBreak
+
+% #(set-global-staff-size 20) %14 
+\score {
+  \keepWithTag #'vlc \music
+  \layout { }
+  \header{instrumentName="Brother John, Cello"}
+}
+
+
+
 
 
 

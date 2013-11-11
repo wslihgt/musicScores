@@ -1,7 +1,7 @@
 %%%%% piece.ly
 %%%%% (This is the global definitions file)
 
-\version "2.16.0"
+\version "2.15.0"
 
 \header{title = "Brother John"
 	composer = "Yusef Lateef"
@@ -13,6 +13,12 @@ global= {
   \key b \minor
   \tempo 4 = 200
   \accidentalStyle "modern-cautionary"
+}
+
+chordSequence = {
+  \chordmode {
+    b2.:m | e: | b2.:m | e: | 
+  }
 }
 
 Violinone = \new Voice { \relative c''{
@@ -31,7 +37,7 @@ Violinone = \new Voice { \relative c''{
 }
 
 cis2 d8 e | cis2 d8 e | cis2 b8 ais | cis2 r4 |
-cis2 d8 e | fis2 g8 fis | d2 cis8 b | g2 fis4 \bar "||"
+cis2 d8 e | fis2 g8 fis | cis2 b8 ais | g2 fis4 \bar "||"
 
 b2. | fis'2. | e8 fis e4.. a16 | fis2. | 
 \grace { cis8 ~ } d2. | b2. | cis8 d cis2 | b2 r4 \bar "||"
@@ -54,7 +60,7 @@ Violintwo = \new Voice { \relative c''{
   r4.\segno fis4. | gis4 r2 | r4 fis4 gis~ | gis r2 |
   r4. fis4. | gis4 r2 | r4 fis4 gis~ | 
 }
-\alternative{{gis4 r2 |}{gis4 r2 \bar "||" }}
+  \alternative{{gis4 r2 |}{gis4 r2 \bar "||" }}	
 
 cis,2. | d | e | d |
 cis    | d | e | r4 ais2 \bar "||"
@@ -120,6 +126,7 @@ r4 fis2 | r4 fis2 | r4 fis2 | r4 fis2 | \bar "||"
 
 music = {
   <<
+    \context ChordNames { \chordSequence }
     \tag #'score \tag #'vn1 \new Staff { << \global \Violinone >> }
     \tag #'score \tag #'vn2 \new Staff { << \global \Violintwo>> }
     \tag #'score \tag #'vla \new Staff { << \global \Viola>> }
