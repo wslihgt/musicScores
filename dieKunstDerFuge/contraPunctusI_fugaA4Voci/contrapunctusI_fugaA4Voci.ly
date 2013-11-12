@@ -17,7 +17,7 @@
 global= {
   \time 2/2
   % \key d \minor
-  \tempo 4 = 120
+  \tempo 2 = 70
   \accidentalStyle "modern-cautionary"
 }
 
@@ -25,6 +25,7 @@ one = \transpose \originpitch \targetpitchone {\new Voice {
   \key d \minor
   \relative c''{
   \set Staff.instrumentName = #"V1 "
+  \set Staff.midiInstrument = \midiInstrOne
 
   r1 | r1 | r1 | r1 |
   a2 d | c a | gis a4 b | c2 ~ c8 d c bes | 
@@ -55,6 +56,7 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   \key d \minor
   \relative c'{
   \set Staff.instrumentName = #"V2 "
+  \set Staff.midiInstrument = \midiInstrTwo
 
   d2 a' | f d | cis d4 e | f2~f8 g8 f e | 
   d4 e f g | a a,8 b c a f'4~ | f8 b,8 e4~e8 f8 e d | e4 fis g2~ | 
@@ -84,7 +86,9 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   \key d \minor
   \relative c' {
   \set Staff.instrumentName = #"V3 "
+  \set Staff.midiInstrument = \midiInstrThr
   %\clef bass %alto
+  \clef \clefVThree
 
   r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |
   a2 d | c a | gis a4 b | c2 ~ c8 d c bes | 
@@ -116,6 +120,7 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   \key d \minor
   \relative c' {
   \set Staff.instrumentName = #"V4 "
+  \set Staff.midiInstrument = \midiInstrFou
   \clef bass
 
   r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |
