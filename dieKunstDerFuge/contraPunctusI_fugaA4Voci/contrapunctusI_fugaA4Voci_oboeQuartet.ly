@@ -1,5 +1,5 @@
 
-originpitch = c' %c' %bes'% f % c'
+originpitch = bes %c' %bes'% f % c'
 
 targetpitchone = c'
 targetpitchtwo = c'
@@ -35,7 +35,7 @@ clefVThree = alto
 \score {
   \keepWithTag #'v1 \music
   \layout { }
-  \header{instrumentName="Violin I"}
+  \header{instrumentName="Oboe/Violin I"}
 }
 
 \pageBreak
@@ -44,7 +44,7 @@ clefVThree = alto
 \score {
   \keepWithTag #'v2 \music
   \layout { }
-  \header{instrumentName="Oboe/Violin II"}
+  \header{instrumentName="Violin II"}
 }
 
 \pageBreak
