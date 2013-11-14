@@ -1,5 +1,5 @@
 
-originpitch = c' %c' %bes'% f % c'
+originpitch = bes %c' %bes'% f % c'
 
 targetpitchone = c'
 targetpitchtwo = c'

@@ -27,19 +27,22 @@ one = \transpose \originpitch \targetpitchone {\new Voice {
   \set Staff.instrumentName = #"V1 "
   \set Staff.midiInstrument = \midiInstrOne
 
-  r1 | r1 | r1 | r1 |
+\compressFullBarRests
+  % r1 | r1 | r1 | r1 |
+  R1*4
   a2 d | c a | gis a4 b | c2 ~ c8 d c bes | 
   a d, d'2 cis4 | d8 a c4 ~ c8 a bes4~ | bes8 e, a2.~ | a8 c4 b8 c2~ |
   c8 d, c'4 ~ c8 a b4~| b a8 gis a2 | b2 c4 d | g,8 bes a4 ~ a8 bes a g~ |
   g8 e f d bes'2 ~ | bes8 g a4 d2 ~ | d8 b c4 f2 ~ | f8 d e4 a,4 d ~ |
   d8 b c4 f, bes | a2 d,4 g ~ | g8 e f d' e,2~ | e8 d a'2 g4 | 
-  a2 r2 | r1 | r1 | r1 |
+  a2 r2 | R1*3 %r1 | r1 | r1 |
   a2 e' | c a | gis a4 b | c2 ~ c8 d c bes |
   a4 r4 r4 a4~| a8 c bes a bes a g fis | g4. bes8 e,4. fis8 | 
          g4. e8 cis4. a'8 |
   d,4. f8 e4. c'8 | f,4. a8 g4. e'8 | a,4. c8 b4. g'8 | cis,2 d4 e~ |
   e8 cis d4~ d4. e8 | f  e g4 ~  g8 f e d  | cis a d4 ~ d8 b c4 ~ | c4 bes a r4 |
-  r1 | r1 | r1 | r1 |
+  % r1 | r1 | r1 | r1 |
+  R1*4 
   e'2 a2 | f d | cis d4 e | f2~ f8 g f e | 
   d4. e8 cis4 d8 f | bes,2~ bes8 bes a g | f2 bes | a2. e'4 ~ |
   e8 cis d e f d g4 ~ | g8 e a g f e d cis | d c bes a g2~ | g8 e f d a'2~ |
@@ -61,9 +64,11 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   d2 a' | f d | cis d4 e | f2~f8 g8 f e | 
   d4 e f g | a a,8 b c a f'4~ | f8 b,8 e4~e8 f8 e d | e4 fis g2~ | 
   g4 f e2 | d4. e8 f4. d8 | g4. g8 f e d cis | d4 g2 c,4 | f4. e8 f4. gis,8 |
-  e'2. d8 c8 | d f e d c4 r4| r1 | r1 | 
-  r1 | r1 | r1 | r1 | 
-  r1 | d2 a' | f d | cis d4 e |
+  e'2. d8 c8 | d f e d c4 r4| %r1 | r1 | 
+  %r1 | r1 | r1 | r1 | 
+  %r1 |
+  R1*7 
+  d2 a' | f d | cis d4 e |
   f2~f8 g8 f e | d4 g ~ g8 e f4 | e4 a ~ a8 fis g4 | fis4. d'8 gis,2 |
   a4 r8 a,8 c4 a | d f e d | c a'2 d,4 | e a ~ a8 g f e | d1 ~ |
   d8 d g4 ~ g8 g c,4 ~ | c8 a bes4 a2 ~ | a8 f g4 c2 ~ | c8 a b4 e2 ~ | 
