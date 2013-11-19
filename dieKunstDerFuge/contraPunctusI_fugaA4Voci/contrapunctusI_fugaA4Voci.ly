@@ -61,6 +61,8 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   \set Staff.instrumentName = #"V2 "
   \set Staff.midiInstrument = \midiInstrTwo
 
+\compressFullBarRests
+
   d2 a' | f d | cis d4 e | f2~f8 g8 f e | 
   d4 e f g | a a,8 b c a f'4~ | f8 b,8 e4~e8 f8 e d | e4 fis g2~ | 
   g4 f e2 | d4. e8 f4. d8 | g4. g8 f e d cis | d4 g2 c,4 | f4. e8 f4. gis,8 |
@@ -95,7 +97,10 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   %\clef bass %alto
   \clef \clefVThree
 
-  r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |
+\compressFullBarRests
+
+  %r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |
+  R1*4 | R1*4 | R1*4 |
   a2 d | c a | gis a4 b | c2 ~ c8 d c bes | 
   a2~ a8 f g4 | c2~ c8 a b4 | e2~ e8 cis d4 | 
   %\clef G
@@ -104,7 +109,8 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   cis4 d8 a b4. c8 | d4 a2.~ | a2 bes | r8 e,8 a4~ a8 bes a g | 
   a4 b c2~ | c8 a bes4 a d4~ | d8 b c4 b e~| e8 a, d4~ d8 d c b | 
   c d e4~ e8 e d c | b2 c4 gis | a8 g fis e fis4 g~ | g8 g f e f e d cis | 
-  d4 r4 r2 | r1 | r1 |r1 | r1 | r1 |
+  d4 r4 r2 | %r1 | r1 |r1 | r1 | r1 |
+  R1*5
   e2 a | f d | cis d4 e | f2~ f8 g f e | d2. a'8 f | bes4. g8 c4. a8 |
   d4 g, c f, | bes e, a2 | e4 a4~ a8 gis fis gis | a4. g8 f e d cis |
   d4 f8 d bes'4 g8 e | a4. f'8 b,4 cis | d b8 g c4 a8 f | bes8 d 
@@ -128,7 +134,10 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   \set Staff.midiInstrument = \midiInstrFou
   \clef bass
 
-  r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |
+\compressFullBarRests
+
+  %r1 |r1 |r1 |r1 |r1 |r1 |r1 |r1 |
+  R1*4 | R1*4
   d,2 a' | f d | cis d4 e | f2~ f8 g f e | 
   d2 r2 | r4 a8 b c a f'4~ | f8 b, e4~ e8 f e d | e g fis a g2 | 
   d2. e8 d | e4 f8 e fis4 g8 fis | gis4 a8 gis a4 bes8 a | b4 c8 b cis4 d8 gis, |
@@ -139,8 +148,9 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   bes2 ~ bes8 g a4 | d2~ d8 b c4 | f2~ f8 d e4 | a,4. g'8 f e d cis | 
   d4. f,8 bes2 | a1 ~ | a4. bes8 a g a4 | bes4. g8 d'2~ | 
   d4 e2 f4~ | f4. d8 e4. cis8 | d4. b8 cis a d4~ | d8 c b a b2 | 
-  a4 r r2 | r1 | r1 | r1 |
-  r1 | r1 | r1 | d2 a'2 | 
+  a4 r r2 | %r1 | r1 | r1 |
+  R1*6 % r1 | r1 | r1 | 
+  d2 a'2 | 
   f d | cis d4 e | f2~ f8 g f e | d2~ d8 ees d c | 
   bes2~ bes8 c bes a | g2. g4 | a1~ | a1~ | 
   a2. a4 | bes4. g8 d'2~ | d8 bes c4 f2~ | f8 d e4 a2~ | 
