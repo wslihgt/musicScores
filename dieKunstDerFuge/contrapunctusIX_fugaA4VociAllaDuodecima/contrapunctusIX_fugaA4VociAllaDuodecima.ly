@@ -150,6 +150,54 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   \clef \clefVThree
 
 \compressFullBarRests
+%1 
+R1*7
+%8
+R1*7
+%15
+R1*7
+%22
+r4 a4 a'2~| a4 gis8 fis e d c b | a gis a b c a b c |
+%25 
+d8 cis d e f d e f | f4 e r8 e d e | f a g f g f e d | c f e d e d cis b | a4 bes8 a bes2~ |
+%30 
+bes4 c8 bes c2~ | c4 r4 r2 | R1*3 | 
+%35
+r4 d,4 d'2~ | d4 cis8 b a g f e | d cis d e f d e f | g fis g a bes g a bes | bes4 a r8 a g a |
+% 40 
+bes8 d c bes c bes a g | f bes a g a g f e | d2 r8 d e f | g a g f g f e d | e f e d e c d e |
+%45 
+f1 | c' | a | f | e |
+%50
+f2 g | a1~ | a4 bes a g | f d' c b | a f' e d | 
+%55
+c2 b | a g | f8 bes a g a g f e | f g f e f e d cis | d2 r2 |
+%60 
+R1*13
+%73
+a'1 | e' | 
+%75
+c | a | gis | a2 b | c1~ | 
+%80
+c4 d c b | a8  gis a b c a b c | d cis d e fis d e fis | g, fis g a b g a b | c b c d e c d e | 
+%85 
+f,4 e fis d | g fis gis e | a bes8 a bes4 g~ | g8 g' f e f e d cis | f e, f g a g a b | 
+%90
+cis b cis d cis d e4~| e d a2~| a4 f bes d | g, bes e8 g f e | d4 r4 r2 | 
+%95 
+r4 a' bes2 | c4 r r g | a e f a | bes8 c bes a bes a g fis | g1 | d' |
+%101
+bes | g | fis | g2 a | bes1~ | bes4 c bes aes | 
+%112
+g1~ | g4 g a bes | c1~ | c8 ees d c d c bes a | bes2 c4 a | bes c bes a |
+%113
+g2 a4 b | c r r2 | R1 | r8 c8 bes a g bes a g | f4 r r2 | R1 | 
+%119
+r4 d4 d'2~ | d4 cis8 b a g f e | d cis d e f d e f | g fis g a bes g a bes | bes4 a r8 a g a | bes d c bes c bes a g |
+%125
+f bes a g a g f e | d2 r4 a'4 | bes2 r4 bes4 | cis,4 g' f bes | a2. g4 | fis1\fermata 
+
+
 \bar "|." }}}   %*********************************
 
 four = \transpose \originpitch \targetpitchfou {\new Voice { 
@@ -160,6 +208,48 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   \clef bass
 
 \compressFullBarRests
+%1
+R1*7 | R1*7 |
+%15
+r4 d, d'2~ | d4 cis8 b a g f e | d cis d e f d e f | g fis g a bes g a bes | 
+%22
+bes4 a r8 a g a | bes d c bes c bes a g | f bes a  g a g f e | d g f e f e d c | d4 b e2 | a, r2 |
+%25 
+r8 g' f e d c b a | gis4. fis16 gis a8 g f e | d4 d' e c | f b, cis a | d2 r4 d4 |
+%30 
+e2 r4 c | f8 a g f g f e d | g bes a g a g f e | a2 r4 bes | g e a a, |
+%35
+bes4 f' bes2 | a2 r2 | R1*8 |
+%45 
+R1*8 | R1*6 |
+r4 d,,4 d'2~ |
+%60 
+d4 cis8 b a g f e | d cis d e f d e f | g fis g a bes g a bes | bes4 a r8 a g a | bes d c bes c bes a g | 
+%65
+f8 bes a g a g f e | d2 r2 | r4 d4 e f | g g' e g | c, c, d e | 
+%70
+f4 f' d f | b, d gis, b | e, e' fis gis | a1~ | a8 gis a fis gis4 b |
+%75
+b a r4 e | f1 | e1 | R1 | R1 |
+%80
+r8 d c b c b a gis | a4 r4 r2 | R1*7 
+d1 |
+%90
+a' | f | d | cis | d2 e | 
+%95 
+f1~ | f4 g f e | d1~ | d8 ees d c d c bes a | bes2 r4 bes' | fis a fis d |
+%101
+g2 d | ees4 f e ees | d2 r8 c bes a | g4 r4 r2 | r4 ees' d g | f8 aes g f g f ees d |
+%107
+ees8 f ees d ees d c b | c d c bes c bes a g | a bes a g a g fis e | fis2 r4 fis' | g ees c d | g r4 r2 |
+%113
+r4 f' ees d | c r4 r2 | r8 e f g a f g e | bes4 r4 r2 | r8 g f e d f e d | cis4 e cis a | 
+%119
+d4 c bes2 | a2 r4 a | bes1~ | bes2 r8 e f g | a, e' a g f4 e | d2 r4 cis4 | 
+%125
+d2 r4 a | bes2 r4 c4 | bes8 c bes a bes a g f | e4 e' f g | a g a a, | d1\fermata 
+
+
 \bar "|."}}}   %**********************************
 
 music = {
