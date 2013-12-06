@@ -52,6 +52,110 @@ one = \transpose \originpitch \targetpitchone {\new Voice {
 
 \compressFullBarRests
 
+  R1*3 |
+  g2.~ g8 f8 g a8. g16 f8 
+  | % 4
+  g e f g4.~ g8 f8 e d ais d 
+  | % 5
+  c4. fis g a 
+  | % 6
+  ais2.~ ais8 c8 d c16 ais a8 g 
+  | % 7
+  a ais c8~ c ais8 a ais c d~ d8. c16 ais8 
+  | % 8
+  c4. e d fis 
+  | % 9
+  g2.~ g8 f8 g a g f 
+  | % 10
+  g2.~ g8 f8 e d ais d 
+  | % 11
+  c4. r16 c a' f g8 r16 c, a' f g8 r16 c, a' f g8 
+  | % 12
+  r16 ais a g f8 r16 a g f e8 r16 g f e d8 r16 c d e f8 
+  | % 13
+  e2. fis 
+  | % 14
+  g ais 
+  | % 15
+  b8 a g f dis cis dis f g a b cis 
+  | % 16
+  c1. 
+  | % 17
+  r16 e, c d c8 ais4 g8 e'8. c16 c8 c16 f16*5 
+  | % 18
+  e2.~ e4. f4.~ |
+  f4. g2. f4.
+  | % 20
+  e4 r2. |
+  R1 |
+  e4 cis2.~ | 
+  cis2 cis8 c ais r8 | 
+  | % 23
+  r2 e'4 f4~ |
+  f2 e8 f ais r8 
+  | % 24
+  e1~ |
+  e1 |
+  g4 r8 e8~ e2~ |
+  e2 r2 | %*9 r4*946/480 | 
+  e16 e cis e f ais c ais gis g gis g f e f e 
+  | % 27
+  cis16 cis d e f8 r16 cis d e f8 r4 
+  | % 28
+  e16 e d cis d cis ais8~ ais2~ |
+  ais2. cis4 
+  | 
+  c1~ |
+  c2 cis16 e g ais r4 |
+  e16 e cis 
+  e f ais c ais gis g gis g f e f e 
+  | % 31
+  cis cis d e f8 r16 cis d e f8 r4 
+  | % 32
+  e16 e d cis d cis ais8~ ais2~ |
+  ais2. cis4 |
+  c1~ | 
+  c2 r2 |
+  cis1 |
+  cis8 c g r8 r2 |
+  r4 ais4 \times 2/3 {gis8 g gis} \times 2/3 {g cis c } | 
+  \times 2/3 {cis8 c f} \times 2/3 {e f e} \times 2/3 {cis c gis} \times 2/3 {g cis c} 
+  | % 37
+  e1 
+  | % 38
+  e4 e \times 2/3 {e4 e e } |
+  f1 ~ |
+  f2. gis4 
+  | % 40
+  e4. c g4~ |
+  g2. e'4 |
+  f4. cis g'4~|
+  g8 gis4. \times 2/3 {g8 f e} \times 2/3 {cis c cis} |  
+  c1 |
+  r2. r8 e8 
+  | % 44
+  f e f e cis c cis gis |
+  g gis b c cis e g f 
+  | % 45
+  e4. c g4~ |
+  g2. e'4 |
+  f4. cis gis4~ |
+  gis8 ais4. \times 2/3 {gis4 g f} 
+  | % 48
+  e1~| 
+  e1 |
+  R1*6 |
+  r1. |% r2*15 
+  g2. ~ g8 f8 g a8. g16 f8 |
+  g e f g4.~ g8 f8 e d ais d |
+  c4. f g gis |
+  ais2. ~ais8 c8 d c16 ais a8 g |
+  a8 ais c8~ c8 ais8 a ais c d8~ d8. c16 ais8 |
+  | % 59
+  c4. ais g fis |
+  e2. fis |
+  g2. ais |
+  c1. 
 
 \bar "|." }}}   %*********************************
 
