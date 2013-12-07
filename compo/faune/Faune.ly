@@ -166,6 +166,122 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
 
 \compressFullBarRests
 
+  r1. 
+  | % 2
+  c4 c8 c4 c8 c4 c8 c4 c8 
+  | % 3
+  c4 c8 c4 c8 c4 c8 c4 c8 
+  | % 4
+  c4 c8 c4 c8 c4 c8 c4 c8 
+  | % 5
+  c d e fis g a b a g fis e d 
+  | % 6
+  c4 c8 c4 c8 c4 c8 c4 c8 
+  | % 7
+  c4 c8 c4 c8 c4 c8 c4 c8 
+  | % 8
+  c d e fis g a b a g fis e d 
+  | % 9
+  c16 c a' f g8 r16 c, a' f g8 r16 c, a' f g8 r16 ais a ais c8 
+  | % 10
+  r16 c, a' f g8 r16 c, e f g8 r16 ais a f g8 r16 d ais d c8 
+  | % 11
+  r8 g'4~ g4.~ g8 f8 g a8. g16 f8 
+  | % 12
+  g4.~ g8 f8 e d f e gis g f 
+  | % 13
+  c'2. cis 
+  | % 14
+  e fis 
+  | % 15
+  r16 <a,, ais' >16 <a ais' >16 <a ais' >16 <a ais' >8 r16 <a ais' >16 
+  <a ais' >16 <a ais' >16 <a ais' >8 r16 <a ais' >16 <a ais' >16 
+  <a ais' >16 <a ais' >8 r16 <a ais' >16 <a ais' >16 <a ais' >16 
+  <a ais' >8 
+  | % 16
+  c d e fis g a b a g fis e d 
+  | % 17
+  c4. fis g a 
+  | % 18
+  ais2.~ ais8 c8 d c16 ais a8 g 
+  | % 19
+  a ais c8~ c8 ais8 a ais c d8~ d8. c16 ais8 
+  | % 20
+  c4 r2. |
+  R1 |
+  r4 ais4 c2~ | 
+  c2 ais8 g e r8 |
+  e'4 cis2.~|
+  cis2 ais8 cis e r8 
+  | % 24
+  g,1~ |
+  g1 | 
+  ais4 r8 g8~ g2~ |
+  g2 r2 |
+  g16 g f g gis cis e cis c ais c ais gis g gis g 
+  | % 27
+  e e f g gis8 r16 e f g gis g f e f e 
+  | % 28
+  r4 g16 g f e f e cis8~ cis4~ |
+  cis2. f4 |
+  e1~ |
+  e2 f16 g ais c r4 |
+  g16 g f g gis cis e cis c ais c ais gis g gis g 
+  | % 31
+  e e f g gis8 r16 e f g gis g f e f e 
+  | % 32
+  r4 g16 g f e f e cis8~ cis4 |
+  cis2. f4 | 
+  e1~ |
+  e2 r2 |
+  cis4. e f4~|
+  f4. e8 f e c r8 
+  | % 36
+  cis4. e f4~ |
+  f4. e8 f e g r8 
+  | % 37
+  g4 g8 g4 g g8~ |
+  g8 g8 g4 f e |
+  f f8 f4 f f8~ |
+  f8 f8 f4 g gis 
+  | % 40
+  g g8 g4 g g8~ |
+  g8 g8 g4 f e 
+  | % 41
+  f f8 f4 f f8~ |
+  f8 f8 f4 g gis |
+  g g8 g4 g g8~ |
+  g8 g8 g4 f e 
+  | % 44
+  f f8 f4 f f8~ |
+  f8 f8 f4 g gis |
+  | % 45
+  g g8 g4 g g8~ |
+  g8 g8 g4 f e |
+  f f8 f4 f f8~ |
+  f8 f8 f4 g gis 
+  | % 48
+  g2. g4~|
+  g4. g4. g4 |
+  g1 
+  | % 50
+  R1*5 |
+  c,4 c8 c4 c8 c4 c8 c4 c8
+  | % 54
+  c16 ais c e f g ais c ais g f e cis c ais a g f e f g ais e' f 
+  | % 55
+  g1. |
+  c,8 cis e f g gis ais gis g f dis cis 
+  | % 57
+  c2.~ c8 d8 c ais c d 
+  | % 58
+  c g' c,8~ c8 c'8 c, ais c a ais d g 
+  | % 59
+  c, d e fis g a b a g fis e d 
+  | % 60
+  c2. cis |
+  c f |
+  e1. 
 
 \bar "|." }}}   %*********************************
 
@@ -177,7 +293,113 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   \clef \clefVThree
 
 \compressFullBarRests
-
+  g
+  | % 2
+  g 
+  | % 3
+  g 
+  | % 4
+  g 
+  | % 5
+  g4 g8 g4 g8 g4 g8 g4 g8 
+  | % 6
+  g1. 
+  | % 7
+  f8 e d8~ d e8 f d e fis g ais a 
+  | % 8
+  g4 g8 g4 g8 g4 g8 g4 g8 
+  | % 9
+  g4 g8 g4 g8 g4 g8 g4 g8 
+  | % 10
+  r8 e f g4.~ g2.
+  | % 11
+  r8 e f g4.~ g2. 
+  | % 12
+  r8 e f g4.~ g2. 
+  | % 13
+  g'2. ais 
+  | % 14
+  c ais 
+  | % 15
+  dis,8 cis b a g f g a b cis dis f 
+  | % 16
+  r16 e d c ais8 c4 g8 e'8. c16 c8 c16 ais16~ ais4
+  | % 17
+  g4 g8 g4 g8 g4 g8 g4 g8 
+  | % 18
+  r16 g a ais c8 c16 ais a ais g8 r16 g c e f8 r16 g, e' f g8 
+  | % 19
+  r16 g f e c8 c4 c8 c4 c8 c4 gis8 
+  | % 20
+  g4 g8 g4 g g8~ 
+  g8 g8 g4 g g 
+  | % 21
+  g g8 g4 g g8~ |
+  g8 g8 g4 f gis |
+  g g8 g4 g g8~ |
+  g8 g8 g4 g g 
+  | % 24
+  g g8 g4 g g8~ |
+  g8 g8 g4 f gis 
+  | % 25
+  g g8 g4 g g8~ |
+  g8 g8 g4 f gis |
+  g g8 g4 g g8~ |
+  g8 g8 g4 f gis 
+  | % 28
+  g g8 g4 g g8~ |
+  g8 g8 g4 f gis 
+  | % 29
+  g g8 g4 g g8~ |
+  g8 g8 g4 f gis |
+  g g8 g4 g g8~ |
+  g8 g8 g4 f gis 
+  | % 32
+  g g8 g4 g g8~ |
+  g8 g8 g4 f gis 
+  | % 33
+  g g8 g4 g g8~ |
+  g8 g8 g4 g g |
+  f4. g gis4~ |
+  gis4. g8 gis g e r8 
+  | % 36
+  f4. g gis4~ |
+  gis4. g8 gis g ais r8 
+  | % 37
+  c4 c8 c4 c c8~ |
+  c8 c8 c4 c c |
+  cis cis8 cis4 cis cis8~ |
+  cis8 cis8 cis4 cis cis 
+  | % 40
+  c c8 c4 c c8~ |
+  c8 c8 c4 c c 
+  | % 41
+  cis cis8 cis4 cis cis8~ |
+  cis8 cis8 cis4 cis cis |
+  c c8 c4 c c8~ |
+  c8 c8 c4 c c 
+  | % 44
+  cis cis8 cis4 cis cis8~ |
+  cis8 cis8 cis4 cis cis 
+  | % 45
+  c c8 c4 c c8~ |
+  c8 c8 c4 c c |
+  cis cis8 cis4 cis cis8~ |
+  cis8 cis8 cis4 
+  cis cis 
+  | % 48
+  c2. c8*5 c4. ais4 g2. g8*5 g4. g4 r1*4 g1. g g16 gis f gis 
+  g f e f g f e cis f e g f 
+  | % 56
+  ais g c ais ais gis gis g g4 g8 g4 g8 g4 
+  | % 57
+  g8 g4 g8 g8*7 f8 
+  | % 58
+  g e f g f e d4 e8 f d e 
+  | % 59
+  fis g ais a g4 g8 g4 g8 g4 
+  | % 60
+  g8 g4 g8 g2. ais g g g1. 
 
 \bar "|." }}}   %*********************************
 
