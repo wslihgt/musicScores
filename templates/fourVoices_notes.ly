@@ -85,3 +85,7 @@ music = {
   >>
 }
 
+
+%%% Local Variables:
+%%% LilyPond-master-file: "oboeQuartet_scoreAndParts.ly"
+%%% End: 
