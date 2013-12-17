@@ -154,19 +154,19 @@ one = \transpose \originpitch \targetpitchone {\new Voice {
   f4. |
   r4 r4 |
   r4 r4 |
-  r4 \appoggiatura b32 bes4 a16 bes d ges |
+  r4 \appoggiatura ces'16 bes4 a16 bes d ges |
   r2 | r2 | r2 | r2 | 
   r2. r2 |
   r2. r2|
   r2. r2 |
   r2 r8 g8 a bes |
   | % 31
-  c ges g des c ges' c ges' 
+  c fis, g des c fis c' fis 
   | % 32
   des c r8 g des' c e, ees |
-  ges,16 g c ees des'2 ges,,16 g c ees 
+  fis,16 g c ees des'2 fis,,16 g c ees 
   | % 33
-  des' c ges8~ ges16 e16 ees des c8 r8 r4
+  des' c fis,8~ fis16 e16 ees des c8 r8 r4
   | % 34
   e16 ees d des e ees des c r16 e ees d e ees a8 
   | % 35
@@ -174,12 +174,12 @@ one = \transpose \originpitch \targetpitchone {\new Voice {
   a bes16 a g ges 
   g ges e ees r8 ees16 e |
   ees16 e ges g a g ges e 
-  \times 2/3 {ees16 des16 c16 bes16 a g}
-  \times 2/3 {a16 bes16 a16 bes a  bes }
+  \times 4/6 {ees16 des16 c16 bes16 a g}
+  \times 4/6 {a16 bes16 a16 bes a  bes }
   | % 37
   r4. g'4. a2 |
   ges4. g a4 e8 ees |
-  des1 \times 2/3 {ees16 ges g a  bes  des}|
+  des1 \times 4/6 {ees16 ges g a  bes  des}|
   ees4. e8 bes4. a8 ees e 
   | % 41
   ges4. g8 a r8 bes r8 r4
@@ -288,32 +288,40 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   d4. |
   r2 |
   r2 | 
-  r4 \appoggiatura aes'32 g4 ges16 g a bes |
+  r4 \appoggiatura aes'16 g4 fis16 g a bes |
   r2 | r2 | r2 | r2 |
-  r8 \appoggiatura e32 ees8 r8 \appoggiatura e32 ees8 r8 \appoggiatura e32 ees8 
+  r8 \appoggiatura e16 ees8 r8 \appoggiatura e16 ees8 r8 \appoggiatura e16 ees8 
   r16 ees e ees des ees e8 
   | % 28
-  r8 \appoggiatura e32 ees8 r8 \appoggiatura e32 ees8 r8 \appoggiatura e32 ees8 
+  r8 \appoggiatura e16 ees8 r8 \appoggiatura e16 ees8 r8 \appoggiatura e16 ees8 
   r8 ges e4 
   | % 29
-  ees1 \times 4/5 {c16 des ees e ges} |
-  r1 |
-  r2 r4*2856/480 a,2 
+  ees1 \times 4/5 {c16 des ees e fis} |
+  g8 r8 r2. |
+  r2 a,2 
   | % 32
-  g bes a a a 
+  g bes |
+  a a |
+  a g 
   | % 34
-  g a bes c des 
+  a bes |
+  c des 
   | % 36
-  e ees c des r16. e32 ees8 r16. e32 ees8 
-  | % 38
-  r16. e32 ees8 r16 ees e ees r16 ees e ees r16. e32 ees8 r16 ees 
-  e ees 
+  e ees |
+  c des |
+  r8 \appoggiatura e16 ees8 r8 \appoggiatura e16 ees8 
+  r8 \appoggiatura e16 ees8 r16 ees e ees r16 ees e ees |
+  r8 \appoggiatura e16 ees8 r16 ees e ees e4 ees16 e ees e16~ e16 e16 ees e 
   | % 39
-  e4 ees16 e ees e8 e16 ees e ees1 c32 r4*20/480 des32 r4*20/480 ees32 
-  r4*20/480 e32 r4*20/480 f32 r4*20/480 ges32 r4*20/480 g8 r8*9 ees4. 
-  e8 
+  ees1 \times 4/6 {c16 des ees e f fis } |
+  g8 r8 r4 r2. |
+  ees4. e8 bes a g r8 r4
   | % 42
-  bes a g r8*5 a2. c4 r2. e2 a,8 r8 a r4. a8 r8*13 a8 
+  r4 a2. c4 |
+  r2. e2 |
+  a,8 r8 a r r4 a8 r8 r4 | 
+  r2. r2| 
+  a8 r8 r1
 
 \bar "|." }}}   %*********************************
 
@@ -327,65 +335,142 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
 
 \compressFullBarRests
 
-  r16 g' g c c e e g g bes bes des des8. c16 des8 c4. r16 g, g 
-  c c e e g g bes bes des f8. des16 
+  r16 g' g c c e |
+  e g g bes bes des |
+  des8. c16 des8 |
+  c4. |
+  r16 g, g c c e |
+  e g g bes bes des |
+  f8. des16 f8
   | % 3
-  f8 e4. r16 f f des des bes bes aes aes f f des 
+  e4. |
+  r16 f f des des bes |
+  bes aes aes f f des 
   | % 4
-  des4. c r16 f' des bes des bes aes bes 
+  des4. |
+  c |
+  r16 f' des bes des bes |
+  aes bes aes f des8 
   | % 5
-  aes f des8 f4. e r8*17 bes'4*5 g8 r8*13 aes8*7 r8 aes r8 g 
+  f4. |
+  e |
+  r4. | 
+  r4. | 
+  r4. | 
+  r4. | 
+  r4. | 
+  r4 bes'8~ |
+  bes4.~  |
+  bes4.~ |
+  bes4. |
+  g8 r4 |
+  r4. |
+  r4. |
+  r4. |
+  r4 aes8~ |
+  aes4.~ |
+  aes4.|
+  r8 aes r8 | 
+  g r8 e 
   | % 11
-  r8 e des8. e16 f e g8. e16 f e des8. e16 
+  des8. e16 f e |
+  g8. e16 f e |
+  des8. e16 f e 
   | % 12
-  f e g8. r16*13 c,8 
+  g8. r8. |
+  r4. |
+  r4 c,8 
   | % 13
-  des32 r4*20/480 c32 r4*20/480 b32 r4*20/480 c8 bes c des ees 
-  r16 g, g c c r8 g16 
+  \times 2/3 {des16  c  b}  c8 bes |
+  c des ees |
+  r16 g, g c c r16 |
+  r16 g16  g c c des 
   | % 14
-  g c c des des ees des c bes aes g4. f r16 g g c c r8 g16 g 
-  c c des des ees des c bes aes 
+  des ees des c bes aes |
+  g4. |
+  f |
+  r16 g g c c r16|
+  r16 g16 g c c des |
+  des ees des c bes aes 
   | % 16
-  g4. g8. aes16 f8 g8. f' g4. g4 f8 ees4 c8 f4 
+  g4. |
+  g8. aes16 f8 |
+  g8. f' |
+  g4. |
+  g4 f8 |
+  ees4 c8 |
+  f4 ges8 
   | % 18
-  ges8 g8. g16 g8. g16 g8. g16 g8 g16 aes g f 
+  g8. g16 g8~|
+  g16 g16 g8. g16 |
+  g8 g16 aes g f 
   | % 19
-  g f ees f des ges g8. g16 g8. f16 f8. f16 g8 
+  g f ees f des fis |
+  g8. g16 g8~ |
+  g16 f16 f8. f16 |
+  g8 r4 | 
   | % 20
-  r4 g8 r4 g8 f r4. 
+  g8 r4 
+  g8 f r8 |
+  r4 g8 
   | % 21
-  g8 f r4 c8 r4 c16 des d8 r8 
+  f r4 |
+  c8 r4 |
+  c16 des d8 r8 
   | % 22
-  c' c16 des c bes aes8 aes16 bes aes g f aes g f ees des c8 
+  c' c16 des c bes |
+  aes8 aes16 bes aes g |
+  f aes g f ees des |
+  c8 r4 
   | % 23
-  r4 c8 r4 aes r8 aes4 
+  c8 r4 |
+  aes r8 |
+  aes4 r8
   | % 24
-  r8 aes4. r32*63 aes32 
+  aes4. |
+  r4 r4 |
+  r4 r4 |
+  r2. |
+  r4 \appoggiatura aes16 g4~
   | % 26
-  g2 r32*43 a'32 bes8 r16. a32 bes8 r16. a32 bes8 
+  g4 r4 |
+  r2 | 
+  r2 |
+  r8 \appoggiatura a'16 bes8 r8 \appoggiatura a16 bes8 
+  r8 \appoggiatura a16 bes8 r16 bes ees, f ges aes a8 
   | % 28
-  r16 bes ees, f ges aes a8 r16. a32 bes8 r16. a32 bes8 r16. a32 
-  bes8 
+  r8 \appoggiatura a16 bes8 r8 \appoggiatura a16 bes8 r8 \appoggiatura a16
+  bes8 r8 g a4 
   | % 29
-  r8 g a4 bes1 c32 r4*20/480 bes32 r4*20/480 a32 r4*20/480 g32 
-  r4*20/480 ges32 r4*20/480 e32 r4*20/480 ees8 r8*11 c2 
+  bes1 \times 4/6 {c16 bes a g ges e} |
+  ees8 r8 r2. |
+  r2 c2 
   | % 32
-  des d ees e f 
+  des d |
+  ees e |
+  f bes,
   | % 34
-  bes, c des ees e 
+  c des |
+  ees e 
   | % 36
-  a bes ges g r16. a32 bes8 r16. a32 bes8 
+  a bes |
+  ges g |
+  r8 \appoggiatura a16 bes8 r8 \appoggiatura a16 bes8 
+  r8 \appoggiatura a16 bes8 r16 bes ees, f r16 ees bes' f 
   | % 38
-  r16. a32 bes8 r16 bes ees, f r16 ees bes' f r16. a32 bes8 r16 f 
-  ees bes' 
+  r8 \appoggiatura a16 bes8 r16 f ees bes' a4 
+  bes16 f ees a16~ a bes16 a g
   | % 39
-  a4 bes16 f ees a8 bes16 a g bes1 c32 r4*20/480 bes32 r4*20/480 a32 
-  r4*20/480 g32 r4*20/480 ges32 r4*20/480 e32 r4*20/480 ees8 r8*9 a4. 
-  g8 
+  bes1 \times 4/6 {c16 bes a g ges e} |
+  ees8 r8 r4 r2. |
+  a4. g8 ges e ees r8 r4 
   | % 42
-  ges e ees r8*7 
+  r4 r4 ges2. 
   | % 43
-  ges2. r4 ges1 ges8 r8 ges r4. ges8 r8*13 ges8 
+  r4 ges1 |
+  ges8 r8 ges r8 r4 ges8 r8 r4 |
+  r2. r2 |
+  ges8 r8 r1
 
 \bar "|." }}}   %*********************************
 
@@ -531,7 +616,7 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   bes1~bes4 |
   c8 r8 c r r4 c8 r8 r4 |
   g'8 ges c, des ges g e ees des4 
-  c8 
+  c8 r8 r1
 
 \bar "|."}}}   %**********************************
 
