@@ -90,7 +90,7 @@ one = \transpose \originpitch \targetpitchone {\new Voice {
   r4 des8~ |
   des4.~ |
   des4.~|
-  des4.~|
+  des4. |
   c8 r4 |
   r4. |
   r4. | 
@@ -171,9 +171,9 @@ one = \transpose \originpitch \targetpitchone {\new Voice {
   e16 ees d des e ees des c r16 e ees d e ees a8 
   | % 35
   e16 ees a8 e16 ees e a16~ a e16 ees e a4~ |
-  a bes16 a g ges 
-  g ges e ees r8 ees16 e |
-  ees16 e ges g a g ges e 
+  a bes16 a g fis
+  g fis e ees r8 ees16 e |
+  ees16 e fis g a g fis e 
   \times 4/6 {ees16 des16 c16 bes16 a g}
   \times 4/6 {a16 bes16 a16 bes a  bes }
   | % 37
@@ -187,9 +187,9 @@ one = \transpose \originpitch \targetpitchone {\new Voice {
   r4 r4 r4 ees,2 
   | % 44
   r4 r4 g2. |
-  ees8 r8 ees r8 r4 ees8 r8 r4 |
-  ees8 e bes' a 
-  e ees ges c, g' r8 |
+  dis8 r8 dis r8 r4 dis8 r8 r4 |
+  dis8 e bes' a 
+  e dis fis c g' r8 |
   ees r8 r1
 
 \bar "|." }}}   %*********************************
@@ -290,13 +290,13 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   r2 | 
   r4 \appoggiatura aes'16 g4 fis16 g a bes |
   r2 | r2 | r2 | r2 |
-  r8 \appoggiatura e16 ees8 r8 \appoggiatura e16 ees8 r8 \appoggiatura e16 ees8 
-  r16 ees e ees des ees e8 
+  r8 \appoggiatura e16 dis8 r8 \appoggiatura e16 dis8 r8 \appoggiatura e16 dis8 
+  r16 dis e dis cis dis e8 
   | % 28
-  r8 \appoggiatura e16 ees8 r8 \appoggiatura e16 ees8 r8 \appoggiatura e16 ees8 
-  r8 ges e4 
+  r8 \appoggiatura e16 dis8 r8 \appoggiatura e16 dis8 r8 \appoggiatura e16 dis8 
+  r8 fis e4 
   | % 29
-  ees1 \times 4/5 {c16 des ees e fis} |
+  dis1 \times 4/5 {c16 cis dis e fis} |
   g8 r8 r2. |
   r2 a,2 
   | % 32
@@ -309,13 +309,13 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   | % 36
   e ees |
   c des |
-  r8 \appoggiatura e16 ees8 r8 \appoggiatura e16 ees8 
-  r8 \appoggiatura e16 ees8 r16 ees e ees r16 ees e ees |
-  r8 \appoggiatura e16 ees8 r16 ees e ees e4 ees16 e ees e16~ e16 e16 ees e 
+  r8 \appoggiatura e16 dis8 r8 \appoggiatura e16 dis8 
+  r8 \appoggiatura e16 dis8 r16 dis e dis r16 dis e dis |
+  r8 \appoggiatura e16 dis8 r16 dis e dis e4 dis16 e dis e16~ e16 e16 dis e 
   | % 39
-  ees1 \times 4/6 {c16 des ees e f fis } |
+  dis1 \times 4/6 {c16 cis dis e f fis } |
   g8 r8 r4 r2. |
-  ees4. e8 bes a g r8 r4
+  dis4. e8 bes a g r8 r4
   | % 42
   r4 a2. c4 |
   r2. e2 |
