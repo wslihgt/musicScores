@@ -37,7 +37,7 @@ global= {
   
 }
 
-chordSequence = {
+chordSequence = \transpose \originpitch \targetpitchone {
   \chordmode {
     r1 |
     d1:m7 |
@@ -165,9 +165,9 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
 
   r8 bes8 r4 ges8 r8 r4 | 
   c8 r8 r8 aes8 r2 |
-  c8 des ees f ges aes bes c |
+  c,8 des ees f ges aes bes c |
   des c bes aes ges f ees des |
-  ces8 r8 r4 aes8 r8 r4 |
+  r8 ces'8 r4 aes8 r8 r4 |
   bes8 r4 des8 r2 |
   
   fes,8 ges aes bes ces bes aes ges | 
@@ -220,7 +220,32 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   r4 ces4 r8 ces4. |
   ees4 r8 ees8~ ees8 r8 ees4 |
   d4 r8 ees8 d4 r4 |
+
+  r8 des8 r4 bes8 r8 r4 | 
+  aes8 r8 r8 ges8 r2 |
+  ees'8 des c bes aes ges f ees | %c8 des ees f ges aes bes c |
+  des ees f ges aes bes c des%des c bes aes ges f ees des |
+  r8 fes8 r4 fes8 r8 r4 |
+  fes8 r8 r8 bes,8 r2 |
+  ces2 r4 des4 | %ces:maj7
+  c4. b8 r2 | % c2:m7.5- b:7.5-
   
+  c4 r8 c8~ c8 r8 ces4 |
+  r4 ces4 r8 ces4. |
+  ees4 r8 ees8~ ees8 r8 ees4~|
+  ees4 r4 r2 |
+  c4 r8 c8~ c8 r8 ces4 |
+  r4 ces4 r8 ces4. |
+  ees4 r8 ees8~ ees8 r8 ees4~|
+  ees4 r4 r2 |
+  ees2~ ees8 ees4 d8~ |
+  d2 d2 |
+  d2~ d8 d4. |
+  c2 r2 |
+  r4 f,4 r8 f4 r8 | %c8~ c8 r8 ces4 |
+  r8 e4. r4 e |% r4 ces4 r8 ces4. |
+  r4 ees4 r8 ees4 d8~ |% ees4 r8 ees8~ ees8 r8 ees4 |
+  d4 r2.  |
 
 }}}   %*********************************
 
@@ -248,7 +273,7 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   d2 d |
   des des |
   c b4 f |
-  bes'4 r8 f8 bes4 r4|
+  bes4 r8 f8 bes4 r4|
   
   ees,4 f ges bes |
   aes bes c ees|
@@ -259,7 +284,7 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   ges ees ces bes' |
   ges f ees ces |
 
-  d2 d |
+  d'2 d |
   des des |
   c c |
   b f'4 f,4 |
@@ -279,7 +304,7 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
 
 music = {
   <<
-    %\context ChordNames { \chordSequence }
+    \context ChordNames { \chordSequence }
     \tag #'score \tag #'v1 \new Staff { << \global \one >> }
     \tag #'score \tag #'v2 \new Staff { << \global \two>> }
     \tag #'score \tag #'v3 \new Staff { << \global \three>> }
