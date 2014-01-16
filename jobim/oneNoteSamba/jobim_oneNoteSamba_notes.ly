@@ -30,11 +30,21 @@ global= {
   \accidentalStyle "modern-cautionary"
   
   % global measure stuff
+  \transpose \originpitch \targetpitchone {
+  \key bes \major
   s1 
+  \bar "||"
+  {s1 * 16}
+  \bar "||"
+  \key bes \minor
+  {s1 * 8}
+  \bar "||"
+  \key bes \major
+  {s1 * 16}
   \bar "||"
   {s1 * 40}
   \bar "|."
-  
+  }
 }
 
 chordSequence = \transpose \originpitch \targetpitchone {
@@ -81,12 +91,12 @@ chordSequence = \transpose \originpitch \targetpitchone {
     des:6 |
     c:7 |
     b:maj7 |
-    bes:6 
+    bes:6 |
   }
 }
 
 one = \transpose \originpitch \targetpitchone {\new Voice { 
-  \key d \minor
+  %\key d \minor
   \relative c'{
   \set Staff.instrumentName = #"V1 "
   \set Staff.midiInstrument = \midiInstrOne
@@ -138,7 +148,7 @@ one = \transpose \originpitch \targetpitchone {\new Voice {
 }}}   %*********************************
 
 two = \transpose \originpitch \targetpitchtwo {\new Voice { 
-  \key d \minor
+  %\key d \minor
   \relative c''{
   \set Staff.instrumentName = #"V2 "
   \set Staff.midiInstrument = \midiInstrTwo
@@ -195,7 +205,7 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
 }}}   %*********************************
 
 three = \transpose \originpitch \targetpitchthr {\new Voice { 
-  \key d \minor
+  %\key d \minor
   \relative c' {
   \set Staff.instrumentName = #"V3 "
   \set Staff.midiInstrument = \midiInstrThr
@@ -250,7 +260,7 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
 }}}   %*********************************
 
 four = \transpose \originpitch \targetpitchfou {\new Voice { 
-  \key d \minor
+  %\key d \minor
   \relative c {
   \set Staff.instrumentName = #"V4 "
   \set Staff.midiInstrument = \midiInstrFou
@@ -300,6 +310,34 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   c c |
   ces ces4. bes8~ |
   bes4 r2.
+
+  d4 f8 d8~ d8 f4 des8~ |
+  des8 f4 des8 f4 des |
+  c4 ees8 c8~ c8 ees4 b8~ |
+  b8 ees4 b8 ees4 a, |
+  d4 f8 d8~ d8 f4 des8~ |
+  des8 f4 des8 f4 des |
+  c4 ees8 c8~ c8 ees4 b8~ |
+  b8 ees4 b8 ees4-- e4-- |
+  f4 aes8 c,8 ~ c8 f4 bes,8~ |
+  bes8 d4 bes8 c4-- d-- |
+  ees4 g8 ees8~ ees8 g4 ees8~ |
+  ees8 ges4 ees8 ges4 ees4 | 
+  d4 f8 d8~ d8 f4 des8~ |
+  des8 f4 des8 f4 des |
+  c4 ees8 b8~ b8  f4 bes8~ |
+  bes4 r8 f8 bes4 r4|
+  
+  ees,4 f ges bes |
+  aes bes c ees|
+  des aes c f, |
+  aes des, f ees  |
+  des fes aes fes |
+  ges aes bes aes |
+  ges ees ces bes' |
+  ges f ees ces |
+
+
 }}}   %**********************************
 
 music = {
