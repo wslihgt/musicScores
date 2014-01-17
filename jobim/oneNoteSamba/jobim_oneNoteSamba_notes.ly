@@ -92,6 +92,49 @@ chordSequence = \transpose \originpitch \targetpitchone {
     c:7 |
     b:maj7 |
     bes:6 |
+
+    d1:m7 |
+    des:7 |
+    c:m7 |
+    b:7.5- | 
+    d1:m7 |
+    des:7 |
+    c:m7 |
+    b:7.5- | 
+    f:m7 |
+    bes:7 |
+    ees:maj7 |
+    ees:m6 |
+    d1:m7 |
+    des:7 |
+    c2.:m7 b4:7.5- |
+    bes1:6 | 
+
+    ees:m7 |
+    aes:7 |
+    des:maj7 |
+    des:maj7 |
+    des:m7 |
+    ges:7 |
+    ces:maj7 |
+    c2:m7.5- b:7.5- |
+    
+    d1:m7 |
+    des:7 |
+    c:m7 |
+    b:7.5- | 
+    d1:m7 |
+    des:7 |
+    c:m7 |
+    b:7.5- | 
+    f:m7 |
+    bes:7 |
+    ees:maj7 |
+    aes:7 |
+    des:6 |
+    c:7 |
+    b:maj7 |
+    bes:6 |
   }
 }
 
@@ -142,7 +185,9 @@ one = \transpose \originpitch \targetpitchone {\new Voice {
   bes4 bes8 bes8~ bes8 bes4 bes8~ |
   bes8 bes4 bes8 bes4 bes4~ |
   bes4 bes8 bes8~ bes8 bes4 bes8~|
-  bes4 r2.
+  bes4 r2. |
+  
+  R1 * 40
 
 \compressFullBarRests
 }}}   %*********************************
@@ -200,6 +245,24 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   r4 ees4 r8 ees4 f8~ |% bes4 r8 bes8~ bes8 r8 a4|
   f4 r2. |
   
+  r4 a8 r8 r8 a8 r4 | 
+  r8 b8 r4 b4 r4 |
+  r4 bes8 r8 r8 bes8 r4 |
+  r8 a8 r4 a4 r4 |
+  r4 a8 r8 r8 a8 r4 | 
+  r8 b8 r4 b4 r4 |
+  r4 bes8 r8 r8 bes8 r4 |
+  r8 a8 r4 a4 r4 |
+
+  r4 aes8 r8 r8 aes8 r4 |
+  r8 d8 r4 d4 r4 |
+  r4 g8 r8 r8 g8 r4 |
+  r8 ges8 r4 ges4 r4 |
+  
+  r4 a8 r8 r8 a8 r4 | 
+  r8 b8 r4 b4 r4 |
+  r4 bes8 r8 r8 a8 r4 |
+  r8 g8 r4 f4 r4 |
   
 
 }}}   %*********************************
@@ -256,6 +319,15 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   r8 e4. r4 e |% r4 ces4 r8 ces4. |
   r4 ees4 r8 ees4 d8~ |% ees4 r8 ees8~ ees8 r8 ees4 |
   d4 r2.  |
+
+  r4 c8 r8 r8 c8 r4 | 
+  r8 des8 r4 des4 r4 |
+  r4 ees8 r8 r8 ees8 r4 |
+  r8 f8 r4 f4 r4 |
+  r4 c8 r8 r8 c8 r4 | 
+  r8 des8 r4 des4 r4 |
+  r4 ees8 r8 r8 ees8 r4 |
+  r8 f8 r4 f4 r4 |
 
 }}}   %*********************************
 
