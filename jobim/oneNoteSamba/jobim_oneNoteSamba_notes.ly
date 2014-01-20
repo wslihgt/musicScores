@@ -5,7 +5,7 @@
 
 \header{
   title = "One Note Samba"
-	composer = "Antonio Carlos Jobim"
+  composer = "Antonio Carlos Jobim"
   arranger = "JLD"
 }
 
@@ -42,13 +42,20 @@ global= {
   \key bes \major
   {s1 * 16}
   \bar "||"
-  {s1 * 40}
+  {s1 * 16}
+  \bar "||"
+  \key bes \minor
+  {s1 * 8}
+  \bar "||"
+  \key bes \major
+  {s1 * 16}
   \bar "|."
   }
 }
 
 chordSequence = \transpose \originpitch \targetpitchone {
   \chordmode {
+    %1
     r1 |
     d1:m7 |
     des:7 |
@@ -66,7 +73,7 @@ chordSequence = \transpose \originpitch \targetpitchone {
     des:7 |
     c2.:m7 b4:7.5- |
     bes1:6 | 
-
+    % 18
     ees:m7 |
     aes:7 |
     des:maj7 |
@@ -75,7 +82,7 @@ chordSequence = \transpose \originpitch \targetpitchone {
     ges:7 |
     ces:maj7 |
     c2:m7.5- b:7.5- |
-    
+    % 26
     d1:m7 |
     des:7 |
     c:m7 |
@@ -92,7 +99,7 @@ chordSequence = \transpose \originpitch \targetpitchone {
     c:7 |
     b:maj7 |
     bes:6 |
-
+    % 42
     d1:m7 |
     des:7 |
     c:m7 |
@@ -109,7 +116,7 @@ chordSequence = \transpose \originpitch \targetpitchone {
     des:7 |
     c2.:m7 b4:7.5- |
     bes1:6 | 
-
+    % 58
     ees:m7 |
     aes:7 |
     des:maj7 |
@@ -118,7 +125,7 @@ chordSequence = \transpose \originpitch \targetpitchone {
     ges:7 |
     ces:maj7 |
     c2:m7.5- b:7.5- |
-    
+    % 66
     d1:m7 |
     des:7 |
     c:m7 |
@@ -199,7 +206,7 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   \set Staff.midiInstrument = \midiInstrTwo
 
 \compressFullBarRests
-
+  %1
   R1 |
   a4 r8 a8~ a8 r8 aes4|
   r4 aes4 r8 aes4. |
@@ -217,7 +224,7 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   r4 aes4 r8 aes4. |
   bes4 r8 bes8~ bes8 r8 a4|
   bes4 r8 a8 bes4 r4 |
-
+  %18
   r8 bes8 r4 ges8 r8 r4 | 
   c8 r8 r8 aes8 r2 |
   c,8 des ees f ges aes bes c |
@@ -227,7 +234,7 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   
   fes,8 ges aes bes ces bes aes ges | 
   f8 ges aes bes dis, f g a | 
-  
+  % 26 
   a4 r8 a8~ a8 r8 aes4|
   r4 aes4 r8 aes4. |
   bes4 r8 bes8~ bes8 r8 a4~|
@@ -244,19 +251,48 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   r8 g4. r4 a4 |% r4 aes4 r8 aes4. |
   r4 ees4 r8 ees4 f8~ |% bes4 r8 bes8~ bes8 r8 a4|
   f4 r2. |
+  % 42
+  r4 a8 r8 r8 a8 r4 | 
+  r8 b8 r4 b4 r4 |
+  r4 bes8 r8 r8 bes8 r4 |
+  r8 a8 r4 a4 r4 |
+  r4 a8 r8 r8 a8 r4 | 
+  r8 b8 r4 b4 r4 |
+  r4 bes8 r8 r8 bes8 r4 |
+  r8 a8 r4 a4 r4 |
+  
+  r4 aes8 r8 r8 aes8 r4 |
+  r8 d8 r4 d4 r4 |
+  r4 g,8 r8 r8 g8 r4 |
+  r8 ges8 r4 ges4 r4 |
   
   r4 a8 r8 r8 a8 r4 | 
   r8 b8 r4 b4 r4 |
+  r4 bes8 r8 r8 a8 r4 |
+  r8 g8 r4 f4 r4 |
+  % 58
+  ges2 ~ ges4. ges8~|
+  ges1 |
+  f2~ f4. f8~ |
+  f1 |
+  e2~ e4. e8~ |
+  e1 |
+  ges1 |
+  ges4. f8~ f2 |
+
+  %66
+  r4 a8 r8 r8 a8 r4 | 
+  r8 b8 r4 b4 r4 |
   r4 bes8 r8 r8 bes8 r4 |
   r8 a8 r4 a4 r4 |
   r4 a8 r8 r8 a8 r4 | 
   r8 b8 r4 b4 r4 |
   r4 bes8 r8 r8 bes8 r4 |
   r8 a8 r4 a4 r4 |
-
+  
   r4 aes8 r8 r8 aes8 r4 |
   r8 d8 r4 d4 r4 |
-  r4 g8 r8 r8 g8 r4 |
+  r4 g,8 r8 r8 g8 r4 |
   r8 ges8 r4 ges4 r4 |
   
   r4 a8 r8 r8 a8 r4 | 
@@ -319,7 +355,7 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   r8 e4. r4 e |% r4 ces4 r8 ces4. |
   r4 ees4 r8 ees4 d8~ |% ees4 r8 ees8~ ees8 r8 ees4 |
   d4 r2.  |
-
+  % 42
   r4 c8 r8 r8 c8 r4 | 
   r8 des8 r4 des4 r4 |
   r4 ees8 r8 r8 ees8 r4 |
@@ -328,6 +364,41 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   r8 des8 r4 des4 r4 |
   r4 ees8 r8 r8 ees8 r4 |
   r8 f8 r4 f4 r4 |
+  % 50
+  r4 ees8 r8 r8 ees8 r4 |
+  r8 f8 r4 d'4 r4 |
+  r4 d8 r8 r8 d8 r4 |
+  r8 c8 r4 c4 r4 |
+  r4 c8 r8 r8 c8 r4 |
+  r8 aes r4 aes4 r4 |
+  r4 g8 r8 r8 ees8 r4 |
+  r8 d8 r4 d4 r4 |
+  % 58
+  bes'2~ bes4. c8~ |
+  c1 |
+  c2~ c4. c8~ |
+  c1 |
+  des2~ des4. bes8~ |
+  bes1 |
+  bes1 |
+  bes4. a8~ a2 |
+  % 66
+  r4 c8 r8 r8 c8 r4 | 
+  r8 des8 r4 des4 r4 |
+  r4 ees8 r8 r8 ees8 r4 |
+  r8 f8 r4 f4 r4 |
+  r4 c8 r8 r8 c8 r4 | 
+  r8 des8 r4 des4 r4 |
+  r4 ees8 r8 r8 ees8 r4 |
+  r8 f8 r4 f4 r4 |
+  r4 ees8 r8 r8 ees8 r4 |
+  r8 f8 r4 d'4 r4 |
+  r4 d8 r8 r8 d8 r4 |
+  r8 c8 r4 c4 r4 |
+  r4 c8 r8 r8 c8 r4 |
+  r8 aes r4 aes4 r4 |
+  r4 g8 r8 r8 ees8 r4 |
+  r8 d8 r4 d4 r4 |
 
 }}}   %*********************************
 
@@ -407,8 +478,26 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   des fes aes fes |
   ges aes bes aes |
   ges ees ces bes' |
-  ges f ees ces |
+  ges f ees ces' |
 
+  d4 f8 d8~ d8 f4 des8~ |
+  des8 f4 des8 f4 des |
+  c4 ees8 c8~ c8 ees4 b8~ |
+  b8 ees4 b8 ees4 a, |
+  d4 f8 d8~ d8 f4 des8~ |
+  des8 f4 des8 f4 des |
+  c4 ees8 c8~ c8 ees4 b8~ |
+  b8 ees4 b8 ees4-- e4-- |
+  f4 aes8 c,8 ~ c8 f4 bes,8~ |
+  bes8 d4 bes8 c4-- d-- |
+  ees4 g8 ees8~ ees8 g4 ees8~ |
+  ees8 ges4 ees8 ges4 ees4 | 
+  des4 f8 des8~ des8 f4 c8~ |
+  c8 e4 c8 e4 c |
+  b4 dis8 b8~ b8  dis4 bes8~ |
+  bes4 r2. |
+
+  
 
 }}}   %**********************************
 
