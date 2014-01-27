@@ -1,5 +1,5 @@
 
-originpitch = c % aes, %c' %bes'% f % c'
+originpitch = aes, %c % c' %bes'% f % c'
 
 targetpitchone = c
 targetpitchtwo = c
@@ -19,7 +19,7 @@ clefVThree = alto
   print-all-headers = "true"
 }
 
-#(set-global-staff-size 20)
+#(set-global-staff-size 18)
 
 \score {
   \new StaffGroup \keepWithTag #'score \music

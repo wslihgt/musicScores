@@ -6,7 +6,7 @@
 \header{
   title = "One Note Samba"
   composer = "Antonio Carlos Jobim"
-  arranger = "JLD"
+  arranger = "(JLD)"
 }
 
 % some things to define in the ..._score.ly file:
@@ -140,7 +140,7 @@ chordSequence = \transpose \originpitch \targetpitchone {
     aes:7 |
     des:6 |
     c:7 |
-    b:maj7 |
+    f:7 | % b:maj7 |
     bes:6 |
   }
 }
@@ -295,10 +295,10 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   r4 g,8 r8 r8 g8 r4 |
   r8 ges8 r4 ges4 r4 |
   
-  r4 a8 r8 r8 a8 r4 | 
-  r8 b8 r4 b4 r4 |
-  r4 bes8 r8 r8 a8 r4 |
-  r8 g8 r4 f4 r4 |
+  r4 aes8 r8 r8 aes8 r4 | 
+  r8 g8 r4 g4 r4 |
+  r4 a8 r8 r8 a4 g8~ |
+  g4 r4 r4 r4 |
   
 
 }}}   %*********************************
@@ -392,13 +392,14 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   r4 ees8 r8 r8 ees8 r4 |
   r8 f8 r4 f4 r4 |
   r4 ees8 r8 r8 ees8 r4 |
-  r8 f8 r4 d'4 r4 |
+  r8 f8 r4 d4 r4 |
   r4 d8 r8 r8 d8 r4 |
   r8 c8 r4 c4 r4 |
-  r4 c8 r8 r8 c8 r4 |
-  r8 aes r4 aes4 r4 |
-  r4 g8 r8 r8 ees8 r4 |
-  r8 d8 r4 d4 r4 |
+
+  r4 bes8 r8 r8 bes8 r4 |
+  r8 bes r4 bes4 r4 |
+  r4 ees8 r8 r8 ees4 d8~ |
+  d4 r4 r4 r4 |
 
 }}}   %*********************************
 
