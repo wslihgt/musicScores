@@ -4,7 +4,7 @@
 \version "2.16.0"
 
 \header{
-  title = "Sonate in g-moll"
+  title = "Sonate in g-moll, Allegro"
 	composer = "Joh. Seb. Bach"
 }
 
@@ -32,13 +32,6 @@ global= {
   \time 3/4
   \key g \minor
   \tempo 4 = 120
-  
-  s2. * 12 
-
-  \time 9/8
-  \key ees \major
-  \tempo 4. = 60
-  
 }
 
 one = \transpose \originpitch \targetpitchone {\new Voice { 
@@ -51,11 +44,7 @@ one = \transpose \originpitch \targetpitchone {\new Voice {
   
   \bar "||"
 
-  \oneAdagio
-  
-  \bar "||"
-
-\bar "|." }}}   %*********************************
+}}}   %*********************************
 
 two = \transpose \originpitch \targetpitchtwo {\new Voice { 
   \relative c'{
@@ -67,11 +56,7 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   
   \bar "||"
 
-  \twoAdagio
-  
-  \bar "||"
-
-\bar "|." }}}   %*********************************
+}}}   %*********************************
 
 three = \transpose \originpitch \targetpitchthr {\new Voice { 
   \relative c' {
@@ -84,12 +69,7 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   \threeAllegro
   
   \bar "||"
-  
-  \threeAdagio
-  
-  \bar "||"
-
-\bar "|." }}}   %*********************************
+}}}   %*********************************
 
 four = \transpose \originpitch \targetpitchfou {\new Voice { 
   \relative c' {
@@ -102,11 +82,8 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   
   \bar "||"
   
-  \fourAdagio
-  
-  \bar "||"
 
-\bar "|."}}}   %**********************************
+}}}   %**********************************
 
 music = {
   <<
@@ -119,5 +96,5 @@ music = {
 
 
 %%% Local Variables:
-%%% LilyPond-master-file: "bachJS_sonataGmoll_oboeQuartet_scoreAndParts.ly"
+%%% LilyPond-master-file: "bachJS_sonataGmoll_allegro_oboeQuartet_scoreAndParts.ly"
 %%% End: 

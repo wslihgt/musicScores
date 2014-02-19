@@ -202,5 +202,5 @@ fourAdagio = \relative c {
 }   %**********************************
 
 %%% Local Variables:
-%%% LilyPond-master-file: "bachJS_sonataGmoll_oboeQuartet_scoreAndParts.ly"
+%%% LilyPond-master-file: "bachJS_sonataGmoll_adagio_oboeQuartet_scoreAndParts.ly"
 %%% End: 

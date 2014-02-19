@@ -4,7 +4,7 @@
 \version "2.16.0"
 
 \header{
-  title = "Sonate in g-moll"
+  title = "Sonate in g-moll, Adagio"
 	composer = "Joh. Seb. Bach"
 }
 
@@ -29,12 +29,6 @@
 global= {
   \accidentalStyle "modern-cautionary"
 
-  \time 3/4
-  \key g \minor
-  \tempo 4 = 120
-  
-  s2. * 12 
-
   \time 9/8
   \key ees \major
   \tempo 4. = 60
@@ -47,15 +41,12 @@ one = \transpose \originpitch \targetpitchone {\new Voice {
   \set Staff.midiInstrument = \midiInstrOne
 
   \compressFullBarRests
-  \oneAllegro
-  
-  \bar "||"
 
   \oneAdagio
   
   \bar "||"
 
-\bar "|." }}}   %*********************************
+}}}   %*********************************
 
 two = \transpose \originpitch \targetpitchtwo {\new Voice { 
   \relative c'{
@@ -63,15 +54,12 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   \set Staff.midiInstrument = \midiInstrTwo
 
   \compressFullBarRests
-  \twoAllegro
   
-  \bar "||"
-
   \twoAdagio
   
   \bar "||"
 
-\bar "|." }}}   %*********************************
+}}}   %*********************************
 
 three = \transpose \originpitch \targetpitchthr {\new Voice { 
   \relative c' {
@@ -81,15 +69,12 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   \clef \clefVThree
 
   \compressFullBarRests
-  \threeAllegro
-  
-  \bar "||"
-  
+    
   \threeAdagio
   
   \bar "||"
 
-\bar "|." }}}   %*********************************
+}}}   %*********************************
 
 four = \transpose \originpitch \targetpitchfou {\new Voice { 
   \relative c' {
@@ -98,15 +83,12 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   \clef bass 
 
   \compressFullBarRests
-  \fourAllegro
-  
-  \bar "||"
   
   \fourAdagio
   
   \bar "||"
 
-\bar "|."}}}   %**********************************
+}}}   %**********************************
 
 music = {
   <<
@@ -119,5 +101,5 @@ music = {
 
 
 %%% Local Variables:
-%%% LilyPond-master-file: "bachJS_sonataGmoll_oboeQuartet_scoreAndParts.ly"
+%%% LilyPond-master-file: "bachJS_sonataGmoll_adagio_oboeQuartet_scoreAndParts.ly"
 %%% End: 
