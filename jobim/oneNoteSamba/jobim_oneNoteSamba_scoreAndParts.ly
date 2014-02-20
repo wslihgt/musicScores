@@ -11,7 +11,7 @@ midiInstrTwo = "violin"
 midiInstrThr = "viola"
 midiInstrFou = "cello"
 
-clefVThree = alto
+clefVThree = alto % G % alto
 
 \include "jobim_oneNoteSamba_notes.ly"
 

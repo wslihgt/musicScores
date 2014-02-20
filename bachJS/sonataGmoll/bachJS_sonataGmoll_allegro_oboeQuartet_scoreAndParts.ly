@@ -11,7 +11,7 @@ midiInstrTwo = "violin"
 midiInstrThr = "viola"
 midiInstrFou = "cello"
 
-clefVThree = alto % G % 
+clefVThree = G % alto % G % 
 
 \include "bachJS_sonataGmoll_allegro_notesGlobal.ly"
 

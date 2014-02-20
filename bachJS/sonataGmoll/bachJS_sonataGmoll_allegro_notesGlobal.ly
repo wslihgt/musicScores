@@ -31,7 +31,7 @@ global= {
 
   \time 3/4
   \key g \minor
-  \tempo 4 = 120
+  \tempo 4 = 100 
 }
 
 one = \transpose \originpitch \targetpitchone {\new Voice { 
