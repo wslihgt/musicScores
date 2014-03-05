@@ -22,7 +22,7 @@ clefVThree = G % alto % G %
 #(set-global-staff-size 20)
 
 \score {
-  \new StaffGroup \keepWithTag #'score \music
+  \new StaffGroup \keepWithTag #'score \music % #'acc \music % 
   \layout { 
     #(layout-set-staff-size 14)}
   \midi { }

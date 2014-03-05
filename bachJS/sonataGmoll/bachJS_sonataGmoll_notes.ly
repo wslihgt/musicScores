@@ -5,7 +5,8 @@
 
 \header{
   title = "Sonate in g-moll"
-	composer = "Joh. Seb. Bach"
+  composer = "Joh. Seb. Bach"
+  transcriber = "J.-L. Durrieu"
 }
 
 \include "bachJS_sonataGmoll_allegro_notes.ly"
@@ -26,36 +27,43 @@
 % midiInstrThr
 % midiInstrFou
 
-global= {
+global = {
   \accidentalStyle "modern-cautionary"
 
+%  \time 3/4
+%  \key g \minor
+%  \tempo 4 = 120
+%  
+%  s2. * 12 %
+%
+%  \time 9/8
+%  \key ees \major
+%  \tempo 4. = 60
+  
+}
+  
+globalAllegro = {
   \time 3/4
   \key g \minor
   \tempo 4 = 120
-  
-  s2. * 12 
-
-  \time 9/8
-  \key ees \major
-  \tempo 4. = 60
-  
 }
 
-one = \transpose \originpitch \targetpitchone {\new Voice { 
-  \relative c''{
-  \set Staff.instrumentName = #"V1 "
-  \set Staff.midiInstrument = \midiInstrOne
-
-  \compressFullBarRests
-  \oneAllegro
-  
-  \bar "||"
-
-  \oneAdagio
-  
-  \bar "||"
-
-\bar "|." }}}   %*********************************
+one = \transpose \originpitch \targetpitchone 
+  {
+    \globalAllegro 
+    \new Voice { 
+      \relative c''{
+	\set Staff.instrumentName = #"V1 "
+	\set Staff.midiInstrument = \midiInstrOne
+	
+	\compressFullBarRests
+	\oneAllegro
+	
+	\bar "|." 
+      }
+    }
+  }   
+%*********************************
 
 two = \transpose \originpitch \targetpitchtwo {\new Voice { 
   \relative c'{
@@ -64,12 +72,6 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
 
   \compressFullBarRests
   \twoAllegro
-  
-  \bar "||"
-
-  \twoAdagio
-  
-  \bar "||"
 
 \bar "|." }}}   %*********************************
 
@@ -82,41 +84,32 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
 
   \compressFullBarRests
   \threeAllegro
-  
-  \bar "||"
-  
-  \threeAdagio
-  
-  \bar "||"
 
 \bar "|." }}}   %*********************************
 
-four = \transpose \originpitch \targetpitchfou {\new Voice { 
-  \relative c' {
-  \set Staff.instrumentName = #"V4 "
-  \set Staff.midiInstrument = \midiInstrFou
-  \clef bass 
+four = \transpose \originpitch \targetpitchfou {
+  \new Voice { 
+    \relative c' {
+      \set Staff.instrumentName = #"V4 "
+      \set Staff.midiInstrument = \midiInstrFou
+      \clef bass 
+      
+      \compressFullBarRests
+      \fourAllegro
+      
+      \bar "|."
+    }
+  }
+}   %**********************************
 
-  \compressFullBarRests
-  \fourAllegro
-  
-  \bar "||"
-  
-  \fourAdagio
-  
-  \bar "||"
-
-\bar "|."}}}   %**********************************
-
-music = {
+musicAllegro = {
   <<
-    \tag #'score \tag #'v1 \new Staff { << \global \one >> }
-    \tag #'score \tag #'v2 \new Staff { << \global \two>> }
-    \tag #'score \tag #'v3 \new Staff { << \global \three>> }
-    \tag #'score \tag #'v4 \new Staff { << \global \four>> }
+    \tag #'score \tag #'v1 \new Staff { << \globalAllegro \one >> }
+    \tag #'score \tag #'v2 \new Staff { << \globalAllegro \two>> }
+    \tag #'score \tag #'v3 \new Staff { << \globalAllegro \three>> }
+    \tag #'score \tag #'v4 \new Staff { << \globalAllegro \four>> }
   >>
 }
-
 
 %%% Local Variables:
 %%% LilyPond-master-file: "bachJS_sonataGmoll_oboeQuartet_scoreAndParts.ly"

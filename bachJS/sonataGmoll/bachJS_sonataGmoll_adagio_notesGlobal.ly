@@ -93,9 +93,9 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
 music = {
   <<
     \tag #'score \tag #'v1 \new Staff { << \global \one >> }
-    \tag #'score \tag #'v2 \new Staff { << \global \two>> }
-    \tag #'score \tag #'v3 \new Staff { << \global \three>> }
-    \tag #'score \tag #'v4 \new Staff { << \global \four>> }
+    \tag #'score \tag #'v2 \tag #'acc \new Staff { << \global \two>> }
+    \tag #'score \tag #'v3 \tag #'acc \new Staff { << \global \three>> }
+    \tag #'score \tag #'v4 \tag #'acc \new Staff { << \global \four>> }
   >>
 }
 

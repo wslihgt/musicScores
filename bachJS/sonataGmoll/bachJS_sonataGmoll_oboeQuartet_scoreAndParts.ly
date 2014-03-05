@@ -21,52 +21,60 @@ clefVThree = alto % G %
 
 #(set-global-staff-size 20)
 
-\score {
-  \new StaffGroup \keepWithTag #'score \music
-  \layout { 
-    #(layout-set-staff-size 14)}
-  \midi { }
-  \header{instrumentName ="Quartet"}
+\book{
+  \bookOutputSuffix "score"
+  \bookpart{
+    \header{
+      subtitle = "I - Allegro"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'score \musicAllegro
+      \layout { 
+	#(layout-set-staff-size 14)}
+      \midi { }
+      \header{
+	instrumentName ="Quartet"
+      }
+    }
+  }
 }
 
-\pageBreak
-
-% #(set-global-staff-size 20) %14 
-\score {
-  \keepWithTag #'v1 \music
-  \layout { }
-  \header{instrumentName="Oboe/Violin I"}
-}
-
-\pageBreak
-
-% #(set-global-staff-size 20) %14 
-\score {
-  \keepWithTag #'v2 \music
-  \layout { }
-  \header{instrumentName="Violin II"}
-}
-
-\pageBreak
-
-% #(set-global-staff-size 20) %14 
-\score {
-  \keepWithTag #'v3 \music
-  \layout { }
-  \header{instrumentName="Viola"}
-}
-
-
-\pageBreak
-
-% #(set-global-staff-size 20) %14 
-\score {
-  \keepWithTag #'v4 \music
-  \layout { }
-  \header{instrumentName="Cello"}
-}
-
-
+%\book{
+%  \bookOutputSuffix "parts"
+%  #(set-global-staff-size 20)%
+%
+%  \score {
+%    \keepWithTag #'v1 \music
+%    \layout { }
+%    \header{instrumentName="Oboe/Violin I"}
+%  }
+ % 
+  %
+  %\pageBreak
+%  
+%  \score {
+%    \keepWithTag #'v2 \music
+%    \layout { }
+%    \header{instrumentName="Violin II"}
+%  }
+%%%  
+%%%  \pageBreak
+%%%  
+%%%  \score {
+%%%    \keepWithTag #'v3 \music
+%%%    \layout { }
+%%%    \header{instrumentName="Viola"}
+%%%  }
+%%%  
+%%%
+%%%  \pageBreak
+%%%  
+%%%  \score {
+%%%    \keepWithTag #'v4 \music
+%%%    \layout { }
+%%%    \header{instrumentName="Cello"}
+%%%  }
+%%%}
 
 
 
