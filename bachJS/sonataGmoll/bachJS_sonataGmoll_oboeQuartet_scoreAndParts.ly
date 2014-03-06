@@ -8,10 +8,10 @@ targetpitchfou = c
 
 midiInstrOne = "oboe"
 midiInstrTwo = "violin"
-midiInstrThr = "viola"
+midiInstrThr = "violin"
 midiInstrFou = "cello"
 
-clefVThree = alto % G % 
+clefVThree = G % alto % G % 
 
 \include "bachJS_sonataGmoll_notes.ly"
 
@@ -19,10 +19,15 @@ clefVThree = alto % G %
   print-all-headers = "true"
 }
 
-#(set-global-staff-size 20)
+#(set-global-staff-size 14)
 
 \book{
   \bookOutputSuffix "score"
+  \header {
+    instrumentName = "Sonate en sol mineur "
+    %title = "Sonate en sol mineur - J.S. Bach"
+    }
+  #(set-global-staff-size 14)
   \bookpart{
     \header{
       subtitle = "I - Allegro"
@@ -37,46 +42,192 @@ clefVThree = alto % G %
       }
     }
   }
+  \bookpart{
+    \header{
+      subtitle = "II - Adagio"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'score \musicAdagio
+      \layout { 
+	#(layout-set-staff-size 14)}
+      \midi { }
+      \header{
+	instrumentName ="Quartet"
+      }
+    }
+  }
+  \bookpart{
+    \header{
+      subtitle = "III - Allegro"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'score \musicAllegroB
+      \layout { 
+	#(layout-set-staff-size 14)}
+      \midi { }
+      \header{
+	instrumentName ="Quartet"
+      }
+    }
+  }
 }
 
-%\book{
-%  \bookOutputSuffix "parts"
-%  #(set-global-staff-size 20)%
-%
-%  \score {
-%    \keepWithTag #'v1 \music
-%    \layout { }
-%    \header{instrumentName="Oboe/Violin I"}
-%  }
- % 
-  %
-  %\pageBreak
-%  
-%  \score {
-%    \keepWithTag #'v2 \music
-%    \layout { }
-%    \header{instrumentName="Violin II"}
-%  }
-%%%  
-%%%  \pageBreak
-%%%  
-%%%  \score {
-%%%    \keepWithTag #'v3 \music
-%%%    \layout { }
-%%%    \header{instrumentName="Viola"}
-%%%  }
-%%%  
-%%%
-%%%  \pageBreak
-%%%  
-%%%  \score {
-%%%    \keepWithTag #'v4 \music
-%%%    \layout { }
-%%%    \header{instrumentName="Cello"}
-%%%  }
-%%%}
+#(set-global-staff-size 20)%
+\book{
+  \bookOutputSuffix "oboe"
+  #(set-global-staff-size 20)%
+  
+  \bookpart{
+    \header{
+      subtitle = "I - Allegro"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v1 \musicAllegro
+      \header{
+	instrumentName ="Oboe"
+      }
+    }
+  }
+  \bookpart{
+    \header{
+      subtitle = "II - Adagio"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v1 \musicAdagio
+      \header{
+	instrumentName ="Oboe"
+      }
+    }
+  }
+  \bookpart{
+    \header{
+      subtitle = "III - Allegro"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v1 \musicAllegroB
+      \header{
+	instrumentName ="Oboe"
+      }
+    }
+  }
+}
 
+#(set-global-staff-size 20)%
+\book{
+  \bookOutputSuffix "violin1"
+  
+  \bookpart{
+    \header{
+      subtitle = "I - Allegro"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v2 \musicAllegro
+      \header{
+	instrumentName = "Violin 1"
+      }
+    }
+  }
+  \bookpart{
+    \header{
+      subtitle = "II - Adagio"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v2 \musicAdagio
+      \header{
+	instrumentName = "Violin 1"
+      }
+    }
+  }
+  \bookpart{
+    \header{
+      subtitle = "III - Allegro"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v2 \musicAllegroB
+      \header{
+	instrumentName = "Violin 1"
+      }
+    }
+  }
+}
 
+#(set-global-staff-size 20)%
+\book{
+  \bookOutputSuffix "violin2"
+  
+  \bookpart{
+    \header{
+      subtitle = "I - Allegro"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v3 \musicAllegro
+      \header{
+	instrumentName = "Violin 2"
+      }
+    }
+  }
+  \bookpart{
+    \header{
+      subtitle = "II - Adagio"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v3 \musicAdagio
+      \header{
+	instrumentName = "Violin 2"
+      }
+    }
+  }
+  \bookpart{
+    \header{
+      subtitle = "III - Allegro"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v3 \musicAllegroB
+      \header{
+	instrumentName = "Violin 2"
+      }
+    }
+  }
+}
+
+#(set-global-staff-size 20)%
+\book{
+  \bookOutputSuffix "cello"
+  
+  \bookpart{
+    \header{
+      subtitle = "I - Allegro"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v4 \musicAllegro
+      \header{
+	instrumentName = "Cello"
+      }
+    }
+  }
+  \bookpart{
+    \header{
+      subtitle = "II - Adagio"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v4 \musicAdagio
+      \header{
+	instrumentName = "Cello"
+      }
+    }
+  }
+  \bookpart{
+    \header{
+      subtitle = "III - Allegro"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v4 \musicAllegroB
+      \header{
+	instrumentName = "Cello"
+      }
+    }
+  }
+}
 
 
 %{ Uncomment this block when using separate files

@@ -259,7 +259,12 @@ twoAllegro = \relative c'' {
   a4 a a |
   a2. |
   % 99
+  r16 g bes d g d bes g fis a d c |
+  bes g bes d g d bes g fis a d c |
+  bes8 r8 g8 f ees d |
+  f8 r f ees d c |
   % 103
+  ees
   % 106
   % 110
   % 114
@@ -368,7 +373,13 @@ threeAllegro = {
   ees4 ees ees |
   d2. |
   % 99
+  r4 g a |
+  bes g a |
+  bes16 g bes d ees g d g c, g' bes, g' |
+  a, f a c d f c f bes, f' a, f' |
   % 103
+  g, ees g bes c ees d ees a, ees' g, ees' |
+  fis8 r8 
   % 106
   % 110
   % 114

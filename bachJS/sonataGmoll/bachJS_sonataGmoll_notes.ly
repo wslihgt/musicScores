@@ -1,19 +1,23 @@
-%%%%% piece.ly
-%%%%% (This is the global definitions file)
+%%%%% bachJS_sonataGmoll_notes.ly
+%%%%% 
+%%%%% contains the scores with all voices, gathered from different notes
+%%%%% from individual instruments.
+%%%%% 
 
 \version "2.16.0"
 
 \header{
-  title = "Sonate in g-moll"
+  title = "Sonate in G-moll"
+  subtitle = "Flute and Cemballo"
   composer = "Joh. Seb. Bach"
-  transcriber = "J.-L. Durrieu"
+  transcriber = "Je.-Lo. Durrieu"
 }
 
 \include "bachJS_sonataGmoll_allegro_notes.ly"
 \include "bachJS_sonataGmoll_adagio_notes.ly"
 \include "bachJS_sonataGmoll_allegro2_notes.ly"
 
-% some things to define in the ..._score.ly file:
+% some things to define in the ..._scoreAndParts.ly file:
 %originpitch = c' %c' %bes'% f % c'
 %targetpitchone = c'
 %targetpitchtwo = c'
@@ -29,28 +33,28 @@
 
 global = {
   \accidentalStyle "modern-cautionary"
-
-%  \time 3/4
-%  \key g \minor
-%  \tempo 4 = 120
-%  
-%  s2. * 12 %
-%
-%  \time 9/8
-%  \key ees \major
-%  \tempo 4. = 60
-  
 }
   
 globalAllegro = {
   \time 3/4
   \key g \minor
-  \tempo 4 = 120
+  \tempo 4 = 100
+}
+  
+globalAdagio = {
+  \time 9/8
+  \key ees \major
+  \tempo 4. = 60
+}
+  
+globalAllegroB = {
+  \time 3/4
+  \key g \minor
+  \tempo 4 = 100
 }
 
-one = \transpose \originpitch \targetpitchone 
+oneAllegroVoice = \transpose \originpitch \targetpitchone 
   {
-    \globalAllegro 
     \new Voice { 
       \relative c''{
 	\set Staff.instrumentName = #"V1 "
@@ -65,7 +69,7 @@ one = \transpose \originpitch \targetpitchone
   }   
 %*********************************
 
-two = \transpose \originpitch \targetpitchtwo {\new Voice { 
+twoAllegroVoice  = \transpose \originpitch \targetpitchtwo {\new Voice { 
   \relative c'{
   \set Staff.instrumentName = #"V2 "
   \set Staff.midiInstrument = \midiInstrTwo
@@ -75,7 +79,7 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
 
 \bar "|." }}}   %*********************************
 
-three = \transpose \originpitch \targetpitchthr {\new Voice { 
+threeAllegroVoice  = \transpose \originpitch \targetpitchthr {\new Voice { 
   \relative c' {
   \set Staff.instrumentName = #"V3 "
   \set Staff.midiInstrument = \midiInstrThr
@@ -87,7 +91,7 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
 
 \bar "|." }}}   %*********************************
 
-four = \transpose \originpitch \targetpitchfou {
+fourAllegroVoice  = \transpose \originpitch \targetpitchfou {
   \new Voice { 
     \relative c' {
       \set Staff.instrumentName = #"V4 "
@@ -104,12 +108,147 @@ four = \transpose \originpitch \targetpitchfou {
 
 musicAllegro = {
   <<
-    \tag #'score \tag #'v1 \new Staff { << \globalAllegro \one >> }
-    \tag #'score \tag #'v2 \new Staff { << \globalAllegro \two>> }
-    \tag #'score \tag #'v3 \new Staff { << \globalAllegro \three>> }
-    \tag #'score \tag #'v4 \new Staff { << \globalAllegro \four>> }
+    \tag #'score \tag #'v1 \new Staff { << \globalAllegro \oneAllegroVoice  >> }
+    \tag #'score \tag #'v2 \new Staff { << \globalAllegro \twoAllegroVoice >> }
+    \tag #'score \tag #'v3 \new Staff { << \globalAllegro \threeAllegroVoice >> }
+    \tag #'score \tag #'v4 \new Staff { << \globalAllegro \fourAllegroVoice >> }
   >>
 }
+
+%**********************************
+%**********************************
+
+oneAdagioVoice = \transpose \originpitch \targetpitchone {\new Voice { 
+  \relative c''{
+  \set Staff.instrumentName = #"V1 "
+  \set Staff.midiInstrument = \midiInstrOne
+
+  \compressFullBarRests
+
+  \oneAdagio
+  
+  \bar "|."
+
+}}}   %*********************************
+
+twoAdagioVoice = \transpose \originpitch \targetpitchtwo {\new Voice { 
+  \relative c'{
+  \set Staff.instrumentName = #"V2 "
+  \set Staff.midiInstrument = \midiInstrTwo
+
+  \compressFullBarRests
+  
+  \twoAdagio
+  
+  \bar "|."
+
+}}}   %*********************************
+
+threeAdagioVoice = \transpose \originpitch \targetpitchthr {\new Voice { 
+  \relative c' {
+  \set Staff.instrumentName = #"V3 "
+  \set Staff.midiInstrument = \midiInstrThr
+  %\clef bass %alto
+  \clef \clefVThree
+
+  \compressFullBarRests
+    
+  \threeAdagio
+  
+  \bar "|."
+
+}}}   %*********************************
+
+fourAdagioVoice = \transpose \originpitch \targetpitchfou {\new Voice { 
+  \relative c' {
+  \set Staff.instrumentName = #"V4 "
+  \set Staff.midiInstrument = \midiInstrFou
+  \clef bass 
+
+  \compressFullBarRests
+  
+  \fourAdagio
+  
+  \bar "|."
+
+}}}   %**********************************
+
+musicAdagio = {
+  <<
+    \tag #'score \tag #'v1 \new Staff { << \globalAdagio \oneAdagioVoice >> }
+    \tag #'score \tag #'v2 \tag #'acc \new Staff { << \globalAdagio \twoAdagioVoice>> }
+    \tag #'score \tag #'v3 \tag #'acc \new Staff { << \globalAdagio \threeAdagioVoice>> }
+    \tag #'score \tag #'v4 \tag #'acc \new Staff { << \globalAdagio \fourAdagioVoice>> }
+  >>
+}
+
+%**********************************
+%**********************************
+
+oneAllegroBVoice = \transpose \originpitch \targetpitchone 
+  {
+    \new Voice { 
+      \relative c''{
+	\set Staff.instrumentName = #"V1 "
+	\set Staff.midiInstrument = \midiInstrOne
+	
+	\compressFullBarRests
+	\oneAllegroB
+	
+	\bar "|." 
+      }
+    }
+  }   
+%*********************************
+
+twoAllegroBVoice = \transpose \originpitch \targetpitchtwo {\new Voice { 
+  \relative c'{
+  \set Staff.instrumentName = #"V2 "
+  \set Staff.midiInstrument = \midiInstrTwo
+
+  \compressFullBarRests
+  \twoAllegroB
+
+\bar "|." }}}   %*********************************
+
+threeAllegroBVoice = \transpose \originpitch \targetpitchthr {\new Voice { 
+  \relative c' {
+  \set Staff.instrumentName = #"V3 "
+  \set Staff.midiInstrument = \midiInstrThr
+  %\clef bass %alto
+  \clef \clefVThree
+
+  \compressFullBarRests
+  \threeAllegroB
+
+\bar "|." }}}   %*********************************
+
+fourAllegroBVoice = \transpose \originpitch \targetpitchfou {
+  \new Voice { 
+    \relative c' {
+      \set Staff.instrumentName = #"V4 "
+      \set Staff.midiInstrument = \midiInstrFou
+      \clef bass 
+      
+      \compressFullBarRests
+      \fourAllegroB
+      
+      \bar "|."
+    }
+  }
+}   %**********************************
+
+musicAllegroB = {
+  <<
+    \tag #'score \tag #'v1 \new Staff { << \globalAllegroB \oneAllegroBVoice >> }
+    \tag #'score \tag #'v2 \new Staff { << \globalAllegroB \twoAllegroBVoice>> }
+    \tag #'score \tag #'v3 \new Staff { << \globalAllegroB \threeAllegroBVoice>> }
+    \tag #'score \tag #'v4 \new Staff { << \globalAllegroB \fourAllegroBVoice>> }
+  >>
+}
+
+%**********************************
+%**********************************
 
 %%% Local Variables:
 %%% LilyPond-master-file: "bachJS_sonataGmoll_oboeQuartet_scoreAndParts.ly"
