@@ -264,10 +264,36 @@ twoAllegro = \relative c'' {
   bes8 r8 g8 f ees d |
   f8 r f ees d c |
   % 103
-  ees
+  ees r r2 |
+  fis16 a d cis d a bes g a fis g e |
+  fis a d cis d a bes g a fis g e |
   % 106
+  fis a d8 r2 |
+  r8 g,16 a b c d ees f ees f d |
+  ees8 r r8 bes bes bes |
+  bes4 r8 d c bes |
   % 110
+  c4 d c |
+  bes4 r4 r4 |
+  r16 g' c, d ees g c, d ees d ees c |
+  d g bes, c d g bes, c d c d bes |
+
   % 114
+  c bes a g a g a bes a bes c d |
+  bes8 r8 r4 r4  |
+  g4 ees g |
+  aes ees aes |
+  % 118
+  a r8 fis g a |
+  bes16 c d ees d c bes d c bes a c |
+  bes c d ees d c bes d c bes a c |
+  bes g' ees c bes4 fis | 
+  % 122 
+  g16 a bes c bes a g bes a g fis a |
+  g16 a bes c bes a g bes a g fis a |
+  g8 d g c16 bes a c bes a |
+  g8. a16 g4 fis |
+  g2 r4 
   
 }   %*********************************
 
@@ -378,11 +404,35 @@ threeAllegro = {
   bes16 g bes d ees g d g c, g' bes, g' |
   a, f a c d f c f bes, f' a, f' |
   % 103
-  g, ees g bes c ees d ees a, ees' g, ees' |
-  fis8 r8 
+  g, ees g bes c ees bes ees a, ees' g, ees' |
+  fis,8 r8 r2 |
+  R1*3/4 |
   % 106
+  r8 d16 e fis g a bes c bes c a |
+  bes d g8 r2 |
+  r8 g, g'2~ |
+  g8 g, g'2~ |
   % 110
+  g4 fis2 |
+  g4 r4 r4 |
+  r4 r8 g ees c |
+  g4 r8 g' d c |
   % 114
+  d4 r2 |
+  bes16 a g a bes d g aes g f ees d |
+  ees g c b c g ees d ees g c, b |
+  c ees aes, g aes c ees d c bes aes g |
+  % 118
+  fis a c ees ees4 d8 c |
+  bes8 r8 r8 bes a a |
+  g8 r8 r8 bes a a |
+  g4 d fis |
+  % 122
+  g16 a bes c bes a g bes a g fis a |
+  g16 a bes c bes a g bes a g fis a |
+  g8 d g c16 bes a c bes a |
+  g8. a16 g4 fis |
+  g2 r4 
   
 }   %*********************************
 
@@ -528,7 +578,7 @@ fourAllegro = {
   c, r8 c' c c |
   bes4 r8 bes bes bes |
   % 114
-  bes4 d d, |
+  a4 d d, |
   g g, g' |
   c, c c |
   c c c |
@@ -546,5 +596,5 @@ fourAllegro = {
 }   %**********************************
 
 %%% Local Variables:
-%%% LilyPond-master-file: "bachJS_sonataGmoll_allegro_oboeQuartet_scoreAndParts.ly"
+%%% LilyPond-master-file: "bachJS_sonataGmoll_oboeQuartet_scoreAndParts.ly"
 %%% End: 
