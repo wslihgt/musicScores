@@ -38,8 +38,19 @@ global = {
   
 globalIElegie = {
   \time 3/4
-  \key g \minor
+  \key c \major
   \tempo 4 = 66
+  
+  s2. * 8
+  s2.^\markup{\huge \circle 1}
+  s2. * 4
+  \time 2/4
+  
+  s2 
+  \time 3/4 
+  s2. * 7 
+  s2.^\markup{\huge \circle 2}
+  
 }
   
 globalIIScherzo = {
