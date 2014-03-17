@@ -64,8 +64,62 @@ globalIIScherzo = {
   
 globalIIIDeploration = {
   \time 3/4
-  \key g \minor
-  \tempo 4 = 100
+  \key c \major
+  \tempo 4 = 56
+  s2. * 2 
+  \time 4/4
+  s1 
+  \time 3/4 
+  s2. * 2 
+  % 5 \circle 1
+  \time 4/4
+  s1^\markup{\circle 1}
+  s1 * 2
+  % 9
+  \time 3/4 
+  s2. * 5
+  \time 2/4 
+  s2 
+  % 15 \circle 2
+  \time 4/4
+  s1^\markup{\circle 2}
+  \time 3/4
+  s2. * 3
+  \time 4/4 
+  s1 
+  \time 2/4
+  s2 
+  % 22 
+  \time 3/4 
+  s2. * 2 
+  % 24 \circle 3
+  s2.^\markup{\circle 3}
+  s2. * 2
+  \time 2/4 
+  s2 
+  \time 4/4 
+  % 27 \circle 4
+  s1^\markup{\circle 4}
+  s1 * 2
+  % 30 
+  s1 * 2
+  \time 2/4
+  s2
+  % 33
+  \time 4/4
+  s1
+  \time 2/4
+  s2
+  % 35 \circle 5
+  \time 4/4
+  s1 
+  \time 3/4
+  s2. 
+  % 37 
+  s2. * 2
+  \time 4/4 
+  s1
+  
 }
 
 oneIElegieVoice = \transpose \originpitch \targetpitchone 
