@@ -112,14 +112,47 @@ globalIIIDeploration = {
   s2
   % 35 \circle 5
   \time 4/4
-  s1 
+  s1^\markup{\circle 5}
   \time 3/4
   s2. 
   % 37 
   s2. * 2
   \time 4/4 
   s1
-  
+  \time 3/4 
+  s2. 
+  % 41 
+  s2. * 2
+  % 43 circle 6
+  s2.^\markup{\circle 6}
+  s2. 
+  % 45
+  s2. * 5 
+  % 50 
+  \breathe 
+  \time 4/4 
+  s1^\markup{\circle 7 Tr`es calme}
+  \tempo 4 = 56
+  s1 * 2 
+  \time 3/4
+  s2.
+  % circle 8
+  \time 4/4 
+  s1^\markup{\circle 8 triste et monotone}
+  % 55
+  \time 3/4
+  s2. 
+  \time 4/4
+  s1
+  \time 3/4
+  s2.
+  \time 4/4
+  s1
+  % 59
+  \time 3/4
+  s2. * 5
+  % 64
+  s2. * 6 \bar "||"
 }
 
 oneIElegieVoice = \transpose \originpitch \targetpitchone 

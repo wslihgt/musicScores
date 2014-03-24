@@ -46,12 +46,53 @@ oneIIIDeploration = \relative c' {
   % 30
   c16 b( c d ees b c d ees4) d8\< dis\! |
   e2\f~ e8. dis32( e f8.) e32( d |
-  e8.) dis32( e eis8.) d32( e |
+  e8.) dis32( e eis8.) d32( eis |
   % 33
   fis8.~) fis64 eis( fis g) fis4~ fis8.. eis64( e dis8..) d64( eis |
   fis8..\ff) eis64( fis g8..) f64( gis |
   % 35 \circle 5
   a4~) a8 r r2 |
+  r4 r4 a,8\p( b |
+  % 37 
+  c4 b8 a g a | 
+  e'2~) e8 r8 |
+  R1 |
+  r4 r4 g,8\p( b |
+  % 41
+  c4 b8 a g a |
+  fes'2\>~) fes8\! r8 |
+  % 43 circle 6
+  aes4~\pp aes8 f16.( aes32 bes8) f16.( bes32 |
+  aes8) f16.( aes32 bes8) f16.( bes32 aes8) r8 |
+  % 45 
+  aes8( g des'4) des,8( ees |
+  fes beses d,4 ees8) r8 |
+  R1 * 3/4 * 3
+  % 50 circle 7
+  f4.\mf( aes8 bes4 aes8 g |
+  f4) bes,8( c g' ees f4) |
+  f2\mf\<( g 4 aes\! |
+  c2\f\>~) c8\! r8 |
+  % 54 circle 8
+  R1 |
+  % 55 
+  R1 * 3/4
+  R1
+  R1 * 3/4
+  fes,4\ppp( ees4. d8 fes d |
+  % 59
+  ees4) d8( fes ees4~) |
+  ees2.~ |
+  ees4~ ees8 r d8\pp( c) |
+  d4( c fes |
+  <<ees2.~) {s2\> s4\!} >> |
+  % 64
+  ees4\ppp~ ees8 r d\ppp( c |
+  d4 c fes |
+  ees2.~) |
+  ees~ |
+  ees\fermata ~ |
+  ees8 r8 r4 r4
 }   %*********************************
 
 twoIIIDeploration = \relative c' { 
@@ -62,8 +103,31 @@ twoIIIDeploration = \relative c' {
   ees,2.~ |
   <<ees2. {s4\> s2\!} >>|
   % 6 \circle 1
-  ges1~ |
-  ges1
+  ces'1~ |
+  ces1 |
+  ces2.\mf\< ees4\f\! |
+  ces2. |
+  % 10
+  ces2.\pp~ |
+  ces2.~ |
+  ces2. | 
+  \acciaccatura{ces8} ces2\mf\< ees4\! |
+  ces4\f~ ces8 r8 |
+  % 15 circle 2
+  c1\f~ |
+  c2. |
+  c2. |
+  ees2. |
+  c1\pp - "subito"~ |
+  c2 |
+  % 21 
+  c2 ees4 |
+  c2~ c8 r |
+  % 23 circle 3
+  b2 d4 |
+  b2 d4 |
+  d2 b4 |
+  e2 
 }   %*********************************
 
 threeIIIDeploration = \relative c' { 
@@ -74,6 +138,31 @@ threeIIIDeploration = \relative c' {
   bes,2\mf( aes4 |
   des,\> ees2\!) |
   % 6 \circle 1
+  ges'1\pp~ |
+  ges1 |
+  ges2.\mf\< ces,4\f\! |
+  fes2. |
+  % 10
+  ges2.\pp~ |
+  ges2.~ |
+  ges2. | 
+  ges2\mf\< ces,4\! |
+  f4\f~ f8 r |
+  % 15 circle 2
+  ees1\f~ |
+  ees2. |
+  ees2. |
+  aes2. |
+  ees1\pp - "subito"~ |
+  ees2 |
+  % 21 
+  ees2 g4 |
+  ees2~ ees8 r|
+  % 23 circle 3 
+  d2\mf g4 |
+  d2 g4 |
+  e2 d4 | 
+  cis2
 }   %*********************************
 
 fourIIIDeploration = \relative c' { 
@@ -89,11 +178,26 @@ fourIIIDeploration = \relative c' {
   << aes1 {s2.\mf\< s4\!\f}>>  |
   des,2. |
   % 10
-  aes'2.~ |
+  aes'2.\pp~ |
   aes~ |
   aes |
   << aes2. {s2\mf\< s4\!}>> |
   g4\f~ g8 r8 |
+  % 15 circle 2
+  c,1~ |
+  c2. |
+  c2. |
+  f2. |
+  c1~ |
+  c2 |
+  % 21 
+  c2. |
+  b2~ b8 r8 |
+  % 23 circle 3 
+  e2.\mf~ |
+  e2. |
+  e2. |
+  \acciaccatura {disis'8} dis,2 |
 }   %**********************************
 
 %%% Local Variables:

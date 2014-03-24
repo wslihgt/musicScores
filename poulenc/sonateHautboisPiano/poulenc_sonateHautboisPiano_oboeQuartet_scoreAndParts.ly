@@ -13,7 +13,7 @@ midiInstrTwo = "violin"
 midiInstrThr = "violin"
 midiInstrFou = "cello"
 
-clefVThree = G % alto % G % 
+clefVThree = alto % G % 
 
 \include "poulenc_sonateHautboisPiano_notes.ly"
 
