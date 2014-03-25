@@ -45,7 +45,7 @@ oneIIIDeploration = \relative c' {
   d32 r32 b16( c d ees d ees f \appoggiatura{d16[ f]} d8 c~) c4~|
   % 30
   c16 b( c d ees b c d ees4) d8\< dis\! |
-  e2\f~ e8. dis32( e f8.) e32( d |
+  e2\f~ e8. dis32( e f8.) e32( dis |
   e8.) dis32( e eis8.) d32( eis |
   % 33
   fis8.~) fis64 eis( fis g) fis4~ fis8.. eis64( e dis8..) d64( eis |
@@ -103,7 +103,7 @@ twoIIIDeploration = \relative c' {
   ees,2.~ |
   <<ees2. {s4\> s2\!} >>|
   % 6 \circle 1
-  ces'1~ |
+  ces'1\pp~ |
   ces1 |
   ces2.\mf\< ees4\f\! |
   ces2. |
@@ -127,7 +127,25 @@ twoIIIDeploration = \relative c' {
   b2 d4 |
   b2 d4 |
   d2 b4 |
-  e2 
+  e2 |
+  % 27 circle 4
+  aes,8\ppp^\markup{monotone} aes aes aes aes aes aes aes |
+  aes8 aes aes aes aes aes aes aes |
+  aes8 aes aes aes aes aes aes aes |
+  % 30 
+  aes8 aes aes aes aes aes aes\< aes\! |
+  g\mf g g g g g g g |
+  g g eis eis |
+  % 33
+  fis fis fis fis fis fis fis fis |
+  fis fis c' gis |
+  % 35 circle 5
+  a'4.->\ff b8( c4 b8 e |
+  b4\> a\!) e,8\p e |
+  % 37
+  a8[ a] a[ a] e[ e] |
+  a[ a~] a[ a\mf~] a[ a] |
+  <a' c e a>4.->\ff
 }   %*********************************
 
 threeIIIDeploration = \relative c' { 
@@ -162,7 +180,21 @@ threeIIIDeploration = \relative c' {
   d2\mf g4 |
   d2 g4 |
   e2 d4 | 
-  cis2
+  cis2 |
+  % 27 circle 4
+  ces8^\markup{monotone} ces ces ces ces ces ces ces |
+  ces8 ces ces ces ces ces ces ces |
+  ces8 ces ces ces ces ces ces ces |
+  % 30
+  ces8 ces ces ces ces ces ces ces |
+  b8\mf b b b b b b b |
+  b b b b |
+  % 33 
+  a8\mf a a a a a a a |
+  a a d\f c |
+  % 35 circle 5
+  c'8\ff c c g'( e e e g |
+  g\> g e e\!) c,\p c |
 }   %*********************************
 
 fourIIIDeploration = \relative c' { 
@@ -198,6 +230,37 @@ fourIIIDeploration = \relative c' {
   e2. |
   e2. |
   \acciaccatura {disis'8} dis,2 |
+  % 27 circle 4
+  \acciaccatura{g'8} aes,2\ppp \acciaccatura{d8} ees,4 \acciaccatura{g8} aes,4 |
+  \acciaccatura{g''8} aes,2 \acciaccatura{d8} ees,4 \acciaccatura{g8} aes,4 |
+  \acciaccatura{g''8} aes,2 \acciaccatura{d8} ees,4 \acciaccatura{g8} aes,4 |
+  % 30
+  \acciaccatura{g''8} aes,2 \acciaccatura{d8} ees,4 \acciaccatura{g8} aes,4\< \! |
+  \acciaccatura{g'8} e2\f \acciaccatura{g'8} gis,4 \acciaccatura{ais8} b,4 |
+  \acciaccatura{g'8} e4 \acciaccatura{d'8} cis,4 |
+  % 33
+  \acciaccatura{a'} fis2\mf \acciaccatura{eis'8} fis,4 \acciaccatura{bis8} cis,4 |
+  \acciaccatura{a'} fis4 \acciaccatura{fis'8} e,4\f |
+  % 35 circle 5
+  a4.\ff e'8( g[ g] a[ g] |
+  a8\>[ a] c[ c])\! e,\p[ a,] |
+  % 37
+  g'8[ g] a[ b] e,[ a,] |
+  d,4 f'\mf a |
+  a,8\f e'[ e] e( g[ g] a[ g] |
+  a8\>[ a] c[ c\!]) e,[ a,] |
+  % 41
+  a'[ a] a[ b] a[ b] |
+  aes,4\mf\> ges'( aes')\! |
+  % 43 circle 6 
+  c,8\pp[( aes] f[ aes,] f'[ aes]) |
+  c--( aes) ces--( aes) c--( aes) | 
+  % 45
+  des--( aes des aes' des, aes) |
+  des4 c2 |
+  d8--\p( aes f aes,-- f' aes) |
+  c--( aes) ces--( aes) c4 | 
+  c,4 c,2 | 
 }   %**********************************
 
 %%% Local Variables:

@@ -107,7 +107,7 @@ globalIIIDeploration = {
   s2
   % 33
   \time 4/4
-  s1
+  s1^\markup{Presser un peu (tres peu)}
   \time 2/4
   s2
   % 35 \circle 5
