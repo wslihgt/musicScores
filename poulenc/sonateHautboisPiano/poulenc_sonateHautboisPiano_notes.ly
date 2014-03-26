@@ -122,13 +122,14 @@ globalIIIDeploration = {
   \time 3/4 
   s2. 
   % 41 
-  s2. * 2
+  s2. * 2 
+  \breathe
   % 43 circle 6
   s2.^\markup{\circle 6}
   s2. 
   % 45
   s2. * 5 
-  % 50 
+  % 50 circle 7 
   \breathe 
   \time 4/4 
   s1^\markup{\circle 7 Tr`es calme}
