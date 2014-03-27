@@ -217,17 +217,18 @@ fourIElegieVoice  = \transpose \originpitch \targetpitchfou {
   }
 }   %**********************************
 
+% empty music for now
 musicIElegie = {
-  <<
-    \tag #'score \tag #'v1 \new Staff { 
-      << \global \globalIElegie \oneIElegieVoice   >> }
-    \tag #'score \tag #'v2 \new Staff { 
-      << \global \globalIElegie \twoIElegieVoice  >> }
-    \tag #'score \tag #'v3 \new Staff { 
-      << \global \globalIElegie \threeIElegieVoice  >> }
-    \tag #'score \tag #'v4 \new Staff { 
-      << \global \globalIElegie \fourIElegieVoice  >> }
-  >>
+%%%  <<
+%%%    \tag #'score \tag #'v1 \new Staff { 
+%%%      << \global \globalIElegie \oneIElegieVoice   >> }
+%%%    \tag #'score \tag #'v2 \new Staff { 
+%%%      << \global \globalIElegie \twoIElegieVoice  >> }
+%%%    \tag #'score \tag #'v3 \new Staff { 
+%%%      << \global \globalIElegie \threeIElegieVoice  >> }
+%%%    \tag #'score \tag #'v4 \new Staff { 
+%%%      << \global \globalIElegie \fourIElegieVoice  >> }
+%%%  >>
 }
 
 %**********************************

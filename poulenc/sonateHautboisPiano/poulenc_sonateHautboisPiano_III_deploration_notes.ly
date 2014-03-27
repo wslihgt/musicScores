@@ -129,16 +129,16 @@ twoIIIDeploration = \relative c' {
   d2 b4 |
   e2 |
   % 27 circle 4
-  aes,8\ppp aes aes aes aes aes aes aes |
-  aes8 aes aes aes aes aes aes aes |
-  aes8 aes aes aes aes aes aes aes |
+  aes,8\ppp[ aes] aes[ aes] aes[ aes] aes[ aes] |
+  aes8[ aes] aes[ aes] aes[ aes] aes[ aes] |
+  aes8[ aes] aes[ aes] aes[ aes] aes[ aes] |
   % 30 
-  aes8 aes aes aes aes aes aes\< aes\! |
-  g\mf g g g g g g g |
-  g g eis eis |
+  aes8[ aes] aes[ aes] aes[ aes] aes[\< aes\!] |
+  g\mf [ g] g[ g] g[ g] g[ g] |
+  g[ g] eis[ eis] |
   % 33
-  fis fis fis fis fis fis fis fis |
-  fis fis c' gis |
+  fis[ fis] fis[ fis] fis[ fis] fis[ fis] |
+  fis[ fis] c'[ gis] |
   % 35 circle 5
   a'4.->\ff b8( c4 b8 e |
   b4\> a\!) e,8\p e |
@@ -231,7 +231,7 @@ threeIIIDeploration = \relative c' {
   a8[\mf a] a[ a] a[ a] a[ a] |
   a[ a] d[\f c] |
   % 35 circle 5
-  c'8[\ff c] c[ g']( e[ e] e[ g] |
+  c'8\ff c[ c] g'( e[ e] e[ g] |
   g[\> g] e[ e\!]) c,\p c |
   % 37
   e8[ e] e[ e] b[ c] |
@@ -319,8 +319,8 @@ fourIIIDeploration = \relative c' {
   \acciaccatura{g'8} e2\f \acciaccatura{g8} gis4 \acciaccatura{ais,8} b4 |
   \acciaccatura{g8} e4 \acciaccatura{d'8} cis4 |
   % 33
-  \acciaccatura{a} fis2\mf \acciaccatura{eis'8} fis4 \acciaccatura{bis,8} cis4 |
-  \acciaccatura{a} fis4 \acciaccatura{fis'8} e4\f |
+  \acciaccatura{a8} fis2\mf \acciaccatura{eis'8} fis4 \acciaccatura{bis,8} cis4 |
+  \acciaccatura{a8} fis4 \acciaccatura{fis'8} e4\f |
   % 35 circle 5
   a,4.\ff e'8( g[ g] a[ g] |
   a8\>[ a] c[ c])\! e,\p[ a,] |
