@@ -48,7 +48,7 @@ globalAdagio = {
 }
   
 globalAllegroB = {
-  \time 3/4
+  \time 2/4
   \key g \minor
   \tempo 4 = 100
 }
