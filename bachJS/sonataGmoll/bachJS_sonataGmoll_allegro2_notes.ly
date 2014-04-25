@@ -94,8 +94,8 @@ oneAllegroB = \relative c'' {
     % 65
     r16 d f ees d c bes aes |
     g4 r16 g' ees c |
-    d ees f aes g f ees d ees |
-    g, a b c4~ |
+    d ees f aes g f ees d |
+    ees g, a b c4~ |
     c b |
     % 70
     c16 g' aes g f ees d c |
@@ -135,7 +135,31 @@ oneAllegroB = \relative c'' {
     d16 f ees d c bes a g |
     fis8 d r4 |
     R1 * 2/4 |
-    
+    r16 d'' d, e fis e fis a |
+    g fis g bes a c, d c |
+    % 103 
+    bes d d d d d d d |
+    d d d d d d d d |
+    d g g, a b a b d |
+    c b c ees d f, g f |
+    ees8 r r4 |
+    % 108
+    R1 * 2/4 |
+    r16 ees g c c b d f |
+    ees ees, g c c b d f |
+    ees8 c r16 g' g f |
+    % 112 
+    ees8 c r16 ees ees d |
+    c ees ees aes c aes aes g |
+    fis d  d fis g8 c, |
+    bes4 a |
+    g8 d' e fis |
+    % 117 
+    g16 d d ees d c bes a |
+    bes g32 a bes16 g c bes a c |
+    bes8. c16 bes a g fis |
+    g g' ees c a8. g16 |
+    g4. 
   }
 }   %*********************************
 
@@ -258,6 +282,11 @@ fourAllegroB = \relative c {
     bes bes' aes g |
     f f ees d |
     c c' bes a |
+    % 89
+    g4 r8 bes, |
+    c c f f |
+    bes, bes ees ees |
+    a, a d d |
     % 93
     g g, r bes |
     c c f f |
