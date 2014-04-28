@@ -163,7 +163,31 @@ oneAllegroB = \relative c'' {
   }
 }   %*********************************
 
-twoAllegroB = { 
+twoAllegroB = \relative c''{
+  \partial 8
+  \repeat volta 2 {
+    d8 |
+    % 1 
+    g16 fis g d bes a bes g |
+    ees'8 d4 g8~ |
+    g16 fis fis g a ees d c |
+    bes a bes c d8 g |
+    bes,16 g bes d g d bes' g |
+    % 6
+    a f d8 a d |
+    r16 ees, g bes ees bes g' ees |
+    f d bes8 f bes |
+    r16 g' c, d ees c g' ees |
+    d g bes, c d bes g' d |
+    c4 bes |
+    % 12
+    a16 c bes d fis, a g bes |
+    a c bes d fis, a g bes |
+    a8 r r4 |
+    R1 * 2/4 |
+    r16 c,32 d e16 c g' c, c' bes |
+    % 17
+  }
 
 }   %*********************************
 
