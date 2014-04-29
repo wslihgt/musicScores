@@ -10,8 +10,13 @@ midiInstrOne = "oboe"
 midiInstrTwo = "violin"
 midiInstrThr = "violin"
 midiInstrFou = "cello"
+instrumentTransposeOne = c'%\targetpitchone % bes'
+instrumentTransposeTwo = c'%\targetpitchtwo % ees
+instrumentTransposeThree = c'%\targetpitchthr % bes
+instrumentTransposeFour = c'%\targetpitchfou % ees,
 
 clefVThree = G % alto % G % 
+clefVFour = bass
 
 \include "bachJS_sonataGmoll_notes.ly"
 
