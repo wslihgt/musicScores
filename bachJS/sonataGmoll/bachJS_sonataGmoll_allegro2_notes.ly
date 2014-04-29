@@ -187,11 +187,232 @@ twoAllegroB = \relative c''{
     R1 * 2/4 |
     r16 c,32 d e16 c g' c, c' bes |
     % 17
+    a g a bes c bes a g |
+    f8 r r4 |
+    r8 c' f4~ |
+    f16 f ees d ees d ees fis |
+    g4 r |
+    r f16 a d, f |
+    % 23 
+    bes a bes8~ bes16 g c bes | 
+    a bes a g a f d f |
+    g f g8~ g16 e a g |
+    f8 r r4 |
+    R1 * 2/4 |
+    % 28 
+    R1 * 2/4 * 2 |
+    r16 cis16 d e f4~ |
+    f16 e d c bes a g f |
+    e8 r r4 |
+    R1 * 2/4 |
+    % 34
+    R1 * 2/4 * 2 |
+    r16 a' a a a a a a |
+    a a a a a a a a |
+    a d d, e fis e fis a 
+    % 39 
+    g fis g bes a c, d c |
+    bes8 g r4 |
+    R1 * 2/4 |
+    r16 bes d g g fis a c |
+    bes bes, d g g fis a c |
+    % 44 
+    bes8 g r4 |
+    R1 * 2/4 * 4 |
+    r16 d32 e f16 d g f e g |
+    % 50 
+    f8. g16 f e d cis |
+    d8 r r4 |
+    R1 * 2/4 * 2 |
+    r4. 
   }
-
+  \repeat volta 2 {
+    r8 |
+    % 55
+    R1 * 2/4 * 3 |
+    r4 r8 d |
+    g16 fis g d c bes a g |
+    % 60 
+    ees'8 d4 g8~ |
+    g16 fis a g fis ees d c |
+    bes8 r r4 |
+    R1 * 2/4 * 3 |
+    % 66 
+    r16 g a b c4~ |
+    c b |
+    c r |
+    R1 * 2/4 * 4 |
+    % 73
+    r8 b c d |
+    r16 g f ees d c bes aes |
+    % 75 
+    g4 r16 bes' g ees |
+    f g aes c bes aes g f |
+    g8 r r4 |
+    R1 * 2/4 |
+    r16 bes c bes aes g f ees |
+    % 80
+    d16 f ees g f aes g bes |
+    d, f ees g f aes g bes |
+    d,8 r r4 |
+    R1 * 2/4 * 2| 
+    r8 bes ees4~ |
+    ees16 ees d c d c d e |
+    f8 r r4 |
+    R1 * 2/4 * 5 |
+    % 93
+    r16 a, bes c d4~ |
+    d16 g, c bes a4~ |
+    a g~ |
+    g8 a16 g fis4 |
+    g8 r r4 |
+    % 98 
+    R1 * 2/4 |
+    r16 d' d, e fis e fis a |
+    g fis g bes a c, d c |
+    bes8 r r4 |
+    R1 * 2/4 * 7 |
+    % 109
+    r16 g'' g g g g g g  |
+    g g g g g g g g |
+    g g g f ees ees ees d |
+    % 112 
+    c ees ees d c c c bes |
+    aes c c c ees c c bes |
+    a fis fis a d,8 a' |
+    g4 fis |
+    g8 r r4 |
+    % 117
+    R1 * 2/4 |
+    r8 d' e fis |
+    g16 d d ees d c bes a |
+    bes8 g fis8. g16 |
+    g4. 
+  }
 }   %*********************************
 
-threeAllegroB = { 
+threeAllegroB = \relative c''{ 
+  \partial 8 
+  \repeat volta 2 {
+    r8 |
+    %1 
+    R1 * 2/4 * 4 |
+    r16 g bes d g d bes' g |
+    % 6 
+    a f d8 a d |
+    R1 * 2/4 * 2 |
+    r16 g c, d ees c g' ees |
+    d g bes, c d bes g' d |
+    c4 bes |
+    % 12 
+    a8 r8 r4 |
+    R1 * 2/4 |
+    r16 d,32 e fis16 d a' d, d' c |
+    bes a bes c d c bes a |
+    g8 r r4 |
+    % 17
+    R1 * 2/4 |
+    r16 ees' d c d c d e |
+    f8 r8 r4 |
+    R1 * 2/4 | 
+    r8 bes, g'4~ | 
+    g16 g f e f8 r |
+    % 23 
+    R1 * 2/4 * 3 |
+    r16 g f e f g a8~ |
+    a16 d, g f e4~ |
+    % 28
+    e4 d4~ |
+    d8 e16 d cis4 |
+    d8 r r4 |
+    R1 * 2/4 * 3 |
+    % 34 
+    r16 a' a, b cis b cis e |
+    d cis d f e g, a g |
+    f8 r r4 |
+    R1 * 2/4 * 7 |
+    % 44 
+    r4 r16 d' d c |
+    bes8 g r16 bes bes a |
+    g8 e r16 g g f |
+    e8 cis' d e |
+    d4 cis |
+    d8 r r4 |
+    % 50 
+    R1 * 2/4 |
+    r8 a b cis |
+    d16 a a bes a g f e |
+    f8 g16 e cis8. d16 |
+    d4. 
+  }
+  \repeat volta 2 {
+    r8 |
+    % 55
+    R1 * 2/4 |
+    r4 r8 d'8~ |
+    d16 c ees d c ees d c |
+    bes4 r4 |
+    R1 * 2/4 * 3 |
+    % 62 
+    r16 g16 bes32 a g16 d' g, b32 a g16 |
+    c8 c, r4 |
+    r16 f a32 g f16 c' f, a32 g f16 |
+    % 65 
+    bes8 bes, r4 |
+    R1 * 2/4 * 2 |
+    r4 r16 g'' ees c |
+    d ees f aes g f ees d |
+    % 70
+    ees d c bes aes g f ees |
+    d f ees g b, d c ees |
+    d f ees g b, d c ees |
+    d8 r8 r4 |
+    R1 * 2/4 * 3 |
+    % 77 
+    r16 bes' c d ees4~ |
+    ees d |
+    ees8 r r4 |
+    % 80
+    R1 * 2/4 * 2 |
+    r16 c bes c d ees f g |
+    aes8 aes4 g16 f |
+    % 84 
+    g8. aes16 f4 |
+    ees4 r4 |
+    R1 * 2/4 |
+    r8 c8 f4~ |
+    f16 f ees d ees d ees fis |
+    % 89
+    g8 g, r16 f' ees d |
+    ees d ees8~ ees16 c f ees |
+    d ees d c d bes ees d |
+    c bes c8~ c16 a d c |
+    % 93 
+    bes8 r r4 |
+    R1 * 2/4 * 3 |
+    r16 fis g a bes4~ |
+    % 98
+    bes16 a g f ees d' c bes |
+    a8 r r4 |
+    R1 * 2/4 * 3 |
+    % 103 
+    r16 bes, d g g fis a c |
+    bes bes, d g g fis a c |
+    bes8 g r4 |
+    R1 * 2/4 |
+    r16 g' g, a b a b d |
+    % 108
+    c b c ees d f, g f |
+    ees8 r  r4 |
+    R1 * 2/4 * 6 |
+    % 116
+    r16 g32 a bes16 g c bes a c |
+    % 117
+    bes8. c16 bes a g fis |
+    g8 r r4 |
+    R1 * 2/4 * 2 |
+    r4. 
+  }
 
 }   %*********************************
 
