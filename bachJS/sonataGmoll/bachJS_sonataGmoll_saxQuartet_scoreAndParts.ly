@@ -7,6 +7,15 @@ targetpitchthr = a %d
 targetpitchfou = a'
 
 midiInstrOne = "alto sax"
+instrumentTransposeOne = c'%\targetpitchone % bes'
+midiInstrTwo = "soprano sax"
+instrumentTransposeTwo = c'%\targetpitchtwo % ees
+midiInstrThr = "alto sax"
+instrumentTransposeThree = c'%\targetpitchthr % bes
+midiInstrFou = "baritone sax"
+instrumentTransposeFour = c'%\targetpitchfou % ees,
+
+midiInstrOne = "alto sax"
 instrumentTransposeAllegroOne = c'%\targetpitchone % bes'
 midiInstrTwo = "soprano sax"
 instrumentTransposeAllegroTwo = c'%\targetpitchtwo % ees
@@ -45,6 +54,7 @@ midiInstrAllegroBisOne = "soprano sax"
 midiInstrAllegroBisTwo = "alto sax"
 midiInstrAllegroBisThr = "tenor sax"
 midiInstrAllegroBisFou = "baritone sax"
+
 
 clefVThree = G % alto % G % 
 clefVFour = G
