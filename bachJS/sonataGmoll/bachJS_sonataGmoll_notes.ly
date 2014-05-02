@@ -34,34 +34,34 @@
 global = {
   \accidentalStyle "modern-cautionary"
 }
-  
+
 globalAllegro = {
   \time 3/4
   \key g \minor
   \tempo 4 = 100
 }
-  
+
 globalAdagio = {
   \time 9/8
   \key ees \major
   \tempo 4. = 60
 }
-  
+
 globalAllegroB = {
   \time 2/4
   \key g \minor
   \tempo 4 = 100
 }
 
-oneAllegroVoice = \transpose \originpitch \targetpitchone 
+oneAllegroVoice = \transpose \originpitch \targetpitchoneAllegro
   {
     \globalAllegro
 
     \new Voice { 
       \relative c''{
 	\set Staff.instrumentName = #"V1 "
-	\set Staff.midiInstrument = \midiInstrOne
-	\transposition \instrumentTransposeOne
+	\set Staff.midiInstrument = \midiInstrAllegroOne
+	\transposition \instrumentTransposeAllegroOne
 
 	\compressFullBarRests
 	\oneAllegro
@@ -72,14 +72,14 @@ oneAllegroVoice = \transpose \originpitch \targetpitchone
   }
 %*********************************
 
-twoAllegroVoice  = \transpose \originpitch \targetpitchtwo 
+twoAllegroVoice  = \transpose \originpitch \targetpitchtwoAllegro
 {
   \globalAllegro
   \new Voice { 
     \relative c'{
       \set Staff.instrumentName = #"V2 "
-      \set Staff.midiInstrument = \midiInstrTwo
-      \transposition \instrumentTransposeTwo
+      \set Staff.midiInstrument = \midiInstrAllegroTwo
+      \transposition \instrumentTransposeAllegroTwo
       
       \compressFullBarRests
       \twoAllegro
@@ -89,15 +89,15 @@ twoAllegroVoice  = \transpose \originpitch \targetpitchtwo
   }
 }   %*********************************
 
-threeAllegroVoice  = \transpose \originpitch \targetpitchthr 
+threeAllegroVoice  = \transpose \originpitch \targetpitchthrAllegro 
 {
   \globalAllegro
   \new Voice { 
     \relative c' {
       \set Staff.instrumentName = #"V3 "
-      \set Staff.midiInstrument = \midiInstrThr
+      \set Staff.midiInstrument = \midiInstrAllegroThr
 				%\clef bass %alto
-      \transposition \instrumentTransposeThree
+      \transposition \instrumentTransposeAllegroThree
 
       \clef \clefVThree
       
@@ -109,14 +109,14 @@ threeAllegroVoice  = \transpose \originpitch \targetpitchthr
   }
 }   %*********************************
 
-fourAllegroVoice  = \transpose \originpitch \targetpitchfou 
+fourAllegroVoice  = \transpose \originpitch \targetpitchfouAllegro 
 {
   \globalAllegro
   \new Voice { 
     \relative c' {
       \set Staff.instrumentName = #"V4 "
-      \set Staff.midiInstrument = \midiInstrFou
-      \transposition \instrumentTransposeFour
+      \set Staff.midiInstrument = \midiInstrAllegroFou
+      \transposition \instrumentTransposeAllegroFour
 
       \clef \clefVFour %bass 
       
@@ -140,12 +140,12 @@ musicAllegro = {
 %**********************************
 %**********************************
 
-oneAdagioVoice = \transpose \originpitch \targetpitchone {
+oneAdagioVoice = \transpose \originpitch \targetpitchoneAdagio {
   \globalAdagio 
   \new Voice { 
     \relative c''{
       \set Staff.instrumentName = #"V1 "
-      \set Staff.midiInstrument = \midiInstrOne
+      \set Staff.midiInstrument = \midiInstrAdagioOne
       \transposition c'
       
       \compressFullBarRests
@@ -158,12 +158,12 @@ oneAdagioVoice = \transpose \originpitch \targetpitchone {
   }
 }   %*********************************
 
-twoAdagioVoice = \transpose \originpitch \targetpitchtwo {
+twoAdagioVoice = \transpose \originpitch \targetpitchtwoAdagio {
   \globalAdagio 
   \new Voice { 
     \relative c'{
       \set Staff.instrumentName = #"V2 "
-      \set Staff.midiInstrument = \midiInstrTwo
+      \set Staff.midiInstrument = \midiInstrAdagioTwo
       \transposition c'
       
       \compressFullBarRests
@@ -176,12 +176,12 @@ twoAdagioVoice = \transpose \originpitch \targetpitchtwo {
   }
 }   %*********************************
 
-threeAdagioVoice = \transpose \originpitch \targetpitchthr {
+threeAdagioVoice = \transpose \originpitch \targetpitchthrAdagio {
   \globalAdagio 
   \new Voice { 
     \relative c' {
       \set Staff.instrumentName = #"V3 "
-      \set Staff.midiInstrument = \midiInstrThr
+      \set Staff.midiInstrument = \midiInstrAdagioThr
 				%\clef bass %alto
       \transposition c'
       \clef \clefVThree
@@ -196,12 +196,12 @@ threeAdagioVoice = \transpose \originpitch \targetpitchthr {
   }
 }   %*********************************
 
-fourAdagioVoice = \transpose \originpitch \targetpitchfou {
+fourAdagioVoice = \transpose \originpitch \targetpitchfouAdagio {
   \globalAdagio 
   \new Voice { 
     \relative c' {
       \set Staff.instrumentName = #"V4 "
-      \set Staff.midiInstrument = \midiInstrFou
+      \set Staff.midiInstrument = \midiInstrAdagioFou
       \transposition c'
       
       \clef \clefVFour %bass 
@@ -228,12 +228,14 @@ musicAdagio = {
 %**********************************
 %**********************************
 
-oneAllegroBVoice = \transpose \originpitch \targetpitchone 
+oneAllegroBVoice = \transpose \originpitch \targetpitchoneAllegroBis
   {
+    \globalAllegroB 
     \new Voice { 
       \relative c''{
 	\set Staff.instrumentName = #"V1 "
-	\set Staff.midiInstrument = \midiInstrOne
+	\set Staff.midiInstrument = \midiInstrAllegroBisOne
+	\transposition c'
 	
 	\compressFullBarRests
 	\oneAllegroB
@@ -244,11 +246,13 @@ oneAllegroBVoice = \transpose \originpitch \targetpitchone
   }   
 %*********************************
 
-twoAllegroBVoice = \transpose \originpitch \targetpitchtwo {
+twoAllegroBVoice = \transpose \originpitch \targetpitchtwoAllegroBis {
+  \globalAllegroB 
   \new Voice { 
     \relative c'{
       \set Staff.instrumentName = #"V2 "
-      \set Staff.midiInstrument = \midiInstrTwo
+      \set Staff.midiInstrument = \midiInstrAllegroBisTwo
+      \transposition c'
       
       \compressFullBarRests
       \twoAllegroB
@@ -258,11 +262,13 @@ twoAllegroBVoice = \transpose \originpitch \targetpitchtwo {
   }
 }   %*********************************
 
-threeAllegroBVoice = \transpose \originpitch \targetpitchthr {
+threeAllegroBVoice = \transpose \originpitch \targetpitchthrAllegroBis {
+  \globalAllegroB 
   \new Voice { 
     \relative c' {
       \set Staff.instrumentName = #"V3 "
-      \set Staff.midiInstrument = \midiInstrThr
+      \set Staff.midiInstrument = \midiInstrAllegroBisThr
+      \transposition c'
 				%\clef bass %alto
       \clef \clefVThree
       
@@ -274,11 +280,13 @@ threeAllegroBVoice = \transpose \originpitch \targetpitchthr {
   }
 }   %*********************************
 
-fourAllegroBVoice = \transpose \originpitch \targetpitchfou {
+fourAllegroBVoice = \transpose \originpitch \targetpitchfouAllegroBis {
+  \globalAllegroB 
   \new Voice { 
     \relative c' {
       \set Staff.instrumentName = #"V4 "
-      \set Staff.midiInstrument = \midiInstrFou
+      \set Staff.midiInstrument = \midiInstrAllegroBisFou
+      \transposition c'
       \clef \clefVFour 
       
       \compressFullBarRests
@@ -291,10 +299,10 @@ fourAllegroBVoice = \transpose \originpitch \targetpitchfou {
 
 musicAllegroB = {
   <<
-    \tag #'score \tag #'v1 \new Staff { << \global \globalAllegroB \oneAllegroBVoice >> }
-    \tag #'score \tag #'v2 \new Staff { << \global \globalAllegroB \twoAllegroBVoice>> }
-    \tag #'score \tag #'v3 \new Staff { << \global \globalAllegroB \threeAllegroBVoice>> }
-    \tag #'score \tag #'v4 \new Staff { << \global \globalAllegroB \fourAllegroBVoice>> }
+    \tag #'score \tag #'v1 \new Staff { << \global \oneAllegroBVoice >> }
+    \tag #'score \tag #'v2 \new Staff { << \global \twoAllegroBVoice>> }
+    \tag #'score \tag #'v3 \new Staff { << \global \threeAllegroBVoice>> }
+    \tag #'score \tag #'v4 \new Staff { << \global \fourAllegroBVoice>> }
   >>
 }
 
