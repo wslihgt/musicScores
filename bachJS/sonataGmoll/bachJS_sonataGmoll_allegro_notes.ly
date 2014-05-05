@@ -148,20 +148,21 @@ twoAllegro = \relative c'' {
   % 1 
   r16 g bes d g d bes g fis a d c |
   bes16 g bes d g d bes g fis a d c |
-  bes16 g bes d ees8 ees ees ees |
-  r16 ees d c d c bes c d bes ees d |
+  bes8 r8 r2 | 
+  R1 * 3/4 | % bes16 g bes d ees8 ees ees ees |
+  % r16 ees d c d c bes c d bes ees d |
   % 5
-  r16 c a bes c8 c c c |
-  r16 c bes a bes g bes d g d bes g |
+  R1 * 3/4 | % 16 c a bes c8 c c c |
+  r4 r16 g bes d g d bes g |
   ees'16 g, a bes c d ees d c bes a g |
   fis16 a d cis d a bes g a fis g e |
   % 9
   fis16 a d cis d a bes g a fis g e |
   fis16 d a' fis c' a fis' c a' fis d c |
   bes16 g' ees c r16 bes d g r16 a, d fis |
-  r16 g d g bes, d g, bes d, g bes, d |
+  r16 g d g bes, d g, bes d,8 r8  | % d, g bes, d |
   % 13 
-  g,2 c'4 |
+  r2 c'4 |
   bes2 d4 |
   ees d d |
   r16 g, bes d g d bes g fis a d c |
@@ -188,11 +189,11 @@ twoAllegro = \relative c'' {
   g aes g f g f ees d ees d c bes |
   a8 r8 r2 |
   R2. |
-  a16 g f g a bes c bes a g f ees |
+  R1 * 3/4 | % a16 g f g a bes c bes a g f ees |
   % 37 
-  d4 r4 r |
-  R2. |
-  r16 a' bes c d ees f ees d c bes aes |
+  r4 r8 ees'16 c' d, bes' c, a' | % d4 r4 r |
+  bes, c d8 r ees16 c' d, bes' c, a' | % R2. |
+  bes,16 a bes c d ees f ees d c bes aes |
   g4 r2 |
   R2. 
   % 42
@@ -204,11 +205,13 @@ twoAllegro = \relative c'' {
   d bes d f bes f d bes a c f ees |
   % 51
   d8 r8 r4 r |
-  R2. * 3 |
-  r16 bes c d ees f g f ees d c bes |
-  a g f g a bes c bes a g f ees |
-  d bes' g ees r16 d f bes r16 c, ees a |
-  bes2 ees4 |
+  R1 * 3/4 * 2  |
+  r4 r16 bes d f bes f d bes |
+  % 55
+  g'8 r8 r2 | % bes, c d ees f g f ees d c bes |
+  R1 * 3/4 * 2 | % a g f g a bes c bes a g f ees |
+  % d bes' g ees r16 d f bes r16 c, ees a |
+  r2 ees4 |
   % 59
   d2 f4 |
   g f f  |
@@ -238,14 +241,15 @@ twoAllegro = \relative c'' {
   R2. |
   r16 bes, d f bes f d bes r16 bes d bes' |
   % 81
-  R2. |
+   R2. |
   r16 g ees bes r bes ees g r bes, ees g |
   r ees aes, g aes bes c d ees f g f |
   % 84
-  R2. * 3 |
+  R2. * 2 |
+  r16 g, a b c d ees f g ees c bes |
   % 87
-  aes,16 c f e f c aes g aes c f, e |
-  f aes des, c des f aes g f aes des c |
+  aes8 r8 r2 | % c f e f c aes g aes c f, e |
+  r4 r16 f aes g f aes des c |
   b c d f f4 ees8 d |
   % 90
   c16 d ees f ees d c ees d c b d | 
@@ -297,11 +301,20 @@ twoAllegro = \relative c'' {
   
 }   %*********************************
 
-threeAllegro = { 
+threeAllegro = \relative c'' { 
   % 1
-  R2. * 12 |
+  R1 * 3/4 * 2 |
+  r16 g bes d ees8 ees ees ees |
+  r16 ees d c d c bes c d bes ees d |
+  % 5
+  r16 c a bes c8 c c c |
+  r16 c bes a bes8 r8 r4 |
+  R1 * 3/4 * 2 | 
+  % 9
+  R1 * 3/4 * 3 |
+  r2 d,16 g bes, d 
   % 13
-  r2 a'4 |
+  g,2 a'4 |
   g2 g4 |
   c bes a |
   R2. * 2 |
@@ -328,11 +341,11 @@ threeAllegro = {
   R2. |
   r16 c, f e f c d bes c a bes g |
   a c f e f c d bes c a bes g |
-  a16 r8. r4 r4 |
+  a16 g f g a bes c bes a g f ees | % r8. r4 r4 |
   % 37 
-  r4 r8 ees'16 c' d, bes' c, a' |
-  bes, c d8 r ees16 c' d, bes' c, a' |
-  bes,16 r8. r4 r |
+  d4 r4 r | % r4 r8 ees'16 c' d, bes' c, a' |
+  R1 * 3/4 * 2 | %bes, c d8 r ees16 c' d, bes' c, a' |
+  % bes,16 r8. r4 r |
   r4 g'2~ |
   g16 e f g a bes c bes a g f ees |
   %42 
@@ -350,11 +363,12 @@ threeAllegro = {
   r16 bes16 d f g8 g g g |
   r16 g f ees f ees d ees f d g f |
   r16 ees c d ees8 ees ees ees |
-  r16 ees d c d bes d f bes f d bes |
+  r16 ees d c d8 r8 r4 | %  bes d f bes f d bes |
   % 55
-  g'8 r8 r2 |
-  R2. *2 |
-  r2 c,4 |
+  r16 bes c d ees f g f ees d c bes | % g'8 r8 r2 |
+  a g f g a bes c bes a g f ees |
+  d bes' g ees r16 d f bes r16 c, ees a |
+  bes2 c4 | %  r2 c,4 |
   % 59
   bes2 bes4 |
   ees d c |
@@ -387,10 +401,11 @@ threeAllegro = {
   % 84 
   r16 f d aes r aes d f r aes, d f |
   r d g, fis g a b c d ees f d |
-  ees g, a b c d ees f g ees c bes |
+  ees8 r8 r2 | %  g, a b c d ees f g ees c bes |
   % 87 
-  aes8 r r2 | 
-  R2. * 5 | % 90 - 
+  aes,16 c f e f c aes g aes c f, e | % 8 r r2 | 
+  f aes des, c des8 r8 r4 | %  f aes g f aes des c |
+  R2. * 4 | % 90 - 
   r4 g g |
   % 94
   f2. |
@@ -596,5 +611,5 @@ fourAllegro = {
 }   %**********************************
 
 %%% Local Variables:
-%%% LilyPond-master-file: "bachJS_sonataGmoll_oboeQuartet_scoreAndParts.ly"
+%%% LilyPond-master-file: "bachJS_sonataGmoll_saxQuartet_scoreAndParts.ly"
 %%% End: 
