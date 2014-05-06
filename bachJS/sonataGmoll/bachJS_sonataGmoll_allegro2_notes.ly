@@ -172,14 +172,15 @@ twoAllegroB = \relative c''{
     ees'8 d4 g8~ |
     g16 fis fis g a ees d c |
     bes a bes c d8 g |
-    bes,16 g bes d g d bes' g |
+    bes,8 r8 r4 | %  g bes d g d bes' g |
     % 6
-    a f d8 a d |
+    R1 * 2/4 | %a f d8 a d |
     r16 ees, g bes ees bes g' ees |
     f d bes8 f bes |
-    r16 g' c, d ees c g' ees |
-    d g bes, c d bes g' d |
-    c4 bes |
+    % r16 g' c, d ees c g' ees |
+    % d g bes, c d bes g' d |
+    % c4 bes |
+    R1 * 2/4 * 3
     % 12
     a16 c bes d fis, a g bes |
     a c bes d fis, a g bes |
