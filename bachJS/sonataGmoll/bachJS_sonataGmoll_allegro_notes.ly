@@ -465,19 +465,19 @@ fourAllegro = {
   % 9 
   d4 r8 d,8 d d |
   d4 r4 fis |
-  g8 c, d4 d, |
-  g2 r4 |
+  g8 c d4 d, |
+  g,2 r4 |
   % 13 
   g2 d'4 |
-  ees2 b4 |
+  ees2 b'4 |
   c d d,|
-  g bes d |
+  g, bes d |
   g, bes d |
   g, r d' |
   % 19 
-  ees2 b4 |
+  ees2 b'4 |
   c d d,|
-  g r g' |
+  g, r g' |
   c, r c8 ees |
   f4 r f, |
   % 24 
@@ -529,9 +529,9 @@ fourAllegro = {
   bes, d f |
   bes, r4 d |
   % 64
-  ees2 b4 |
+  ees2 b'4 |
   c d d, |
-  g bes d |
+  g, bes d |
   g, bes d |
   % 68
   g r8 g16 f ees f g ees |
@@ -598,16 +598,16 @@ fourAllegro = {
   c, c c |
   c c c |
   % 118
-  d4 r8 d,16 d' e, e' fis, fis' |
-  g4 r8 g8 d' d, |
+  d4 r8 d16 d' e, e' fis, fis' |
+  g,4 r8 g8 d' d, |
   g4 r8 g8 d' d, |
   g8 c d c d d, |
   % 122 
-  g,4 r8 g d' d, |
+  g4 r8 g d' d, |
   g4 r8 g d' d, |
   g8 bes c, c' d fis |
   g8 c, d4 d, |
-  g2 r4 
+  g,2 r4 
 }   %**********************************
 
 %%% Local Variables:
