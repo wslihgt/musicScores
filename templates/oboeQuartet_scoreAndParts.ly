@@ -1,4 +1,4 @@
-
+% TRANSPOSITION and MIDI variables
 originpitch = c %c' %bes'% f % c'
 
 targetpitchone = c
@@ -13,104 +13,122 @@ midiInstrFou = "cello"
 
 clefVThree = alto
 
+% INCLUDE the musical notes (and any variables further used in the books)
 \include "fourVoices_notes.ly"
 
 \paper{
   print-all-headers = "true"
 }
+#(set-global-staff-size 14)
 
-#(set-global-staff-size 20)
-
-\score {
-  \new StaffGroup \keepWithTag #'score \music
-  \layout { 
-    #(layout-set-staff-size 14)}
-  \midi { }
-  \header{instrumentName ="Quartet"}
+% BOOK FOR THE WHOLE SCORE
+% 
+%    add as many bookparts as there are pieces in the music
+\book{
+  \bookOutputSuffix "score"
+  \header {
+    instrumentName = "Title" % ?
+    }
+  #(set-global-staff-size 14)
+  \bookpart{
+    \header{
+      subtitle = "Sub-piece title"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'score \musicPieceOne
+      \layout { 
+	#(layout-set-staff-size 14)}
+      \midi { }
+      \header{
+	instrumentName ="Quartet"
+      }
+    }
+  }
+  % ... other bookparts come here
 }
 
-\pageBreak
-
-% #(set-global-staff-size 20) %14 
-\score {
-  \keepWithTag #'v1 \music
-  \layout { }
-  \header{instrumentName="Oboe/Violin I"}
-}
-
-\pageBreak
-
-% #(set-global-staff-size 20) %14 
-\score {
-  \keepWithTag #'v2 \music
-  \layout { }
-  \header{instrumentName="Violin II"}
-}
-
-\pageBreak
-
-% #(set-global-staff-size 20) %14 
-\score {
-  \keepWithTag #'v3 \music
-  \layout { }
-  \header{instrumentName="Viola"}
-}
-
-
-\pageBreak
-
-% #(set-global-staff-size 20) %14 
-\score {
-  \keepWithTag #'v4 \music
-  \layout { }
-  \header{instrumentName="Cello"}
-}
-
-
-
-
-
-
-%{ Uncomment this block when using separate files
-
-%%%%% vn1.ly
-%%%%% (This is the Violin 1 part file)
-
-\include "piece.ly"
-\score {
-  \keepWithTag #'vn1 \music
-  \layout { }
+% BOOKS FOR EACH INSTRUMENT
+% 
+%    for each instrument, we likewise have a book
+% 
+% TODO: make more automatisms with variables? possible to put more logic?
+% 
+#(set-global-staff-size 20)%
+\book{
+  \bookOutputSuffix "oboe"
+  #(set-global-staff-size 20)%
+  
+  \bookpart{
+    \header{
+      subtitle = "Subpiece title"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v1 \musicPieceOne
+      \header{
+	instrumentName ="Oboe"
+      }
+    }
+  }
+  % ... other bookparts
 }
 
 
-%%%%% vn2.ly
-%%%%% (This is the Violin 2 part file)
-
-\include "piece.ly"
-\score {
-  \keepWithTag #'vn2 \music
-  \layout { }
+#(set-global-staff-size 20)%
+\book{
+  \bookOutputSuffix "violin"
+  #(set-global-staff-size 20)%
+  
+  \bookpart{
+    \header{
+      subtitle = "Subpiece title"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v2 \musicPieceOne
+      \header{
+	instrumentName ="Violin"
+      }
+    }
+  }
+  % ... other bookparts
 }
 
 
-%%%%% vla.ly
-%%%%% (This is the Viola part file)
-
-\include "piece.ly"
-\score {
-  \keepWithTag #'vla \music
-  \layout { }
+#(set-global-staff-size 20)%
+\book{
+  \bookOutputSuffix "alto"
+  #(set-global-staff-size 20)%
+  
+  \bookpart{
+    \header{
+      subtitle = "Subpiece title"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v3 \musicPieceOne
+      \header{
+	instrumentName ="Alto"
+      }
+    }
+  }
+  % ... other bookparts
 }
 
 
-%%%%% vlc.ly
-%%%%% (This is the Cello part file)
-
-\include "piece.ly"
-\score {
-  \keepWithTag #'vlc \music
-  \layout { }
+#(set-global-staff-size 20)%
+\book{
+  \bookOutputSuffix "cello"
+  #(set-global-staff-size 20)%
+  
+  \bookpart{
+    \header{
+      subtitle = "Subpiece title"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v4 \musicPieceOne
+      \header{
+	instrumentName ="Cello"
+      }
+    }
+  }
+  % ... other bookparts
 }
-
-%}
 

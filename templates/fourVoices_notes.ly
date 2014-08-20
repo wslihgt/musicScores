@@ -22,18 +22,22 @@
 % midiInstrThr
 % midiInstrFou
 
-global= {
-  \time 2/2
-  % \key d \minor
-  \tempo 2 = 90
+globalStyle = {
   \accidentalStyle "modern-cautionary"
 }
 
+global = {
+  \time 2/2
+  \tempo 2 = 90
+  \key d \minor 
+}
+
 one = \transpose \originpitch \targetpitchone {\new Voice { 
-  \key d \minor
+  \global
   \relative c''{
   \set Staff.instrumentName = #"V1 "
   \set Staff.midiInstrument = \midiInstrOne
+  \transposition c' % for MIDI files? to be verified
 
 \compressFullBarRests
 R1*4
@@ -41,10 +45,11 @@ R1*4
 \bar "|." }}}   %*********************************
 
 two = \transpose \originpitch \targetpitchtwo {\new Voice { 
-  \key d \minor
+  \global
   \relative c'{
   \set Staff.instrumentName = #"V2 "
   \set Staff.midiInstrument = \midiInstrTwo
+  \transposition c' % for MIDI files? to be verified
 
 \compressFullBarRests
 R1*4
@@ -52,10 +57,12 @@ R1*4
 \bar "|." }}}   %*********************************
 
 three = \transpose \originpitch \targetpitchthr {\new Voice { 
-  \key d \minor
+  \global
   \relative c' {
   \set Staff.instrumentName = #"V3 "
   \set Staff.midiInstrument = \midiInstrThr
+  \transposition c' % for MIDI files? to be verified
+
   %\clef bass %alto
   \clef \clefVThree
 
@@ -65,10 +72,12 @@ R1*4
 \bar "|." }}}   %*********************************
 
 four = \transpose \originpitch \targetpitchfou {\new Voice { 
-  \key d \minor
+  \global
   \relative c' {
   \set Staff.instrumentName = #"V4 "
   \set Staff.midiInstrument = \midiInstrFou
+  \transposition c' % for MIDI files? to be verified
+
   \clef bass 
 
 \compressFullBarRests
@@ -76,12 +85,12 @@ R1*4
 
 \bar "|."}}}   %**********************************
 
-music = {
+musicPieceOne = {
   <<
-    \tag #'score \tag #'v1 \new Staff { << \global \one >> }
-    \tag #'score \tag #'v2 \new Staff { << \global \two>> }
-    \tag #'score \tag #'v3 \new Staff { << \global \three>> }
-    \tag #'score \tag #'v4 \new Staff { << \global \four>> }
+    \tag #'score \tag #'v1 \new Staff { << \globalStyle \one >> }
+    \tag #'score \tag #'v2 \new Staff { << \globalStyle \two>> }
+    \tag #'score \tag #'v3 \new Staff { << \globalStyle \three>> }
+    \tag #'score \tag #'v4 \new Staff { << \globalStyle \four>> }
   >>
 }
 
