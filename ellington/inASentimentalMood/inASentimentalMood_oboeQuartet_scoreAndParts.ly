@@ -1,0 +1,136 @@
+% TRANSPOSITION and MIDI variables
+originpitch = c %c' %bes'% f % c'
+
+targetpitchchord = c
+targetpitchone = c
+targetpitchtwo = c
+targetpitchthr = c
+targetpitchfou = c
+
+midiInstrOne = "oboe"
+midiInstrTwo = "violin"
+midiInstrThr = "viola"
+midiInstrFou = "cello"
+
+clefVThree = alto
+
+% INCLUDE the musical notes (and any variables further used in the books)
+\include "inASentimentalMood_fourVoices_notes.ly"
+
+\paper{
+  print-all-headers = "true"
+}
+#(set-global-staff-size 14)
+
+% BOOK FOR THE WHOLE SCORE
+% 
+%    add as many bookparts as there are pieces in the music
+\book{
+  \bookOutputSuffix "score"
+  \header {
+    title = \pieceTitle
+    instrumentName = \pieceTitle % ?
+    }
+  #(set-global-staff-size 14)
+  \bookpart{
+    \header{
+      subtitle = \pieceOneTitle
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'score \musicPieceOne
+      \layout { 
+	#(layout-set-staff-size 14)}
+      \midi { }
+      \header{
+	instrumentName ="Quartet"
+      }
+    }
+  }
+  % ... other bookparts come here
+}
+
+% BOOKS FOR EACH INSTRUMENT
+% 
+%    for each instrument, we likewise have a book
+% 
+% TODO: make more automatisms with variables? possible to put more logic?
+% 
+#(set-global-staff-size 20)%
+\book{
+  \bookOutputSuffix "oboe"
+  #(set-global-staff-size 20)%
+  
+  \bookpart{
+    \header{
+      subtitle = \pieceOneTitle
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v1 \musicPieceOne
+      \header{
+	instrumentName ="Oboe"
+      }
+    }
+  }
+  % ... other bookparts
+}
+
+
+#(set-global-staff-size 20)%
+\book{
+  \bookOutputSuffix "violin"
+  #(set-global-staff-size 20)%
+  
+  \bookpart{
+    \header{
+      subtitle = \pieceOneTitle
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v2 \musicPieceOne
+      \header{
+	instrumentName ="Violin"
+      }
+    }
+  }
+  % ... other bookparts
+}
+
+
+#(set-global-staff-size 20)%
+\book{
+  \bookOutputSuffix "alto"
+  #(set-global-staff-size 20)%
+  
+  \bookpart{
+    \header{
+      subtitle = \pieceOneTitle
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v3 \musicPieceOne
+      \header{
+	instrumentName ="Alto"
+      }
+    }
+  }
+  % ... other bookparts
+}
+
+
+#(set-global-staff-size 20)%
+\book{
+  \bookOutputSuffix "cello"
+  #(set-global-staff-size 20)%
+  
+  \bookpart{
+    \header{
+      subtitle = \pieceOneTitle
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'v4 \musicPieceOne
+      \header{
+	instrumentName ="Cello"
+      }
+    }
+  }
+  % ... other bookparts
+}
+
