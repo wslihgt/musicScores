@@ -30,7 +30,7 @@ globalStyle = {
   
   % structure of the piece: 
   s1 |
-  \bar "||"
+  % \bar "||"
   {
     s1 * 8
   }
@@ -150,11 +150,27 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   d1 |
   c1 |
   bes1 |
-  a4 r2.  |
-  a4 r4  % alternative
+  a4-. r2.  |
+  a4-- r4  % alternative
   
-  ges8 ges4. | 
+  ges8-. ges4.-- | 
+
+  r8 des'( ees des) c-. bes4.-- |
+  des8( bes des4) des8-. c4.-- |
+  r8 des( ees des) \times 2/3 {ees4-- d-- d-- } |
+  \times 2/3 {des-- bes-- bes-- } \times 2/3 {bes-- aes-- c-- } |
   
+  des2 des |
+  des2 c |
+  bes4 f'8( d c bes g4) |
+  bes4 r2. |
+
+  r4 \times 2/3 {d8( f d} \times 2/3 {f cis f)} r4 |
+  r4 \times 2/3 {b,8( f' b,} \times 2/3 {f' bes, f')} r4 |
+  r4 \times 2/3 {g,8( bes g} \times 2/3 {bes g bes)} r4 |
+  r4 \times 2/3 {g8( bes g} \times 2/3 {bes g bes)} r8 cis8 |
+
+  r8 d8~ d8 b16 b b16 b b b 
 
 }}}   %*********************************
 
@@ -182,6 +198,22 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   
   des8 c4. |
   
+  r8 f aes f ees aes4. |
+  aes8 ges aes4 ges8 aes4. |
+  r8 des, f ges \times 2/3 {aes4 bes aes} |
+  \times 2/3 {g aes g} \times 2/3 {aes ees e} |
+
+  f2 f |
+  ges ges |
+  g4 d8 f g f d f |
+  e4 r2. |
+
+  r4 \times 2/3 {f8 a f} \times 2/3 {a f a} r4 |
+  r4 \times 2/3 {f8 a f} \times 2/3 {a f a} r4 |
+  r4 \times 2/3 {d,8 g d} \times 2/3 {fis d fis} r4 |
+  r4 \times 2/3 {d8 f d} \times 2/3 {e d e} r8 e8 |
+
+  r8 f8~ f8  
 
 }}}   %*********************************
 
@@ -214,9 +246,9 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   des, des bes' bes |
   ees, ees aes aes |
   g g g g |
-  c4 r2. |
+  c,4 r2. |
   
-  d4 d des des |
+  d4 d d des |
   c c ces \times 2/3 {ces8 f, d'} |
   g4 g ges ges |
   f f e \breathe cis8 a |
