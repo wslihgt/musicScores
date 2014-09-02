@@ -26,6 +26,14 @@ globalStyle = {
   \accidentalStyle "modern-cautionary"
 }
 
+structure = {
+  s1^\markup{\circle 1} \breathe |
+  s1 |
+  s1 \breathe |
+  s1
+  \bar "||"
+}
+
 global = {
   \time 2/2
   \tempo 2 = 90
@@ -87,10 +95,10 @@ R1*4
 
 musicPieceOne = {
   <<
-    \tag #'score \tag #'v1 \new Staff { << \globalStyle \one >> }
-    \tag #'score \tag #'v2 \new Staff { << \globalStyle \two>> }
-    \tag #'score \tag #'v3 \new Staff { << \globalStyle \three>> }
-    \tag #'score \tag #'v4 \new Staff { << \globalStyle \four>> }
+    \tag #'score \tag #'v1 \new Staff { << \globalStyle \structure \one >> }
+    \tag #'score \tag #'v2 \new Staff { << \globalStyle \structure \two>> }
+    \tag #'score \tag #'v3 \new Staff { << \globalStyle \structure \three>> }
+    \tag #'score \tag #'v4 \new Staff { << \globalStyle \structure \four>> }
   >>
 }
 
