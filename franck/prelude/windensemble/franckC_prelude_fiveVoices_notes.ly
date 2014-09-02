@@ -142,7 +142,7 @@ structurePieceOne = {
   | %37
   s1 * 9/8 * 6
   | %43
-  s4_\markup\italic "dim." s8 s2.
+  s4_\markup\italic "dim." s8 s2 s8 s16 s16^\breathe
   | %44
   s4.\pp s2.
   | %45
@@ -165,7 +165,7 @@ globalPieceOne = {
 one = \transpose \originpitch \targetpitchone {\new Voice { 
   \globalPieceOne
   \relative do {
-  \set Staff.instrumentName = #"V1 "
+  \set Staff.instrumentName = \labInstrOne
   \set Staff.midiInstrument = \midiInstrOne
   \transposition do' % for MIDI files? to be verified
 
@@ -198,11 +198,11 @@ one = \transpose \originpitch \targetpitchone {\new Voice {
   |%16
   fad8 sol4 fad8 lad4 fad8 si4
   |%17
-  fad8 dod'  r8 r2. 
+  fad8 dod'4 r2. 
   |%18
   fad,8 si4 fad8 dod'4 fad,8 re'4 
   | %19
-  fad,8 mi' r8 r2. %  
+  fad,8 mi'4 r2. %  
   |%20
   fad,8 fad' re si2.
   |%21
@@ -271,7 +271,7 @@ one = \transpose \originpitch \targetpitchone {\new Voice {
 two = \transpose \originpitch \targetpitchtwo {\new Voice { 
   \globalPieceOne
   \relative do {
-  \set Staff.instrumentName = #"V2 "
+  \set Staff.instrumentName = \labInstrTwo
   \set Staff.midiInstrument = \midiInstrTwo
   \transposition do' % for MIDI files? to be verified
 
@@ -356,7 +356,7 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
 three = \transpose \originpitch \targetpitchthr {\new Voice { 
   \globalPieceOne
   \relative do {
-  \set Staff.instrumentName = #"V3 "
+  \set Staff.instrumentName = \labInstrThr
   \set Staff.midiInstrument = \midiInstrThr
   \transposition do' % for MIDI files? to be verified
 
@@ -452,7 +452,7 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
 four = \transpose \originpitch \targetpitchfou {\new Voice { 
   \globalPieceOne
   \relative do' {
-  \set Staff.instrumentName = #"V4 "
+  \set Staff.instrumentName = \labInstrFou
   \set Staff.midiInstrument = \midiInstrFou
   \transposition do' % for MIDI files? to be verified
   
@@ -464,7 +464,7 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   % R1 * 9/8 %  r re fad r mi fad r re fad |
   % | %5
   R1 * 9/8 * 5 % r dod fad r re fad r mi sol|
-  r8  fad si r re, fad si dod re
+  r8  fad (si) r re,( fad si dod re)
   |%7
   r fad, si r re, fad si dod re|
   r8 mid, si' r fad si r dod, sold' 
@@ -537,7 +537,7 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   |%43
   r8 dod fad r re fad r si, fad'
   | %44
-  r dod fad r la, dod fad sold la
+  r dod( fad) r la,( dod fad sold la)
   |%45
   r dod, fad r la, dod fad sold la
   | %46
@@ -557,7 +557,7 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
 five = \transpose \originpitch \targetpitchfiv {\new Voice { 
   \globalPieceOne
   \relative do {
-  \set Staff.instrumentName = #"V5 "
+  \set Staff.instrumentName = \labInstrFiv
   \set Staff.midiInstrument = \midiInstrFiv
   \transposition do' % for MIDI files? to be verified
 
