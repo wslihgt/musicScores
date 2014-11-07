@@ -3,10 +3,7 @@
 
 \version "2.16.0"
 
-\header{
-  title = "Title"
-	composer = "Someone"
-}
+\include "bwv582.ly"
 
 % some things to define in the ..._score.ly file:
 %originpitch = c' %c' %bes'% f % c'
@@ -27,18 +24,18 @@ globalStyle = {
 }
 
 structure = {
-  s1^\markup{\circle 1} \breathe |
-  s1 |
-  s1 \breathe |
-  s1
-  \bar "||"
+%%%  s1^\markup{\circle 1} \breathe |
+%%%  s1 |
+%%%  s1 \breathe |
+%%%  s1
+%%%  \bar "||"
 }
 
-global = {
-  \time 2/2
-  \tempo 2 = 90
-  \key d \minor 
-}
+%%%global = {
+%%%  \time 2/2
+%%%  \tempo 2 = 90
+%%%  \key d \minor 
+%%%}
 
 one = \transpose \originpitch \targetpitchone {\new Voice { 
   \global
@@ -48,7 +45,7 @@ one = \transpose \originpitch \targetpitchone {\new Voice {
   \transposition c' % for MIDI files? to be verified
 
 \compressFullBarRests
-R1*4
+\sopran
 
 \bar "|." }}}   %*********************************
 
@@ -60,8 +57,10 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   \transposition c' % for MIDI files? to be verified
 
 \compressFullBarRests
-R1*4
-
+<<
+\alt
+\altzwei
+>>
 \bar "|." }}}   %*********************************
 
 three = \transpose \originpitch \targetpitchthr {\new Voice { 
@@ -74,8 +73,11 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   %\clef bass %alto
   \clef \clefVThree
 
-\compressFullBarRests
-R1*4
+  \compressFullBarRests
+  <<
+    \tenor
+    \bass
+  >>
 
 \bar "|." }}}   %*********************************
 
@@ -88,8 +90,10 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
 
   \clef bass 
 
-\compressFullBarRests
-R1*4
+  \compressFullBarRests
+  <<
+    \pedal
+  >>
 
 \bar "|."}}}   %**********************************
 
@@ -104,5 +108,5 @@ musicPieceOne = {
 
 
 %%% Local Variables:
-%%% LilyPond-master-file: "oboeQuartet_scoreAndParts.ly"
+%%% LilyPond-master-file: "bachJS_passacagliaBWV582_oboeQuartet_scoreAndParts.ly"
 %%% End: 

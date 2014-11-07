@@ -1,33 +1,6 @@
-﻿\version "2.8.1"
-
-\header {
- mutopiatitle = "Passacaglia"
- mutopiacomposer = "BachJS"
- mutopiaopus = "BWV 582"
- mutopiainstrument = "Organ"
- date = ""
- source = "8656, C. F. Peters, Leipzig"
- style = "Baroque"
- copyright = "Public Domain"
- maintainer = "Urs Metzger"
- maintainerEmail = "urs@ursmetzger.de"
- lastupdated = "2006/Apr/08"
-
- title = "Passacaglia"
- composer = "Johann Sebastian Bach"
- opus = "BWV 582"
- footer = "Mutopia-2006/04/21-741"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
-}
 
 \include "deutsch.ly"
 
-#(set-default-paper-size "a4" 'landscape)
-#(set-global-staff-size 18)
-#(define set-script-property (lambda (script property value)
-   (append! (cdr (assoc script default-script-alist))
-      (list (cons property value)))))
-#(set-script-property "prall" 'avoid-slur 'outside)
 
 adjustSlash = { \once \override TextScript #'extra-offset = #'( -2 . 5 ) }
 halsdown = { \stemDown \tieDown \slurDown }
@@ -49,33 +22,34 @@ scriptdownn = { \once \override Script #'extra-offset = #'(0 . -2.3) }
 scriptdownnn = { \once \override Script #'extra-offset = #'(0 . -3.3) }
 scriptup = { \once \override Script #'extra-offset = #'(0 . 1.3) }
 showBrackets = { \override TupletBracket #'bracket-visibility = ##t }
-showTripletNumber = { \set tupletNumberFormatFunction = #denominator-tuplet-formatter }
-staffdown = { \change Staff = "left" \halsup }
-staffup = { \change Staff = "right" \halsdown }
-std = { \change Staff = "left" }
-stu = { \change Staff = "right" }
+showTripletNumber = {}% \set tupletNumberFormatFunction = #denominator-tuplet-formatter }
+%%%staffdown = { \change Staff = "left" \halsup }
+%%%staffup = { \change Staff = "right" \halsdown }
+%%%std = { \change Staff = "left" }
+%%%stu = { \change Staff = "right" }
 
-triolen = {
-   #(override-auto-beam-setting '(end * * * *) 1 8)
-   #(override-auto-beam-setting '(end * * * *) 2 8)
-   #(override-auto-beam-setting '(end * * * *) 3 8)
-   #(override-auto-beam-setting '(end * * * *) 4 8)
-   #(override-auto-beam-setting '(end * * * *) 5 8)
-   #(override-auto-beam-setting '(end * * * *) 6 8)
-   #(override-auto-beam-setting '(end * * * *) 7 8)
-   #(override-auto-beam-setting '(end * * * *) 8 8)
-}
+triolen = {}
+%%%   #(override-auto-beam-setting '(end * * * *) 1 8)
+%%%   #(override-auto-beam-setting '(end * * * *) 2 8)
+%%%   #(override-auto-beam-setting '(end * * * *) 3 8)
+%%%   #(override-auto-beam-setting '(end * * * *) 4 8)
+%%%   #(override-auto-beam-setting '(end * * * *) 5 8)
+%%%   #(override-auto-beam-setting '(end * * * *) 6 8)
+%%%   #(override-auto-beam-setting '(end * * * *) 7 8)
+%%%   #(override-auto-beam-setting '(end * * * *) 8 8)
+%%%}
 
-duolen = {
-   #(revert-auto-beam-setting '(end * * * *) 1 8)
-   #(revert-auto-beam-setting '(end * * * *) 2 8)
-   #(revert-auto-beam-setting '(end * * * *) 3 8)
-   #(revert-auto-beam-setting '(end * * * *) 4 8)
-   #(revert-auto-beam-setting '(end * * * *) 5 8)
-   #(revert-auto-beam-setting '(end * * * *) 6 8)
-   #(revert-auto-beam-setting '(end * * * *) 7 8)
-   #(revert-auto-beam-setting '(end * * * *) 8 8)
-}
+%%%duolen = {
+%%%   #(revert-auto-beam-setting '(end * * * *) 1 8)
+%%%   #(revert-auto-beam-setting '(end * * * *) 2 8)
+%%%   #(revert-auto-beam-setting '(end * * * *) 3 8)
+%%%   #(revert-auto-beam-setting '(end * * * *) 4 8)
+%%%   #(revert-auto-beam-setting '(end * * * *) 5 8)
+%%%   #(revert-auto-beam-setting '(end * * * *) 6 8)
+%%%   #(revert-auto-beam-setting '(end * * * *) 7 8)
+%%%   #(revert-auto-beam-setting '(end * * * *) 8 8)
+%%%}
+duolen = {}
 
 global = {
    \key c \minor
@@ -85,10 +59,7 @@ global = {
    \override TupletBracket  #'bracket-visibility = #'if-no-beam
 }
 
-sopran = {
-   \new Voice \relative c'' {
-      \global
-      \halsup
+sopran = {{ 
       \partial 4 f4\rest
       \mmrestup R2.
       \mmrestup R2.
@@ -443,10 +414,7 @@ sopran = {
     }
 }
 
-alt = {
-   \new Voice \relative g' {
-      \global
-      \halsdown
+alt = {{ 
       \partial 4 f4\rest
       \mmrestdown R2.
       \mmrestdown R2.
@@ -472,10 +440,10 @@ alt = {
       es4 d g8\rest es~
       %% Takt 20 ======================================================
       es4 d g8\rest h,~
-      h4 c \staffdown as8\rest as~
+      h4 c  as8\rest as~
       as8 g~ g4 as8\rest as~
       as4. as8 g8. f16
-      es4 \staffup c'\rest c\rest                                 % V 3
+      es4  c'\rest c\rest                                 % V 3
       %% Takt 25 ======================================================
       es8\rest d g as b! c
       as4. as8 g f
@@ -572,19 +540,19 @@ alt = {
       g4~ g16 g( f es) d( f es d)
       es4~ es16 es d c h d c h
       %% Takt 110 =====================================================
-      c4~ c16 \staffdown b! as g f as g f
+      c4~ c16 b! as g f as g f
       g4~ g16 g f es d f es d
       es4~ es16 f es d s4                                        % V 14
       s2.*7
       %% Takt 120 =====================================================
-      \staffup s4 c'16 es h8\rest c'16 es h8\rest                % V 15
+      s4 c'16 es h8\rest c'16 es h8\rest                % V 15
       s4 g16 h g8\rest es16 c' h8\rest
       s4 f16 as es8\rest g16 es' g,8\rest
       s4 as16 c g8\rest f16 d' g,8\rest
       s4 g16 h g8\rest d16 d' g,8\rest
       %% Takt 125 =====================================================
       s4 es16 g es8\rest h16 g' es8\rest
-      s4 c16 es c8\rest \staffdown f,16 \staffup d' c8\rest
+      s4 c16 es c8\rest  f,16  d' c8\rest
       s4 g'16 c g8\rest s4
       s4 c16 es h8\rest h8\rest \stemUp \shiftOn g \shiftOff     % V 16
       \override Staff.NoteCollision #'merge-differently-dotted = ##t
@@ -652,14 +620,14 @@ alt = {
       g as g as g as f g es f d es
       %% Takt 185 =====================================================
       c16 g' f g es f d es c d b c
-      \staffdown a8 b c a b \staffup g'
+       a8 b c a b  g'
       g4 c g
       g4 b f~
       f8 g a4 g8 fis
       %% Takt 190 =====================================================
       g16 f! e g fis8 g4 fis8
-      g4 c,\rest \staffdown c
-      \staffup g'2 es4
+      g4 c,\rest  c
+       g'2 es4
       f2 g4
       as2 f4
       %% Takt 195 =====================================================
@@ -793,7 +761,7 @@ alt = {
 
 altzwei = {
    \new Voice \relative es' {
-      \global
+      
       \partial 4 s4
       s2.*127
       s2 es8\rest \shiftOnn es \shiftOff \halsup
@@ -814,10 +782,9 @@ altzwei = {
 
 tenor = {
    \new Voice \relative es' {
-      \global
       \partial 4 r4
       R2.*7
-      r4 r4 r8 \clef treble es~                                   % V 1
+      r4 r4 r8 es~                                   % V 1
       es8 d8~ d4 r8 g~
       %% Takt 10 ======================================================
       g8 f~ f4 r8 h,8~
@@ -832,7 +799,7 @@ tenor = {
       des8 c~ c4 r8 h~
       h8 c~ c4 r8 c~
       %% Takt 20 ======================================================
-      c8. d!16 h4 r8 \clef bass as~
+      c8. d!16 h4 r8 as~
       as8 g~ g4 b,8\rest \halsdown f'~
       f4 es b8\rest es~
       es8 d~ d f es8. d16
@@ -841,21 +808,21 @@ tenor = {
       s2.*5
       %% Takt 30 ======================================================
       s2.
-      \staffup \stemUp \shiftOn \override Stem #'details #'beamed-lengths = #'( 4 )
+       \stemUp \shiftOn \override Stem #'details #'beamed-lengths = #'( 4 )
       b''8\rest as g f es d
       \revert Stem #'beamed-lengths
       c4 s2                                                       % V 4
       s2.*55
       s2 c16 es d c                                              % V 11
-      \halsdown h16 c h \staffdown a g f es d c \staffup b''! as! g
+      \halsdown h16 c h  a g f es d c  b''! as! g
       %% Takt 90 ======================================================
       as16 b as g f es d c h d c h
-      c16 d c b! \staffdown as! g f es d es d c
+      c16 d c b!  as! g f es d es d c
       h16 c h a g a h c h d c h
-      c16 d es f g a h c \staffup d f es d
+      c16 d es f g a h c  d f es d
       es16 g c b! as! g f es d es d c
       %% Takt 95 ======================================================
-      h16 c d es d c h! a \staffdown \stemNeutral g as! g f
+      h16 c d es d c h! a  \stemNeutral g as! g f
       es16 f g as g f es d c es d c                              % V 12
       h8 g r g' as! b!
       c2 des8 c~
@@ -876,16 +843,16 @@ tenor = {
       as!16 c b! as \halsdown es'8 e f4~
       f16 f es d es4 h
       c2~ c8 c,
-      r16 g''h \stu d g es\rest es8\rest \std es,16 g c \stu es  % V 14
-      \std r16 f, as \stu c f c\rest c8\rest \std g16 h \stu es g
+      r16 g''h  d g es\rest es8\rest  es,16 g c  es  % V 14
+       r16 f, as  c f c\rest c8\rest  g16 h  es g
       %% Takt 115 =====================================================
-      \std r16 as, c \stu es as es\rest es8\rest \std f,16 as d \stu f
-      \std r16 g, h d \stu g es\rest es8\rest \std d,16 f b d
-      r16 es, g b \stu es c\rest c8\rest \std h,16 d g h
-      r16 c, es g \stu c as\rest as8\rest \std f,16 c' d f
+       r16 as, c  es as es\rest es8\rest  f,16 as d  f
+       r16 g, h d  g es\rest es8\rest  d,16 f b d
+      r16 es, g b  es c\rest c8\rest  h,16 d g h
+      r16 c, es g  c as\rest as8\rest  f,16 c' d f
       r16 g, c es g r r8 g,16 h d g
       %% Takt 120 =====================================================
-      \stu c8 \staffdown es,16[ g] s2                            % V 15
+       c8  es,16[ g] s2                            % V 15
       a8\rest h16 d s2
       a8\rest as16 c s2
       a8\rest c16 es s2
@@ -894,7 +861,7 @@ tenor = {
       a8\rest g16 c s2
       a8\rest es16 g s2
       a8\rest c16 es s2
-      c8\rest \stu es16 g s4 g,8\rest \halsdown c
+      c8\rest  es16 g s4 g,8\rest \halsdown c
       d,4\rest a'16\rest fis' g d es8 c                           % V 16
       %% Takt 130 =====================================================
       d,4\rest a'16\rest e' f! c~ c8 <d g>
@@ -906,15 +873,15 @@ tenor = {
       d,,4\rest es'16\rest h' c fis, s4
       d,4\rest es'16\rest h' c fis, s4                           % V 17
       \times 2/3 { \triolen \showTripletNumber \tupletDown
-         es16 d c c \staffdown h a
+         es16 d c c  h a
             \once \override TupletBracket #'staff-padding = #-3 g a h
-            \once \override TupletBracket #'staff-padding = #-3 h c d \staffup c d es es f g
+            \once \override TupletBracket #'staff-padding = #-3 h c d  c d es es f g
       \hideTripletNumber f16 g as as g f f es d d es f f g as } g16. f32
       es8[ \times 2/3 { \triolen c'16 b! as] as g f f es d d es f f g as!
       %% Takt 140 =====================================================
       g16 a h h c d d es f f g as as g f \shiftOff f es d }
       g4 g4\rest h,,8\rest g'~
-      \times 2/3 { \triolen g16 f es es d c c \staffdown b! as as g f f es d d c h
+      \times 2/3 { \triolen g16 f es es d c c  b! as as g f f es d d c h
       \stemNeutral h16 a g g a h h c d d es f f g as! g as f
       es16 f d c8*3/2 g16 f es es d c } \duolen c4               % V 18
       %% Takt 145 =====================================================
@@ -927,17 +894,17 @@ tenor = {
       es16 f es d es es f g as8 f
       %% Takt 165 =====================================================
       es16 f es d es4 f16 as! g f
-      \clef bass \halsup es16 f es d c4~ c16 d c h
+      es16 f es d c4~ c16 d c h
       c4~ c16 d c h c d c h
       c4~ c16 as g f << \new Voice { \stemUp c'4 }
                         \new Voice { \stemUp \shiftOn g4 }
                         \new Voice { \stemUp \shiftOnn es4 } >>
-      \clef treble \halsneutral r8 es'( h) h c c        % Thema fugatum
+      r8 es'( h) h c c        % Thema fugatum
       %% Takt 170 =====================================================
       r8 as'( d,) d e e
       r8 f( c) c d d
       r8 es( h) h c c~
-      c16 \clef bass c b! a b4~ b16 b a g
+      c16 c b! a b4~ b16 b a g
       fis16 d g c, d d' c d g, g' f! g
       %% Takt 175 =====================================================
       es16 g es g es f es f d f d f
@@ -961,12 +928,12 @@ tenor = {
       d8 c4 d a8
       h8 c d g, c as!
       g8 es' h h c c
-      \clef treble r8 as' d, d e e
+      r8 as' d, d e e
       r8 f c c d d
       %% Takt 195 =====================================================
       r8 es b b c c
       d8 b r4 r
-      r4 r \clef bass es,4
+      r4 r es,4
       b'2 g4
       as2 b4
       %% Takt 200 =====================================================
@@ -986,7 +953,7 @@ tenor = {
       es16 g f as g b es, g c, es d c
       b8 b' c c d d
       es8 es, f f g g
-      as8\noBeam \clef treble as' d, d e e
+      as8\noBeam  as' d, d e e
       %% Takt 215 =====================================================
       f4 r16 g f g es! as g as
       d,4 r16 f es f d g f g
@@ -994,15 +961,15 @@ tenor = {
       b,4 c d
       es4 d c
       %% Takt 220 =====================================================
-      d4 c \clef bass b16 a g a
+      d4 c  b16 a g a
       b16 d c es d4 d~
       d8 g, c4 fis,
-      g4 \clef treble c8 d es4
+      g4  c8 d es4
       d2.~
       %% Takt 225 =====================================================
       d16 f! es g f g es f g8 c,~
       c16 es d f es f d es f8 b,~
-      b16 d c es d es c d es8 \clef bass a,~
+      b16 d c es d es c d es8  a,~
       a8 c b a g16 b g b
       c16 es c es a, c b d c8 f,~
       %% Takt 230 =====================================================
@@ -1016,12 +983,12 @@ tenor = {
       as2 f4
       g16 b as b r c b c r d c d
       r16 es f es r d c d r h a h
-      c8 r r4 r8 \clef treble f
+      c8 r r4 r8  f
       %% Takt 240 =====================================================
       b,16 d c es d f es g f as! g b
       as8 r r4 r8 d,
       g,16 b a c b d c es d f e g
-      f8 r r \clef bass b,~ b16 c b as!
+      f8 r r  b,~ b16 c b as!
       g16 b as c b4 c16 d b c
       %% Takt 245 =====================================================
       a16 b g a fis4 g16 a fis g
@@ -1034,7 +1001,7 @@ tenor = {
       b8 a4 g fis8
       g4~ g16 b! a g fis8. g16
       g4. a8 h4
-      \clef treble c16 es d f es g f as! g b as g
+       c16 es d f es g f as! g b as g
       %% Takt 255 =====================================================
       as8 e f16 as g b as8 r
       r4 r16 c,b c f, f' es! f
@@ -1046,7 +1013,7 @@ tenor = {
       b8 f g4~ g16 g as g
       f2 es!4~
       es8 d16 es c es d c b4
-      \clef bass r16 c b c a b a b g4
+       r16 c b c a b a b g4
       %% Takt 265 =====================================================
       r16 c b c a b a b g4
       r16 a g a fis8 g4 fis8
@@ -1066,12 +1033,12 @@ tenor = {
       f16 f es d es8 es'~ es16 es d c
       h16 d c es d4 r16 es d es
       c4 b! b
-      c4 \clef treble f16 g f es d8 c~
+      c4  f16 g f es d8 c~
       %% Takt 275 =====================================================
       c16 h c8~ c16 h c d es g f es
       d4 g8 g es es
       c4 f8 f d d
-      h4 es8 es c c \clef bass
+      h4 es8 es c c 
       a4 d8 d h h
       %% Takt 280 =====================================================
       g4 c8 c as! as
@@ -1080,14 +1047,14 @@ tenor = {
       g4 r8 h c c
       h4 r8 h c es
       %% Takt 285 =====================================================
-      des8\fermata r r \clef treble d es4
+      des8\fermata r r  d es4
       c2 h4
       c8 d e g f f
       g4 r8 c, c c
       c4 r8 e f f
       %% Takt 290 =====================================================
       e4 d'16\rest e, d! e~ e8 f
-      f'4\rest \clef bass c,4\rest e8\rest c16\rest \stemUp h
+      f'4\rest  c,4\rest e8\rest c16\rest \stemUp h
       << \new Voice { \stemUp c2. }
          \new Voice { \stemUp \shiftOn g2. } >>
   }
@@ -1095,7 +1062,6 @@ tenor = {
 
 bass = {
    \new Voice \relative g {
-      \global
       \partial 4 s4
       s2.*23
       s4 r8 g   c d                                               % V 3
@@ -1121,29 +1087,29 @@ bass = {
       es4 r8 g'16 g, c4                                           % V 5
       h4 r8 h16 g c4~
       c4 r8 d16 a h4
-      c4 \clef treble r8 c'16 c, f4
-      d4 \clef bass r8 d16 d, g8 d'
+      c4  r8 c'16 c, f4
+      d4  r8 d16 d, g8 d'
       %% Takt 45 ======================================================
       c4 r8 g'16 g, c8 h16( d)
-      c4 \clef treble r8 c'16 c, f8. es16
+      c4  r8 c'16 c, f8. es16
       d4 r4 r8 g16 d
       es16 g, a h c8. d16 es4                                     % V 6
       r16 d es f g2
       %% Takt 50 ======================================================
       r16 c, d es f8. es16 d8 f
       es16 c d es f8. g16 as8 f
-      \clef bass d16 d, es f g8. a16 h!4
+       d16 d, es f g8. a16 h!4
       r16 g a h c4 d
       r16 g, a h c2~
       %% Takt 55 ======================================================
       c4~ c16 c h a h4
       c4 r r16 g f es                                             % V 7
-      d4 r \clef treble r16 f' es d
+      d4 r  r16 f' es d
       c4 r16 g' f es d f es d
       c4 r16 g' f es d es d c
       %% Takt 60 ======================================================
       h4 r r16 as'! g f
-      g4 r \clef bass d16 c h a
+      g4 r  d16 c h a
       g4 r r16 es' d c
       h4 r r16 as g f
       es16 c b! as g f es d c es'' d c                            % V 8
@@ -1152,9 +1118,9 @@ bass = {
       as!8. b!16 c4 r16 g a h
       c16 des c b! as c d es f g f es
       d4~ d16 es d c h c h a
-      g4 \clef treble r16 c d es f as! g f
+      g4  r16 c d es f as! g f
       %% Takt 70 ======================================================
-      es4 \clef bass r16 es, f g as4
+      es4  r16 es, f g as4
       g8 a16 h c c, d es f as! g f
       es8 c r16 g' h g c4\mordent                                 % V 9
       h4 r16 g h g c4
@@ -1203,10 +1169,10 @@ bass = {
       s2.*3
       %% Takt 140 =====================================================
       s2.*4
-      s2 \staffup es4~                                           % V 18
+      s2  es4~                                           % V 18
       %% Takt 145 =====================================================
       es8 d16 c d8 es16 f g4~
-      g8 f16 es f8 g16 as \std \tieNeutral d,4~
+      g8 f16 es f8 g16 as  \tieNeutral d,4~
       d8 c~ c4 r8 d
       \appoggiatura c16 h8 c16 h c8 d16 es h!4~
       h8 c16 d es4 r8 d
@@ -1223,7 +1189,7 @@ bass = {
       d4 c2
       h4 c d8 g,~
       %% Takt 160 =====================================================
-      g4~ g16 as g f es8 \clef treble \halsdown c'~              % V 20
+      g4~ g16 as g f es8  \halsdown c'~              % V 20
       c16 d c h c4~ c16 d c h
       c4~ c16 d c h c4~
       c16 d c h c4~ c16 d c h
@@ -1244,7 +1210,7 @@ bass = {
 }
 
 right = {
-   \clef treble
+   
    <<
       \sopran
       \alt
@@ -1253,7 +1219,6 @@ right = {
 }
 
 left = {
-   \clef bass
    <<
       \tenor
       \bass
@@ -1262,8 +1227,6 @@ left = {
 
 pedal = {
    \new Voice  \relative c {
-      \global
-      \clef bass
       \partial 4 c4
       g'2 es4
       f2 g4
@@ -1558,78 +1521,3 @@ pedal = {
    }
 }
 
-\score {
-   <<
-      \new PianoStaff %{
-      \with {
-      \override VerticalAlignment #'forced-distance = #9
-      }
-      %}
-      {
-         \set PianoStaff.instrument = \markup { \large "Manual." }
-         <<
-            \context Staff = right {
-               \context Voice = right \right
-            }
-            \context Staff = left {
-               \context Voice = left \left
-            }
-         >>
-      }
-      \context Staff = pedal {
-         \set Staff.instrument = \markup { \large "Pedal." \hspace #1.8 }
-         \context Voice = pedal \pedal
-      }
-   >>
-
-   \layout{
-   }
-}
-
-\score {
-   <<
-      \new Staff = right {
-         \set Staff.midiInstrument = "pan flute"
-         \right
-      }
-      \new Staff {
-         \set Staff.midiInstrument = "recorder"
-         \transpose c c' \right
-      }
-
-      \new Staff = left {
-         \set Staff.midiInstrument = "pan flute"
-         \context Voice = left \left
-      }
-      \new Staff {
-         \set Staff.midiInstrument = "recorder"
-         \transpose c c' \left
-      }
-
-      \new Staff {
-         \set Staff.midiInstrument = "pan flute"
-         \pedal
-      }
-      \new Staff {
-         \set Staff.midiInstrument = "recorder"
-         \transpose c c, \pedal
-      }
-      \new Staff {
-         \set Staff.midiInstrument = "recorder"
-         \transpose c c' \pedal
-      }
-      \new Staff { % tempo staff
-         \partial 4 s4
-         s2.*167
-         s4 \tempo 4 = 66 s4 \tempo 4 = 50 s4
-         \tempo 4 = 72 s2.*115
-         s2 s8 \tempo 4 = 64 s8
-         \tempo 8 = 30 s8 \tempo 4 = 72 s8 s2
-         s2.*4
-         s4 \tempo 4 = 68 s2
-         \tempo 4 = 44 s2 s8. \tempo 4 = 32 s16
-         s2.
-      }
-   >>
-   \midi{ \tempo 4 = 72 }
-}
