@@ -61,14 +61,14 @@ global = {
 
 sopran = {{ 
       \partial 4 f4\rest
-      \mmrestup R2.
-      \mmrestup R2.
-      \mmrestup R2.
-      \mmrestup R2.
+       R1*2.
+       R1*2.
+       R1*2.
+       R1*2.
       %% Takt  5 ======================================================
-      \mmrestup R2.
-      \mmrestup R2.
-      \mmrestup R2.
+       R1*2.
+       R1*2.
+       R1*2.
       f4\rest f4\rest f8\rest c~                                  % V 1
       c8. d16 h4 f'8\rest es~
       %% Takt 10 ======================================================
@@ -228,11 +228,11 @@ sopran = {{
       \hideTripletNumber as16 g f f es d d es f f g as } h,4\prall
       \times 2/3 { \triolen c'16 b! as as g f f es d d es f f g a a h c }
       %% Takt 140 =====================================================
-      h8.*10/9 [ a16*2/3] h8 c\rest c,,\rest \stemDown \shiftOff h
-      \times 2/3 { \shiftOff \triolen c16 d es es f g g a h h c d d es f \stemUp es f d
+      h8.*10/9 [ a16*2/3] h8 c\rest c,,\rest  \shiftOff h
+      \times 2/3 { \shiftOff \triolen c16 d es es f g g a h h c d d es f  es f d
       es8*3/2 g16 f es es d c \stemNeutral c' b as as g f f es d
       d16 c h h c d d es f f g as } h,!8.*10/9\prall c16*2/3
-      c8 \times 2/3 { \triolen g16 f es es[ d c] } \duolen c8 \stemUp c'4~ % V 18
+      c8 \times 2/3 { \triolen g16 f es es[ d c] } \duolen c8  c'4~ % V 18
       %% Takt 145 =====================================================
       c8 h16 a h8 c16 d es4~
       es8 d16 c d8 es16 f h,4~
@@ -262,11 +262,11 @@ sopran = {{
       g16 as g f es4~ es16 f es d
       es4~ es16 f es d es f es d
       c16 d c h c h c d es4 \bar "||"
-      \mmrestup R2.                                     % Thema fugatum
+       R2.                                     % Thema fugatum
       %% Takt 170 =====================================================
-      \mmrestup R2.
-      \mmrestup R2.
-      \mmrestup R2.
+       R2.
+       R2.
+       R2.
       d4\rest d\rest g,
       d'2 b4
       %% Takt 175 =====================================================
@@ -330,29 +330,29 @@ sopran = {{
       c16 es d f es g fis a g b a g
       fis16 a g b a8 d, f4\rest
       %% Takt 225 =====================================================
-      \mmrestup R2.
-      \mmrestup R2.
-      \mmrestup R2.
-      \mmrestup R2.
-      \mmrestup R2.
+       R2.
+       R2.
+       R2.
+       R2.
+       R2.
       %% Takt 230 =====================================================
-      \mmrestup R2.
-      \mmrestup R2.
-      \mmrestup R2.
-      \mmrestup R2.
-      \mmrestup R2.
+       R2.
+       R2.
+       R2.
+       R2.
+       R2.
       %% Takt 235 =====================================================
-      \mmrestup R2.
-      \mmrestup R2.
-      \mmrestup R2.
-      \mmrestup R2.
-      \mmrestup R2.
+       R2.
+       R2.
+       R2.
+       R2.
+       R2.
       %% Takt 240 =====================================================
-      \mmrestuppp R2.
-      \mmrestupp R2.
-      \mmrestupp R2.
-      \mmrestupp R2.
-      \mmrestup R2.
+       R2.
+       R2.
+       R2.
+       R2.
+       R2.
       %% Takt 245 =====================================================
       f4\rest f\rest g,
       d'2 b4
@@ -381,10 +381,10 @@ sopran = {{
       f'16\rest a, g a fis4 d'16\rest g, f g
       es4 d h'16\rest d, c d~
       d8 d'\rest f4\rest f\rest
-      \mmrestup R2.
-      \mmrestup R2.
+       R2.
+       R2.
       %% Takt 270 =====================================================
-      \mmrestup R2.
+       R2.
       f4\rest f\rest c
       g'2 es4
       f2 g4
@@ -416,14 +416,14 @@ sopran = {{
 
 alt = {{ 
       \partial 4 f4\rest
-      \mmrestdown R2.
-      \mmrestdown R2.
-      \mmrestdown R2.
-      \mmrestdown R2.
+       R2.
+       R2.
+       R2.
+       R2.
       %% Takt  5 ======================================================
-      \mmrestdown R2.
-      \mmrestdown R2.
-      \mmrestdown R2.
+       R2.
+       R2.
+       R2.
       f4\rest f\rest g8\rest g~                                   % V 1
       g4 g g8\rest c~
       %% Takt 10 ======================================================
@@ -554,25 +554,25 @@ alt = {{
       s4 es16 g es8\rest h16 g' es8\rest
       s4 c16 es c8\rest  f,16  d' c8\rest
       s4 g'16 c g8\rest s4
-      s4 c16 es h8\rest h8\rest \stemUp \shiftOn g \shiftOff     % V 16
+      s4 c16 es h8\rest h8\rest  \shiftOn g \shiftOff     % V 16
       \override Staff.NoteCollision #'merge-differently-dotted = ##t
-      \halsdown d'16\rest c d a \halsup h4~ \noflag h8\noBeam \noflag g8
+       d'16\rest c d a \halsup h4~ \noflag h8\noBeam \noflag g8
       %% Takt 130 =====================================================
-      \halsdown d'16\rest b! c g \halsup as!4 g4*1/2 s8
-      \halsdown d'16\rest d es h \halsup c4~ c4*1/2 s8
-      \halsdown d16\rest c d a \halsup h4~ h4*1/2 s8
-      \halsdown d16\rest fis g d \halsup es4 s4
-      \halsdown d16\rest f g d \halsup es4~ es4*1/2 s8
+       d'16\rest b! c g \halsup as!4 g4*1/2 s8
+       d'16\rest d es h \halsup c4~ c4*1/2 s8
+       d16\rest c d a \halsup h4~ h4*1/2 s8
+       d16\rest fis g d \halsup es4 s4
+       d16\rest f g d \halsup es4~ es4*1/2 s8
       %% Takt 135 =====================================================
-      \halsdown d16\rest f g d \halsup es4 s4
-      \halsdown d16\rest f g d \halsup es4~ \shiftOn es8 s       % V 17
+       d16\rest f g d \halsup es4 s4
+       d16\rest f g d \halsup es4~ \shiftOn es8 s       % V 17
       s2.*3
       %% Takt 140 =====================================================
       s2.*4
       s2 g,4~                                                    % V 18
       %% Takt 145 =====================================================
       g2 h8\rest c
-      \appoggiatura b!16 as!2 e8\rest \halsdown g
+      \appoggiatura b!16 as!2 e8\rest  g
       f8 es16 d es8 f16 g as4
       g2 g8\rest f
       g4. f16 g as4~
@@ -599,7 +599,7 @@ alt = {{
       c4~ c16 d c b! as4
       g16 as g f g8. as16 g as g f
       es f es d es d es f g4 \bar "||"
-      \halsdown g2^\markup { \italic "Thema fugatum" } es4 % Thema fugatum
+       g2^\markup { \italic "Thema fugatum" } es4 % Thema fugatum
       %% Takt 170 =====================================================
       f2 g4
       as2 f4
@@ -641,11 +641,11 @@ alt = {{
       g8\rest g d d es es
       g8\rest f c c d d
       es8 b es4 es\rest
-      \mmrestdownn R2.
+      R2.
       %% Takt 205 =====================================================
-      \mmrestdownn R2.
-      \mmrestdownn R2.
-      \mmrestdownn R2.
+      R2.
+       R2.
+       R2.
       es4\rest c\rest b
       f'2 d4
       %% Takt 210 =====================================================
@@ -765,18 +765,18 @@ altzwei = {
       \partial 4 s4
       s2.*127
       s2 es8\rest \shiftOnn es \shiftOff \halsup
-      c4\rest es8\rest g~\noBeam \stemDown g4*1/2 es4*1/2 % hide the beam
+      c4\rest es8\rest g~\noBeam  g4*1/2 es4*1/2 % hide the beam
       %% Takt 130 ===========================================
-      \stemUp c4\rest es8\rest f \stemDown es4*1/2 s8
-      \stemUp c4\rest g'8\rest as~ \stemDown as4*1/2 s8
-      \stemUp c,4\rest es8\rest g s4
+       c4\rest es8\rest f  es4*1/2 s8
+       c4\rest g'8\rest as~  as4*1/2 s8
+       c,4\rest es8\rest g s4
       c,4\rest h'8\rest c8\noBeam g s
-      c,4\rest h'8\rest c~\noBeam \stemDown c4*1/2 s8
+      c,4\rest h'8\rest c~\noBeam  c4*1/2 s8
       %% Takt 135 ===========================================
-      \stemUp c,4\rest h'8\rest \tieDown c~\noBeam \stemDown <g c>8 <g h!>
-      \stemUp c,4\rest h'8\rest c~\noBeam \stemDown <c g>8~ \times 2/3 { g16 f! es }
+       c,4\rest h'8\rest \tieDown c~\noBeam  <g c>8 <g h!>
+       c,4\rest h'8\rest c~\noBeam  <c g>8~ \times 2/3 { g16 f! es }
       s2.*31
-      s4 s8. \stemUp \shiftOn h'!16 c4 \bar "||"
+      s4 s8.  \shiftOn h'!16 c4 \bar "||"
    }
 }
 
@@ -800,7 +800,7 @@ tenor = {
       h8 c~ c4 r8 c~
       %% Takt 20 ======================================================
       c8. d!16 h4 r8 as~
-      as8 g~ g4 b,8\rest \halsdown f'~
+      as8 g~ g4 b,8\rest  f'~
       f4 es b8\rest es~
       es8 d~ d f es8. d16
       es4 s2                                                      % V 3
@@ -808,13 +808,13 @@ tenor = {
       s2.*5
       %% Takt 30 ======================================================
       s2.
-       \stemUp \shiftOn \override Stem #'details #'beamed-lengths = #'( 4 )
+        \shiftOn \override Stem #'details #'beamed-lengths = #'( 4 )
       b''8\rest as g f es d
       \revert Stem #'beamed-lengths
       c4 s2                                                       % V 4
       s2.*55
       s2 c16 es d c                                              % V 11
-      \halsdown h16 c h  a g f es d c  b''! as! g
+       h16 c h  a g f es d c  b''! as! g
       %% Takt 90 ======================================================
       as16 b as g f es d c h d c h
       c16 d c b!  as! g f es d es d c
@@ -840,7 +840,7 @@ tenor = {
       g16( as g f) es8 d16 c h4\prall
       c16 es d c g'4. g,8
       %% Takt 110 =====================================================
-      as!16 c b! as \halsdown es'8 e f4~
+      as!16 c b! as  es'8 e f4~
       f16 f es d es4 h
       c2~ c8 c,
       r16 g''h  d g es\rest es8\rest  es,16 g c  es  % V 14
@@ -861,7 +861,7 @@ tenor = {
       a8\rest g16 c s2
       a8\rest es16 g s2
       a8\rest c16 es s2
-      c8\rest  es16 g s4 g,8\rest \halsdown c
+      c8\rest  es16 g s4 g,8\rest  c
       d,4\rest a'16\rest fis' g d es8 c                           % V 16
       %% Takt 130 =====================================================
       d,4\rest a'16\rest e' f! c~ c8 <d g>
@@ -896,9 +896,9 @@ tenor = {
       es16 f es d es4 f16 as! g f
       es16 f es d c4~ c16 d c h
       c4~ c16 d c h c d c h
-      c4~ c16 as g f << \new Voice { \stemUp c'4 }
-                        \new Voice { \stemUp \shiftOn g4 }
-                        \new Voice { \stemUp \shiftOnn es4 } >>
+      c4~ c16 as g f << \new Voice {  c'4 }
+                        \new Voice {  \shiftOn g4 }
+                        \new Voice {  \shiftOnn es4 } >>
       r8 es'( h) h c c        % Thema fugatum
       %% Takt 170 =====================================================
       r8 as'( d,) d e e
@@ -1054,9 +1054,9 @@ tenor = {
       c4 r8 e f f
       %% Takt 290 =====================================================
       e4 d'16\rest e, d! e~ e8 f
-      f'4\rest  c,4\rest e8\rest c16\rest \stemUp h
-      << \new Voice { \stemUp c2. }
-         \new Voice { \stemUp \shiftOn g2. } >>
+      f'4\rest  c,4\rest e8\rest c16\rest  h
+      << \new Voice {  c2. }
+         \new Voice {  \shiftOn g2. } >>
   }
 }
 
@@ -1146,7 +1146,7 @@ bass = {
       %% Takt 90 ======================================================
       s2.*30
       %% Takt 120 =====================================================
-      \stemDown c,,16 c' g8\rest s2                              % V 15
+       c,,16 c' g8\rest s2                              % V 15
       g16 g' d8\rest s2
       f,16 f' h,8\rest s2
       as16 as' d,8\rest s2
@@ -1189,7 +1189,7 @@ bass = {
       d4 c2
       h4 c d8 g,~
       %% Takt 160 =====================================================
-      g4~ g16 as g f es8  \halsdown c'~              % V 20
+      g4~ g16 as g f es8   c'~              % V 20
       c16 d c h c4~ c16 d c h
       c4~ c16 d c h c4~
       c16 d c h c4~ c16 d c h
