@@ -61,14 +61,8 @@ global = {
 
 sopran = {{ 
       \partial 4 f4\rest
-       R1*2.
-       R1*2.
-       R1*2.
-       R1*2.
-      %% Takt  5 ======================================================
-       R1*2.
-       R1*2.
-       R1*2.
+       R1*3/4*7
+      %% Takt  8 ======================================================
       f4\rest f4\rest f8\rest c~                                  % V 1
       c8. d16 h4 f'8\rest es~
       %% Takt 10 ======================================================
@@ -214,17 +208,17 @@ sopran = {{
       s4 h,8\rest g16 c h8\rest as16 f'
       s4 f8\rest es16 g h,16\rest d f h
       s4 a8\rest g16 c f,8\rest c                                % V 16
-      a'8\rest d,4.~ d8 c
+      a'16\rest c,16 d8~ d4~ d8 c
       %% Takt 130 =====================================================
-      a'8\rest c,4.~ c8 \shiftOn <h f> \shiftOff
-      a'8\rest es4.~ es8 <c d>
-      a'8\rest d,4.~ d8 <h f'>
-      a'8\rest g4.~ <d g>8 <d f>
-      a'8\rest g4.~ g8 <f d>
+      a'16\rest b,! c8~ c4~ c8 h
+      a'16\rest d, es8~ es4~ es8 d
+      a'16\rest c, d8~ d4~ d8 f
+      r16 fis g8~ g4~ g8 f
+      r16 f g8~ g4~ g8 f
       %% Takt 135 =====================================================
-      a8\rest g4.~ <d g>8 <d f!>
-      a'8\rest g4.~ \times 2/3 { \showTripletNumber \tupletUp \triolen g16 f! es es d c % V 17
-      c16 h a a h c h c d d es f es f g g as! b!
+      r16 f16 g8~ g4~ g8 f!
+      r16 f16 g8~ g4~ \times 2/3 { \showTripletNumber \tupletUp \triolen g16( f! es) es( d c) % V 17
+      c16( h a) a( h c) h( c d) d( es f) es( f g) g( as! b!)
       \hideTripletNumber as16 g f f es d d es f f g as } h,4\prall
       \times 2/3 { \triolen c'16 b! as as g f f es d d es f f g a a h c }
       %% Takt 140 =====================================================
@@ -416,14 +410,7 @@ sopran = {{
 
 alt = {{ 
       \partial 4 f4\rest
-       R2.
-       R2.
-       R2.
-       R2.
-      %% Takt  5 ======================================================
-       R2.
-       R2.
-       R2.
+       R2. * 7
       f4\rest f\rest g8\rest g~                                   % V 1
       g4 g g8\rest c~
       %% Takt 10 ======================================================
@@ -483,7 +470,7 @@ alt = {{
       %% Takt 55 ======================================================
       g2~ g16 as g f
       es4 c16\rest f es d c es d c                                % V 7
-      h4g'16\rest c h a g as g b
+      h4 g'16\rest c h a g as g b
       as4 es4\rest es16\rest as g f
       es4 es\rest es16\rest g f es
       %% Takt 60 ======================================================
@@ -556,16 +543,16 @@ alt = {{
       s4 g'16 c g8\rest s4
       s4 c16 es h8\rest h8\rest  \shiftOn g \shiftOff     % V 16
       \override Staff.NoteCollision #'merge-differently-dotted = ##t
-       d'16\rest c d a \halsup h4~ \noflag h8\noBeam \noflag g8
+       r8. a16 \halsup h4~ \noflag h8\noBeam \noflag g8
       %% Takt 130 =====================================================
-       d'16\rest b! c g \halsup as!4 g4*1/2 s8
-       d'16\rest d es h \halsup c4~ c4*1/2 s8
-       d16\rest c d a \halsup h4~ h4*1/2 s8
-       d16\rest fis g d \halsup es4 s4
-       d16\rest f g d \halsup es4~ es4*1/2 s8
+       r8. g16 \halsup as!4 g8 g8
+       r8. h16 \halsup c4~ c8 c8
+       r8. a16 \halsup h4~ h8 h8
+       r8. d16 \halsup es4 d8 d
+       r8. d16 \halsup es4~ es8 d8
       %% Takt 135 =====================================================
-       d16\rest f g d \halsup es4 s4
-       d16\rest f g d \halsup es4~ \shiftOn es8 s       % V 17
+       r8. d16 \halsup es4 d8 d8
+       r8. d16 \halsup es4~ \shiftOn es8 r8       % V 17
       s2.*3
       %% Takt 140 =====================================================
       s2.*4
@@ -760,24 +747,24 @@ alt = {{
 }
 
 altzwei = {
-   \new Voice \relative es' {
-      
-      \partial 4 s4
-      s2.*127
-      s2 es8\rest \shiftOnn es \shiftOff \halsup
-      c4\rest es8\rest g~\noBeam  g4*1/2 es4*1/2 % hide the beam
-      %% Takt 130 ===========================================
-       c4\rest es8\rest f  es4*1/2 s8
-       c4\rest g'8\rest as~  as4*1/2 s8
-       c,4\rest es8\rest g s4
-      c,4\rest h'8\rest c8\noBeam g s
-      c,4\rest h'8\rest c~\noBeam  c4*1/2 s8
-      %% Takt 135 ===========================================
-       c,4\rest h'8\rest \tieDown c~\noBeam  <g c>8 <g h!>
-       c,4\rest h'8\rest c~\noBeam  <c g>8~ \times 2/3 { g16 f! es }
-      s2.*31
-      s4 s8.  \shiftOn h'!16 c4 \bar "||"
-   }
+%%%   \new Voice \relative es' {
+%%%      
+%%%      \partial 4 s4
+%%%      s2.*127
+%%%      s2 es8\rest \shiftOnn es \shiftOff \halsup
+%%%      c4\rest es8\rest g~\noBeam  g4*1/2 es4*1/2 % hide the beam
+%%%      %% Takt 130 ===========================================
+%%%       c4\rest es8\rest f  es4*1/2 s8
+%%%       c4\rest g'8\rest as~  as4*1/2 s8
+%%%       c,4\rest es8\rest g s4
+%%%      c,4\rest h'8\rest c8\noBeam g s
+%%%      c,4\rest h'8\rest c~\noBeam  c4*1/2 s8
+%%%      %% Takt 135 ===========================================
+%%%       c,4\rest h'8\rest \tieDown c~\noBeam  <g c>8 <g h!>
+%%%       c,4\rest h'8\rest c~\noBeam  <c g>8~ \times 2/3 { g16 f! es }
+%%%      s2.*31
+%%%      s4 s8.  \shiftOn h'!16 c4 \bar "||"
+%%%   }
 }
 
 tenor = {
@@ -862,16 +849,17 @@ tenor = {
       a8\rest es16 g s2
       a8\rest c16 es s2
       c8\rest  es16 g s4 g,8\rest  c
-      d,4\rest a'16\rest fis' g d es8 c                           % V 16
+      r4 r16 fis g8~ g8 es8                           % V 16
       %% Takt 130 =====================================================
-      d,4\rest a'16\rest e' f! c~ c8 <d g>
-      d,4\rest c'16\rest g' as es f8 <f as>
-      d,4\rest a'16\rest fis' g d~ <d f>8 <d f>
-      d,4\rest es'16\rest h' c fis, g8 <d g>
-      d,4\rest es'16\rest h' c g as!8 <as c>
+      r4 r16 e f!8 es8 d
+      r4 r16 g as8~ as as
+      r4 r16 fis g8 f f
+      r4 r16 h c8 g8 g
+      r4 r16 h c8~ c8 c
+
       %% Takt 135 =====================================================
-      d,,4\rest es'16\rest h' c fis, s4
-      d,4\rest es'16\rest h' c fis, s4                           % V 17
+      r4 r16 h c8~  c8 h
+      r4 r16 h c fis, g8~  \times 2/3 { g16 f! es }                         % V 17
       \times 2/3 { \triolen \showTripletNumber \tupletDown
          es16 d c c  h a
             \once \override TupletBracket #'staff-padding = #-3 g a h
@@ -1061,152 +1049,152 @@ tenor = {
 }
 
 bass = {
-   \new Voice \relative g {
-      \partial 4 s4
-      s2.*23
-      s4 r8 g   c d                                               % V 3
-      %% Takt 25 ======================================================
-      h4. c8 des es
-      c8 f d! c h4
-      c8 b! as c f es
-      d4. es8 f4
-      es8 f g4 d
-      %% Takt 30 ======================================================
-      r8 as g f es d
-      es8 f g as g4~
-      g8 c,16 d es8 es16 f g8 c                                   % V 4
-      d8 g,16 a h8 a16 h c4~
-      c8 d16 es f8 f16 es d4
-      %% Takt 35 ======================================================
-      c4 r4 r8 f16 es
-      d8 h16 c d8 d16 es f4
-      g4 r8 g16 f g8 g,
-      c8 es16 d es8 c16 h c8 es,16 d
-      es4 r8 g16 f g8 d
-      %% Takt 40 ======================================================
-      es4 r8 g'16 g, c4                                           % V 5
-      h4 r8 h16 g c4~
-      c4 r8 d16 a h4
-      c4  r8 c'16 c, f4
-      d4  r8 d16 d, g8 d'
-      %% Takt 45 ======================================================
-      c4 r8 g'16 g, c8 h16( d)
-      c4  r8 c'16 c, f8. es16
-      d4 r4 r8 g16 d
-      es16 g, a h c8. d16 es4                                     % V 6
-      r16 d es f g2
-      %% Takt 50 ======================================================
-      r16 c, d es f8. es16 d8 f
-      es16 c d es f8. g16 as8 f
-       d16 d, es f g8. a16 h!4
-      r16 g a h c4 d
-      r16 g, a h c2~
-      %% Takt 55 ======================================================
-      c4~ c16 c h a h4
-      c4 r r16 g f es                                             % V 7
-      d4 r  r16 f' es d
-      c4 r16 g' f es d f es d
-      c4 r16 g' f es d es d c
-      %% Takt 60 ======================================================
-      h4 r r16 as'! g f
-      g4 r  d16 c h a
-      g4 r r16 es' d c
-      h4 r r16 as g f
-      es16 c b! as g f es d c es'' d c                            % V 8
-      %% Takt 65 ======================================================
-      h4~ h16 c h a g es f g
-      as!8. b!16 c4 r16 g a h
-      c16 des c b! as c d es f g f es
-      d4~ d16 es d c h c h a
-      g4  r16 c d es f as! g f
-      %% Takt 70 ======================================================
-      es4  r16 es, f g as4
-      g8 a16 h c c, d es f as! g f
-      es8 c r16 g' h g c4\mordent                                 % V 9
-      h4 r16 g h g c4
-      r16 c es c f2
-      %% Takt 75 ======================================================
-      r4 r16 c es c f4
-      d16 g, h g d' h d h f'4
-      g16 g, h g c4 r
-      r16 g h g c4 r
-      r16 g h g c4~ c8. h16
-      %% Takt 80 ======================================================
-      c4 r es                                                    % V 10
-      d4 r c
-      c4 r g'
-      c,4 r as
-      g4 r f
-      %% Takt 85 ======================================================
-      g4 r g
-      c4 r as
-      g4 r h
-      g4 r r                                                     % V 11
-      s2.
-      %% Takt 90 ======================================================
-      s2.*30
-      %% Takt 120 =====================================================
-       c,,16 c' g8\rest s2                              % V 15
-      g16 g' d8\rest s2
-      f,16 f' h,8\rest s2
-      as16 as' d,8\rest s2
-      g,16 g' d8\rest s2
-      %% Takt 125 =====================================================
-      es,16 es' h8\rest s2
-      c,16 c' g8\rest s2
-      g16 g' d8\rest s4 g16 r16 r8
-      c,16 c' s4. r8 g                                           % V 16
-      r4 r4 r8 g
-      %% Takt 130 =====================================================
-      r4 r4 r8 g
-      r4 r4 r8 d'
-      r4 r4 r8 g,
-      r4 r4 r8 g
-      r4 r4 r8 d'
-      %% Takt 135 =====================================================
-      r4 r4 r8 d
-      r4 r4 c8 r                                                 % V 17
-      s2.*3
-      %% Takt 140 =====================================================
-      s2.*4
-      s2  es4~                                           % V 18
-      %% Takt 145 =====================================================
-      es8 d16 c d8 es16 f g4~
-      g8 f16 es f8 g16 as  \tieNeutral d,4~
-      d8 c~ c4 r8 d
-      \appoggiatura c16 h8 c16 h c8 d16 es h!4~
-      h8 c16 d es4 r8 d
-      %% Takt 150 =====================================================
-      c4. d16 e f4~
-      f8 es!16 d es8 d16 c g'8 f~
-      f8 es16 d es8 es16 d c8 es~                                % V 19
-      es16 f es d es4~ es16 f es d
-      es4~ es16 f es d es4~
-      %% Takt 155 =====================================================
-      es16 f es d es4~ es16 f es d
-      es4~ es16 es d c d4~
-      d16 f es d c4 d~
-      d4 c2
-      h4 c d8 g,~
-      %% Takt 160 =====================================================
-      g4~ g16 as g f es8   c'~              % V 20
-      c16 d c h c4~ c16 d c h
-      c4~ c16 d c h c4~
-      c16 d c h c4~ c16 d c h
-      c4~ c16 c d es f8 f,
-      %% Takt 165 =====================================================
-      c'4~ c16 c h a d4
-      g,4~ g16 b! as g f4
-      es16 f es d es8. f16 g f g as
-      g4~ g16 f es d c4 \bar "||"
-      s2.
-      %% Takt 170 =====================================================
-      s2.*120
-      %% Takt 290 =====================================================
-      a'4\rest c\rest c
-      g'4\rest d,16\rest as' g as~as4
-      c,2._\fermata
-   }
+%%%   \new Voice \relative g {
+%%%      \partial 4 s4
+%%%      s2.*23
+%%%      s4 r8 g   c d                                               % V 3
+%%%      %% Takt 25 ======================================================
+%%%      h4. c8 des es
+%%%      c8 f d! c h4
+%%%      c8 b! as c f es
+%%%      d4. es8 f4
+%%%      es8 f g4 d
+%%%      %% Takt 30 ======================================================
+%%%      r8 as g f es d
+%%%      es8 f g as g4~
+%%%      g8 c,16 d es8 es16 f g8 c                                   % V 4
+%%%      d8 g,16 a h8 a16 h c4~
+%%%      c8 d16 es f8 f16 es d4
+%%%      %% Takt 35 ======================================================
+%%%      c4 r4 r8 f16 es
+%%%      d8 h16 c d8 d16 es f4
+%%%      g4 r8 g16 f g8 g,
+%%%      c8 es16 d es8 c16 h c8 es,16 d
+%%%      es4 r8 g16 f g8 d
+%%%      %% Takt 40 ======================================================
+%%%      es4 r8 g'16 g, c4                                           % V 5
+%%%      h4 r8 h16 g c4~
+%%%      c4 r8 d16 a h4
+%%%      c4  r8 c'16 c, f4
+%%%      d4  r8 d16 d, g8 d'
+%%%      %% Takt 45 ======================================================
+%%%      c4 r8 g'16 g, c8 h16( d)
+%%%      c4  r8 c'16 c, f8. es16
+%%%      d4 r4 r8 g16 d
+%%%      es16 g, a h c8. d16 es4                                     % V 6
+%%%      r16 d es f g2
+%%%      %% Takt 50 ======================================================
+%%%      r16 c, d es f8. es16 d8 f
+%%%      es16 c d es f8. g16 as8 f
+%%%       d16 d, es f g8. a16 h!4
+%%%      r16 g a h c4 d
+%%%      r16 g, a h c2~
+%%%      %% Takt 55 ======================================================
+%%%      c4~ c16 c h a h4
+%%%      c4 r r16 g f es                                             % V 7
+%%%      d4 r  r16 f' es d
+%%%      c4 r16 g' f es d f es d
+%%%      c4 r16 g' f es d es d c
+%%%      %% Takt 60 ======================================================
+%%%      h4 r r16 as'! g f
+%%%      g4 r  d16 c h a
+%%%      g4 r r16 es' d c
+%%%      h4 r r16 as g f
+%%%      es16 c b! as g f es d c es'' d c                            % V 8
+%%%      %% Takt 65 ======================================================
+%%%      h4~ h16 c h a g es f g
+%%%      as!8. b!16 c4 r16 g a h
+%%%      c16 des c b! as c d es f g f es
+%%%      d4~ d16 es d c h c h a
+%%%      g4  r16 c d es f as! g f
+%%%      %% Takt 70 ======================================================
+%%%      es4  r16 es, f g as4
+%%%      g8 a16 h c c, d es f as! g f
+%%%      es8 c r16 g' h g c4\mordent                                 % V 9
+%%%      h4 r16 g h g c4
+%%%      r16 c es c f2
+%%%      %% Takt 75 ======================================================
+%%%      r4 r16 c es c f4
+%%%      d16 g, h g d' h d h f'4
+%%%      g16 g, h g c4 r
+%%%      r16 g h g c4 r
+%%%      r16 g h g c4~ c8. h16
+%%%      %% Takt 80 ======================================================
+%%%      c4 r es                                                    % V 10
+%%%      d4 r c
+%%%      c4 r g'
+%%%      c,4 r as
+%%%      g4 r f
+%%%      %% Takt 85 ======================================================
+%%%      g4 r g
+%%%      c4 r as
+%%%      g4 r h
+%%%      g4 r r                                                     % V 11
+%%%      s2.
+%%%      %% Takt 90 ======================================================
+%%%      s2.*30
+%%%      %% Takt 120 =====================================================
+%%%       c,,16 c' g8\rest s2                              % V 15
+%%%      g16 g' d8\rest s2
+%%%      f,16 f' h,8\rest s2
+%%%      as16 as' d,8\rest s2
+%%%      g,16 g' d8\rest s2
+%%%      %% Takt 125 =====================================================
+%%%      es,16 es' h8\rest s2
+%%%      c,16 c' g8\rest s2
+%%%      g16 g' d8\rest s4 g16 r16 r8
+%%%      c,16 c' s4. r8 g                                           % V 16
+%%%      r4 r4 r8 g
+%%%      %% Takt 130 =====================================================
+%%%      r4 r4 r8 g
+%%%      r4 r4 r8 d'
+%%%      r4 r4 r8 g,
+%%%      r4 r4 r8 g
+%%%      r4 r4 r8 d'
+%%%      %% Takt 135 =====================================================
+%%%      r4 r4 r8 d
+%%%      r4 r4 c8 r                                                 % V 17
+%%%      s2.*3
+%%%      %% Takt 140 =====================================================
+%%%      s2.*4
+%%%      s2  es4~                                           % V 18
+%%%      %% Takt 145 =====================================================
+%%%      es8 d16 c d8 es16 f g4~
+%%%      g8 f16 es f8 g16 as  \tieNeutral d,4~
+%%%      d8 c~ c4 r8 d
+%%%      \appoggiatura c16 h8 c16 h c8 d16 es h!4~
+%%%      h8 c16 d es4 r8 d
+%%%      %% Takt 150 =====================================================
+%%%      c4. d16 e f4~
+%%%      f8 es!16 d es8 d16 c g'8 f~
+%%%      f8 es16 d es8 es16 d c8 es~                                % V 19
+%%%      es16 f es d es4~ es16 f es d
+%%%      es4~ es16 f es d es4~
+%%%      %% Takt 155 =====================================================
+%%%      es16 f es d es4~ es16 f es d
+%%%      es4~ es16 es d c d4~
+%%%      d16 f es d c4 d~
+%%%      d4 c2
+%%%      h4 c d8 g,~
+%%%      %% Takt 160 =====================================================
+%%%      g4~ g16 as g f es8   c'~              % V 20
+%%%      c16 d c h c4~ c16 d c h
+%%%      c4~ c16 d c h c4~
+%%%      c16 d c h c4~ c16 d c h
+%%%      c4~ c16 c d es f8 f,
+%%%      %% Takt 165 =====================================================
+%%%      c'4~ c16 c h a d4
+%%%      g,4~ g16 b! as g f4
+%%%      es16 f es d es8. f16 g f g as
+%%%      g4~ g16 f es d c4 \bar "||"
+%%%      s2.
+%%%      %% Takt 170 =====================================================
+%%%      s2.*120
+%%%      %% Takt 290 =====================================================
+%%%      a'4\rest c\rest c
+%%%      g'4\rest d,16\rest as' g as~as4
+%%%      c,2._\fermata
+%%%   }
 }
 
 right = {
