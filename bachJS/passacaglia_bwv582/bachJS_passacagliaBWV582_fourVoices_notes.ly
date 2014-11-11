@@ -59,7 +59,7 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
 \compressFullBarRests
 <<
 \alt
-\altzwei
+% \altzwei
 >>
 \bar "|." }}}   %*********************************
 
@@ -76,7 +76,7 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   \compressFullBarRests
   <<
     \tenor
-    \bass
+    % \bass
   >>
 
 \bar "|." }}}   %*********************************

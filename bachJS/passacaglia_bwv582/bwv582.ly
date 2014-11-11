@@ -869,7 +869,7 @@ tenor = {
       g4 r g
       c4 r as
       g4 r h
-      g4 c16 es d c                                              % V 11
+      g4 r c16 es d c                                              % V 11
       h16 c h  a g f es d c  b''! as! g
       %% Takt 90 ======================================================
       as16 b as g f es d c h d c h

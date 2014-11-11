@@ -28,18 +28,18 @@
 % TRANSPOSITION and MIDI variables
 originpitch = c %c' %bes'% f % c'
 
-targetpitchone = d
-targetpitchtwo = a
-targetpitchthr = d'
-targetpitchfou = a'
+targetpitchone = c%d
+targetpitchtwo = c%a
+targetpitchthr = c%d'
+targetpitchfou = c%a'
 
-midiInstrOne = "soprano sax"%"oboe"
-midiInstrTwo = "alto sax"%"violin"
-midiInstrThr = "tenor sax"%"viola"
-midiInstrFou = "baritone sax"%"cello"
+midiInstrOne = "oboe"%"soprano sax"%
+midiInstrTwo = "violin"%"alto sax"%"violin"%
+midiInstrThr = "viola"%"tenor sax"%
+midiInstrFou = "cello"%"baritone sax"%
 
-clefVThree = treble %alto
-clefVFour = treble %bass
+clefVThree = alto%treble %
+clefVFour = bass%treble %
 
 % INCLUDE the musical notes (and any variables further used in the books)
 \include "bachJS_passacagliaBWV582_fourVoices_notes.ly"
