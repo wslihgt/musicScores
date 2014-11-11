@@ -88,7 +88,7 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   \set Staff.midiInstrument = \midiInstrFou
   \transposition c' % for MIDI files? to be verified
 
-  \clef bass 
+  \clef \clefVFour 
 
   \compressFullBarRests
   <<

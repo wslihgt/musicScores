@@ -790,18 +790,87 @@ tenor = {
       as8 g~ g4 b,8\rest  f'~
       f4 es b8\rest es~
       es8 d~ d f es8. d16
-      es4 s2                                                      % V 3
+      es4 r8 g   c d % from bass to tenor                         % V 3
       %% Takt 25 ======================================================
-      s2.*5
+      h4. c8 des es 
+      c8 f d! c h4
+      c8 b! as c f es
+      d4. es8 f4
+      es8 f g4 d
       %% Takt 30 ======================================================
-      s2.
+      r8 as g f es d
         \shiftOn \override Stem #'details #'beamed-lengths = #'( 4 )
-      b''8\rest as g f es d
+      c as' g f es d
       \revert Stem #'beamed-lengths
-      c4 s2                                                       % V 4
-      s2.*55
-      s2 c16 es d c                                              % V 11
-       h16 c h  a g f es d c  b''! as! g
+      c8 c16 d es8 es16 f g8 c                                       % V 4
+      d8 g,16 a h8 a16 h c4~
+      c8 d16 es f8 f16 es d4
+      %% Takt 35 ======================================================
+      c4 r4 r8 f16 es
+      d8 h16 c d8 d16 es f4
+      g4 r8 g16 f g8 g,
+      c8 es16 d es8 c16 h c8 es,16 d
+      es4 r8 g16 f g8 d
+      %% Takt 40 ======================================================
+      es4 r8 g'16 g, c4                                           % V 5
+      h4 r8 h16 g c4~
+      c4 r8 d16 a h4
+      c4  r8 c'16 c, f4
+      d4  r8 d16 d, g8 d'
+      %% Takt 45 ======================================================
+      c4 r8 g'16 g, c8 h16( d)
+      c4  r8 c'16 c, f8. es16
+      d4 r4 r8 g16 d
+      es16 g, a h c8. d16 es4                                     % V 6
+      r16 d es f g2
+      %% Takt 50 ======================================================
+      r16 c, d es f8. es16 d8 f
+      es16 c d es f8. g16 as8 f
+       d16 d, es f g8. a16 h!4
+      r16 g a h c4 d
+      r16 g, a h c2~
+      %% Takt 55 ======================================================
+      c4~ c16 c h a h4
+      c4 r r16 g f es                                             % V 7
+      d4 r  r16 f' es d
+      c4 r16 g' f es d f es d
+      c4 r16 g' f es d es d c
+      %% Takt 60 ======================================================
+      h4 r r16 as'! g f
+      g4 r  d16 c h a
+      g4 r r16 es' d c
+      h4 r r16 as g f
+      es16 c b! as g f es d c es'' d c                            % V 8
+      %% Takt 65 ======================================================
+      h4~ h16 c h a g es f g
+      as!8. b!16 c4 r16 g a h
+      c16 des c b! as c d es f g f es
+      d4~ d16 es d c h c h a
+      g4  r16 c d es f as! g f
+      %% Takt 70 ======================================================
+      es4  r16 es, f g as4
+      g8 a16 h c c, d es f as! g f
+      es8 c r16 g' h g c4\mordent                                 % V 9
+      h4 r16 g h g c4
+      r16 c es c f2
+      %% Takt 75 ======================================================
+      r4 r16 c es c f4
+      d16 g, h g d' h d h f'4
+      g16 g, h g c4 r
+      r16 g h g c4 r
+      r16 g h g c4~ c8. h16
+      %% Takt 80 ======================================================
+      c4 r es                                                    % V 10
+      d4 r c
+      c4 r g'
+      c,4 r as
+      g4 r f
+      %% Takt 85 ======================================================
+      g4 r g
+      c4 r as
+      g4 r h
+      g4 c16 es d c                                              % V 11
+      h16 c h  a g f es d c  b''! as! g
       %% Takt 90 ======================================================
       as16 b as g f es d c h d c h
       c16 d c b!  as! g f es d es d c
@@ -1252,7 +1321,7 @@ pedal = {
       es2 h4
       %% Takt 30 ======================================================
       c2 f,4
-      g2.
+      g8 f g as g4 % from bass
       c,2 \adjustSlash c'4_"//"                                   % V 4
       g'2 es4
       f2 g4
