@@ -61,7 +61,7 @@ global = {
 
 sopran = {{ 
       \partial 4 f4\rest
-       R1*3/4*7
+      R2. * 7
       %% Takt  8 ======================================================
       f4\rest f4\rest f8\rest c~                                  % V 1
       c8. d16 h4 f'8\rest es~
@@ -179,17 +179,11 @@ sopran = {{
       es2 h4
       c2 f,4
       g2.
-      c,2 d'4\rest                                              % V 13
+      c,2 r4                                               % V 13
       %% Takt 105 =====================================================
-      d4\rest c16( es d c) g'4
-      c,16 e( d c) f4. e!8
-      f16( as g f) c'4~ c16 es,!( d c)
-      h4 c d
-      g,8 c~ c16 c h a g8 f
-      %% Takt 110 =====================================================
-      es8 as!~ as16 g c b! as f'(g as)
-      h,4 c16 es d c g'4~
-      g16 h a g c8 c, r16 g' es c                                % V 14
+      R2. * 7
+      %% Takt 112 =====================================================
+      r4 r r16 g'' es c                                % V 14
       h8 g as'16\rest h, d g as\rest g es c
       as'8 f f16\rest as, c f f\rest g es h
       %% Takt 115 =====================================================
@@ -520,29 +514,29 @@ alt = {{
       es8 g c b as[ g16 f]
       g16 as f g es f d es c8 f~
       f16 g es f d8 h c h
-      c2 c16( es d c)                                            % V 13
+      c2 r4                                           % V 13
       %% Takt 105 =====================================================
-      g'2 es4
-      f4~ f16( as g f) g( b as g)
-      as4~ as16( b as g) f4
-      g4~ g16 g( f es) d( f es d)
-      es4~ es16 es d c h d c h
+      r4 c'16( es d c) g'4
+      c,16 e( d c) f4. e!8
+      f16( as g f) c'4~ c16 es,!( d c)
+      h4 c d
+      g,8 c~ c16 c h a g8 f
       %% Takt 110 =====================================================
-      c4~ c16 b! as g f as g f
-      g4~ g16 g f es d f es d
-      es4~ es16 f es d s4                                        % V 14
-      s2.*7
+      es8 as!~ as16 g c b! as f'(g as)
+      h,4 c16 es d c g'4~
+      g16 h a g c8 c, r4                                   % V 14
+      R2.*7
       %% Takt 120 =====================================================
-      s4 c'16 es h8\rest c'16 es h8\rest                % V 15
-      s4 g16 h g8\rest es16 c' h8\rest
-      s4 f16 as es8\rest g16 es' g,8\rest
-      s4 as16 c g8\rest f16 d' g,8\rest
-      s4 g16 h g8\rest d16 d' g,8\rest
+      r4 c,16 es h8\rest c'16 es h8\rest                % V 15
+      r4 g16 h g8\rest es16 c' h8\rest
+      r4 f16 as es8\rest g16 es' g,8\rest
+      r4 as16 c g8\rest f16 d' g,8\rest
+      r4 g16 h g8\rest d16 d' g,8\rest
       %% Takt 125 =====================================================
-      s4 es16 g es8\rest h16 g' es8\rest
-      s4 c16 es c8\rest  f,16  d' c8\rest
-      s4 g'16 c g8\rest s4
-      s4 c16 es h8\rest h8\rest  \shiftOn g \shiftOff     % V 16
+      r4 es16 g es8\rest h16 g' es8\rest
+      r4 c16 es c8\rest  f,16  d' c8\rest
+      r4 g'16 c g8\rest r4
+      r4 c16 es h8\rest h8\rest  \shiftOn g \shiftOff     % V 16
       \override Staff.NoteCollision #'merge-differently-dotted = ##t
        r8. a16 \halsup h4~ \noflag h8\noBeam \noflag g8
       %% Takt 130 =====================================================
@@ -888,18 +882,18 @@ tenor = {
       c16 d b! c as! b g as f g es d
       c8 r r es f16 g es f
       d16 es c d h8 d es f
-      g16 as f g es f d es c8 r                                  % V 13
+      g16 as f g es f d es c'16( es d c)                         % V 13
       %% Takt 105 =====================================================
-      g'16( h a g) c4~ c16 des c b
-      as4. des8 b c
-      f4 r as,
-      g16( as g f) es8 d16 c h4\prall
-      c16 es d c g'4. g,8
+      g'2 es4
+      f4~ f16( as g f) g( b as g)
+      as4~ as16( b as g) f4
+      g4~ g16 g( f es) d( f es d)
+      es4~ es16 es d c h d c h
       %% Takt 110 =====================================================
-      as!16 c b! as  es'8 e f4~
-      f16 f es d es4 h
-      c2~ c8 c,
-      r16 g'' h  d g es\rest es8\rest  es,16 g c  es  % V 14
+      c4~ c16 b! as g f as g f
+      g4~ g16 g f es d f es d
+      es4~ es16 f es d c8 r8
+      r16 g'' h  d g r16 r8 es,16 g c  es  % V 14
        r16 f, as  c f c\rest c8\rest  g16 h  es g
       %% Takt 115 =====================================================
        r16 as, c  es as es\rest es8\rest  f,16 as d  f
@@ -1419,8 +1413,8 @@ pedal = {
       as!16 c b! as  es'8 e f4~
       f16 f es d es4 h
       c2~ c8 c,
-      R2. * 7 % V 14
-      %% Takt 120 %% TODO FINISH HERE!!! 
+      R2. * 7 % V 14 bass tacet 
+      %% Takt 120 
       c16 c' g8\rest s2                              % V 15
       g16 g' d8\rest s2
       f,16 f' h,8\rest s2
@@ -1430,7 +1424,7 @@ pedal = {
       es,16 es' h8\rest s2
       c,16 c' g8\rest s2
       g16 g' d8\rest s4 g16 r16 r8
-      c,16 c' r4 c'                                             % V 16
+      c,16 c' r8 r4 c'                                             % V 16
       g'2 es4
       %% Takt 130 =====================================================
       f2 g4
@@ -1479,7 +1473,7 @@ pedal = {
       c2 f,4
       g2.
       c,2. \bar "||"
-      R2.
+      R2. 
       %% Takt 170 =====================================================
       R2.*10
       %% Takt 180 =====================================================
