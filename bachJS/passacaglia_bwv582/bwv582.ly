@@ -548,10 +548,13 @@ alt = {{
       %% Takt 135 =====================================================
        r8. d16 \halsup es4 d8 d8
        r8. d16 \halsup es4~ \shiftOn es8 r8       % V 17
-      s2.*3
+      R2. * 2
+      r8 [ \times 2/3 { c16 b! as] as g f f es d d es f f g as!
       %% Takt 140 =====================================================
-      s2.*4
-      s2 g,4~                                                    % V 18
+      g16 a h h c d d es f f g as as g f \shiftOff f es d }
+      g4 r r
+      R2. * 2
+      r2 g,4~                                                    % V 18
       %% Takt 145 =====================================================
       g2 h8\rest c
       \appoggiatura b!16 as!2 e8\rest  g
@@ -893,7 +896,7 @@ tenor = {
       c4~ c16 b! as g f as g f
       g4~ g16 g f es d f es d
       es4~ es16 f es d c8 r8
-      r16 g'' h  d g r16 r8 es,16 g c  es  % V 14
+      r16 g' h  d g r16 r8 es,16 g c  es  % V 14
        r16 f, as  c f c\rest c8\rest  g16 h  es g
       %% Takt 115 =====================================================
        r16 as, c  es as es\rest es8\rest  f,16 as d  f
@@ -928,18 +931,18 @@ tenor = {
             \once \override TupletBracket #'staff-padding = #-3 g a h
             \once \override TupletBracket #'staff-padding = #-3 h c d  c d es es f g
       \hideTripletNumber f16 g as as g f f es d d es f f g as } g16. f32
-      es8[ \times 2/3 { \triolen c'16 b! as] as g f f es d d es f f g as!
+      es8 r r4 r
       %% Takt 140 =====================================================
-      g16 a h h c d d es f f g as as g f \shiftOff f es d }
-      g4 g4\rest h,,8\rest g'~
-      \times 2/3 { \triolen g16 f es es d c c  b! as as g f f es d d c h
-      \stemNeutral h16 a g g a h h c d d es f f g as! g as f
-      es16 f d c8*3/2 g16 f es es d c } \duolen c4               % V 18
+      R2. 
+      r4 r4 r8 g~
+      \times 2/3 { \triolen g16 f es es d c c  b! as as g f } f8 r8 
+      R2. * 2 % \stemNeutral h16 a g g a h h c d d es f f g as! g as f
+      % es16 f d c8*3/2 g16 f es es d c } \duolen c4               % V 18
       %% Takt 145 =====================================================
-      s2.*15
+      R2.*15
       %% Takt 160 =====================================================
-      s2.                                                        % V 20
-      h'''4\rest es,16 f es d es4~
+      R2.                                                        % V 20
+      r4 es'16 f es d es4~
       es16 f es d es4~ es16 f es d
       c8. f16 es f es d es4~
       es16 f es d es es f g as8 f
@@ -1424,7 +1427,7 @@ pedal = {
       es,16 es' h8\rest s2
       c,16 c' g8\rest s2
       g16 g' d8\rest s4 g16 r16 r8
-      c,16 c' r8 r4 c'                                             % V 16
+      c,16 c' r8 r4 c,                                             % V 16
       g'2 es4
       %% Takt 130 =====================================================
       f2 g4
@@ -1441,9 +1444,11 @@ pedal = {
       %% Takt 140 =====================================================
       g2 d4
       es2 h4
-      c2 f,4
-      g2.
-      c,2 r8 c'                                                  % V 18
+      c2  \times 2/3 { f16 es d d c h  % f,4
+      \stemNeutral h16 a g g a h h c d d es f f g as! g as f
+      es16 f d c8*3/2 g16 f es es d c } \duolen c8 c'8  % V 18 
+      % g2.
+      % c,2 r8 c'                                                  % V 18
       %% Takt 145 =====================================================
       g'2 r8 es
       f2 r8 g

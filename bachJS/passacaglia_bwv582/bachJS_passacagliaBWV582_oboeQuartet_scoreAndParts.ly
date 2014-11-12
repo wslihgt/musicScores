@@ -66,7 +66,7 @@ clefVFour = bass%treble %
       \new StaffGroup \keepWithTag #'score \musicPieceOne
       \layout { 
 	#(layout-set-staff-size 14)}
-      \midi { }
+      \midi {\tempo 4 = 82 }
       \header{
 	instrumentName ="Quartet"
       }
@@ -81,82 +81,82 @@ clefVFour = bass%treble %
 % 
 % TODO: make more automatisms with variables? possible to put more logic?
 % 
-#(set-global-staff-size 20)%
-\book{
-  \bookOutputSuffix "oboe"
-  #(set-global-staff-size 20)%
-  
-  \bookpart{
-    \header{
-      subtitle = "Subpiece title"
-      }
-    \score {
-      \new StaffGroup \keepWithTag #'v1 \musicPieceOne
-      \header{
-	instrumentName ="Oboe"
-      }
-    }
-  }
-  % ... other bookparts
-}
-
-
-#(set-global-staff-size 20)%
-\book{
-  \bookOutputSuffix "violin"
-  #(set-global-staff-size 20)%
-  
-  \bookpart{
-    \header{
-      subtitle = "Subpiece title"
-      }
-    \score {
-      \new StaffGroup \keepWithTag #'v2 \musicPieceOne
-      \header{
-	instrumentName ="Violin"
-      }
-    }
-  }
-  % ... other bookparts
-}
-
-
-#(set-global-staff-size 20)%
-\book{
-  \bookOutputSuffix "alto"
-  #(set-global-staff-size 20)%
-  
-  \bookpart{
-    \header{
-      subtitle = "Subpiece title"
-      }
-    \score {
-      \new StaffGroup \keepWithTag #'v3 \musicPieceOne
-      \header{
-	instrumentName ="Alto"
-      }
-    }
-  }
-  % ... other bookparts
-}
-
-
-#(set-global-staff-size 20)%
-\book{
-  \bookOutputSuffix "cello"
-  #(set-global-staff-size 20)%
-  
-  \bookpart{
-    \header{
-      subtitle = "Subpiece title"
-      }
-    \score {
-      \new StaffGroup \keepWithTag #'v4 \musicPieceOne
-      \header{
-	instrumentName ="Cello"
-      }
-    }
-  }
-  % ... other bookparts
-}
+%%%#(set-global-staff-size 20)%
+%%%\book{
+%%%  \bookOutputSuffix "oboe"
+%%%  #(set-global-staff-size 20)%
+%%%  
+%%%  \bookpart{
+%%%    \header{
+%%%      subtitle = "Subpiece title"
+%%%      }
+%%%    \score {
+%%%      \new StaffGroup \keepWithTag #'v1 \musicPieceOne
+%%%      \header{
+%%%	instrumentName ="Oboe"
+%%%      }
+%%%    }
+%%%  }
+%%%  % ... other bookparts
+%%%}
+%%%
+%%%
+%%%#(set-global-staff-size 20)%
+%%%\book{
+%%%  \bookOutputSuffix "violin"
+%%%  #(set-global-staff-size 20)%
+%%%  
+%%%  \bookpart{
+%%%    \header{
+%%%      subtitle = "Subpiece title"
+%%%      }
+%%%    \score {
+%%%      \new StaffGroup \keepWithTag #'v2 \musicPieceOne
+%%%      \header{
+%%%	instrumentName ="Violin"
+%%%      }
+%%%    }
+%%%  }
+%%%  % ... other bookparts
+%%%}
+%%%
+%%%
+%%%#(set-global-staff-size 20)%
+%%%\book{
+%%%  \bookOutputSuffix "alto"
+%%%  #(set-global-staff-size 20)%
+%%%  
+%%%  \bookpart{
+%%%    \header{
+%%%      subtitle = "Subpiece title"
+%%%      }
+%%%    \score {
+%%%      \new StaffGroup \keepWithTag #'v3 \musicPieceOne
+%%%      \header{
+%%%	instrumentName ="Alto"
+%%%      }
+%%%    }
+%%%  }
+%%%  % ... other bookparts
+%%%}
+%%%
+%%%
+%%%#(set-global-staff-size 20)%
+%%%\book{
+%%%  \bookOutputSuffix "cello"
+%%%  #(set-global-staff-size 20)%
+%%%  
+%%%  \bookpart{
+%%%    \header{
+%%%      subtitle = "Subpiece title"
+%%%      }
+%%%    \score {
+%%%      \new StaffGroup \keepWithTag #'v4 \musicPieceOne
+%%%      \header{
+%%%	instrumentName ="Cello"
+%%%      }
+%%%    }
+%%%  }
+%%%  % ... other bookparts
+%%%}
 
