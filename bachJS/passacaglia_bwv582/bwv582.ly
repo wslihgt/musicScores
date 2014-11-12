@@ -150,16 +150,17 @@ sopran = {{
       es4 as16\rest c, es c f d f d
       es4 as16\rest c, es c f d f d
       %% Takt 80 ======================================================
-      es16 c' b! as g f es d c es d c                            % V 10
-      h16 c h a g f es d c b''! as! g
-      as16 b as g f es d c h d c h
-      c16 d c b! as g f es d es d c
-      h16 c h a g a h c h d c h
+      es16 c' b! as g f es d g,4                             % V 10
+      g4 r r16 b'! as! g
+      as16 b as g f es d c g4 
+      es4 r4 as4 % d es d c
+      g4 r4 f % h16 c h a g a h c % h d c h
       %% Takt 85 ======================================================
-      c16 d es f g a h c d f es d
-      es16 g c b! as! g f es d es d c
-      h16 c d es d c h! a g as g f
-      es16 f g as g f es d c'4                                   % V 11
+      % c16 d es f g a h c 
+      g4 r d'16 f es d
+      es16 g c b! as! g f es f4 % d es d c
+      es r d % h16 c d es d c h! a % g as g f
+      c r c % es16 f g as g f es d c'4                                   % V 11
       g'2 es4
       %% Takt 90 ======================================================
       f2 g4
@@ -498,20 +499,20 @@ alt = {{
       g4 g16\rest es g es as4
       g4 g16\rest es g es d4
       %% Takt 80 ======================================================
-      c4 es\rest g                                               % V 10
-      g4 a,\rest g'
-      f4 es\rest f
-      es c\rest f
-      d4 d,\rest d'
+      c4 r c'16 es d c                                       % V 10
+      h16 c h a g f es d g4
+      f4 r h16 d c h
+      c16 d c b! as g f es f4 % es c\rest f
+      d4 r h16 d c h
       %% Takt 85 ======================================================
-      c4 c\rest g'
-      g4 es\rest f
-      d4 es\rest d
-      c4 as\rest f\rest                                          % V 11
-      s2.*6
+      c16 d es f g a h c g4 % c4 c\rest g'
+      g4 r d'16 es d c % f
+      h16 c d es d c h! a h4% d4 es\rest d
+      g4 r r                                          % V 11
+      R2.*6
       %% Takt 95 ======================================================
-      s2.*2
-      g'8\rest g a h c4~                                         % V 12
+      R2.*2
+      r8 g a h c4~                                         % V 12
       c16 des b! c as! b g as f g e g
       f8 g\rest g4\rest g8\rest a
       %% Takt 100 =====================================================
@@ -840,7 +841,7 @@ tenor = {
       g4 r  d16 c h a
       g4 r r16 es' d c
       h4 r r16 as g f
-      es16 c b! as g f es d c es'' d c                            % V 8
+      es8 r r4 r16 es'16 d c                            % V 8
       %% Takt 65 ======================================================
       h4~ h16 c h a g es f g
       as!8. b!16 c4 r16 g a h
@@ -863,24 +864,23 @@ tenor = {
       c4 r es                                                    % V 10
       d4 r c
       c4 r g'
-      c,4 r as
-      g4 r f
+      c,4 r d16 es d c% as
+      h16 c h a g a h c d4 % g4 r f
       %% Takt 85 ======================================================
-      g4 r g
+      c4 r g
       c4 r as
-      g4 r h
-      g4 r c16 es d c                                              % V 11
-      h16 c h  a g f es d c  b''! as! g
+      g4 r g'16 as g f
+      es16 f g as g f es d c4 %g4 r c16 es d c                                              % V 11
+      r2 r16  b'! as! g
       %% Takt 90 ======================================================
-      as16 b as g f es d c h d c h
-      c16 d c b!  as! g f es d es d c
-      h16 c h a g a h c h d c h
-      c16 d es f g a h c  d f es d
+      as16 b as g f es d c h4 
+      R2. * 2
+      r2 r16 f' es d
       es16 g c b! as! g f es d es d c
       %% Takt 95 ======================================================
       h16 c d es d c h! a  \stemNeutral g as! g f
-      es16 f g as g f es d c es d c                              % V 12
-      h8 g r g' as! b!
+      es16 f g as g f es d c8 as'8 % es d c                     % V 12
+      g16 as f g es f g8 as! b!
       c2 des8 c~
       c16 des b c as8 c f16 g es f
       %% Takt 100 =====================================================
@@ -899,7 +899,7 @@ tenor = {
       as!16 c b! as  es'8 e f4~
       f16 f es d es4 h
       c2~ c8 c,
-      r16 g''h  d g es\rest es8\rest  es,16 g c  es  % V 14
+      r16 g'' h  d g es\rest es8\rest  es,16 g c  es  % V 14
        r16 f, as  c f c\rest c8\rest  g16 h  es g
       %% Takt 115 =====================================================
        r16 as, c  es as es\rest es8\rest  f,16 as d  f
@@ -1360,7 +1360,7 @@ pedal = {
       es2 h4
       c2 f,4
       g2.
-      c,2 \adjustSlash c'4_"//"                                   % V 8
+      c,16 c''16 b! as g f es d \adjustSlash c4_"//"                                   % V 8
       %% Takt 65 ======================================================
       g'2 es4
       f2 g4
@@ -1389,14 +1389,18 @@ pedal = {
       es4 r h
       c4 r f,
       g4 r g
-      c,4 r \adjustSlash r_"//"                                  % V 11
-      R2.
+      c,4 r \adjustSlash r16_"//" es'' d c                         % V 11
+      h16 c h  a g f es d c4
       %% Takt 90 ======================================================
-      R2.*5
+      r2 r16 d' c h
+      c16 d c b!  as! g f es d es d c
+      h16 c h a g a h c h d c h
+      c16 d es f g a h c  d4 
+      R2.
       %% Takt 95 ======================================================
       R2.
-      r4 r r8 as''                                               % V 12
-      g16 as f g es f d es c d b! c
+      r4 r r16 es, d c                                            % V 12
+      h8 g es'16 f d es c d b! c
       as4. as8 b c
       f, c' f16 g es f d! es c d
       %% Takt 100 =====================================================
@@ -1406,8 +1410,27 @@ pedal = {
       h8 c g16 as f g es f d f
       es16 f d es c4 r                                           % V 13
       %% Takt 105 =====================================================
-      R2.*23
-      r4 r4 c'                                                   % V 16
+      g''16( h a g) c4~ c16 des c b
+      as4. des8 b c
+      f4 r as,
+      g16( as g f) es8 d16 c h4\prall
+      c16 es d c g'4. g,8
+      %% Takt 110 =====================================================
+      as!16 c b! as  es'8 e f4~
+      f16 f es d es4 h
+      c2~ c8 c,
+      R2. * 7 % V 14
+      %% Takt 120 %% TODO FINISH HERE!!! 
+      c16 c' g8\rest s2                              % V 15
+      g16 g' d8\rest s2
+      f,16 f' h,8\rest s2
+      as16 as' d,8\rest s2
+      g,16 g' d8\rest s2
+      %% Takt 125 =====================================================
+      es,16 es' h8\rest s2
+      c,16 c' g8\rest s2
+      g16 g' d8\rest s4 g16 r16 r8
+      c,16 c' r4 c'                                             % V 16
       g'2 es4
       %% Takt 130 =====================================================
       f2 g4
@@ -1578,3 +1601,7 @@ pedal = {
    }
 }
 
+
+%%% Local Variables:
+%%% LilyPond-master-file: "bachJS_passacagliaBWV582_oboeQuartet_scoreAndParts.ly"
+%%% End: 
