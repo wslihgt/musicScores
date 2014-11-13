@@ -3,9 +3,9 @@
 
 
 adjustSlash = { \once \override TextScript #'extra-offset = #'( -2 . 5 ) }
-halsdown = { \stemDown \tieDown \slurDown }
+halsdown = { }
 halsneutral = { \stemNeutral \tieNeutral \slurNeutral }
-halsup = { \stemUp \tieUp \slurUp}
+halsup = { }
 hideBrackets = { \override TupletBracket #'bracket-visibility = ##f }
 hideTripletNumber = { \set tupletNumberFormatFunction = #'() }
 mmrestdown = { \once \override MultiMeasureRest #'staff-position = #-2 }
@@ -181,9 +181,16 @@ sopran = {{
       g2.
       c,2 r4                                               % V 13
       %% Takt 105 =====================================================
-      R2. * 7
+      r4 c'16( es d c) g'4
+      c,16 e( d c) f4. e!8 % R2. * 2
+      f16( as g f) c'4~ c16 es,!( d c)
+      h4 c d
+      g,8 c~ c16 c h a g8 f % R2. * 4
+      %% Takt 110 =====================================================
+      es8 as!~ as16 g c b! as f'(g as)
+      h,4 c16 es d c g'4~
       %% Takt 112 =====================================================
-      r4 r r16 g'' es c                                % V 14
+      g16 h a g c8 c, r16 g' es c                                % V 14
       h8 g as'16\rest h, d g as\rest g es c
       as'8 f f16\rest as, c f f\rest g es h
       %% Takt 115 =====================================================
@@ -319,28 +326,14 @@ sopran = {{
       c16 es d f es g fis a g b a g
       fis16 a g b a8 d, f4\rest
       %% Takt 225 =====================================================
-       R2.
-       R2.
-       R2.
-       R2.
-       R2.
-      %% Takt 230 =====================================================
-       R2.
-       R2.
-       R2.
-       R2.
-       R2.
-      %% Takt 235 =====================================================
-       R2.
-       R2.
-       R2.
-       R2.
+       R2.*7
+       R2.*7
        R2.
       %% Takt 240 =====================================================
-       R2.
-       R2.
-       R2.
-       R2.
+       d8 es f g as! b
+       c8 r8 r2 % R2.
+       b,8 c d es f g % R2.
+       as8 r8 r2 % R2.
        R2.
       %% Takt 245 =====================================================
       f4\rest f\rest g,
@@ -516,7 +509,7 @@ alt = {{
       f16 g es f d8 h c h
       c2 r4                                           % V 13
       %% Takt 105 =====================================================
-      r4 c'16( es d c) g'4
+      \new CueVoice {r4^"A def. V1" c'16( es d c) g'4
       c,16 e( d c) f4. e!8
       f16( as g f) c'4~ c16 es,!( d c)
       h4 c d
@@ -524,7 +517,7 @@ alt = {{
       %% Takt 110 =====================================================
       es8 as!~ as16 g c b! as f'(g as)
       h,4 c16 es d c g'4~
-      g16 h a g c8 c, r4                                   % V 14
+      g16 h a g c8 c,} r4                                   % V 14
       R2.*7
       %% Takt 120 =====================================================
       r4 c,16 es h8\rest c'16 es h8\rest                % V 15
@@ -670,17 +663,17 @@ alt = {{
       r16 g as g r f es f r d c d
       es8 f g a b! c
       %% Takt 240 =====================================================
-      d8 es f g as! b
-      c8\noBeam d,, es f g as
-      b8 c d es f g
-      as8\noBeam b,, c d es! f
+      R2. % d8 es f g as! b
+      r8 d, es f g as
+      R2. % b8 c d es f g
+      r8 b, c d es! f
       g4. g8 a16 b g a
       %% Takt 245 =====================================================
       fis16 g e fis d2~
       d16 a' g b a c b a g8 d
       g4 f f
       es8 f g b a g
-      fis16 a g b a8 fis g4~
+      fis16 a g b a8 fis g4~ 
       %% Takt 250 =====================================================
       g8 g a4 g~
       g8 f4 es d8~
@@ -935,24 +928,39 @@ tenor = {
       %% Takt 140 =====================================================
       R2. 
       r4 r4 r8 g~
-      \times 2/3 { \triolen g16 f es es d c c  b! as as g f } f8 r8 
-      R2. * 2 % \stemNeutral h16 a g g a h h c d d es f f g as! g as f
+      \times 2/3 { \triolen g16 f es es d c c  b! as as g f } f4 
+      g2. % \stemNeutral h16 a g g a h h c d d es f f g as! g as f
       % es16 f d c8*3/2 g16 f es es d c } \duolen c4               % V 18
+      c,2 es'4~                                           % V 18
       %% Takt 145 =====================================================
-      R2.*15
-      %% Takt 160 =====================================================
-      R2.                                                        % V 20
-      r4 es'16 f es d es4~
+      es8 d16 c d8 es16 f g4~
+      g8 f16 es f8 g16 as  \tieNeutral d,4~
+      d8 c~ c4 r8 d
+      \appoggiatura c16 h8 c16 h c8 d16 es h!4~
+      h8 c16 d es4 r8 d
+      %% Takt 150 =====================================================
+      c4. d16 e f4~
+      f8 es!16 d es8 d16 c g'8 f~
+      f8 es16 d es8 es16 d c8 es~                                % V 19
       es16 f es d es4~ es16 f es d
-      c8. f16 es f es d es4~
-      es16 f es d es es f g as8 f
+      es4~ es16 f es d es4~
+      %% Takt 155 =====================================================
+      es16 f es d es4~ es16 f es d
+      es4~ es16 es d c d4~
+      d16 f es d c4 d~
+      d4 c2
+      h4 c d8 g,~
+      %% Takt 160 =====================================================
+      g4~ g16 as g f es8 c'~                                     % V 20
+      c16 d c h c16 f es d c16 d c h
+      c16 f es d c16 d c h c16 f es d
+      c16 d c h c16 f es d c16 d c h
+      c16 f es d es es f g as8 f
       %% Takt 165 =====================================================
-      es16 f es d es4 f16 as! g f
-      es16 f es d c4~ c16 d c h
-      c4~ c16 d c h c d c h
-      c4~ c16 as g f << \new Voice {  c'4 }
-                        \new Voice {  \shiftOn g4 }
-                        \new Voice {  \shiftOnn es4 } >>
+      es16 f es d es c h a d  as'! g f
+      es16 f es d c b as g f16 d' c h
+      c16 f, es d c d' c h c d c h
+      c4~ c16 as g f  es4 
       r8 es'( h) h c c        % Thema fugatum
       %% Takt 170 =====================================================
       r8 as'( d,) d e e
