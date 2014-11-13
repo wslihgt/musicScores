@@ -83,7 +83,7 @@ clefVFour = treble %
 % 
 #(set-global-staff-size 20)%
 \book{
-  \bookOutputSuffix "oboe"
+  \bookOutputSuffix \midiInstrOne
   #(set-global-staff-size 20)%
   
   \bookpart{
@@ -103,7 +103,7 @@ clefVFour = treble %
 
 #(set-global-staff-size 20)%
 \book{
-  \bookOutputSuffix "violin"
+  \bookOutputSuffix \midiInstrTwo
   #(set-global-staff-size 20)%
   
   \bookpart{
@@ -123,7 +123,7 @@ clefVFour = treble %
 
 #(set-global-staff-size 20)%
 \book{
-  \bookOutputSuffix "alto"
+  \bookOutputSuffix \midiInstrThr
   #(set-global-staff-size 20)%
   
   \bookpart{
@@ -143,7 +143,7 @@ clefVFour = treble %
 
 #(set-global-staff-size 20)%
 \book{
-  \bookOutputSuffix "cello"
+  \bookOutputSuffix \midiInstrFou 
   #(set-global-staff-size 20)%
   
   \bookpart{
