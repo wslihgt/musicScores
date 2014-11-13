@@ -1418,25 +1418,25 @@ pedal = {
       c2~ c8 c,
       R2. * 7 % V 14 bass tacet 
       %% Takt 120 
-      c16 c' g8\rest s2                              % V 15
-      g16 g' d8\rest s2
-      f,16 f' h,8\rest s2
-      as16 as' d,8\rest s2
-      g,16 g' d8\rest s2
+      c16 c' r8 r2                              % V 15
+      g16 g' r8 r2
+      f,16 f' r8 r2
+      as,16 as' r8 r2
+      g,16 g' r8 r2
       %% Takt 125 =====================================================
-      es,16 es' h8\rest s2
-      c,16 c' g8\rest s2
-      g16 g' d8\rest s4 g16 r16 r8
-      c,16 c' r8 r4 c,                                             % V 16
-      g'2 es4
+      es,16 es' r8 r2
+      c,16 c' r8 r2
+      g16 g' r8 r4 g16 r16 r8
+      c,16 c' r8 r4 c,                                          % V 16
+      g'4~ g8. d16 es4
       %% Takt 130 =====================================================
-      f2 g4
-      as2 f4
-      g2 d4
-      es2 h4
-      c2 f,4
+      f4~ f8. c'16 g4
+      as4~ as8. es16 f4
+      g4~ g8. d'16 d,4
+      es4~ es8. fis16 g8 h,8
+      c4~ c8. g16 f4
       %% Takt 135 =====================================================
-      g2.
+      g4~ g8. fis16 g4
       c,2 \adjustSlash c'4_"//"                                  % V 17
       g'2 es4
       f2 g4
