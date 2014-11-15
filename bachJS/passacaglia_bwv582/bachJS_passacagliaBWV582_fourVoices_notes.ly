@@ -23,13 +23,13 @@ globalStyle = {
   \accidentalStyle "modern-cautionary"
 }
 
-structure = {
+%%%structure = {
 %%%  s1^\markup{\circle 1} \breathe |
 %%%  s1 |
 %%%  s1 \breathe |
 %%%  s1
 %%%  \bar "||"
-}
+%%%}
 
 %%%global = {
 %%%  \time 2/2

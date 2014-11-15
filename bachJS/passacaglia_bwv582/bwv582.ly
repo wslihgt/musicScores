@@ -59,6 +59,73 @@ global = {
    \override TupletBracket  #'bracket-visibility = #'if-no-beam
 }
 
+structure = {
+  \partial 4 s4
+  s2. * 7 
+  s2 s4^\markup{"V 1"}
+  
+  s2. * 7 
+  s2 s4^\markup{"V 2"}
+  
+  s2. * 7 
+  s2 s4^\markup{"V 3"}
+  
+  s2. * 7 
+  s2 s4^\markup{"V 4"}
+  
+  s2. * 7 
+  s2 s4^\markup{"V 5"}
+  
+  s2. * 7 
+  s2 s4^\markup{"V 6"}
+  
+  s2. * 7 
+  s2 s4^\markup{"V 7"}
+  
+  s2. * 7 
+  s2 s4^\markup{"V 8"}
+  
+  s2. * 7 
+  s2 s4^\markup{"V 9"}
+
+  s2. * 7 
+  s2 s4^\markup{"V 10"}
+
+  s2. * 7 
+  s2 s4^\markup{"V 11"}
+  
+  s2. * 7 
+  s2 s4^\markup{"V 12"}
+  
+  s2. * 7 
+  s2 s4^\markup{"V 13"}
+  
+  s2. * 7 
+  s2 s4^\markup{"V 14"}
+  
+  s2. * 7 
+  s2 s4^\markup{"V 15"}
+  
+  s2. * 7 
+  s2 s4^\markup{"V 16"}
+  
+  s2. * 7 
+  s2 s4^\markup{"V 17"}
+  
+  s2. * 7 
+  s2 s4^\markup{"V 18"}
+  
+  s2. * 7 
+  s2 s4^\markup{"V 19"}
+
+  s2. * 7 
+  s2 s4^\markup{"V 20"}
+  
+  s2. * 8
+  
+  \bar "||"
+}
+
 sopran = {{ 
       \partial 4 f4\rest
       R2. * 7
@@ -200,16 +267,16 @@ sopran = {{
       es'8 c d16\rest es, g c b\rest as f d
       es8\mordent c r16 c es g h, d f h,
       %% Takt 120 =====================================================
-      es8 s h'8\rest g16 c h'8\rest g16 c                        % V 15
-      s4 f,8\rest d16 g f8\rest g16 c
-      s4 d,8\rest c16 f f8\rest g16 h
-      s4 f8\rest es16 as f8\rest as16 c
-      s4 d,8\rest d16 g f8\rest f16 h
+      es8 r h'8\rest g16 c h'8\rest g16 c                        % V 15
+      r4 f,8\rest d16 g f8\rest g16 c
+      r4 d,8\rest c16 f f8\rest g16 h
+      r4 f8\rest es16 as f8\rest as16 c
+      r4 d,8\rest d16 g f8\rest f16 h
       %% Takt 125 =====================================================
-      s4 d,8\rest c16 es d8\rest d16 f
-      s4 h,8\rest g16 c h8\rest as16 f'
-      s4 f8\rest es16 g h,16\rest d f h
-      s4 a8\rest g16 c f,8\rest c                                % V 16
+      r4 d,8\rest c16 es d8\rest d16 f
+      r4 h,8\rest g16 c h8\rest as16 f'
+      r4 f8\rest es16 g h,16\rest d f h
+      r4 a8\rest g16 c f,8\rest c                                % V 16
       a'16\rest c,16 d8~ d4~ d8 c
       %% Takt 130 =====================================================
       a'16\rest b,! c8~ c4~ c8 h
@@ -576,8 +643,8 @@ alt = {{
       c16 d c h c4 d16 f es d
       c4~ c16 d c b! as4
       g16 as g f g8. as16 g as g f
-      es f es d es d es f g4 \bar "||"
-       g2^\markup { \italic "Thema fugatum" } es4 % Thema fugatum
+      es f es d es d es f c4 \bar "||"
+       g'2^\markup { \italic "Thema fugatum" } es4 % Thema fugatum
       %% Takt 170 =====================================================
       f2 g4
       as2 f4
@@ -890,24 +957,24 @@ tenor = {
       g4~ g16 g f es d f es d
       es4~ es16 f es d c8 r8
       r16 g' h  d g r16 r8 es,16 g c  es  % V 14
-       r16 f, as  c f c\rest c8\rest  g16 h  es g
+       r16 f, as  c f r r8  g,16 h  es g
       %% Takt 115 =====================================================
-       r16 as, c  es as es\rest es8\rest  f,16 as d  f
+       r16 as, c  es as r r8  f,16 as d  f
        r16 g, h d  g es\rest es8\rest  d,16 f b d
       r16 es, g b  es c\rest c8\rest  h,16 d g h
       r16 c, es g  c as\rest as8\rest  f,16 c' d f
       r16 g, c es g r r8 g,16 h d g
       %% Takt 120 =====================================================
-       c8  es,16[ g] s2                            % V 15
-      a8\rest h16 d s2
-      a8\rest as16 c s2
-      a8\rest c16 es s2
-      a,8\rest h16 d s2
+       c8  es,16[ g] r2                            % V 15
+      a8\rest h16 d r2
+      a8\rest as16 c r2
+      a8\rest c16 es r2
+      a,8\rest h16 d r2
       %% Takt 125 =====================================================
-      a8\rest g16 c s2
-      a8\rest es16 g s2
-      a8\rest c16 es s2
-      c8\rest  es16 g s4 g,8\rest  c
+      a8\rest g16 c r2
+      a8\rest es16 g r2
+      a8\rest c16 es r2
+      c8\rest  es16 g r4 g,8\rest  c
       r4 r16 fis g8~ g8 es8                           % V 16
       %% Takt 130 =====================================================
       r4 r16 e f!8 es8 d
@@ -1116,9 +1183,8 @@ tenor = {
       c4 r8 e f f
       %% Takt 290 =====================================================
       e4 d'16\rest e, d! e~ e8 f
-      f'4\rest  c,4\rest e8\rest c16\rest  h
-      << \new Voice {  c2. }
-         \new Voice {  \shiftOn g2. } >>
+      r4 r16 as, g as~as4
+      g2._\fermata
   }
 }
 
@@ -1424,9 +1490,13 @@ pedal = {
       as!16 c b! as  es'8 e f4~
       f16 f es d es4 h
       c2~ c8 c,
-      R2. * 7 % V 14 bass tacet 
+      R2. * 3 % V 14 bass tacet
+      r2 d'16 f b! d
+      r16 es, g b  es r r8  h,16 d g h
+      r16 c, es g  c r r8  f,,16 c' d f
+      r16 g, c es g r r8 g,16 h d g
       %% Takt 120 
-      c16 c' r8 r2                              % V 15
+      c,,16 c' r8 r2                              % V 15
       g16 g' r8 r2
       f,16 f' r8 r2
       as,16 as' r8 r2
