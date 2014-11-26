@@ -5,6 +5,9 @@
       (list (cons property value)))))
 #(set-script-property "prall" 'avoid-slur 'outside)
 
+title = "Passacaille et Fugue en Do mineur"
+subtitle = "BWV582"
+
 \header {
  mutopiatitle = "Passacaglia"
  mutopiacomposer = "BachJS"
@@ -18,7 +21,7 @@
  maintainerEmail = "jean-louis@durrieu.ch"
  lastupdated = "2014/Nov/07"
 
- title = "Passacaglia"
+ title = \title %"Passacaglia"
  composer = "Johann Sebastian Bach"
  opus = "BWV 582"
  footer = "Mutopia-..."
@@ -55,12 +58,12 @@ clefVFour = treble %
 \book{
   \bookOutputSuffix "score"
   \header {
-    instrumentName = "Title" % ?
+    instrumentName = \title % "Title" % ?
     }
   #(set-global-staff-size 14)
   \bookpart{
     \header{
-      subtitle = "Sub-piece title"
+      subtitle = \subtitle % "Sub-piece title"
       }
     \score {
       \new StaffGroup \keepWithTag #'score \musicPieceOne
@@ -88,7 +91,7 @@ clefVFour = treble %
   
   \bookpart{
     \header{
-      subtitle = "Subpiece title"
+      subtitle = \subtitle % "Subpiece title"
       }
     \score {
       \new StaffGroup \keepWithTag #'v1 \musicPieceOne
@@ -108,7 +111,7 @@ clefVFour = treble %
   
   \bookpart{
     \header{
-      subtitle = "Subpiece title"
+      subtitle = \subtitle % "Subpiece title"
       }
     \score {
       \new StaffGroup \keepWithTag #'v2 \musicPieceOne
@@ -128,7 +131,7 @@ clefVFour = treble %
   
   \bookpart{
     \header{
-      subtitle = "Subpiece title"
+      subtitle = \subtitle % "Subpiece title"
       }
     \score {
       \new StaffGroup \keepWithTag #'v3 \musicPieceOne
@@ -148,7 +151,7 @@ clefVFour = treble %
   
   \bookpart{
     \header{
-      subtitle = "Subpiece title"
+      subtitle = \subtitle % "Subpiece title"
       }
     \score {
       \new StaffGroup \keepWithTag #'v4 \musicPieceOne
