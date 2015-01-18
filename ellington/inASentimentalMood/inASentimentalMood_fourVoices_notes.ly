@@ -170,7 +170,10 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   r4 \times 2/3 {g,8( bes g} \times 2/3 {bes g bes)} r4 |
   r4 \times 2/3 {g8( bes g} \times 2/3 {bes g bes)} r8 cis8 |
 
-  r8 d8~ d8 b16 b b16 b b b 
+  r8 d8~ d2~ d4 |
+  r4 \times 2/3 {c8 bes c~} c4 r |
+  r4 bes8 bes4. r4 |
+  r \times 2/3 {g8 ges f} e2 
 
 }}}   %*********************************
 
@@ -213,7 +216,10 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   r4 \times 2/3 {d,8 g d} \times 2/3 {fis d fis} r4 |
   r4 \times 2/3 {d8 f d} \times 2/3 {e d e} r8 e8 |
 
-  r8 f8~ f8  
+  r8 f8~ f2~ \times 2/3 {f8 e f} |
+  r4 \times 2/3 {fis8 g fis~} fis4 r |
+  r4 g8 ges4. r4 |
+  r4 \times 2/3 {c8 ces bes} a2 
 
 }}}   %*********************************
 
@@ -249,20 +255,20 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   c,4 r2. |
   
   d4 d d des |
-  c c ces \times 2/3 {ces8 f, d'} |
+  c c ces \times 2/3 {c8 d f} |
   g4 g ges ges |
   f f e \breathe cis8 a |
   d4 d d d |
-  d d d d |
-  g f8 d c4 c |
-  f2 r2 
+  r d8 d4. r4 |
+  r \times 2/3 {g8 f8 d} c4 c |
+  f,2 r2 
 
 }}}   %**********************************
 
 musicPieceOne = {
   <<
     \context ChordNames { \chordSequence }
-    \tag #'score \tag #'v1 \new Staff { << \globalStyle \one >> }
+    \tag #'score \tag #'v1 \new Staff { << \globalStyle \one>> }
     \tag #'score \tag #'v2 \new Staff { << \globalStyle \two>> }
     \tag #'score \tag #'v3 \new Staff { << \globalStyle \three>> }
     \tag #'score \tag #'v4 \new Staff { << \globalStyle \four>> }
