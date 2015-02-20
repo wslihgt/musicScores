@@ -633,3 +633,4 @@ music = {
 %%% Local Variables:
 %%% LilyPond-master-file: "Sinouhe_scoreAndParts.ly"
 %%% End: 
+% -*- master: Sinouhe_scoreAndParts.ly;

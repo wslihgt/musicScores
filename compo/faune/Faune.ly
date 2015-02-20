@@ -539,3 +539,4 @@ music = {
 %%% Local Variables:
 %%% LilyPond-master-file: "Faune_scoreAndParts.ly"
 %%% End: 
+% -*- master: Faune_scoreAndParts.ly;
