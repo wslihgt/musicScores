@@ -5,8 +5,8 @@
 originpitch = c %c' %bes'% f % c'
 
 targetpitchone = c
-targetpitchtwo = c
-targetpitchthr = c
+targetpitchtwo = c%a
+targetpitchthr = c%d
 targetpitchfou = c
 
 midiInstrOne = "oboe"

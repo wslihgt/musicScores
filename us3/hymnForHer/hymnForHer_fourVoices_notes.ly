@@ -27,20 +27,75 @@ globalStyle = {
 }
 
 structure = {
-  s1^\markup{Intro Percus} | %\breathe |
+  s1^\markup{Intro, Percus} | %\breathe |
   s1 * 6 |
   s1 \breathe |
-  s1^\markup{Intro II} | %\breathe |
+  s1^\markup{Intro, Piano} | %\breathe |
   s1 * 6 |
   s1 \breathe |
   s1^\markup{Riff I} | %\breathe |
   s1 * 6 |
   s1 \breathe |
-  s1^\markup{Theme} | %\breathe |
+  s1^\markup{Riff I + Theme start} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff II} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff III + Theme} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff III} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff II} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff IV, percu break} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff I, Reggae} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff I} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff II} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff III} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff III} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff IV, break} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff II} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff I, Reggae} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff I, Reggae} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff II} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff III} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff III} | %\breathe |
+  s1 * 6 |
+  s1 \breathe |
+  s1^\markup{Riff III} | %\breathe |
   s1 * 6 |
   s1 \breathe |
   s1
   % \bar "||"
+  \bar "|."
 }
 
 global = {
@@ -49,16 +104,106 @@ global = {
   \key g \minor 
 }
 
-melody = {
-  fis'8 ees ees d d4 r4 | 
+bassRiffI = \relative c {
+  \transposition c' {
+  \repeat unfold 2 {
+    g4 g8 g bes4 bes8 c8~ |
+    c8 bes8 \appoggiatura cis8 d4 f8 cis c bes |
+    g4 g8 g bes4 bes8 c8~ |
+    c8 bes8 \appoggiatura cis8 d4 f4 r4 |
+  }
+  }
+}
+
+bassRiffII = \relative c {
+  \transposition c'
+  \repeat unfold 2 {
+    bes4. g4. r4 |
+    d'4 d8 f8~ f8 g8 g,4 | 
+    bes4. g4. r4 |
+    R1
+  }
+}
+
+bassRiffIII = \relative c {
+  \transposition c'
+  \repeat unfold 2 {
+    d8 f8~ f8 g8~ g8 f8 cis16 c bes8 |
+    c8 bes c c bes4 g |
+    d'8 f8~ f8 g8~ g8 f8 cis16 c bes8 |
+    c8 bes c c bes4 r4 |
+  }
+}
+
+bassRiffIV = \relative c {
+  \transposition c'
+  \repeat unfold 4 {
+    d4 d8 f8~ f g8 g,4 |
+    R1 |
+  }
+}
+
+melody = \relative c'' {
+  \transposition c'
   fis8 ees ees d d4 r4 | 
-  fis8 ees ees d d8 c c d | 
-  c bes bes c fis,4 r4 | 
-  fis'8 ees ees d d4 r4 | 
-  fis8 ees ees d d4 r4 | 
-  fis8 ees ees d d8 c c d | 
-  c bes bes c fis,4 r4 | 
+  R1 * 7 |
   
+  R1 * 8 |
+  
+  d8 ees fis g fis4 ees |
+  d8 ees16 d c8 bes d4 g, |
+  d'8 ees fis g a4 fis8 g |
+  ees d c4 bes g |
+  d'8 ees fis g fis4 ees |
+  bes'4 a g8 g d4 |
+  d8 ees fis g fis4 ees |
+  \appoggiatura {fis16 ees} d8 c bes c8~ c4 r |
+  
+  R1 * 4 |
+  d8 ees fis g fis4 ees |
+  d8 ees16 d c8 bes d bes~ bes fis~ |
+  fis4 r r2 |
+  R1 |
+
+  r8 d ees f fis g g g |
+  g g g g g g g g |
+  g fis fis ees ees d d4 | 
+  r2 r8 d ees f | 
+  fis g g g g g g g | 
+  g g g g g g g g |
+  g fis fis ees ees d d4 | 
+  R1 
+  
+  R1 * 8 | % kkiizzgg kiizzgg 
+  
+  R1 * 8 | % 
+  
+  R1 * 8 | % 
+ 
+  fis8 ees ees d d4 r4 | 
+  R1 * 3 |
+  fis8 ees ees d d4 r4 | 
+  R1 * 3 |
+  
+  fis8 ees ees d d4 r4 | 
+  R1 * 3 |
+  %ouuhh
+  %ouuhhuhghgrrgw
+  
+  
+  fis8 ees ees d d4 r4 | 
+  
+  fis8 ees ees d d4 r4 | 
+  fis8 ees ees d d8 c c d | 
+  c bes bes c fis,4 r4 | 
+  %fis'8 ees ees d d4 r4 | 
+  %fis8 ees ees d d4 r4 | 
+  %fis8 ees ees d d8 c c d | 
+  %c bes bes c fis,4 r4 | 
+  
+  
+  fis'8 ees ees g g fis fis a |
+  a g bes a \appoggiatura {bes16 c } d 
 }
 
 one = \transpose \originpitch \targetpitchone {\new Voice { 
@@ -67,7 +212,7 @@ one = \transpose \originpitch \targetpitchone {\new Voice {
   \set Staff.instrumentName = #"V1 "
   \set Staff.midiInstrument = \midiInstrOne
   \transposition c' % for MIDI files? to be verified
-
+  {
   \compressFullBarRests
   R1*7 |
   r2. r8 g |
@@ -79,8 +224,8 @@ one = \transpose \originpitch \targetpitchone {\new Voice {
   f2 r4. r8 | 
   R1 *8 |
   \melody
-
-\bar "|." }}}   %*********************************
+  }
+}}}   %*********************************
 
 two = \transpose \originpitch \targetpitchtwo {\new Voice { 
   \global
@@ -88,7 +233,7 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   \set Staff.instrumentName = #"V2 "
   \set Staff.midiInstrument = \midiInstrTwo
   \transposition c' % for MIDI files? to be verified
-
+  {
   \compressFullBarRests
   R1*7 |
   r2. r8 g |
@@ -99,8 +244,9 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   d'4 r8 d,8~ d2~ |
   d2 r4. r8 | 
   R1 *8 |
-
-\bar "|." }}}   %*********************************
+  \melody
+  }
+}}}   %*********************************
 
 three = \transpose \originpitch \targetpitchthr {\new Voice { 
   \global
@@ -139,9 +285,7 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
     d'8 f8~ f8 g8~ g8 f8 cis16 c bes8 |
     c8 bes c c bes4 r4 |
   }
-  
-
-\bar "|." }}}   %*********************************
+}}}   %*********************************
 
 four = \transpose \originpitch \targetpitchfou {\new Voice { 
   \global
@@ -155,33 +299,27 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   \compressFullBarRests
   R1*8 |
   R1*8 |
-  \repeat unfold 2 {
-    g4 g8 g bes4 bes8 c8~ |
-    c8 bes8 \appoggiatura cis8 d4 f8 cis c bes |
-    g4 g8 g bes4 bes8 c8~ |
-    c8 bes8 \appoggiatura cis8 d4 f4 r4 |
-  }
-  \repeat unfold 2 {
-    g,4 g8 g bes4 bes8 c8~ |
-    c8 bes8 \appoggiatura cis8 d4 f8 cis c bes |
-    g4 g8 g bes4 bes8 c8~ |
-    c8 bes8 \appoggiatura cis8 d4 f4 r4 |
-  }
-  \repeat unfold 2 {
-    bes,4. g4. r4 |
-    d'4 d8 f8~ f8 g8 g,4 | 
-    bes4. g4. r4 |
-    R1
-  }
-  \repeat unfold 2 {
-    d'8 f8~ f8 g8~ g8 f8 cis16 c bes8 |
-    c8 bes c c bes4 g |
-    d'8 f8~ f8 g8~ g8 f8 cis16 c bes8 |
-    c8 bes c c bes4 r4 |
-  }
-  
-
-\bar "|."}}}   %**********************************
+  \bassRiffI
+  \bassRiffI
+  \bassRiffII
+  \bassRiffIII
+  \bassRiffIII
+  \bassRiffII
+  \bassRiffIV
+  \bassRiffI
+  \bassRiffI
+  \bassRiffII
+  \bassRiffIII
+  \bassRiffIII
+  \bassRiffIV
+  \bassRiffII
+  \bassRiffI
+  \bassRiffI
+  \bassRiffII
+  \bassRiffIII
+  \bassRiffIII
+  \bassRiffIII
+}}}   %**********************************
 
 percuUp = \drummode {
   \repeat unfold 8 {
