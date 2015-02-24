@@ -105,18 +105,15 @@ global = {
 }
 
 bassRiffI = \relative c {
-  \transposition c' {
   \repeat unfold 2 {
     g4 g8 g bes4 bes8 c8~ |
     c8 bes8 \appoggiatura cis8 d4 f8 cis c bes |
     g4 g8 g bes4 bes8 c8~ |
     c8 bes8 \appoggiatura cis8 d4 f4 r4 |
   }
-  }
 }
 
 bassRiffII = \relative c {
-  \transposition c'
   \repeat unfold 2 {
     bes4. g4. r4 |
     d'4 d8 f8~ f8 g8 g,4 | 
@@ -126,7 +123,6 @@ bassRiffII = \relative c {
 }
 
 bassRiffIII = \relative c {
-  \transposition c'
   \repeat unfold 2 {
     d8 f8~ f8 g8~ g8 f8 cis16 c bes8 |
     c8 bes c c bes4 g |
@@ -136,7 +132,6 @@ bassRiffIII = \relative c {
 }
 
 bassRiffIV = \relative c {
-  \transposition c'
   \repeat unfold 4 {
     d4 d8 f8~ f g8 g,4 |
     R1 |
@@ -169,7 +164,6 @@ bassRiffs = {
 }
 
 melody = \relative c'' {
-  \transposition c'
   fis8 ees ees d d4 r4 | 
   R1 * 7 |
   
@@ -263,7 +257,7 @@ two = \transpose \originpitch \targetpitchtwo {\new Voice {
   \relative c''{
   \set Staff.instrumentName = #"V2 "
   \set Staff.midiInstrument = \midiInstrTwo
-  \transposition c' % for MIDI files? to be verified
+  \transposition ees % for MIDI files? to be verified
   {
   \compressFullBarRests
   R1*7 |
@@ -284,7 +278,7 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   \relative c' {
   \set Staff.instrumentName = #"V3 "
   \set Staff.midiInstrument = \midiInstrThr
-  \transposition c' % for MIDI files? to be verified
+  \transposition bes % for MIDI files? to be verified
 
   %\clef bass %alto
   \clef \clefVThree
@@ -330,7 +324,7 @@ four = \transpose \originpitch \targetpitchfou {\new Voice {
   \relative c {
   \set Staff.instrumentName = #"V4 "
   \set Staff.midiInstrument = \midiInstrFou
-  \transposition c' % for MIDI files? to be verified
+  \transposition \targetpitchfou % for MIDI files? to be verified
 
   \clef bass 
 
