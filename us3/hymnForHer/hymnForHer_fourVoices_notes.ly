@@ -143,6 +143,31 @@ bassRiffIV = \relative c {
   }
 }
 
+bassRiffs = {
+  R1*8 |
+  R1*8 |
+  \bassRiffI
+  \bassRiffI
+  \bassRiffII
+  \bassRiffIII
+  \bassRiffIII
+  \bassRiffII
+  \bassRiffIV
+  \bassRiffI
+  \bassRiffI
+  \bassRiffII
+  \bassRiffIII
+  \bassRiffIII
+  \bassRiffIV
+  \bassRiffII
+  \bassRiffI
+  \bassRiffI
+  \bassRiffII
+  \bassRiffIII
+  \bassRiffIII
+  \bassRiffIII
+}
+
 melody = \relative c'' {
   \transposition c'
   fis8 ees ees d d4 r4 | 
@@ -161,7 +186,7 @@ melody = \relative c'' {
   
   R1 * 4 |
   d8 ees fis g fis4 ees |
-  d8 ees16 d c8 bes d bes~ bes fis~ |
+  ees8 fis16 ees d8 c d c~ c fis,~ |
   fis4 r r2 |
   R1 |
 
@@ -174,36 +199,42 @@ melody = \relative c'' {
   g fis fis ees ees d d4 | 
   R1 
   
-  R1 * 8 | % kkiizzgg kiizzgg 
+  r4 g8 aes b c d ees |
+  fis4 fis8 fis fis4 fis8 fis |
+  fis4 fis8 fis fis8 g~ g d~ |
+  d4 r4 r2 |
+  r8 bes~ bes4 g4 r4 |
+  d'4~ d8 fis,~ fis4 r4 |
+  bes2 g2 |
+  d'2 fis, |
   
-  R1 * 8 | % 
-  
-  R1 * 8 | % 
- 
-  fis8 ees ees d d4 r4 | 
+  fis'8 ees ees d d4 r4 | 
   R1 * 3 |
   fis8 ees ees d d4 r4 | 
   R1 * 3 |
   
   fis8 ees ees d d4 r4 | 
   R1 * 3 |
-  %ouuhh
-  %ouuhhuhghgrrgw
-  
-  
   fis8 ees ees d d4 r4 | 
-  
   fis8 ees ees d d4 r4 | 
-  fis8 ees ees d d8 c c d | 
+  fis8 ees ees d d8 ees16 d c8 d |
   c bes bes c fis,4 r4 | 
   %fis'8 ees ees d d4 r4 | 
   %fis8 ees ees d d4 r4 | 
   %fis8 ees ees d d8 c c d | 
   %c bes bes c fis,4 r4 | 
   
+  r4 r8 fis d' ees ees d |
+  ees4 d8 c~ c d16 c bes4 |
+  r4 r8 g d' ees ees d |
+  ees d c4 bes r4 |
+  r4 r8 fis d' ees ees d |
+  ees4 d8 c~ c d16 c bes4 |
+  r4 r8 g d' ees ees d |
+  ees d c4 bes r4 |
   
-  fis'8 ees ees g g fis fis a |
-  a g bes a \appoggiatura {bes16 c } d 
+  %fis'8 ees ees g g fis fis a |
+  % a g bes a \appoggiatura {bes16 c } d 
 }
 
 one = \transpose \originpitch \targetpitchone {\new Voice { 
@@ -259,32 +290,39 @@ three = \transpose \originpitch \targetpitchthr {\new Voice {
   \clef \clefVThree
 
   \compressFullBarRests
-  R1*8 |
-  R1*8 |
-  \repeat unfold 2 {
-    g4 g8 g bes4 bes8 c8~ |
-    c8 bes8 \appoggiatura cis8 d4 f8 cis c bes |
-    g4 g8 g bes4 bes8 c8~ |
-    c8 bes8 \appoggiatura cis8 d4 f4 r4 |
-  }
-  \repeat unfold 2 {
-    g,4 g8 g bes4 bes8 c8~ |
-    c8 bes8 \appoggiatura cis8 d4 f8 cis c bes |
-    g4 g8 g bes4 bes8 c8~ |
-    c8 bes8 \appoggiatura cis8 d4 f4 r4 |
-  }
-  \repeat unfold 2 {
-    bes,4. g4. r4 |
-    d'4 d8 f8~ f8 g8 g,4 | 
-    bes4. g4. r4 |
-    R1
-  }
-  \repeat unfold 2 {
-    d'8 f8~ f8 g8~ g8 f8 cis16 c bes8 |
-    c8 bes c c bes4 g |
-    d'8 f8~ f8 g8~ g8 f8 cis16 c bes8 |
-    c8 bes c c bes4 r4 |
-  }
+  <<
+    {
+      R1*8 |
+      R1*8 |
+      \repeat unfold 2 {
+        g4 g8 g bes4 bes8 c8~ |
+        c8 bes8 \appoggiatura cis8 d4 f8 cis c bes |
+        g4 g8 g bes4 bes8 c8~ |
+        c8 bes8 \appoggiatura cis8 d4 f4 r4 |
+      }
+      \repeat unfold 2 {
+        g,4 g8 g bes4 bes8 c8~ |
+        c8 bes8 \appoggiatura cis8 d4 f8 cis c bes |
+        g4 g8 g bes4 bes8 c8~ |
+        c8 bes8 \appoggiatura cis8 d4 f4 r4 |
+      }
+      \repeat unfold 2 {
+        bes,4. g4. r4 |
+        d'4 d8 f8~ f8 g8 g,4 | 
+        bes4. g4. r4 |
+        R1
+      }
+      \repeat unfold 2 {
+        d'8 f8~ f8 g8~ g8 f8 cis16 c bes8 |
+        c8 bes c c bes4 g |
+        d'8 f8~ f8 g8~ g8 f8 cis16 c bes8 |
+        c8 bes c c bes4 r4 |
+      }
+    }
+    {
+      \bassRiffs
+    }
+  >>
 }}}   %*********************************
 
 four = \transpose \originpitch \targetpitchfou {\new Voice { 
