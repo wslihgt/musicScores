@@ -298,28 +298,7 @@ four = \transpose \originpitchfou \targetpitch {\new Voice {
   \clef bass 
 
   \compressFullBarRests
-  R1*8 |
-  R1*8 |
-  \bassRiffI
-  \bassRiffI
-  \bassRiffII
-  \bassRiffIII
-  \bassRiffIII
-  \bassRiffII
-  \bassRiffIV
-  \bassRiffI
-  \bassRiffI
-  \bassRiffII
-  \bassRiffIII
-  \bassRiffIII
-  \bassRiffIV
-  \bassRiffII
-  \bassRiffI
-  \bassRiffI
-  \bassRiffII
-  \bassRiffIII
-  \bassRiffIII
-  \bassRiffIII
+  \bassRiffs
 }}}   %**********************************
 
 percuUp = \drummode {
