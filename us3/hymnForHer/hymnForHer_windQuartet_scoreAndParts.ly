@@ -9,6 +9,13 @@ targetpitchtwo = a
 targetpitchthr = d'
 targetpitchfou = c
 
+originpitchone = c' %c' %bes'% f % c'
+originpitchtwo = ees' %c' %bes'% f % c'
+originpitchthr = bes, %c' %bes'% f % c'
+originpitchfou = c' %c' %bes'% f % c'
+
+targetpitch = f'
+
 midiInstrOne = "oboe"
 midiInstrTwo = "alto sax"
 midiInstrThr = "tenor sax"
