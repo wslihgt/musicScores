@@ -163,6 +163,13 @@ bassRiffs = {
   \bassRiffIII
 }
 
+bassRiffsOttava = \transpose \originpitch \originpitchOttava {
+    \bassRiffs
+  }
+
+
+\addQuote "bassLineOtta" {\bassRiffsOttava}
+
 melody = \relative c'' {
   fis8 ees ees d d4 r4 | 
   R1 * 7 |
@@ -249,6 +256,10 @@ one = \transpose \originpitchone \targetpitch {\new Voice {
   f2 r4. r8 | 
   R1 *8 |
   \melody
+  \cueDuring "bassLineOtta" #UP
+  {
+    R1 * 80
+  }
   }
 }}}   %*********************************
 
@@ -270,6 +281,10 @@ two = \transpose \originpitchtwo \targetpitch {\new Voice {
   d2 r4. r8 | 
   R1 *8 |
   \melody
+  \cueDuring "bassLineOtta" #UP
+  {
+    R1 * 80
+  }
   }
 }}}   %*********************************
 
@@ -319,26 +334,30 @@ percuDown = \drummode {
 }
 
 
-percus =  {
+percus = {
   \global
   \set Staff.instrumentName = #"VPercu "
   \set Staff.midiInstrument = "synth drum"
 
-\compressFullBarRests
-<<
-  \new DrumVoice {\voiceOne \percuUp }
-  \new DrumVoice {\voiceTwo \percuDown }
->>
-
-\bar "|."}   %**********************************
+  \compressFullBarRests
+  <<	
+    \new DrumVoice {\voiceOne \percuUp }
+    \new DrumVoice {\voiceTwo \percuDown }
+  >>
+}   %**********************************
 
 musicPieceOne = {
   <<
-    \tag #'score \tag #'vpercu \new DrumStaff { << \globalStyle \structure \percus>> }
-    \tag #'score \tag #'v1 \new Staff { << \globalStyle \structure \one >> }
-    \tag #'score \tag #'v2 \new Staff { << \globalStyle \structure \two>> }
-    \tag #'score \tag #'v3 \new Staff { << \globalStyle \structure \three>> }
-    \tag #'score \tag #'v4 \new Staff { << \globalStyle \structure \four>> }
+    \tag #'score \tag #'vpercu \new DrumStaff {
+      << \globalStyle \structure \percus>> }
+    \tag #'score \tag #'v1 \new Staff { 
+      << \globalStyle \structure \one >> }
+    \tag #'score \tag #'v2 \new Staff { 
+      << \globalStyle \structure \two>> }
+    \tag #'score \tag #'v3 \new Staff { 
+      << \globalStyle \structure \three>> }
+    \tag #'score \tag #'v4 \new Staff { 
+      << \globalStyle \structure \four>> }
   >>
 }
 

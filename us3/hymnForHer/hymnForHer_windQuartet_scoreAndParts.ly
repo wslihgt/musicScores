@@ -3,6 +3,7 @@
 
 % TRANSPOSITION and MIDI variables
 originpitch = c %c' %bes'% f % c'
+originpitchOttava = c'' %c' %bes'% f % c'
 
 targetpitchone = c
 targetpitchtwo = a
@@ -85,7 +86,7 @@ clefVThree = "treble"
 
 #(set-global-staff-size 20)%
 \book{
-  \bookOutputSuffix "violin"
+  \bookOutputSuffix \midiInstrTwo
   #(set-global-staff-size 20)%
   
   \bookpart{
