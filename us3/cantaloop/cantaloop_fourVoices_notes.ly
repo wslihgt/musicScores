@@ -43,10 +43,10 @@ harmonies = \chordmode {
     f1:m7 |
     f1:m7 |
     f1:m7 |
-    des1:m7 |
-    des1:m7 |
-    des1:m7 |
-    des1:m7 |
+    des1:7 |
+    des1:7 |
+    des1:7 |
+    des1:7 |
     d1:m7 |
     d1:m7 |
     d1:m7 |
