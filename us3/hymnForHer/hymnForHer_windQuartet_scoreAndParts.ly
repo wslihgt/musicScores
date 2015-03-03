@@ -13,7 +13,7 @@ targetpitchfou = c
 originpitchone = c' %c' %bes'% f % c'
 originpitchtwo = ees' %c' %bes'% f % c'
 originpitchthr = bes, %c' %bes'% f % c'
-originpitchfou = c' %c' %bes'% f % c'
+originpitchfou = bes, %c' %bes'% f % c'
 
 targetpitch = f'
 
@@ -23,6 +23,7 @@ midiInstrThr = "tenor sax"
 midiInstrFou = "trombone"
 
 clefVThree = "treble"
+clefVFour = "treble"
 
 % INCLUDE the musical notes (and any variables further used in the books)
 \include "hymnForHer_fourVoices_notes.ly"

@@ -310,7 +310,7 @@ four = \transpose \originpitchfou \targetpitch {\new Voice {
   \set Staff.midiInstrument = \midiInstrFou
   \transposition \originpitchfou % for MIDI files? to be verified
 
-  \clef bass 
+  \clef \clefVFour
 
   \compressFullBarRests
   \bassRiffs
