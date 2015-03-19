@@ -10,8 +10,8 @@ targetpitchtwo = a
 targetpitchthr = d'
 targetpitchfou = c
 
-originpitchone = c' %c' %bes'% f % c'
-originpitchtwo = ees' %c' %bes'% f % c'
+originpitchone = bes' %c' %bes'% f % c'
+originpitchtwo = bes' %c' %bes'% f % c'
 originpitchthr = bes, %c' %bes'% f % c'
 originpitchfou = bes, %c' %bes'% f % c'
 

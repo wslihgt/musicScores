@@ -101,6 +101,7 @@ melody = \relative c' {
 one = \transpose \originpitchone \targetpitch {
   <<
     \new ChordNames {
+      \transposition \originpitchone
       \harmonies
     }
     \new Voice { 
@@ -146,6 +147,7 @@ one = \transpose \originpitchone \targetpitch {
 two = \transpose \originpitchtwo \targetpitch {
   <<
     \new ChordNames {
+      \transposition \originpitchtwo % for MIDI files? to be verified	
       \harmonies
     }
     \new Voice { 
@@ -191,6 +193,7 @@ two = \transpose \originpitchtwo \targetpitch {
 three = \transpose \originpitchthr \targetpitch {
   <<
     \new ChordNames {
+      \transposition \originpitchthr % for MIDI files? to be verified	
       \harmonies
     }
     \new Voice { 
@@ -228,6 +231,7 @@ three = \transpose \originpitchthr \targetpitch {
 four = \transpose \originpitchfou \targetpitch {
   <<
     \new ChordNames {
+      \transposition \originpitchfou % for MIDI files? to be verified
       \harmonies
     }
     \new Voice { 
