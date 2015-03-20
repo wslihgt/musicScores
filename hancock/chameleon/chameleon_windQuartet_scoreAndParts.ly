@@ -10,21 +10,21 @@ targetpitchtwo = a
 targetpitchthr = d'
 targetpitchfou = c
 
-originpitchone = bes %c' %bes'% f % c'
-originpitchtwo = bes' %c' %bes'% f % c'
-originpitchthr = bes, %c' %bes'% f % c'
-originpitchfou = bes, %c' %bes'% f % c'
+originpitchone = c' %bes %bes'% f % c'
+originpitchtwo = c'' %bes' %bes'% f % c'
+originpitchthr = c' %bes, %bes'% f % c'
+originpitchfou = c' %bes'% f % c'
 
-targetpitch = bes
-originpitchFromTarget = d
+targetpitch = c'
+originpitchFromTarget = c'
 
-midiInstrOne = "oboe"
-midiInstrTwo = "alto sax"
-midiInstrThr = "tenor sax"
-midiInstrFou = "trombone"
+midiInstrOne = "V1"
+midiInstrTwo = "Vharmo"
+midiInstrThr = "bassAlt"
+midiInstrFou = "bass"
 
-clefVThree = "treble" % "bass" %"treble"%
-clefVFour = "treble" % "bass" %
+clefVThree = "bass" %"treble" % "treble"%
+clefVFour = "bass" %"treble" % "bass" %
 
 % INCLUDE the musical notes (and any variables further used in the books)
 \include "chameleon_fourVoices_notes.ly"
@@ -38,7 +38,7 @@ clefVFour = "treble" % "bass" %
 % 
 %    add as many bookparts as there are pieces in the music
 \book{
-  \bookOutputSuffix "score"
+  \bookOutputSuffix "score_in_C" 
   \header {
     instrumentName = "Title" % ?
     }

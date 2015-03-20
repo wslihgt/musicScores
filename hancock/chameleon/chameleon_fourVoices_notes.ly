@@ -33,8 +33,10 @@ structure = {
   \bar "|."
 }
 
+harmoniesSilent = \chordmode {R1}
+
 harmonies = \chordmode {
-  R1 
+  R1
   \repeat unfold 2 {
     bes1:m7 |
     ees1:7 |
@@ -49,7 +51,7 @@ harmonies = \chordmode {
 
 global = {
   \time 4/4
-  \tempo 4 = 120
+  \tempo 4 = 90
   \key bes \minor 
 }
   
@@ -60,14 +62,14 @@ bassLine = \relative c {
       ees8. bes'16~ bes8 des8~ des g,, aes a
   }
   r8 f'' ees4 ees8 des~ des des16 ees |
-  des bes aes ees~ ees8 des~ des2| 
+  des bes ees, des~ des8 bes~ bes2| 
   R1 |
   R1
   
 }
 
 bassLineTwo = \relative c {
-  r2 r4 ees |
+  r2 r4 ees' |
   \repeat unfold 6 {
     des8 bes aes16 aes r8    aes16 aes r bes r4 |
     aes8 aes aes16 aes r bes r4 ees 
@@ -120,7 +122,7 @@ harmo = \relative c'' {
     r4 r4 r4 |
   }
   r8 f' ees4 ees8 des~ des des16 ees |
-  des bes aes ees~ ees8 des r4 des16 ees des 
+  des bes ees, des~ des8 bes r4 des16 ees des 
       <<
          {aes'16~ | 
           aes8 aes8 r4 r4 r8 bes~ |
@@ -133,7 +135,13 @@ harmo = \relative c'' {
           f8 des}
       >> r4 r4 r4  |
   r8 f' ees4 ees8 des~ des des16 ees |
-  des bes aes ees~ ees8 des~ des2| 
+  des bes ees, des~ des8 
+    << 
+      {aes'8~ aes2}
+      {ees8~ ees2}
+      {bes8~ bes2}
+    >>
+    | 
   R1 |
   R1
 }
@@ -206,8 +214,8 @@ three = \transpose \originpitchthr \targetpitch {
     \clef \clefVThree
     
     \compressFullBarRests
-    \repeat volta 2 { 
-    }
+    \bassLineTwo
+    
   }
 }>>}   %*********************************
 
