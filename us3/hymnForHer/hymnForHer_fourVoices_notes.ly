@@ -104,13 +104,19 @@ global = {
   \key g \minor 
 }
 
-bassRiffI = \relative c {
-  \repeat unfold 2 {
-    g4 g8 g bes4 bes8 c8~ |
-    c8 bes8 \appoggiatura cis8 d4 f8 cis c bes |
-    g4 g8 g bes4 bes8 c8~ |
-    c8 bes8 \appoggiatura cis8 d4 f4 r4 |
+
+bassRiffI = \relative c { 
+  <<
+  {\new ChordNames {\chordmode {g1:m | d2:m7dim5}}}
+  {
+    \repeat unfold 2 {
+      g4 g8 g bes4 bes8 c8~ |
+      c8 bes8 \appoggiatura cis8 d4 f8 cis c bes |
+      g4 g8 g bes4 bes8 c8~ |
+      c8 bes8 \appoggiatura cis8 d4 f4 r4 |
+    }
   }
+  >>
 }
 
 bassRiffII = \relative c {
