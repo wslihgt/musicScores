@@ -36,23 +36,22 @@ structure = {
 
 global = {
   \time 4/4
-  \tempo 4 = 180
-  \key g \minor 
+  \tempo 4 = 90
+  \key aes \major 
 }
 
 
 bassRiffI = \relative c { 
-  <<
-  {\new ChordNames {\chordmode {g1:m | d2:m7dim5}}}
-  {
-    \repeat unfold 2 {
-      g4 g8 g bes4 bes8 c8~ |
-      c8 bes8 \appoggiatura cis8 d4 f8 cis c bes |
-      g4 g8 g bes4 bes8 c8~ |
-      c8 bes8 \appoggiatura cis8 d4 f4 r4 |
-    }
+  \repeat unfold 4 {
+    aes4 r r8. b16 c ees f des~ |
+    des4 r4 r16 bes16 c des r d ees e |
+    f4 c des8. aes16~ aes4 |
+    bes4 ees8. aes,16~ aes16 \breathe bes16 c des r16 bes des ees |
   }
-  >>
+}
+
+guitarRiffI = \relative c {
+  
 }
 
 
@@ -69,6 +68,7 @@ bassRiffsOttava = \transpose \originpitch \originpitchOttava {
 \addQuote "bassLineOtta" {\bassRiffsOttava}
 
 melody = \relative c'' {
+  ees4 c16 bes8 aes16~ aes bes8 c16~ c  aes8 bes16~ bes4  
 }
 
 one = \transpose \originpitchone \targetpitch {\new Voice { 
@@ -79,20 +79,8 @@ one = \transpose \originpitchone \targetpitch {\new Voice {
   \transposition \originpitchone % for MIDI files? to be verified
   {
   \compressFullBarRests
-  R1*7 |
-  r2. r8 g |
-  \repeat unfold 3 {
-    \appoggiatura fis'16 g4 r8 f,8~ f2~ |
-    f2 r4. g8 | 
-  }
-  \appoggiatura fis'16 g4 r8 f,8~ f2~ |
-  f2 r4. r8 | 
-  R1 *8 |
+  R1 * 8
   \melody
-  \cueDuring "bassLineOtta" #UP
-  {
-    R1 * 80
-  }
   }
 }}}   %*********************************
 
@@ -104,20 +92,8 @@ two = \transpose \originpitchtwo \targetpitch {\new Voice {
   \transposition \originpitchtwo % for MIDI files? to be verified
   {
   \compressFullBarRests
-  R1*7 |
-  r2. r8 g |
-  \repeat unfold 3 {
-    d'4 r8 d,8~ d2~ |
-    d2 r4. g8 | 
-  }
-  d'4 r8 d,8~ d2~ |
-  d2 r4. r8 | 
-  R1 *8 |
+  R1 * 8
   \melody
-  \cueDuring "bassLineOtta" #UP
-  {
-    R1 * 80
-  }
   }
 }}}   %*********************************
 
@@ -149,40 +125,8 @@ four = \transpose \originpitchfou \targetpitch {\new Voice {
   \bassRiffs
 }}}   %**********************************
 
-percuUp = \drummode {
-  \repeat unfold 8 {
-    \repeat unfold 4 {
-      wbh4. wbh4. wbh4 |
-      r4 wbh4. wbh4.
-    }
-  }
-}
-percuDown = \drummode {
-  \repeat unfold 8 {
-    \repeat unfold 4 {
-      mar4 mar8 mar mar4 mar8 mar |
-      mar4 mar8 mar mar4 mar8 mar |
-    }
-  }
-}
-
-
-percus = {
-  \global
-  \set Staff.instrumentName = #"VPercu "
-  \set Staff.midiInstrument = "synth drum"
-
-  \compressFullBarRests
-  <<	
-    \new DrumVoice {\voiceOne \percuUp }
-    \new DrumVoice {\voiceTwo \percuDown }
-  >>
-}   %**********************************
-
 musicPieceOne = {
   <<
-    \tag #'score \tag #'vpercu \new DrumStaff {
-      << \globalStyle \structure \percus>> }
     \tag #'score \tag #'v1 \new Staff { 
       << \globalStyle \structure \one >> }
     \tag #'score \tag #'v2 \new Staff { 
@@ -196,7 +140,7 @@ musicPieceOne = {
 
 
 %%% Local Variables:
-%%% LilyPond-master-file: "hymnForHer_windQuartet_scoreAndParts.ly"
+%%% LilyPond-master-file: "iWantYouBack_windQuartet_scoreAndParts.ly"
 %%% End: 
-% -*- master: hymnForHer_windQuartet_scoreAndParts.ly;
-% -*- output: hymnForHer_windQuartet_scoreAndParts-score.pdf
+% -*- master: iWantYouBack_windQuartet_scoreAndParts.ly;
+% -*- output: iWantYouBack_windQuartet_scoreAndParts-score.pdf

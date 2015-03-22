@@ -15,7 +15,7 @@ originpitchtwo = bes' %c' %bes'% f % c'
 originpitchthr = bes, %c' %bes'% f % c'
 originpitchfou = c' % bes, %bes'% f % c'
 
-targetpitch = f'
+targetpitch = c'
 
 midiInstrOne = "oboe"
 midiInstrTwo = "tenor sax"
