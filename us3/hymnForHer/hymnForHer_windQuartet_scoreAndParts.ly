@@ -144,3 +144,22 @@ clefVFour = "bass" % "treble"
   % ... other bookparts
 }
 
+#(set-global-staff-size 20)%
+\book{
+  \bookOutputSuffix "percus"
+  #(set-global-staff-size 20)%
+  
+  \bookpart{
+    \header{
+      subtitle = "percus"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'vpercu \musicPieceOne
+      \header{
+	instrumentName = "percus"
+      }
+    }
+  }
+  % ... other bookparts
+}
+

@@ -10,10 +10,10 @@ targetpitchtwo = a
 targetpitchthr = d'
 targetpitchfou = c
 
-originpitchone = bes' %c' %bes'% f % c'
-originpitchtwo = bes' %c' %bes'% f % c'
-originpitchthr = bes, %c' %bes'% f % c'
-originpitchfou = bes, %c' %bes'% f % c'
+originpitchone = c % bes %c' %bes'% f % c'
+originpitchtwo = c' %bes' %c' %bes'% f % c'
+originpitchthr = c, %bes, %c' %bes'% f % c'
+originpitchfou = c, %bes, %c' %bes'% f % c'
 
 targetpitch = c'
 
@@ -37,7 +37,7 @@ clefVFour = "treble"
 % 
 %    add as many bookparts as there are pieces in the music
 \book{
-  \bookOutputSuffix "score"
+  \bookOutputSuffix "scoreInC"
   \header {
     instrumentName = "Title" % ?
     }
