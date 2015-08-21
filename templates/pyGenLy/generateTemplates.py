@@ -151,6 +151,28 @@ def generateNotes(instrument, optLabel=''):
                 '}\n')
     return notesStr
 
+def generatePercuNotes(instrument, optLabel=''):
+    instrLabel = optLabel + instrument
+    percuStr = (
+        '%s%sUp = \drummode {\n' %instrLabel +
+        '  R1*4 wbh4. wbh4. wbh4 |\n' +
+        '}\n\n' +
+        '%s%sDown = \drummode {\n' %instrLabel +
+        '  R1*4 mar4 mar8 mar mar4 mar8 mar |\n' +
+        '}\n\n' +
+        '%s%sNotes = {\n' %instrLabel +
+        '  \global\n' +
+        '  \set Staff.instrumentName = #"%s "\n' %instrument +
+        '  \set Staff.midiInstrument = "synth drum"\n\n' +
+        '  \compressFullBarRests\n' +
+        '  <<\n' +
+        '    \new DrumVoice {\voiceOne \%sUp }\n' %(instrLabel) +
+        '    \new DrumVoice {\voiceTwo \%sDown }\n'  %(instrLabel) +
+        '  >>\n' +
+        '}   %**********************************\n\n')
+    return percuStr
+
+
 def generateNotesScore(instruments, optNotesLabel='', scoreLabel='musicPieceOne', scoreTag='score'):
     scoreNotesStr = scoreLabel + ' = {\n  <<\n'
     scoreNotesStr += '\n'.join(
@@ -166,3 +188,12 @@ def generateVariablesEmacs(masterfilename):
         ' End:')
     return varStr
 
+def generateVariablesFrescobaldi(masterfilename, outputfilename=None):
+    '''master and output filenames are expected without the .ly and .pdf extension.
+    '''
+    if outputfilename is None:
+        outputfilename = masterfilename + '-score'
+
+    varStr = (
+        '% -*- master: %s.ly;' %masterfilename +
+        '% -*- output: %s.pdf' %outputfilename)
