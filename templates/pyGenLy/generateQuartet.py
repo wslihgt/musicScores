@@ -32,7 +32,7 @@ def generateNotesAndScore(instruments,
     
     if filename is not None:
         notesly += gt.generateVariablesEmacs(masterfilename=filename+'_score.ly')
-        notesly += gt.generateVariablesFrescobaldi(masterfilename=filename+'_score.ly')
+        notesly += gt.generateVariablesFrescobaldi(masterfilename=filename+'_score')
         f = open(outdir+'/'+filename+'_notes.ly', 'w')
         f.writelines(notesly)
         f.close()
@@ -77,27 +77,22 @@ def generateWashingMachines(*args, **kwargs):
     """
     instruments = ('Oboe', 'TenorSax', 'Trombone', 'Guitar', 'Piano', 'Drums')
     
-    targetPitchDic = {
-        'Oboe': 'c', 
-        'Violin': 'c', 
-        'Alto': 'c', 
-        'Cello': 'c', }
+    targetPitchDic = dict(
+        zip(instruments,
+            ('c', 'd', 'd', 'c', 'c', 'c')))
     
-    clefDic = {
-        'Oboe': 'treble', 
-        'Violin': 'treble', 
-        'Alto': 'alto', 
-        'Cello': 'bass', }
-
-    midiInstrDic = {
-        'Oboe': 'oboe', 
-        'Violin': 'violin', 
-        'Alto': 'viola', 
-        'Cello': 'cello', }
-
+    clefDic = dict(
+        zip(instruments,
+            ('treble', 'treble', 'treble', 'treble', 'treble', 'drums')))
+    
+    midiInstrDic = dict(
+        zip(instruments,
+            ('oboe', 'tenor sax', 'trombone', 'electric guitar (jazz)',
+             'acoustic grand', 'synth drum')))
+    
     return generateNotesAndScore(instruments=instruments,
                                  targetPitchDic=targetPitchDic,
                                  clefDic=clefDic, midiInstrDic=midiInstrDic,
-                                 ensemble='quatuor',
+                                 ensemble='Wasching Machines',
                                  **kwargs)
     

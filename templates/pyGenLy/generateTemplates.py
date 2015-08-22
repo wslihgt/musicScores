@@ -3,6 +3,12 @@
 generate templates for a music ensemble, as defined by a given file (format to be defined)
 """
 
+percuInstr = ('Drums', 'Percus', 'drums', 'percus')
+prefixForPercu = dict(
+    zip(percuInstr,
+        ('Drum', )*len(percuInstr))
+    )
+
 def generateCommonScoreLy(targetPitchDic, midiInstrumentDic, clefDic,
                           staffSize=14, title='Title', subtitle='subtitle',
                           musicPieceLabel='musicPieceOne',
@@ -132,6 +138,9 @@ def generateBook(staffSize=20,
     return bookStr
 
 def generateNotes(instrument, optLabel=''):
+    if instrument in percuInstr:
+        return generatePercuNotes(instrument, optLabel)
+    
     notesStr = ('%s%sNotes = \\transpose \\originpitch \\targetPitch%s {\n' %(
         optLabel, instrument, instrument) +
                 '  \\new Voice {\n' +
@@ -154,20 +163,20 @@ def generateNotes(instrument, optLabel=''):
 def generatePercuNotes(instrument, optLabel=''):
     instrLabel = optLabel + instrument
     percuStr = (
-        '%s%sUp = \drummode {\n' %instrLabel +
+        '%sUp = \\drummode {\n' %instrLabel +
         '  R1*4 wbh4. wbh4. wbh4 |\n' +
         '}\n\n' +
-        '%s%sDown = \drummode {\n' %instrLabel +
+        '%sDown = \\drummode {\n' %instrLabel +
         '  R1*4 mar4 mar8 mar mar4 mar8 mar |\n' +
         '}\n\n' +
-        '%s%sNotes = {\n' %instrLabel +
-        '  \global\n' +
-        '  \set Staff.instrumentName = #"%s "\n' %instrument +
-        '  \set Staff.midiInstrument = "synth drum"\n\n' +
-        '  \compressFullBarRests\n' +
+        '%sNotes = {\n' %instrLabel +
+        '  \\global\n' +
+        '  \\set Staff.instrumentName = #"%s "\n' %instrument +
+        '  \\set Staff.midiInstrument = "synth drum"\n\n' +
+        '  \\compressFullBarRests\n' +
         '  <<\n' +
-        '    \new DrumVoice {\voiceOne \%sUp }\n' %(instrLabel) +
-        '    \new DrumVoice {\voiceTwo \%sDown }\n'  %(instrLabel) +
+        '    \\new DrumVoice {\\voiceOne \\%sUp }\n' %(instrLabel) +
+        '    \\new DrumVoice {\\voiceTwo \\%sDown }\n'  %(instrLabel) +
         '  >>\n' +
         '}   %**********************************\n\n')
     return percuStr
@@ -176,16 +185,17 @@ def generatePercuNotes(instrument, optLabel=''):
 def generateNotesScore(instruments, optNotesLabel='', scoreLabel='musicPieceOne', scoreTag='score'):
     scoreNotesStr = scoreLabel + ' = {\n  <<\n'
     scoreNotesStr += '\n'.join(
-        ['    \\tag #\'%s \\tag #\'%s \\new Staff { << \\globalStyle \\structure \\%s%sNotes >> }' %(
-            scoreTag, ins, optNotesLabel, ins) for ins in instruments])
+        ['    \\tag #\'%s \\tag #\'%s \\new %sStaff { << \\globalStyle \\structure \\%s%sNotes >> }' %(
+            scoreTag, ins, prefixForPercu.get(ins, ''), # if it's drums, add a prefix.
+            optNotesLabel, ins) for ins in instruments])
     scoreNotesStr += '\n  >>\n}\n'
     return scoreNotesStr
 
 def generateVariablesEmacs(masterfilename):
     varStr = (
-        ' Local Variables\n' +
-        ' Lilypond-master-file: "%s"\n' %masterfilename +
-        ' End:')
+        '%%% Local Variables\n' +
+        '%%% Lilypond-master-file: "{}"\n'.format(masterfilename) +
+        '%%% End:\n')
     return varStr
 
 def generateVariablesFrescobaldi(masterfilename, outputfilename=None):
@@ -195,5 +205,6 @@ def generateVariablesFrescobaldi(masterfilename, outputfilename=None):
         outputfilename = masterfilename + '-score'
 
     varStr = (
-        '% -*- master: %s.ly;' %masterfilename +
-        '% -*- output: %s.pdf' %outputfilename)
+        '% -*- master: {}.ly;\n'.format(masterfilename) +
+        '% -*- output: {}.pdf\n'.format(outputfilename))
+    return varStr
