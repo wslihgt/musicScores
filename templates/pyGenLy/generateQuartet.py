@@ -78,20 +78,21 @@ def generateOboeQuartet(*args, **kwargs):
 def generateWashingMachines(*args, **kwargs):
     """
     """
-    instruments = ('Oboe', 'TenorSax', 'Trombone', 'Guitar', 'Piano', 'Drums')
+    instruments = ('Drums', 'Oboe', 'TenorSax', 'Trombone', 'Guitar', 'Piano')
     
     targetPitchDic = dict(
         zip(instruments,
-            ('c', 'd', 'd', 'c', 'c', 'c')))
+            ('c', 'c', 'd\'', 'd\'', 'c', 'c')))
     
     clefDic = dict(
         zip(instruments,
-            ('treble', 'treble', 'treble', 'treble', 'treble', 'drums')))
+            ('drums', 'treble', 'treble', 'treble', 'treble', 'treble')))
     
     midiInstrDic = dict(
         zip(instruments,
-            ('oboe', 'tenor sax', 'trombone', 'electric guitar (jazz)',
-             'acoustic grand', 'synth drum')))
+            ('synth drum', 'soprano sax', 'tenor sax', 'trombone',
+             'electric guitar (jazz)',
+             'acoustic grand')))
     
     return generateNotesAndScore(instruments=instruments,
                                  targetPitchDic=targetPitchDic,

@@ -270,7 +270,7 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
       \compressFullBarRests
       
       % intro
-      ees,8 bes' des ees~ ees des~ des ees, |
+      ees,,8 bes' des ees~ ees des~ des ees, |
       d f a b~ b a~ a f |
       ees8 bes' des ees~ ees des~ des ees, |
       d f a b~ b a~ a f |
@@ -290,14 +290,14 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
         d4 e f d |
       }
       % bridge I
-      a'4 g f ees |
+      a''4 g f ees |
       d e fis d |
       e g d fis |
       e d bes a |
       g a bes d |
       c e g e |
       f f f f |
-      e4 r8 a4. d,4 | 
+      e4 r8 a4. d,,4 | 
       % theme
       \repeat volta 2 {
         ees8 bes' des ees~ ees des~ des ees, |
@@ -310,6 +310,19 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
         d4 e f d |
       }
       % bridge II
+      e'4 e e e  |
+      e e r8 e4 a,8~ |
+      a4 a a a |
+      a a r8 a4 d8~ |
+      d4 d d d |
+      d d r8 d4 g,8~ |
+      g4 g g g |
+      g g r8 g4 g8~ |
+      g4 g g g |
+      g g r8 g4 ges8~ |
+      ges4 ges ges ges |
+      ges ges r4 ges8 f^. 
+      R1 * 4
     }
   }
 }
