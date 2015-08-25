@@ -38,7 +38,7 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
 
 global = { % Use for tempo and key changes
   \time 2/2
-  \tempo 2 = 60
+  \tempo 2 = 72
   \key d \minor
 }
 
@@ -289,6 +289,27 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
         e fis g bes a g ees d~ |
         d4 e f d |
       }
+      % bridge I
+      a'4 g f ees |
+      d e fis d |
+      e g d fis |
+      e d bes a |
+      g a bes d |
+      c e g e |
+      f f f f |
+      e4 r8 a4. d,4 | 
+      % theme
+      \repeat volta 2 {
+        ees8 bes' des ees~ ees des~ des ees, |
+        d f a b~ b a~ a f |
+        ees8 bes' des ees~ ees des~ des ees, |
+        d f a b~ b a~ a f |
+        ees8 bes' des ees~ ees des~ des ees, |
+        d f a b~ b a~ a f |
+        e fis g bes a g ees d~ |
+        d4 e f d |
+      }
+      % bridge II
     }
   }
 }
