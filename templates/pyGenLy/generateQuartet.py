@@ -7,14 +7,17 @@ def generateNotesAndScore(instruments,
                           title='Title',
                           ensemble='Ensemble',
                           composer='me',
-                          filename=None, outdir=''):
-
-    notesly = gt.generateCommonNotesLy(pieceTitle=title, composer=composer)
+                          filename=None, outdir='', withChords=False):
     
+    notesly = gt.generateCommonNotesLy(pieceTitle=title, composer=composer)
+
+    if withChords:
+        notesly += '\n' + gt.generateChordNotes() + '\n'
+        
     notesly += ('\n').join(
         [gt.generateNotes(instrument) for instrument in instruments])
 
-    notesly += gt.generateNotesScore(instruments, )
+    notesly += gt.generateNotesScore(instruments, withChords=withChords)
     
     scorely = gt.generateCommonScoreLy(
         targetPitchDic,
