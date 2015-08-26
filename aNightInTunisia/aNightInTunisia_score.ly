@@ -57,7 +57,8 @@ clefPiano = treble
 %    for each instrument, we likewise have a book
 % 
 % TODO: make more automatisms with variables? possible to put more logic?
-    % #(set-global-staff-size 20)%
+% 
+#(set-global-staff-size 20)%
 \book{
   \bookOutputSuffix Oboe
   #(set-global-staff-size 20)%
@@ -117,10 +118,10 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 19)%
 \book{
   \bookOutputSuffix Guitar
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 19)%
 
   \bookpart{
     \header{
@@ -157,10 +158,10 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 18)%
 \book{
   \bookOutputSuffix Drums
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 18)%
 
   \bookpart{
     \header{

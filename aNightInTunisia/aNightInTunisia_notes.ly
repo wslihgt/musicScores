@@ -15,20 +15,20 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
   s1^\markup{intro, latin} |
   s1 * 7 |
   %\bar "||"
-  s1^\markup{theme, latin} |
+  s1^\markup{\circle {A1} theme, latin} |
   s1 * 5 |
   s1^\markup{swing} |
   s1 | % repeat here
   %\bar "||"
-  s1^\markup{bridge I, swing} |
+  s1^\markup{\circle B bridge I, swing} |
   s1 * 7 |
   \bar "||"
-  s1^\markup{theme, latin} |
+  s1^\markup{\circle {A2} theme, latin} |
   s1 * 5 |
   s1^\markup{swing} |
   s1 |
   \bar "||"
-  s1^\markup{bridge II, swing} |
+  s1^\markup{\circle C bridge II, swing} |
   s1 * 11 |
   \bar "||"
   s1^\markup{charlie parker break} |
@@ -343,11 +343,73 @@ PianoNotes = \transpose \originPitch \targetPitchPiano {
 }
 
 DrumsUp = \drummode {
-  R1*4 wbh4. wbh4. wbh4 |
+  \repeat unfold 4 {
+  <<
+  \new DrumVoice \stemUp {cyms4 cb cb cb8 cb8~ | cb8 cb4 cb cb8 cb4 |}
+  \new DrumVoice {s4 tomh8 tomh s4 toml8 toml |s4 tomh8 tomh s4 toml8 toml }
+  >>}
+  \repeat unfold 3 {
+  <<
+  \new DrumVoice \stemUp {cyms4 cb cb cb8 cb8~ | cb8 cb4 cb cb8 cb4 |}
+  \new DrumVoice {s4 tomh8 tomh s4 toml8 toml |s4 tomh8 tomh s4 toml8 toml }
+  >>}
+  <<
+    {cyms4 cyms8 cyms cyms4 cyms8 cyms | cyms4 cyms8 cyms cyms4 cyms8 cyms }
+    {s4. sn8 s4 sn4 | s4. sn8 s4 sn4 |}
+  >>
+  \repeat unfold 4 {
+    <<
+      {cyms4 cyms8 cyms cyms4 cyms8 cyms | cyms4 cyms8 cyms cyms4 cyms8 cyms }
+      {s4. sn8 s4 sn4 | s4. sn8 s4 sn4 |}
+    >>
+  }
+  \repeat unfold 3 {
+    bd8 cyms sn bd hh sn tomfl tomfl | bd cyms sn bd hh bd toml tomh |
+  }
+  {cyms4 cyms8 cyms cyms4 cyms8 cyms | cyms4 cyms8 cyms cyms4 cyms8 cyms }
+  % bridge II
+  {cyms4 cyms8 cyms cyms4 cyms8 cyms | cyms4 cyms8 cyms8^. r8 r4 cymc8~ |}
+  {cyms4 cyms8 cyms cyms4 cyms8 cyms | cyms4 cyms8 cyms8^. r8 r4 cymc8~ |}
+  {cyms4 cyms8 cyms cyms4 cyms8 cyms | cyms4 cyms8 cyms8^. r8 r4 cymc8~ |}
+  {cyms4 cyms8 cyms cyms4 cyms8 cyms | cyms4 cyms8 cyms8^. r8 r4 cymc8~ |}
+  {cyms4 cyms8 cyms cyms4 cyms8 cyms | cyms4 cyms8 cyms8^. r8 r4 cymc8~ |}
+  {cyms4 cyms8 cyms cyms4 cyms8 cyms | cyms4 cyms8 cyms8^. r8 r4 cymc8~ |}
+  R1 * 4
 }
 
 DrumsDown = \drummode {
-  R1*4 mar4 mar8 mar mar4 mar8 mar |
+  \repeat unfold 4 {
+  <<
+  \new DrumVoice \stemDown {bd4. bd4 bd4.| bd4. bd4 bd4.}
+  \new DrumVoice \stemDown {s4 hhp s hhp | s hhp s hhp |}
+  >>
+  }
+  \repeat unfold 3 {
+  <<
+  \new DrumVoice \stemDown {bd4. bd4 bd4.| bd4. bd4 bd4.}
+  \new DrumVoice \stemDown {s4 hhp s hhp | s hhp s hhp |}
+  >>
+  }
+  {bd4 r2 r8 bd8 | r4 bd r2 }
+  \repeat unfold 4 {
+    {bd4 r2 r8 bd8 | r4 bd r2 }
+  }
+  \repeat unfold 3 {
+  %<<
+  %\new DrumVoice \stemDown {bd4. bd4 bd4.| bd4. bd4 bd4.}
+  %\new DrumVoice \stemDown {s4 hhp s hhp | s hhp s hhp |}
+  %>>
+  s1 | s1
+  }
+  {bd4 r2 r8 bd8 | r4 bd r2 }
+  % bridge II
+  \repeat unfold 6 {
+    <<
+      {s4 s8 sn8 s2 | sn4 s s8 sn8 sn s8}
+      {bd4 hhp s hhp8 bd | s4 hhp s8 bd4 bd8}
+    >>
+  }
+  R1 * 4
 }
 
 DrumsNotes = {
