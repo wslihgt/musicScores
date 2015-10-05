@@ -131,6 +131,7 @@ clefPiano = treble
       \header{
 	instrumentName = Trombone
       }
+      \midi{}
     }
   }
   %% ... other bookparts
