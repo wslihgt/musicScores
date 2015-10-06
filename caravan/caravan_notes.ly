@@ -27,7 +27,7 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
   \bar "||"
   s1^\markup{A2 Theme} |
   s1*15
-  \bar "||"
+  %\bar "||"
   
   \repeat volta 2 {
     s1^\markup{\musicglyph #"scripts.segno" Solos, A1 Theme } |
@@ -38,7 +38,7 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
   \bar "||"
   s1^\markup{A2 Theme} |
   s1*14 | s2. s4_\markup{"D.S."}
-  \bar "||"
+  %\bar "||"
   
   \repeat volta 2 {
     s1^\markup{Tutti, A1 Theme} |
@@ -76,23 +76,25 @@ chordSeq = \chordmode {
   c:7 |
   des:7 |
   \repeat unfold 3 {
-    % theme
-    c:7 |
-    des:7 |
-    c:7 |
-    des:7 |
-    c:7 |
-    des:7 |
-    c:7 |
-    des:7 |
-    c:7 |
-    des:7 |
-    c:7 |
-    des:7 |
-    f:m6 | %f2:m bes:13 %f:m6 |
-    f:m6 | %ees:9 aes:13 %f:m6 |
-    f:m6 | %des:9 c:aug7maj9 %f:m6 |
-    f:m6 | %f1:m69%f:m6 |
+    \repeat volta 2 {
+      % theme
+      c:7 |
+      des:7 |
+      c:7 |
+      des:7 |
+      c:7 |
+      des:7 |
+      c:7 |
+      des:7 |
+      c:7 |
+      des:7 |
+      c:7 |
+      des:7 |
+      f:m6 | %f2:m bes:13 %f:m6 |
+      f:m6 | %ees:9 aes:13 %f:m6 |
+      f:m6 | %des:9 c:aug7maj9 %f:m6 |
+      f:m6 | %f1:m69%f:m6 |
+    }
     % bridge
     f1:7 | 
     f1:7 | 
@@ -169,13 +171,48 @@ DrumsUp = \drummode {
       sn4 hh8 sn4. hh8 r8
     }
   }
+  % coda
+  R1*2 |
+  r8 sn4. r4. cymc8 | 
+  r8 sn4 sn8 r2 |
+  r8 sn4. r4. cymc8 | 
+  r8 sn4 sn8 r2 |
+  R1 |
+  r2 r8 sn r4 |
 }
 
 DrumsDown = \drummode {
-  \repeat unfold 16 {
+  \repeat unfold 8 {
     bd4. bd4. bd4 |
     r8 bd4. bd4. bd8 |
   }
+  \repeat unfold 3 {
+    % theme
+    \repeat volta 2 {
+      \repeat unfold 8 {
+        bd4. bd4. bd4 |
+        r8 bd4. bd4. bd8 |
+      }
+    }
+    % bridge
+    \repeat unfold 8 {
+      
+      bd4. bd4. bd4 |
+      r8 bd4. bd4. bd8 |
+    }
+    % theme again
+    \repeat unfold 8 {
+      bd4. bd4. bd4 |
+      r8 bd4. bd4. bd8 |
+    }
+  }
+  % coda
+  R1*2 |
+  bd4 r8 bd8 bd4 r8 bd |
+  bd4 r8 bd8 bd4 r8 bd |
+  bd4 r8 bd8 bd4 r8 bd |
+  bd4 r8 bd8 bd4 r8 bd |
+  R1*2
 }
 
 DrumsNotes = {
@@ -528,7 +565,7 @@ PianoNotes = \transpose \originPitch \targetPitchPiano {
 
       \clef \clefPiano
       \compressFullBarRests
-      R1*4 
+      \chordSeq
 
       %\bar "|."
     }
