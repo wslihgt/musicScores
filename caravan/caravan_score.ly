@@ -36,6 +36,7 @@ clefPiano = treble
   \bookOutputSuffix "score"
   \header {
     title = "Caravan"
+    instrument = "score"
     }
   #(set-global-staff-size 14)
   \bookpart{
@@ -57,7 +58,7 @@ clefPiano = treble
 %    for each instrument, we likewise have a book
 % 
 % TODO: make more automatisms with variables? possible to put more logic?
-    % #(set-global-staff-size 20)%
+#(set-global-staff-size 20)%
 \book{
   \bookOutputSuffix Drums
   #(set-global-staff-size 20)%
@@ -65,6 +66,7 @@ clefPiano = treble
   \bookpart{
     \header{
       subtitle = title
+      instrument = "Drums"
       }
     \score {
       \new StaffGroup \keepWithTag #'Drums \musicPieceOne
@@ -85,6 +87,7 @@ clefPiano = treble
   \bookpart{
     \header{
       subtitle = title
+      instrument = "Oboe"
       }
     \score {
       \new StaffGroup \keepWithTag #'Oboe \musicPieceOne
@@ -105,6 +108,7 @@ clefPiano = treble
   \bookpart{
     \header{
       subtitle = title
+      instrument = "TenorSax"
       }
     \score {
       \new StaffGroup \keepWithTag #'TenorSax \musicPieceOne
@@ -125,6 +129,7 @@ clefPiano = treble
   \bookpart{
     \header{
       subtitle = title
+      instrument = "Trombone"
       }
     \score {
       \new StaffGroup \keepWithTag #'Trombone \musicPieceOne
@@ -146,6 +151,7 @@ clefPiano = treble
   \bookpart{
     \header{
       subtitle = title
+      instrument = "Guitar"
       }
     \score {
       \new StaffGroup \keepWithTag #'Guitar \musicPieceOne
@@ -166,6 +172,7 @@ clefPiano = treble
   \bookpart{
     \header{
       subtitle = title
+      instrument = "Piano"
       }
     \score {
       \new StaffGroup \keepWithTag #'Piano \musicPieceOne

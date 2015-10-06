@@ -139,7 +139,6 @@ chordSeq = \chordmode {
   f:m6 | %f1:m69%f:m6 |
   r1 | %c:7 | 
   r1 | %c:7 |
-  r4
 }
 
 
@@ -571,6 +570,7 @@ PianoNotes = \transpose \originPitch \targetPitchPiano {
     }
   }
 }
+
 musicPieceOne = {
   <<
 
@@ -601,6 +601,7 @@ musicPieceOne = {
     \tag #'score \tag #'Piano \new Staff { << \globalStyle \structure \PianoNotes >> }
   >>
 }
+
 %%% Local Variables
 %%% Lilypond-master-file: "caravan_score.ly"
 %%% End:
