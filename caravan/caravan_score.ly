@@ -6,7 +6,7 @@ originPitch = c %%c' %%bes'%% f %% c'
 targetPitchOboe = c
 targetPitchGuitar = c
 targetPitchDrums = c
-targetPitchTrombone = d'
+targetPitchTrombone = d''
 targetPitchTenorSax = d'
 targetPitchPiano = c
 midiInstrOboe = "soprano sax"
@@ -136,7 +136,7 @@ clefPiano = treble
       \header{
 	instrumentName = Trombone
       }
-      \midi{}
+      % \midi{}
     }
   }
   %% ... other bookparts
