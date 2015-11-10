@@ -73,7 +73,7 @@ def generateCommonScoreLy(targetPitchDic, midiInstrumentDic, clefDic,
         '% \n' +
         '% TODO: make more automatisms with variables? ' +
         'possible to put more logic?\n' +
-        '    % ')
+        '%\n\n')
     return commonStr
 
 def generateCommonNotesLy(pieceTitle='title',
@@ -130,6 +130,7 @@ def generateBook(staffSize=20,
                '  \\bookpart{\n' +
                '    \\header{\n' +
                '      subtitle = %s\n' %bookTitle +
+               '      instrument = %s\n' %instrumentName +
                '      }\n' +
                '    \\score {\n' +
                '      \\new StaffGroup \\keepWithTag #\'%s \\%s\n' %(
