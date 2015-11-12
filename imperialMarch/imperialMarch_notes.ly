@@ -16,7 +16,7 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
   s1*3 |
   % theme
   s1^\markup{\circle A Theme} |
-  s1*7 |
+  s1*11 |
   
 }
 
@@ -40,17 +40,21 @@ chordSeq = \chordmode {
   e2.:m6 a4:m7.5- |
   bes1:m7 |
   a1:m7.5- |
+  e1:m6  |
+  e2.:m6 a4:m7.5- |
+  bes1:m7 |
+  a1:m7.5- |
   e4:m6 a4:m7.5- e2:m6
   % bridge?
 }
 
 
 DrumsUp = \drummode {
-  R1*4 wbh4. wbh4. wbh4 |
+  R1*4 
 }
 
 DrumsDown = \drummode {
-  R1*4 mar4 mar8 mar mar4 mar8 mar |
+  R1*4 
 }
 
 DrumsNotes = {
@@ -85,11 +89,18 @@ OboeNotes = \transpose \originPitch \targetPitchOboe {
         ees4 c8 g'16 e~ e2 |
         e'4 e, e' ees8 d |
         des16 c des8~ des f, bes4 a8 aes |
+        g16 fis g8~ g8 c, ees4 c8 ees16 g~ |
+        g4 e8 g16 b~ b2 |
+        e4 e, e' ees8 d |
+        des16 c des8~ des f, bes4 a8 aes |
         g16 fis g8~ g8 c, ees4 c8 g'16 e~ |
         e4 c8 g'16 e~ e2 |
       }
-
-      \bar "|."
+      r8 b c a r8 g' fis dis | 
+      r8 d' ais fis a g dis c |
+      r8 b c a r8 g' fis dis | 
+      r8 e' b g f c aes f | 
+      % \bar "|."
     }
   }
 }
@@ -114,10 +125,14 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
         cis'4 cis, cis' a |
         bes8 bes4 bes8 aes4 aes4  |
         ees8 ees4 ees8 c4 a8. cis16~ |
+        cis4 cis8 e16 g16~ g2 |
+        cis4 cis, cis' a |
+        bes8 bes4 bes8 aes4 aes4  |
+        ees8 ees4 ees8 c4 a8. cis16~ |
         cis4 a8. cis16~ cis2 |
       }
 
-      \bar "|."
+      % \bar "|."
     }
   }
 }
@@ -142,9 +157,13 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
         b'4 b, g' ees |
         f8 f4 f8 des4 des4  |
         c8 c4 c8 g4 a8. b16~ |
+        b4 b8 cis16 e16~ e2 |
+        b'4 b, g' ees |
+        f8 f4 f8 des4 des4  |
+        c8 c4 c8 g4 a8. b16~ |
         b4 g8. b16~ b2 |
       }
-      \bar "|."
+      %\bar "|."
     }
   }
 }
@@ -155,33 +174,40 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
     \relative c''{
       \set Staff.instrumentName = #"Guitar "
       \set Staff.midiInstrument = \midiInstrGuitar
+      \set Staff.midiMaximumVolume = #0.8
       \transposition c' %% for MIDI files? to be verified
 
       \clef \clefGuitar
       \compressFullBarRests
-      \repeat unfold 4 {
+      \repeat unfold 3 {
       \chordmode{
         e4:m6 e8:m6 \tuplet 3/2 {e16:m6 e16:m6 e16:m6}
         e8:m6 \tuplet 3/2 {e16:m6 e16:m6 e16:m6}
         \tuplet 3/2 {a16:m7.5- a16:m7.5- a16:m7.5-} a8:m7.5-
       }
       }
-      % theme
       \chordmode{
-      e4:m6 e8:m6 \tuplet 3/2 {e16:m6 e16:m6 e16:m6}
-      e8:m6 \tuplet 3/2 {e16:m6 e16:m6 e16:m6}
-      \tuplet 3/2 {a16:m7.5- a16:m7.5- a16:m7.5-} a8:m7.5- |
-      e8:m6 \tuplet 3/2 {e16:m6 e16:m6 e16:m6}
-      \tuplet 3/2 {a16:m7.5- a16:m7.5- a16:m7.5-} a8:m7.5- 
-      e8:m6 \tuplet 3/2 {e16:m6 e16:m6 e16:m6}
-      e4:m6 |
-      e4:m6 e8:m6 \tuplet 3/2 {e16:m6 e16:m6 e16:m6}
-      e8:m6 \tuplet 3/2 {e16:m6 e16:m6 e16:m6}
-      \tuplet 3/2 {a16:m7.5- a16:m7.5- a16:m7.5-} a8:m7.5- |
-      a8:m7.5- \tuplet 3/2 {a16:m7.5- a16:m7.5- a16:m7.5-}
-      \tuplet 3/2 {a16:m7.5- a16:m7.5- a16:m7.5-} a8:m7.5- 
-      e8:m6 \tuplet 3/2 {e16:m6 e16:m6 e16:m6}
-      e4:m6 |
+        e4:m6 e8:m6 \tuplet 3/2 {e16:m6 e16:m6 e16:m6}
+        e8:m6 
+      }
+      \appoggiatura{e16} d8 c b | 
+      % theme
+      \chordmode {
+        r8 e8:m6~ e16:m6 e8.:m6 e16:m6 e16:m6 e16:m6 e16:m6  
+      }
+      r16 ais b8 | 
+      e,8 \chordmode {e:m6} c16 
+      \chordmode { a8.:m7.5- e16:m6 e16:m6 e16:m6 e16:m6~ e4:m6  } |
+      \chordmode {
+        r8 e8:m6 r16 e8:m6 r16 e8.:m6 a16:m7.5-~  a4:m7.5-} | 
+      \chordmode {
+        r8 a8:m7.5-~ a16:m7.5- e8.:m6 e16:m6 e16:m6 e16:m6 e16:m6 r4 | 
+        r4 e4:m6 r4 r16 a8.:m7.5- | r4 bes4:m7 r4 r16 f8.:m |
+        r4 a4:m7.5- r4 r16 a8.:m7.5- | 
+        r8 e8:m6~ e16:m6 e8.:m6 e16:m6 e16:m6 e16:m6 e16:m6~ e4:m6 |
+        r4 e4:m6 r4 r16 a8.:m7.5- | r4 bes4:m7 r4 r16 f8.:m |
+        r4 a4:m7.5- r4 a8.:m7.5- e16:m6~ | 
+        e4:m6 a8.:m7.5- e16:m6~ e2:m6 |
       }
       % \bar "|."
     }
@@ -198,9 +224,9 @@ PianoNotes = \transpose \originPitch \targetPitchPiano {
 
       \clef \clefPiano
       \compressFullBarRests
-      R1*4 c
+      R1*4 
 
-      \bar "|."
+      % \bar "|."
     }
   }
 }
