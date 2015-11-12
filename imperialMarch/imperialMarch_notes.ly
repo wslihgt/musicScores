@@ -50,11 +50,23 @@ chordSeq = \chordmode {
 
 
 DrumsUp = \drummode {
-  R1*4 
+  \repeat unfold 3 {
+    hh4 hh4 hh4 hh4 |}
+  hh4 hh4 s4 s8. hh16 | 
+  
 }
 
 DrumsDown = \drummode {
-  R1*4 
+  \repeat unfold 3 {
+    <<
+      {sn4 sn8 \tuplet 3/2 {sn16 sn16 sn16}
+      sn8 \tuplet 3/2 {sn16 sn16 sn16} \tuplet 3/2 {sn16 sn16 sn16} sn8 |}
+      {s4 s8 bda8 s8 bda8 s4 |}
+    >>
+  }
+  sn4 sn8 \tuplet 3/2 {sn16 sn16 sn16} sn8 sn16 bda16 sn16 sn8 s16 |
+  bda8 sn8 hh16 sn8 hh16 sn8 hh16 sn16~ sn8. cymbc16 |  
+  bda4 
 }
 
 DrumsNotes = {
@@ -190,7 +202,7 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
         e4:m6 e8:m6 \tuplet 3/2 {e16:m6 e16:m6 e16:m6}
         e8:m6 
       }
-      \appoggiatura{e16} d8 c b | 
+      \appoggiatura{b16} a8 g fis | 
       % theme
       \chordmode {
         r8 e8:m6~ e16:m6 e8.:m6 e16:m6 e16:m6 e16:m6 e16:m6  
