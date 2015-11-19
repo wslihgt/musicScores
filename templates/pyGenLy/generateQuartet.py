@@ -82,7 +82,7 @@ def generateWashingMachines(*args, **kwargs):
     
     targetPitchDic = dict(
         zip(instruments,
-            ('c', 'c', 'd\'', 'd\'', 'c', 'c')))
+            ('c', 'c', 'd\'', 'd\'\'', 'c', 'c')))
     
     clefDic = dict(
         zip(instruments,
