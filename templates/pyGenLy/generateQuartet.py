@@ -79,10 +79,10 @@ def generateWashingMachines(*args, **kwargs):
     """
     """
     instruments = ('Drums', 'Oboe', 'TenorSax', 'Trombone', 'Guitar', 'Piano')
-    
+    # target pitch, relative to c':
     targetPitchDic = dict(
         zip(instruments,
-            ('c', 'c', 'd\'', 'd\'\'', 'c', 'c')))
+            ('c\'', 'c\'', 'd\'\'', 'd\'\'\'', 'c\'', 'c\'')))
     
     clefDic = dict(
         zip(instruments,
