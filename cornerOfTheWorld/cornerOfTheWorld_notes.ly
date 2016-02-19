@@ -13,11 +13,12 @@ globalStyle = { % Use for various rendering styles that apply to all parts
 
 structure = { % Use to give annotations, mainly, also checking meaure consistency
   s1^\markup{\circle I Intro} |
-  s1*15 \breathe|
+  s1*15 \breathe \bar "||"
   s1^\markup{\circle A} |
-  s1*15 |
+  s1*15 \bar "||"
   s1^\markup{\circle A'} |
   s1*15 |
+  s1*15 \bar "||"
   s1^\markup{\circle B Corner of the World...} |
   s1*15 |
   \bar "||"
@@ -25,8 +26,8 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
 
 global = { % Use for tempo and key changes
   \time 4/4
-  \tempo 4 = 144
-  \key f \minor
+  \tempo 4 = 172
+  \key g \minor
   s1*16
   \key d \minor
   s1*48
@@ -34,11 +35,27 @@ global = { % Use for tempo and key changes
 
 
 chordSeq = \chordmode {
-  c1:5 | c2:5 ~c8:5 des4.:5 | c1:5 | c2:5 ~c8:5 des4.:5 | % intro
-  c1:5 | c2:5 ~c8:5 des4.:5 | c1:5 | c2:5 ~c8:5 des4.:5 | 
-  c1:5 | c2:5 ~c8:5 des4.:5 | c1:5 | c2:5 ~c8:5 des4.:5 | 
-  c1:5 | c2:5 ~c8:5 des4.:5 | c1:5 | c2:5 ~c8:5 des4.:5 | 
-  d4.:m d8:m7~ d2:m7 | d1:m7 |
+  d1:5 | d2:5 ~d8:5 ees4.:5 | d1:5 | d2:5 ~d8:5 ees4.:5 | % intro
+  d1:5 | d2:5 ~d8:5 ees4.:5 | d1:5 | d2:5 ~d8:5 ees4.:5 | % intro
+  d1:5 | d2:5 ~d8:5 ees4.:5 | d1:5 | d2:5 ~d8:5 ees4.:5 | % intro
+  d1:5 | d2:5 ~d8:5 ees4.:5 | d1:5 | d2:5 r2 | 
+  d4.:m d8:m7~ d2:m7 | d1:m7 | % A
+  ees4.:m ees8:m4~ ees2:m4 | ees1:sus7 |
+  g4.:m g8:m4~ g2:m4 | g1:sus7 |
+  a4.:5 a8:7~ a2:7 | a1:7 |
+  d4.:m d8:m7~ d2:m7 | d1:m7 | % A
+  ees4.:m ees8:m4~ ees2:m4 | ees1:sus7 |
+  g4.:m g8:m4~ g2:m4 | g1:sus7 |
+  a4.:5 a8:7~ a2:7 | a1:7 |
+  d4.:m d8:m7~ d2:m7 | d1:m7 | % A'
+  ees4.:m ees8:m4~ ees2:m4 | ees1:sus7 |
+  g4.:m g8:m4~ g2:m4 | g1:sus7 |
+  a4.:5 a8:7~ a2:7 | a1:7 |
+  d4.:m d8:m7~ d2:m7 | d1:m7 | % A'
+  ees4.:m ees8:m4~ ees2:m4 | ees1:sus7 |
+  g4.:m g8:m4~ g2:m4 | g1:sus7 |
+  a4.:5 a8:7~ a2:7 | a1:7 |
+  d4.:m d8:m7~ d2:m7 | d1:m7 | % B
   ees4.:m ees8:m4~ ees2:m4 | ees1:sus7 |
   g4.:m g8:m4~ g2:m4 | g1:sus7 |
   a4.:5 a8:7~ a2:7 | a1:7 |
@@ -78,9 +95,21 @@ OboeNotes = \transpose \originPitch \targetPitchOboe {
 
       \clef \clefOboe
       \compressFullBarRests
-      R1*4 c
-
-      \bar "|."
+      R1*4 |
+      R1 |
+      r4 fis,4. g8 a4~|
+      a8 bes8 c4. d8 c4~ |
+      c8 bes8 a4. g8 fis4~ |
+      fis2 r2 | 
+      R1*3 |
+      r2. fis4~ |
+      fis8 g8 a4. bes8 c4~|
+      c8 d8 c4. bes8 a4~ |
+      a8 g8 fis2 r4 |
+      % theme
+      r4 d'8 d d d f d | a' 
+      % refrain
+      
     }
     >>
   }
@@ -97,9 +126,22 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
 
       \clef \clefTenorSax
       \compressFullBarRests
-      R1*4 c
-
-      \bar "|."
+      a,1~ |
+      a2 a8 bes4 g8 |
+      a1~ |
+      a2 a8 bes4 g8 |
+      a1~ |
+      a2 a8 bes4 g8 |
+      a1~ |
+      a2 a8 bes4 g8 |
+      a1~ |
+      a2 a8 bes4 g8 |
+      a1~ |
+      a2 a8 bes4 g8 |
+      a2. a4~ |
+      a8 bes8 c4. d8 ees4~ |
+      ees8 f8 ees4. d8 c4~ |
+      c8 bes a2 r4
     }
     >>
   }
@@ -116,9 +158,22 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
 
       \clef \clefTrombone
       \compressFullBarRests
-      R1*4 c
-
-      \bar "|."
+      d,,,1~ |
+      d2 d8 ees4 c8 |
+      d1~ |
+      d2 d8 ees4 c8 |
+      d1~ |
+      d2 d8 ees4 c8 |
+      d1~ |
+      d2 d8 ees4 c8 |
+      d1~ |
+      d2 d8 ees4 c8 |
+      d1~ |
+      d2 d8 ees4 c8 |
+      d2. d4~ |
+      d8 ees8 f4. g8 a4~ |
+      a8 bes8 a4. g8 f4~ |
+      f8 ees d2 r4
     }
     >>
   }
@@ -135,9 +190,7 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
 
       \clef \clefGuitar
       \compressFullBarRests
-      R1*4 c
-
-      \bar "|."
+      
     }
     >>
   }
@@ -154,9 +207,7 @@ PianoNotes = \transpose \originPitch \targetPitchPiano {
 
       \clef \clefPiano
       \compressFullBarRests
-      R1*4 c
-
-      \bar "|."
+      R1*4 
     }
     >>
   }
