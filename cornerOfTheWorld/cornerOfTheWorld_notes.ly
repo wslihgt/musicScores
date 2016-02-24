@@ -181,6 +181,15 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
       d1~ | d2 g4 f | e c8 d8~ d2~ | d2 g4 f | 
       e c8 d8~ d2~ | d2 d4 f | e1 | R1 | 
       % B
+      d4 r8 d d d r8 bes | R1 |
+      c4 r8 c c c r8 cis | r4 d d cis |
+      d4 r8 d d d r8 bes | R1 |
+      c4 r8 c c c r8 cis | R1 |
+      d4 r8 d d d r8 bes | R1 |
+      c4 r8 c c c r8 cis | r4 d d cis |
+      r4 d e f | e f8 e4 d4 c8~ |
+      c4. c8 f8 e d e |
+      cis2 r2
       
     }
     >>
@@ -222,6 +231,15 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
       f1~ | f2 g4 f | e c8 d8~ d2~ | d2 g4 f | 
       e c8 d8~ d2~ | d2 d4 f | e1 | R1 | 
       % B
+      bes'4 r8 bes bes bes r8 g | R1 |
+      a4 r8 a a a r8 e | r4 d c' bes |
+      bes4 r8 bes bes bes r8 g | R1 |
+      a4 r8 a a a r8 e | R1 |
+      bes'4 r8 bes bes bes r8 g | R1 |
+      a4 r8 a a a r8 e | r4 d c' bes |
+      r4 a g a | g f8 e4 g4 f8~ |
+      f8~ f4 f8 a4 bes8 a8~ |
+      a2 r2
     }
     >>
   }
