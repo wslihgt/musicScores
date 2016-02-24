@@ -74,11 +74,11 @@ chordSeq = \chordmode {
 
 
 DrumsUp = \drummode {
-  R1*4 wbh4. wbh4. wbh4 |
+  R1*80
 }
 
 DrumsDown = \drummode {
-  R1*4 mar4 mar8 mar mar4 mar8 mar |
+  R1*80
 }
 
 DrumsNotes = {
@@ -354,6 +354,7 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
       a4 <c f a>4^. a8 <c f a>4^. e,8~|
       e8 <g a cis>4^. e4 <g a cis>4^. a8 |
       % Outro
+      R1*16
     }
     >>
   }
@@ -370,7 +371,7 @@ PianoNotes = \transpose \originPitch \targetPitchPiano {
 
       \clef \clefPiano
       \compressFullBarRests
-      R1*4 
+      R1*80
     }
     >>
   }
