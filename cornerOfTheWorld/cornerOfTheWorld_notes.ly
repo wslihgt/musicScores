@@ -29,11 +29,13 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
 
 global = { % Use for tempo and key changes
   \time 4/4
-  \tempo 4 = 192
+  \tempo 4 = 172
   \key g \minor
   s1*16
   \key d \minor
   s1*48
+  \key g \minor
+  
 }
 
 
@@ -43,20 +45,20 @@ chordSeq = \chordmode {
   d1:5 | d2:5 ~d8:5 ees4.:5 | d1:5 | d2:5 ~d8:5 ees4.:5 | % intro
   d1:5 | d2:5 ~d8:5 ees4.:5 | d1:5 | d2:5 r2 | 
   d4.:m d8:m7~ d2:m7 | d1:m7 | % A
-  ees4.:m ees8:m4~ ees2:m4 | ees1:sus7 |
-  g4.:m g8:m4~ g2:m4 | g1:sus7 |
+  ees4.:m ees8:m6~ ees2:m6 | ees1:sus7 |
+  g4.:m g8:sus4~ g2:sus4 | g1:sus7 |
   a4.:5 a8:7~ a2:7 | a1:7 |
   d4.:m d8:m7~ d2:m7 | d1:m7 | % A
-  ees4.:m ees8:m4~ ees2:m4 | ees1:sus7 |
-  g4.:m g8:m4~ g2:m4 | g1:sus7 |
+  ees4.:m ees8:m6~ ees2:m6 | ees1:sus7 |
+  g4.:m g8:sus4~ g2:sus4 | g1:sus7 |
   a4.:5 a8:7~ a2:7 | a1:7 |
   d4.:m d8:m7~ d2:m7 | d1:m7 | % A'
-  ees4.:m ees8:m4~ ees2:m4 | ees1:sus7 |
-  g4.:m g8:m4~ g2:m4 | g1:sus7 |
+  ees4.:m ees8:m6~ ees2:m6 | ees1:sus7 |
+  g4.:m g8:sus4~ g2:sus4 | g1:sus7 |
   a4.:5 a8:7~ a2:7 | a1:7 |
   d4.:m d8:m7~ d2:m7 | d1:m7 | % A'
-  ees4.:m ees8:m4~ ees2:m4 | ees1:sus7 |
-  g4.:m g8:m4~ g2:m4 | g1:sus7 |
+  ees4.:m ees8:m6~ ees2:m6 | ees1:sus7 |
+  g4.:m g8:sus4~ g2:sus4 | g1:sus7 |
   a4.:5 a8:7~ a2:7 | a1:7 |
   bes1:maj7 | g:m6 | f:maj7 | a:7 |% B
   bes1:maj7 | g:m6 | f:maj7 | a:7 |% B
@@ -141,6 +143,15 @@ OboeNotes = \transpose \originPitch \targetPitchOboe {
       g4 f e4 f8 e8 | d2 r2 |
       r4 a g a | c bes8 a4 bes a8~|
       a8~ a4 a8 f4 g8 a8~ | a2 r2 |
+      % Outro
+      R1*4 |
+      R1*2 |
+      \tuplet 3/2 4 {d'8 ees c d bes c a bes g a f g } | 
+      \tuplet 3/2 4 {d ees c d bes c a bes a g f ees} |
+      d1 | R1*5 |
+      \tuplet 3/2 4 {d''8 ees c d bes c a bes g a f g } | 
+      \tuplet 3/2 4 {d ees c d bes c a bes a g f ees} |
+      
     }
     >>
   }
@@ -190,7 +201,23 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
       r4 d e f | e f8 e4 d4 c8~ |
       c4. c8 f8 e d e |
       cis2 r2
-      
+      % Outro
+      a1~ |
+      a2 a8 bes4 g8 |
+      r4 fis'4~ fis8 g8 a4~ | % a1~ |
+      a8 bes8 a4~a8 g8 fis4~ | % a2 a8 bes4 g8 |
+      fis1 |
+      r2 a,8 bes4 g8 |
+      a1~ |
+      a2 a8 bes4 g8 |
+      a1~ |
+      a2 a8 bes4 g8 |
+      a1~ |
+      a2 a8 bes4 g8 |
+      a2. a4~ |
+      a8 bes8 c4. d8 ees4~ |
+      ees8 f8 ees4. d8 c4~ |
+      c8 bes a2 r4 |
     }
     >>
   }
@@ -228,8 +255,8 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
       % A'
       f1~ | f2 c'4 a | g e8 f8~ f2~ | f2 bes4 a | 
       g f8 f8~ f2~ | f2 f4 d | cis1 | R1 | 
-      f1~ | f2 g4 f | e c8 d8~ d2~ | d2 g4 f | 
-      e c8 d8~ d2~ | d2 d4 f | e1 | R1 | 
+      f1~ | f2 c'4 a | g e8 f8~ f2~ | f2 bes4 a | 
+      g f8 f8~ f2~ | f2 f4 d | cis1 | R1 | 
       % B
       bes'4 r8 bes bes bes r8 g | R1 |
       a4 r8 a a a r8 e | r4 d c' bes |
@@ -240,6 +267,23 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
       r4 a g a | g f8 e4 g4 f8~ |
       f8~ f4 f8 a4 bes8 a8~ |
       a2 r2
+      % Outro
+      d,1~ |
+      d2 d8 ees4 c8 |
+      r4 a'4~ a8 bes8 c4~ |% d1~ |
+      c8 d8 c4~ c8 bes8 a4~ |% d2 d8 ees4 c8 |
+      a1 |
+      r2 d,8 ees4 c8 |
+      d1~ |
+      d2 d8 ees4 c8 |
+      d1~ |
+      d2 d8 ees4 c8 |
+      d1~ |
+      d2 d8 ees4 c8 |
+      d2. d4~ |
+      d8 ees8 f4. g8 a4~ |
+      a8 bes8 a4. g8 f4~ |
+      f8 ees d2 r4
     }
     >>
   }
@@ -256,7 +300,60 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
 
       \clef \clefGuitar
       \compressFullBarRests
-      
+      % intro
+      R1*16
+      % A
+      < a, d>4. <a c>4 <a c>4 <a d>8~ | 
+      <a d>8 <a d>4 <a c>4 <a d>4 r8 |
+      <g d'>4. <g c>4 <g c>4 <g d'>8~ | 
+      <g d'>8 <g d'>4 <g c>4 <g d'>4 r8 |
+      <g d'>4. <g c>4 <g c>4 <g d'>8~ | 
+      <g d'>8 <g d'>4 <g c>4 <g d'>4 r8 |
+      <a d>4. <g cis>4 <g cis>4 <a d>8~ | 
+      <a d>8 <a d>4 <g cis>4 <g cis>4 r8 |
+      <a d>4. <a c>4 <a c>4 <a d>8~ | 
+      <a d>8 <a d>4 <a c>4 <a d>4 r8 |
+      <g d'>4. <g c>4 <g c>4 <g d'>8~ | 
+      <g d'>8 <g d'>4 <g c>4 <g d'>4 r8 |
+      <g d'>4. <g c>4 <g c>4 <g d'>8~ | 
+      <g d'>8 <g d'>4 <g c>4 <g d'>4 r8 |
+      <a d>4. <g cis>4 <g cis>4 <a d>8~ | 
+      <a d>8 <a d>4 <g cis>4 <g cis>4 r8 |
+      % A'
+      <a d>4. <a c>4 <a c>4 <a d>8~ | 
+      <a d>8 <a d>4 <a c>4 <a d>4 r8 |
+      <g d'>4. <g c>4 <g c>4 <g d'>8~ | 
+      <g d'>8 <g d'>4 <g c>4 <g d'>4 r8 |
+      <g d'>4. <g c>4 <g c>4 <g d'>8~ | 
+      <g d'>8 <g d'>4 <g c>4 <g d'>4 r8 |
+      <a d>4. <g cis>4 <g cis>4 <a d>8~ | 
+      <a d>8 <a d>4 <g cis>4 <g cis>4 r8 |
+      <a d>4. <a c>4 <a c>4 <a d>8~ | 
+      <a d>8 <a d>4 <a c>4 <a d>4 r8 |
+      <g d'>4. <g c>4 <g c>4 <g d'>8~ | 
+      <g d'>8 <g d'>4 <g c>4 <g d'>4 r8 |
+      <g d'>4. <g c>4 <g c>4 <g d'>8~ | 
+      <g d'>8 <g d'>4 <g c>4 <g d'>4 r8 |
+      <a d>4. <g cis>4 <g cis>4 <a d>8~ | 
+      <a d>8 <a d>4 <g cis>4 <g cis>4 r8 |
+      % B
+      bes4 <d f a>4^. bes8 <d f a>4^. g,8~|
+      g8 <bes d g>4^. g4 <bes d g>4^. g8 |
+      a4 <c f a>4^. a8 <c f a>4^. e,8~|
+      e8 <g a cis>4^. e4 <g a cis>4^. a8 |
+      bes4 <d f a>4^. bes8 <d f a>4^. g,8~|
+      g8 <bes d g>4^. g4 <bes d g>4^. g8 |
+      a4 <c f a>4^. a8 <c f a>4^. e,8~|
+      e8 <g a cis>4^. e4 <g a cis>4^. a8 |
+      bes4 <d f a>4^. bes8 <d f a>4^. g,8~|
+      g8 <bes d g>4^. g4 <bes d g>4^. g8 |
+      a4 <c f a>4^. a8 <c f a>4^. e,8~|
+      e8 <g a cis>4^. e4 <g a cis>4^. a8 |
+      bes4 <d f a>4^. bes8 <d f a>4^. g,8~|
+      g8 <bes d g>4^. g4 <bes d g>4^. g8 |
+      a4 <c f a>4^. a8 <c f a>4^. e,8~|
+      e8 <g a cis>4^. e4 <g a cis>4^. a8 |
+      % Outro
     }
     >>
   }
