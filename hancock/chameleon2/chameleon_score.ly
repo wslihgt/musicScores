@@ -65,10 +65,10 @@ clefPiano = bass
 % TODO: make more automatisms with variables? possible to put more logic?
 %
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 19)%
 \book{
   \bookOutputSuffix Drums
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 19)%
 
   \bookpart{
     \header{
@@ -86,10 +86,10 @@ clefPiano = bass
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 19)%
 \book{
   \bookOutputSuffix Oboe
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 19)%
 
   \bookpart{
     \header{
@@ -107,10 +107,10 @@ clefPiano = bass
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 19)%
 \book{
   \bookOutputSuffix TenorSax
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 19)%
 
   \bookpart{
     \header{
@@ -128,10 +128,10 @@ clefPiano = bass
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 19)%
 \book{
   \bookOutputSuffix Trombone
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 19)%
 
   \bookpart{
     \header{
@@ -149,10 +149,10 @@ clefPiano = bass
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 19)%
 \book{
   \bookOutputSuffix Guitar
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 19)%
 
   \bookpart{
     \header{
@@ -170,10 +170,10 @@ clefPiano = bass
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 19)%
 \book{
   \bookOutputSuffix Piano
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 19)%
 
   \bookpart{
     \header{
