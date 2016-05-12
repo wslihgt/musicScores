@@ -8,6 +8,23 @@ def generateNotesAndScore(instruments,
                           ensemble='Ensemble',
                           composer='me',
                           filename=None, outdir='', withChords=False):
+    """generateQuartet.generateNotesAndScore
+
+      :inputs:
+
+        * instruments:
+        * targetPitchDic:
+        * clefDic:
+        * midiInstrDic:
+        * title: string for the title
+        * ensemble: the name of the target ensemble
+        * composer: the name that comes as 'composer' in the score
+        * filename: optional, if None, does not output a file, if provided,
+          generates files
+        * outdir: where to write the files
+        * withChords: if True, also prints the chord names at the top
+          of the staffs
+    """
     
     notesly = gt.generateCommonNotesLy(pieceTitle=title, composer=composer)
 
@@ -75,8 +92,9 @@ def generateOboeQuartet(*args, **kwargs):
                                  **kwargs)
     
 
-def generateWashingMachines(*args, **kwargs):
-    """
+def generateWashingMachines(**kwargs):
+    """Refer to generateQuartet.generateNotesAndScore
+    for list of arguments.
     """
     instruments = ('Drums', 'Oboe', 'TenorSax', 'Trombone', 'Guitar', 'Piano')
     # target pitch, relative to c':
