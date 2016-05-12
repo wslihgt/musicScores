@@ -354,8 +354,6 @@ percus = {
 
 musicPieceOne = {
   <<
-    \tag #'score \tag #'vpercu \new DrumStaff {
-      << \globalStyle \structure \percus>> }
     \tag #'score \tag #'v1 \new Staff { 
       << \globalStyle \structure \one >> }
     \tag #'score \tag #'v2 \new Staff { 
@@ -364,6 +362,8 @@ musicPieceOne = {
       << \globalStyle \structure \three>> }
     \tag #'score \tag #'v4 \new Staff { 
       << \globalStyle \structure \four>> }
+    \tag #'score \tag #'vpercu \new DrumStaff {
+      << \globalStyle \structure \percus>> }
   >>
 }
 

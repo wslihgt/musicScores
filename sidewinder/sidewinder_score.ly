@@ -6,13 +6,13 @@ originPitch = c' %%c' %%bes'%% f %% c'
 targetPitchOboe = c'
 targetPitchGuitar = c'
 targetPitchDrums = c'
-targetPitchTrombone = d'''
+targetPitchTrombone = d''
 targetPitchTenorSax = d''
 targetPitchPiano = c'
 originPitchOboe = c'
 originPitchGuitar = c'
 originPitchDrums = c'
-originPitchTrombone = bes,,
+originPitchTrombone = bes,
 originPitchTenorSax = bes,
 originPitchPiano = c'
 midiInstrOboe = "soprano sax"
@@ -28,11 +28,29 @@ clefTrombone = treble
 clefTenorSax = treble
 clefPiano = treble
 %% INCLUDE the musical notes (and any variables further used in the books)
+
+\include "LilyJAZZ.ily"
+
 \include "sidewinder_notes.ly" % Put the name of the *_notes.ly
 
 \paper{
   print-all-headers = "true"
+  %#(define fonts (set-global-fonts
+  %    #:music "LilyJAZZ"
+  %    #:brace "LilyJAZZ"))
+  indent = #10 
 }
+%% (set-global-fonts
+    %% #:music "lilyjazz"
+    %% #:brace "lilyjazz"
+    %% )
+    
+%%    (make-pango-font-tree
+%%    "lilyjazz"
+%%    "sans-serif"
+%%    "monospace"
+%%    (/ staff-height pt 20))
+    
 #(set-global-staff-size 14)
 
 %% BOOK FOR THE WHOLE SCORE
