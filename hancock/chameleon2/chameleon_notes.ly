@@ -9,6 +9,7 @@ composer = "Herbie Hancock"
 
 globalStyle = { % Use for various rendering styles that apply to all parts
   \accidentalStyle "modern-cautionary"
+  \override Glissando.style = #'zigzag
 }
 
 structure = {
@@ -36,7 +37,12 @@ structure = {
   s1^\markup{Drums break} | % 2 bars on disc with synthe endings
   s1 * 1 |
   %\bar "||"
-  s1^\markup{Solos...} | % # bars on disc 
+  s1^\markup{Solos / Riff I} | % # bars on disc 
+  s1 * 7 |
+  s1^\markup{Solos / Riff II "Stevie"} | % # bars on disc 
+  s1 * 7 |
+  s1^\markup{Solos / Riff III} | % # bars on disc 
+  s1 * 7 |
   
   %\bar "|."
 }
@@ -93,6 +99,39 @@ chordSeq = \chordmode {
     ees1:7 |
   }
   R1*4
+  % A again Solo Riff I
+  \repeat volta 2 {
+    bes1:m7 |
+    ees1:7 |
+    bes1:m7 |
+    ees1:7 |
+    bes1:m7 |
+    ees1:7 |
+    bes1:m7 |
+    ees1:7 |
+  }
+  % A again Solo Riff II
+  \repeat volta 2 {
+    bes1:m7 |
+    ees1:7 |
+    bes1:m7 |
+    ees1:7 |
+    bes1:m7 |
+    ees1:7 |
+    bes1:m7 |
+    ees1:7 |
+  }
+  % A again Solo riff III
+  \repeat volta 2 {
+    bes1:m7 |
+    ees1:7 |
+    bes1:m7 |
+    ees1:7 |
+    bes1:m7 |
+    ees1:7 |
+    bes1:m7 |
+    ees1:7 |
+  }
 }
   
 bassLine = \relative c {
@@ -127,6 +166,24 @@ bassLine = \relative c {
   des bes ees, des~ des8 bes~ bes2| 
   R1 |
   R1
+  \repeat volta 2 { % A Riff I
+    \repeat unfold 4 {
+      bes8. aes'16~ aes8 bes8~ bes c, des d |
+      ees8. bes'16~ bes8 des8~ des g,, aes a
+    }
+  }
+  \repeat volta 2 { % A Riff II
+    \repeat unfold 4 {
+      bes8. aes'16~ aes8 bes8~ bes c, des d |
+      ees8. bes'16~ bes8 des8~ des g,, aes a
+    }
+  }
+  \repeat volta 2 { % A Riff III
+    \repeat unfold 4 {
+      bes8. aes'16~ aes8 bes8~ bes c, des d |
+      ees8. bes'16~ bes8 des8~ des g,, aes a
+    }
+  }
   
 }
 
@@ -196,6 +253,31 @@ melody = \relative c'' {
   des bes aes ees~ ees8 des~ des2| 
   R1 |
   R1
+  \repeat volta 2 { % A Riff I
+    \repeat unfold 4 {
+      aes'16 aes r8 aes16 aes r8 aes16 bes r16 des~ des8 r |
+      aes16 aes r8 aes16 bes r16 des~ des8 r r4 |
+    }
+  }
+  \repeat volta 2 { % A Riff II
+    des8. c16~ c8 bes~ bes16 bes8. aes8. g16~ | % bes:m7
+    g8 f ees f g2 | % ees:7
+    f8 r8 r8 f g4 g8. ees16~ | % bes:m7
+    ees2 r2 | % ees:7
+    aes'8. f16~ f8 ees~ ees16 f8. des8. ees16~ | % bes:m7
+    ees8 des bes des ees2 | % ees:7
+    des8 r8 r8 des c4 des8. c16~ | % bes:m7
+    c2 r2 | % ees:7
+  }
+  \repeat volta 3 { % B Riff III
+    R1 * 2 | 
+    r8 f ees4 ees8 des~ des des16 ees |
+    des bes aes ees~ ees8 \glissando ees' r2 
+  }
+  r8 f ees4 ees8 des~ des des16 ees |
+  des bes aes ees~ ees8 des~ des2| 
+  R1 |
+  R1
 } % harmoZero
 
 
@@ -229,6 +311,29 @@ harmoOne = {
   des bes ees, des~ des8 aes'8~ aes2 | 
   R1 |
   R1
+  \repeat volta 2 { % A Riff I
+    \repeat unfold 4 {
+      aes16 aes r8 aes16 aes r8 aes16 aes r16 bes~ bes8 r |
+      aes16 aes r8 aes16 aes r16 bes~ bes8 r r4 |
+    }
+  }
+  \repeat volta 2 { % A Riff II
+    \repeat unfold 2 {
+      des8. c16~ c8 bes~ bes16 bes8. aes8. g16~ | % bes:m7
+      g8 f ees f g2 | % ees:7
+      f8 r8 r8 f g4 g8. ees16~ | % bes:m7
+      ees2 r2 | % ees:7
+    }
+  }
+  \repeat volta 3 { % B Riff III
+    R1 * 2 |
+    r8 f' ees4 ees8 des~ des des16 ees |
+    des bes ees, des~ des8 \glissando des' r2 | 
+  }
+  r8 f ees4 ees8 des~ des des16 ees |
+  des bes ees, des~ des8 aes'8~ aes2 | 
+  R1 |
+  R1
 }
 
 harmoTwo = {
@@ -258,6 +363,29 @@ harmoTwo = {
     f8 des r4 r4 r4  |
   }
   r8 f' ees4 ees8 des~ des des16 ees |
+  des bes ees, des~ des8 bes8~ bes2 | 
+  R1 |
+  R1
+  \repeat volta 2 { % Riff I
+    \repeat unfold 4 {
+      aes'16 aes r8 aes16 aes r8 aes16 bes r16 des~ des8 r |
+      aes16 aes r8 aes16 bes r16 g~ g8 r r4 |
+    }
+  }
+  \repeat volta 2 { % A Riff II
+    \repeat unfold 2 {
+      f'8. ees16~ ees8 des~ des16 des8. c8. bes16~ | % bes:m7
+      bes8 aes g aes bes2 | % ees:7
+      aes8 r8 r8 aes bes4 bes8. aes16~ | % bes:m7
+      aes2 r2 | % ees:7
+    }
+  }
+  \repeat volta 3 { % Riff III
+    R1 * 2 |
+    r8 f' ees4 ees8 des~ des des16 ees |
+    des bes ees, des~ des8 \glissando des' r2 | 
+  }
+  r8 f ees4 ees8 des~ des des16 ees |
   des bes ees, des~ des8 bes8~ bes2 | 
   R1 |
   R1
@@ -298,6 +426,27 @@ DrumsUp = \drummode {
   s8. cymcb16~ cymcb8 cymcb8~ cymcb2 |
   s8. hh16 s4 s8. hh16 s4 |
   s16 hh16 s8 s16 hh16 s8 tomh8 tommh16 tommh tomml tomml tomfl8 |
+  \repeat volta 2 { % Riff I
+    \repeat unfold 8 {
+      hh4 hh4 hh hh |
+    }
+  }
+  \repeat volta 2 { % Riff II
+    \repeat unfold 8 {
+      hh4 hh4 hh hh |
+    }
+  }
+  \repeat volta 3 { % Riff III
+    \repeat unfold 2 {
+      hh4 hh4 hh hh |
+    }
+    s8 cymcb8 cymcb s8 cymcb cymcb s4 |
+    s8. cymcb16~ cymcb8 cymcb8 r2 |
+  }
+  s8 cymcb8 cymcb s8 cymcb cymcb s4 |
+  s8. cymcb16~ cymcb8 cymcb8~ cymcb2 |
+  s8. hh16 s4 s8. hh16 s4 |
+  s16 hh16 s8 s16 hh16 s8 tomh8 tommh16 tommh tomml tomml tomfl8 |
 }
 
 DrumsDown = \drummode {
@@ -332,6 +481,29 @@ DrumsDown = \drummode {
     \repeat unfold 4 {
       bd8. sn16 r8 bd~ bd16 bd16 bd8 sn8 bd8 |
     }
+  }
+  bd4 r8 sn8 r4 sn8 sn16 sn |
+  bd8 sn16 bd~ bd sn bd8~ bd4.. sn16:32 |
+  <sn bd>16 sn16 sn r16 sn8. sn16:32 <sn bd>16 sn sn r16 sn8.  sn16:32 |
+  bd8 sn bd sn r2 |
+  \repeat volta 2 { % A Riff I
+    \repeat unfold 7 {
+      bd8. sn16 r8 bd~ bd16 bd16 bd8 sn8 bd8 |
+    }
+    bd8. sn16 r8 bd sn bd8 bd8 bd8 |
+  }
+  \repeat volta 2 { % A Riff II
+    \repeat unfold 7 {
+      bd8. sn16 r8 bd~ bd16 bd16 bd8 sn8 bd8 |
+    }
+    bd8. sn16 r8 bd sn bd8 bd8 bd8 |
+  }
+  \repeat volta 3 { % B Riff III
+    bd8. sn16 r8 bd~ bd16 bd16 bd8 sn8 bd8 |
+    bd8. sn16 r8 bd~ bd16 bd16 bd8 sn8 bd8 |
+    bd4 r8 sn8 r4 sn8 sn16 sn |
+    bd8 sn16 bd~ bd sn bd8 r8 bd bd bd |
+    
   }
   bd4 r8 sn8 r4 sn8 sn16 sn |
   bd8 sn16 bd~ bd sn bd8~ bd4.. sn16:32 |
