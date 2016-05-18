@@ -27,6 +27,9 @@ clefDrums = drums
 clefTrombone = treble
 clefTenorSax = treble
 clefPiano = bass
+
+\include "../../../LilyJAZZ/LilyJAZZ.ily"
+
 %% INCLUDE the musical notes (and any variables further used in the books)
 \include "chameleon_notes.ly" % Put the name of the *_notes.ly
 

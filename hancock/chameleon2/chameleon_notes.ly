@@ -9,6 +9,7 @@ composer = "Herbie Hancock"
 
 globalStyle = { % Use for various rendering styles that apply to all parts
   \accidentalStyle "modern-cautionary"
+  \jazzOn
   \override Glissando.style = #'zigzag
 }
 
