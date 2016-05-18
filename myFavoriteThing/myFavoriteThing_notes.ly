@@ -12,22 +12,146 @@ globalStyle = { % Use for various rendering styles that apply to all parts
 }
 
 structure = { % Use to give annotations, mainly, also checking meaure consistency
-  s1^\markup{\circle 1} \breathe |
-  s1 |
-  s1 \breathe |
-  s1
-  \bar "||"
+  s2.^\markup{A} |
+  s2. * 15 |
+  s2.^\markup{B} |
+  s2. * 15 |
+  s2.^\markup{Coda} |
+  s2. * 15 |
+  
 }
 
 global = { % Use for tempo and key changes
-  \time 2/2
-  \tempo 2 = 90
-  \key d \minor
+  \time 3/4
+  \tempo 4 = 112
+  \key e \minor
+  % jazz font stuff
+  \jazzOn
+  \override ChordNames . ChordName #'font-size = #2
+  \override ChordNames . ChordName #'font-name = #"lilyjazzchord"
 }
 
 
 chordSeq = \chordmode {
-  R1*4 g:7 % 
+  \repeat volta 2 {
+    e2.:m7 |
+    fis:m7/e |
+    e2.:m7 |
+    fis:m7/e |
+    c:maj7 |
+    c:maj7 |
+    c:maj7 |
+    c:maj7 |
+    a:m7 |
+    d:7 |
+    g:maj7 |
+    c:maj7 |
+    g:maj7 |
+    c:maj7 |
+    fis:7m5-|
+    b:7 |
+  }
+  e:maj7 |
+  fis:m7 |
+  e:maj7 |
+  fis:m7 |
+  e:maj7 |
+  fis:m7 |
+  e:maj7 |
+  fis:m7 |
+  a:m7 |
+  d:7 |
+  g:maj7 |
+  c:maj7 |
+  g:maj7 |
+  c:maj7 |
+  fis:7m5-|
+  b:7 |
+  % coda
+  e:m7 |
+  e:m7 |
+  fis:7m5-|
+  b:7 |
+  e:m7 |
+  e:m7 |
+  c:maj7 |
+  c:maj7 |
+  c:maj7 |
+  c:maj7 |
+  a:7 |
+  a:7 |
+  g:maj7 |
+  c:maj7 |
+  c:maj7 |
+  d:7 |
+  g:6 / d |
+  c:maj7 |
+  g:6 / d |
+  c:maj7 |
+  g:maj7 |
+  c:maj7 |
+  fis:7m5- |
+  b:7
+}
+
+melody = {
+  \repeat volta 2 
+  {
+    e8^- b'^. r4 b^. |
+    fis2 e4^. |
+    b8^- e~ e4 e |
+    fis8 e fis4 r4 |
+    e4 b' b |
+    fis2 e4 |
+    b e2 |
+    fis4 fis2 |
+    e4 b' a |
+    e fis d |
+    d a' g |
+    c,2. |
+    b4 c d |
+    e fis g |
+    a b a |
+    dis,2.
+  }
+  e8^- b'^. r4 b^. |
+  fis2 e4^. |
+  b8^- e~ e4 e |
+  fis8 e fis4 r4 |
+  e4 b' b |
+  fis2 e4 |
+  b e2 |
+  fis4 fis2 |
+  e4 b' a |
+  e fis d |
+  d a' g |
+  c,2. |
+  b4 c d |
+  e fis g |
+  a b a |
+  b2. |
+  % coda
+  r4 b b |
+  b4~ b8 e,~ e4 |
+  r4 a a |
+  a4~ a8 dis,~ dis4 |
+  r4 g g |
+  g4. b, |
+  e2. |
+  r2 r8 e |
+  e4 fis e |
+  fis e fis |
+  g a g |
+  a2 g8 a |
+  b4 c b |
+  c2.~ |
+  c2. |
+  b2. |
+  g2.~ |
+  g2.~ |
+  g2.~ |
+  g2. |
+  R1 * 4 
 }
 
 
@@ -62,9 +186,7 @@ OboeNotes = \transpose \originPitch \targetPitchOboe {
 
       \clef \clefOboe
       \compressFullBarRests
-      R1*4 c
-
-      \bar "|."
+      \melody
     }
   }
 }
@@ -79,9 +201,7 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
 
       \clef \clefTenorSax
       \compressFullBarRests
-      R1*4 c
-
-      \bar "|."
+      \melody
     }
   }
 }
