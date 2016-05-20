@@ -29,7 +29,7 @@ clefTenorSax = treble
 clefPiano = treble
 %% INCLUDE the musical notes (and any variables further used in the books)
 
-\include "LilyJAZZ.ily"
+\include "../../LilyJAZZ/LilyJAZZ.ily"
 
 \include "sidewinder_notes.ly" % Put the name of the *_notes.ly
 

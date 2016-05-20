@@ -18,12 +18,11 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
   s2. * 15 |
   s2.^\markup{Coda} |
   s2. * 15 |
-  
 }
 
 global = { % Use for tempo and key changes
   \time 3/4
-  \tempo 4 = 112
+  \tempo 2. = 56
   \key e \minor
   % jazz font stuff
   \jazzOn
@@ -52,13 +51,13 @@ chordSeq = \chordmode {
     b:7 |
   }
   e:maj7 |
-  fis:m7 |
+  fis:m7/e |
   e:maj7 |
-  fis:m7 |
+  fis:m7/e |
   e:maj7 |
-  fis:m7 |
+  fis:m7/e |
   e:maj7 |
-  fis:m7 |
+  fis:m7/e |
   a:m7 |
   d:7 |
   g:maj7 |
@@ -151,16 +150,138 @@ melody = {
   g2.~ |
   g2.~ |
   g2. |
-  R1 * 4 
+  R2. * 4 
 }
 
+backOne = {
+  \repeat volta 2 
+  {
+    b,8^- d^. r4 d^. |
+    cis^- b a |
+    g8^- b~ b4 b |
+    a2 r4 |
+    b8^- d^. r4 d^. |
+    c^- b a |
+    g b2 |
+    c4 e2 |
+    e4 d c |
+    d c b |
+    b c d |
+    e2. |
+    d4 c b |
+    a g fis |
+    e d cis |
+    b2.
+  }
+  b'8^- dis^. r4 dis^. |
+  e4 cis2 |
+  dis8^- b~ b4 gis |
+  a2 r4 |
+  b4 dis b |
+  cis2 a4 |
+  e gis2 |
+  a4 a2 |
+  e'4 d c |
+  d c b |
+  b c d |
+  e2. |
+  d4 c b |
+  a g fis |
+  e d cis |
+  b2.
+  % coda
+  r4 g' g |
+  g4~ g8 b8~ b4  |
+  r4 c c |
+  c4~ c8 b~ b4 |
+  r4 b b  |
+  b4. d |
+  c2. |
+  r2 r8 c |
+  c4. b8 c b |
+  c4. b8 c b |
+  a4. b8 a b |
+  a4. g8 b a |
+  g2 fis4 |
+  e2.~ |
+  e2. |
+  fis2 d4 |
+  r8 d8 r4 d4 |
+  r8 c8 r4 c4 |
+  r8 d8 r4 d4 |
+  r8 c8 r4 c4 |
+  R2. * 4 
+}
+
+rhythmicGt = \chordmode {
+  \repeat volta 2 {
+    r8 e:m7 r r e:m7 r |
+    r8 fis:m7/e r r fis:m7/e r |
+    r8 e:m7 r r e:m7 r |
+    r8 fis:m7/e r r fis:m7/e r |
+    r8 c:maj7 r r c:maj7 r |
+    r8 c:maj7 r r c:maj7 r |
+    r8 c:maj7 r r c:maj7 r |
+    r8 c:maj7 r r c:maj7 r |
+    r8 a:m7 r r a:m7 r |
+    r4 d:7 d:7 |
+    r8 g:maj7 r r g:maj7 r |
+    r4 c2:maj7 |
+    r8 g8:maj7 r r g:maj7 r |
+    r4 c:maj7 c:maj7 |
+    r8 fis:7m5- r r fis:7m5- r |
+    r4 b2:7
+  }
+  r8 e:maj7 r r e:maj7 r |
+  r8 fis:m7/e r r fis:m7/e r |
+  r8 e:maj7 r r e:maj7 r |
+  r8 fis:m7/e r r fis:m7/e r |
+  r8 e:maj7 r r e:maj7 r |
+  r8 fis:m7/e r r fis:m7/e r |
+  r8 e:maj7 r r e:maj7 r |
+  r8 fis:m7/e r r fis:m7/e r |
+  r8 a:m7 r r a:m7 r |
+  r4 d:7 d:7 |
+  r8 g:maj7 r r g:maj7 r |
+  r4 c2:maj7 |
+  r8 g8:maj7 r r g:maj7 r |
+  r4 c:maj7 c:maj7 |
+  r8 fis:7m5- r r fis:7m5- r |
+  r4 b,2:7
+  % coda
+  e2.:m7~ | e:m7 |
+  fis:7m5- | b:7 |
+  e2.:m7~ | e:m7 |
+  r8 c:maj7 r r c:maj7 r |
+  r8 c:maj7 r r c:maj7 r |
+  c2.:maj7~ | c2.:maj7 | 
+  a:7~ | a:7 |
+  g:maj7 | 
+  r8 c:maj7 r r c:maj7 r |
+  r8 c:maj7 r r c:maj7 r |
+  r8 d:7 r r d:7 r |
+  r8 e:m/d r r e:m/d r |
+  r8 e:m/c r r e:m/c r |
+  r8 e:m/d r r e:m/d r |
+  r8 e:m/c r r e:m/c r |
+  r8 g:maj7 r r g:maj7 r |
+  r8 c':maj7 r r c':maj7 r |
+  r8 fis:7m5- r r fis:7m5- r |
+  r8 b,:7 r r b,:7 r |
+}
 
 DrumsUp = \drummode {
-  R1*4 wbh4. wbh4. wbh4 |
+  r4 hh4 r |
+  r4 hh4 r8 hh |
+  r4 hh4 r |
+  r4 hh4 r8 hh |
 }
 
 DrumsDown = \drummode {
-  R1*4 mar4 mar8 mar mar4 mar8 mar |
+  bd8 sn r8 bd sn4 |
+  bd8 r8 r8 bd sn4 |
+  bd8 sn r8 bd sn4 |
+  bd8 r8 r8 bd sn4 |
 }
 
 DrumsNotes = {
@@ -201,7 +322,7 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
 
       \clef \clefTenorSax
       \compressFullBarRests
-      \melody
+      \relative c'{\melody}
     }
   }
 }
@@ -216,9 +337,7 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
 
       \clef \clefTrombone
       \compressFullBarRests
-      R1*4 c
-
-      \bar "|."
+      \backOne
     }
   }
 }
@@ -233,9 +352,7 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
 
       \clef \clefGuitar
       \compressFullBarRests
-      R1*4 c
-
-      \bar "|."
+      \rhythmicGt
     }
   }
 }
@@ -250,16 +367,16 @@ PianoNotes = \transpose \originPitch \targetPitchPiano {
 
       \clef \clefPiano
       \compressFullBarRests
-      R1*4 c
-
-      \bar "|."
+      \rhythmicGt
     }
   }
 }
+
 musicPieceOne = {
   <<
 
-    \tag #'score \new ChordNames {\chordSeq}
+    \tag #'score \transpose \originPitch \targetPitchOboe {
+       \new ChordNames {\chordSeq}}
     \tag #'Drums \transpose \originPitch \targetPitchDrums {
       \new ChordNames {\chordSeq}}
 
@@ -273,7 +390,11 @@ musicPieceOne = {
       \new ChordNames {\chordSeq}}
 
     \tag #'Guitar \transpose \originPitch \targetPitchGuitar {
-      \new ChordNames {\chordSeq}}
+      <<
+        \context FretBoards { \chordSeq}
+        \new ChordNames {\chordSeq}
+      >>
+    }
 
     \tag #'Piano \transpose \originPitch \targetPitchPiano {
       \new ChordNames {\chordSeq}}
