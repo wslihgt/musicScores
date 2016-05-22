@@ -1,6 +1,6 @@
 \version "2.18.2"
 
-pieceTitle = "My Favorite Thing"
+pieceTitle = "My Favorite Things"
 composer = "??? as played by J. Coltrane"
 
 \header{  title = \pieceTitle
@@ -15,9 +15,12 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
   s2.^\markup{A} |
   s2. * 15 |
   s2.^\markup{B} |
-  s2. * 15 |
+  s2. * 11 | 
+  s2 s4^\markup{Solos on A-A-B, then theme B, and to Coda}|
+  s2. * 3 |
   s2.^\markup{Coda} |
-  s2. * 15 |
+  s2. * 23 |
+  \bar "|."
 }
 
 global = { % Use for tempo and key changes
@@ -66,6 +69,7 @@ chordSeq = \chordmode {
   c:maj7 |
   fis:7m5-|
   b:7 |
+  \bar "||"
   % coda
   e:m7 |
   e:m7 |
@@ -232,14 +236,14 @@ rhythmicGt = \chordmode {
     r8 fis:7m5- r r fis:7m5- r |
     r4 b2:7
   }
-  r8 e:maj7 r r e:maj7 r |
-  r8 fis:m7/e r r fis:m7/e r |
-  r8 e:maj7 r r e:maj7 r |
-  r8 fis:m7/e r r fis:m7/e r |
-  r8 e:maj7 r r e:maj7 r |
-  r8 fis:m7/e r r fis:m7/e r |
-  r8 e:maj7 r r e:maj7 r |
-  r8 fis:m7/e r r fis:m7/e r |
+  e4.:maj7 e:maj7 |
+  r8 fis4.:m7/e s4 |
+  e4.:maj7 e:maj7 |
+  r8 fis4.:m7/e s4 |
+  e4.:maj7 e:maj7 |
+  r8 fis4.:m7/e s4 |
+  e4.:maj7 e:maj7 |
+  r8 fis4.:m7/e s4 |
   r8 a:m7 r r a:m7 r |
   r4 d:7 d:7 |
   r8 g:maj7 r r g:maj7 r |
@@ -261,14 +265,69 @@ rhythmicGt = \chordmode {
   r8 c:maj7 r r c:maj7 r |
   r8 d:7 r r d:7 r |
   r8 e:m/d r r e:m/d r |
-  r8 e:m/c r r e:m/c r |
+  r4 e:m/c e:m/c |
   r8 e:m/d r r e:m/d r |
-  r8 e:m/c r r e:m/c r |
+  r4 e:m/c e:m/c |
   r8 g:maj7 r r g:maj7 r |
-  r8 c':maj7 r r c':maj7 r |
+  r4 c':maj7 c':maj7 |
   r8 fis:7m5- r r fis:7m5- r |
-  r8 b,:7 r r b,:7 r |
+  r4 b,2:7 |
 }
+
+bassNotes = {
+  \repeat volta 2 {
+    e,,4 r8 e4 r8 |
+    e4 r8 e4 r8 |
+    e4 r8 e4 r8 |
+    e4 r8 e4 r8 |
+    c4 r8 c4 r8 |
+    c4 r8 c4 r8 |
+    c4 r8 c4 r8 |
+    c4 r8 c4 r8 |
+    a'4 r8 a4 a8 |
+    d,4 r2 |
+    g4 r8 r4 g8 |
+    c,4 r2 |
+    g'4 r8 g4 g8 |
+    c,4 r2 |
+    fis4 r8 fis4 fis8 |
+    b,2 r4 
+  }
+  e4 r8 e4 r8 |
+  e4 r8 e4 r8 |
+  e4 r8 e4 r8 |
+  e4 r8 e4 r8 |
+  e4 r8 e4 r8 |
+  e4 r8 e4 r8 |
+  e4 r8 e4 r8 |
+  e4 r8 e4 r8 |
+  a4 r8 a4 a8 |
+  d,4 r2 |
+  g4 r8 r4 g8 |
+  c,4 r2 |
+  g'4 r8 g4 g8 |
+  c,4 r2 |
+  fis4 r8 fis4 fis8 |
+  b,2 r4 |
+  e2.~ |
+  e2. |
+  fis |
+  b, |
+  e2.~ |
+  e2 e8 d |
+  c2.~ |
+  c2. |
+  c2.~ |
+  c2. |
+  a2.~ |
+  a2. |
+  g2. |
+  c2.~ |
+  c2. |
+  d2. | 
+  g2. | c,2. | g' | c, |
+  g' | c, | fis | b, |
+} 
 
 DrumsUp = \drummode {
   r4 hh4 r |
@@ -358,7 +417,7 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
 }
 
 PianoNotes = \transpose \originPitch \targetPitchPiano {
-  \new Voice {
+  {
     \global
     \relative c''{
       \set Staff.instrumentName = #"Piano "
@@ -368,6 +427,21 @@ PianoNotes = \transpose \originPitch \targetPitchPiano {
       \clef \clefPiano
       \compressFullBarRests
       \rhythmicGt
+    }
+  }
+}
+
+PianoNotesBass = \transpose \originPitch \targetPitchPiano {
+  \new Staff = "down" {
+    \global
+    \relative c''{
+      \set Staff.instrumentName = #"Piano "
+      \set Staff.midiInstrument = \midiInstrPiano
+      \transposition \originPitchPiano % for MIDI files? to be verified
+
+      \clef bass
+      \compressFullBarRests
+      \bassNotes
     }
   }
 }
@@ -404,7 +478,12 @@ musicPieceOne = {
     \tag #'score \tag #'TenorSax \new Staff { << \globalStyle \structure \TenorSaxNotes >> }
     \tag #'score \tag #'Trombone \new Staff { << \globalStyle \structure \TromboneNotes >> }
     \tag #'score \tag #'Guitar \new Staff { << \globalStyle \structure \GuitarNotes >> }
-    \tag #'score \tag #'Piano \new Staff { << \globalStyle \structure \PianoNotes >> }
+    \tag #'score \tag #'Piano \new PianoStaff {
+      << 
+        \new Staff = "up" <<\globalStyle \structure \PianoNotes >>
+        \PianoNotesBass
+      >>
+    }
   >>
 }
 %%% Local Variables
