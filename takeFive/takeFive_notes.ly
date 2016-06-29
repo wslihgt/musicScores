@@ -13,7 +13,7 @@ globalStyle = { % Use for various rendering styles that apply to all parts
 
 structure = { % Use to give annotations, mainly, also checking meaure consistency
   s1 ^\markup{Intro} s4 |
-  s1*7 s4*7|
+  s1*5/4*7 |
   s1 ^\markup{A} s4 |
   s1*7 s4*7|
   s1 ^\markup{B} s4 |
@@ -21,6 +21,13 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
   s1 ^\markup{A} s4 |
   s1*7 s4*7|
   \bar "||"
+  s1 ^\markup{A'} s4 |
+  s1*7 s4*7|
+  s1 ^\markup{B'} s4 |
+  s1*7 s4*7|
+  s1 ^\markup{A''} s4 |
+  s1*7 s4*7|
+  \bar "|."
 }
 
 global = { % Use for tempo and key changes
@@ -34,6 +41,33 @@ global = { % Use for tempo and key changes
 
 
 chordSeq = \chordmode {
+  ees2.:m7 bes2:m7 |
+  ees2.:m7 bes2:m7 |
+  ees2.:m7 bes2:m7 |
+  ees2.:m7 bes2:m7 |
+  ees2.:m7 bes2:m7 |
+  ees2.:m7 bes2:m7 |
+  ees2.:m7 bes2:m7 |
+  ees2.:m7 bes2:m7 |
+  % A theme
+  ees2.:m7 bes2:m7 |
+  ees2.:m7 bes2:m7 |
+  ees2.:m7 bes2:m7 |
+  ees2.:m7 bes2:m7 |  
+  ees2.:m7 bes2:m7 |
+  ees2.:m7 bes2:m7 |
+  ees2.:m7 bes2:m7 |
+  ees2.:m7 bes2:m7 |
+  % B
+  ces2.:maj7 f2:m7.5-|
+  bes2.:m7 ees2:m7 |
+  aes2.:m7 des2:7 |
+  ges2.:maj7 c2:m7.5- |
+  ces2.:maj7 f2:m7.5-|
+  bes2.:m7 ees2:m7 |
+  aes2.:m7 des2:7 |
+  f2.:m7 bes2:m7 |
+  % A
   ees2.:m7 bes2:m7 |
   ees2.:m7 bes2:m7 |
   ees2.:m7 bes2:m7 |
@@ -129,6 +163,33 @@ OboeNotes = \transpose \originPitch \targetPitchOboe {
       a( bes) a aes( ges4) bes, des |
       ees2. des16( ees des bes aes4) |
       bes2. f'16( ges f ees des4) |
+      ees2. bes8 ees ges aes |
+      % A'
+      a8( bes) a aes( ges4) bes, des |
+      ees2. f16( ges f ees des4) |
+      ees2. des16( ees des bes aes4) |
+      bes2. bes8 ees ges aes |
+      a( bes) a aes( ges4) bes, des |
+      ees2. des16( ees des bes aes4) |
+      bes2. f'16( ges f ees des4) |
+      ees2. r2 |
+      % B'
+      ees8 ges4~ ges4. f4 ces8 c | 
+      des8 f4~ f4. ees4 a,8 bes |
+      ces8 ees4~ ees4. des4 r4 |
+      r2. des8 c des d |
+      ees8 ges4~ ges4. f4 ces8 c | 
+      des8 f4~ f4. ees4 a,8 bes |
+      ces8 ees4~ ees4. bes4 r4 |
+      r2. bes8 ees ges aes |
+      % A'
+      a( bes) a aes( ges4) bes, des |
+      ees2. f16( ges f ees des4) |
+      ees2. des16( ees des bes aes4) |
+      bes2. bes8 ees ges aes |
+      a( bes) a aes( ges4) bes, des |
+      ees2. des16( ees des bes aes4) |
+      bes2. f'16( ges f ees des4) |
       ees2. r2 |
     }
   }
@@ -173,6 +234,33 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
       ees2. des16( ees des bes aes4) |
       bes2. f'16( ges f ees des4) |
       ees2. r2 |
+      % A'
+      r8 ees8 r4 ees8 r8 r4 des4 |
+      r8 ees8 r4 ees8 r8 r4 des4 |
+      r8 ees8 r4 ees8 r8 r4 des4 |
+      r8 ees8 r4 ees8 r8 r4 des4 |
+      r8 ees8 r4 ees8 r8 r4 des4 |
+      r8 ees8 r4 ees8 r8 r4 des4 |
+      r8 ees8 r4 ees8 r8 r4 des4 |
+      r8 ees8 r4 ees8 r8 r4 des4 |
+      % B
+      r4. ees8 ces4~ ces2 | 
+      r4. des8 bes4~ bes2 |
+      r4. ces8 aes4~ aes2 |
+      bes8 a bes ces des4 r2 |
+      r4. ees8 ces4~ ces2 | 
+      r4. des8 bes4~ bes2 |
+      r4. ces8 aes4~ aes2 |
+      aes2. r4 des |
+      % A
+      a'8( bes) a aes( ges4) bes, des |
+      ees2. f16( ges f ees des4) |
+      ees2. des16( ees des bes aes4) |
+      bes2. bes8 ees ges aes |
+      a( bes) a aes( ges4) bes, des |
+      ees2. des16( ees des bes aes4) |
+      bes2. f'16( ges f ees des4) |
+      ees2. r2 |
     }
   }
 }
@@ -187,6 +275,54 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
 
       \clef \clefTrombone
       \compressFullBarRests
+      R1*5/4*7 |
+      r2. bes,,8 ees ges aes |
+      % A
+      a( bes) a aes( ges4) bes, des |
+      ees2. f16( ges f ees des4) |
+      ees2. des16( ees des bes aes4) |
+      bes2. bes8 ees ges aes |
+      a( bes) a aes( ges4) bes, des |
+      ees2. des16( ees des bes aes4) |
+      bes2. f'16( ges f ees des4) |
+      ees2. r2 |
+      % B
+      ees8 ges4 ees8 ces4 aes8 bes ces c | 
+      des8 f4 des8 bes4 ges8 aes a bes |
+      ces8 ees4 ces8 aes4 f8 ges aes a |
+      bes8 a bes ces des4 des8 c des d |
+      ees8 ges4 ees8 ces4 aes8 bes ces c | 
+      des8 f4 des8 bes4 ges8 aes a bes |
+      ces8 ees4 ces8 aes4 f8 aes des ces |
+      bes2. bes8 ees ges aes |
+      % A
+      a( bes) a aes( ges4) bes, des |
+      ees2. f16( ges f ees des4) |
+      ees2. des16( ees des bes aes4) |
+      bes2. bes8 ees ges aes |
+      a( bes) a aes( ges4) bes, des |
+      ees2. des16( ees des bes aes4) |
+      bes2. f'16( ges f ees des4) |
+      ees2. r2 |
+      % A'
+      r8 ges8 r4 ges8 r8 r4 f4 |
+      r8 ges8 r4 ges8 r8 r4 f4 |
+      r8 ges8 r4 ges8 r8 r4 f4 |
+      r8 ges8 r4 ges8 r8 r4 f4 |
+      r8 ges8 r4 ges8 r8 r4 f4 |
+      r8 ges8 r4 ges8 r8 r4 f4 |
+      r8 ges8 r4 ges8 r8 r4 f4 |
+      r8 ges8 r4 ges8 r8 r4 f4 |
+      % B' 
+      ces4. ges4. aes8 bes ces4 | 
+      bes4. f4. ges8 aes a4 |
+      aes4. ees4. f8 ges aes a |
+      bes8 r8 r4 r4 r2 |
+      ces4. ges4. aes8 bes ces4 | 
+      bes4. f4. ges8 aes a4 |
+      aes4. ees4. f8 aes des ces |
+      bes2. r4 ges4 |
+      % A''
       
     }
   }
@@ -210,14 +346,75 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
 PianoNotes = \transpose \originPitch \targetPitchPiano {
   \new Voice {
     \global
-    \relative c''{
+    \relative c{
       \set Staff.instrumentName = #"Piano "
       \set Staff.midiInstrument = \midiInstrPiano
       \transposition \originPitchPiano % for MIDI files? to be verified
 
-      \clef \clefPiano
+      \clef bass % s\clefPiano
       \compressFullBarRests
-
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      % A 
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees aes4 bes |
+      % B
+      ces4. ces ges4 aes |
+      bes4. bes f4 ges |
+      aes4. aes ees4 f |
+      ges4. ges aes4 bes |
+      ces4. ces ges4 aes |
+      bes4. bes f4 ges |
+      aes4. aes des,4 ees |
+      f4. f bes,4 des |
+      % A 
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      % A 
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees aes4 bes |
+      % B
+      ces4. ces ges4 aes |
+      bes4. bes f4 ges |
+      aes4. aes ees4 f |
+      ges4. ges aes4 bes |
+      ces4. ces ges4 aes |
+      bes4. bes f4 ges |
+      aes4. aes des,4 ees |
+      f4. f bes,4 des |
+      % A 
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees bes4 des |
+      ees4. ees aes4 bes |
     }
   }
 }
