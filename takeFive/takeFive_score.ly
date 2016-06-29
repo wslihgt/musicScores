@@ -7,7 +7,7 @@ targetPitchOboe = c'
 targetPitchGuitar = c'
 targetPitchDrums = c'
 targetPitchTrombone = d'''
-targetPitchTenorSax = d''
+targetPitchTenorSax = d'
 targetPitchPiano = c'
 originPitchOboe = c'
 originPitchGuitar = c'
@@ -28,6 +28,7 @@ clefTrombone = treble
 clefTenorSax = treble
 clefPiano = treble
 %% INCLUDE the musical notes (and any variables further used in the books)
+\include "../../LilyJAZZ/LilyJAZZ.ily"
 \include "takeFive_notes.ly" % Put the name of the *_notes.ly
 
 \paper{

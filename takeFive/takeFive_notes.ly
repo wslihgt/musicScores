@@ -1,7 +1,7 @@
 \version "2.18.2"
 
 pieceTitle = "Take Five"
-composer = "Dave Brubeck"
+composer = "Paul Desmond"
 
 \header{  title = \pieceTitle
   composer = \composer
@@ -29,6 +29,7 @@ global = { % Use for tempo and key changes
   \key ees \minor
   \set Timing.baseMoment = #(ly:make-moment 1/8)
   \set Timing.beatStructure = #'(3 3 4)
+  \jazzOn
 }
 
 
