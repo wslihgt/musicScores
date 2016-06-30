@@ -13,7 +13,8 @@ globalStyle = { % Use for various rendering styles that apply to all parts
 
 structure = { % Use to give annotations, mainly, also checking meaure consistency
   s2.^\markup{A} |
-  s2. * 15 |
+  s2. * 7 | \break
+  s2. * 8 | \break
   s2.^\markup{B} |
   s2. * 11 | 
   s2 s4^\markup{Solos on A-A-B, then theme B, and to Coda}|
