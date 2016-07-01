@@ -32,7 +32,7 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
 
 global = { % Use for tempo and key changes
   \time 5/4
-  \tempo 4 = 120
+  \tempo 4 = 160
   \key ees \minor
   \set Timing.baseMoment = #(ly:make-moment 1/8)
   \set Timing.beatStructure = #'(3 3 4)
