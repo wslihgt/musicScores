@@ -47,38 +47,46 @@ chordSeq = \chordmode {
   % intro
   g2.:m | f | g~ | g |
   g2.:m | f | g~ | g |
+  \bar "||"
   % verse 1
   g2. | g | ees | f | g |
   g2. | g | ees | f | g |
   g | g |
   f | c | g | g | g:m |
   ees | f | ees | f | g | g |
+  \bar "||"
   % chorus
   g | g | ees | f | 
   g | g | f:sus | f |
   g | g | ees | f |
   ees | f | g | g |
+  \bar "||"
   % interlude 
   g:m | f | g | g |
+  \bar "||"
   % verse 2
   g | g | ees | f |
   g | g | g | ees | f |
   g | g | ees | f |
   g | g | ees | f | g | g:m |
   ees | f | ees | f | g | g | 
+  \bar "||"
   % chorus
   g | g | ees | f | 
   g | g | f:sus | f |
   g | g | ees | f |
   ees | f | g | g |
+  \bar "||"
   % musical intermezzo
   g:m | f | g | g | 
   ees | f | ees | f | 
+  \bar "||"
   % bridge - choir
   f | c/f | c | bes | 
   f | c/f | c | bes | 
   f | c/f | c | bes | 
   f | c/f | c | bes | 
+  \bar "||"
   % verse 3
   g | g | ees | f | 
   g | g | ees | f | 
@@ -86,6 +94,7 @@ chordSeq = \chordmode {
   g | g | ees | f | 
   g | g:m | ees | f |
   ees | f | g | g |
+  \bar "|."
 }
 
 DrumsUp = \drummode {
@@ -149,7 +158,7 @@ OboeNotes = \transpose \originPitch \targetPitchOboe {
       bes4. c8 bes4 | a4 g f |
       g2.~ | g2. |
       % verse 2 
-      r8 c b2 | b8 c b c b c | 
+      r4 c8 b4.~ | b8 c b c b c | 
       d4 f, d' | d c bes |
       d8 b r4 r | g'8 fis~ fis4. d8 |
       b2 c4 | d c d | f d f | 
@@ -171,7 +180,7 @@ OboeNotes = \transpose \originPitch \targetPitchOboe {
       g2.~ | g2 r4 |
       % intermezzo
       r4 g' f~ | f c a |
-      b2. | r2 g' a | 
+      b2. | r2 g'8 a | 
       bes2. | a4 f2 | bes2. | a2. |
       % bridge
       
@@ -215,6 +224,25 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
       g2.~ | g2 r4 |
       % interlude
       r4 d' d | r4 c c | r b b8 c | b2 r4 |
+      % verse 2
+      r4 r4 e8 d8~ | d2. | d8 c bes4 d8 c8~ |
+      c4. f,8 f g~ | g2 r4 |
+      g'8 fis8~ fis2~ | fis2 r4 |
+      d4 c bes | c bes a | g2 g'8 f | d bes c2~ |
+      c2 r4 | c8 bes c bes c b~ | b2 r4 | 
+      b8 c b c b c | d c c2 | r2 r8 bes8 |
+      g' fis b,4. b8 | g' fis bes,2 |
+      d4. ees8 d4 | c bes a  | d4. ees8 d4 | c bes a  | 
+      b2. | r2 bes4 |
+      % chorus 2 
+      g8 f d2 | f8 d f d f g |
+      d'4 c bes8 a~ | a4 f e8 d~ |
+      d2 r8 d8 | f d f g b c |
+      d4 c bes8 a~ | a2 f8 g~ | 
+      g2 r8 b | d4 c b | 
+      d4 c bes8 a~ | a2 r8 g |
+      d'4 c bes8 a~ | a bes f4 f8 g~ |
+      g2.~ | g2 r4 |
     }
   }
 }
@@ -244,13 +272,30 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
       g2. | d'2. | 
       bes4 a g8 f~ | f4 d c8 b~ |
       b2.  | d'2. |
-      bes4 a g8 f~ | f2 d8 b~ | 
-      b2 r8 b | d4 c b | 
-      d4 c bes8 a~ | a2 r8 g' |
-      d'4 c bes8 a~ | a bes f4 f8 g~ |
+      bes4 a g8 f~ | f2 f8 d~ | 
+      d2 r8 g | b4 a g | 
+      f4 ees ees8 f~ | f2 r8 g |
+      bes4 a g8 f~ | f ees f4 f8 g~ |
       g2.~ | g2 r4 |
       % interlude
       r4 g2 | f4 c f | d2.~ | d2. |
+      % verse 2
+      g2. | a8 g8~ g2 | ees4 f g | f g a | g2 r4 |
+      g2. | b2. | d4 c bes | a f ees | 
+      d4 r4 g'8 f | d bes g4. d8 |
+      ees2. | f | g8 a bes a g f | 
+      g2. | ees2. | f2. | g8 b d b g4 | 
+      r4 g4 f | ees2. | f2. | ees | f |
+      g2.~ | g2. | 
+      % chorus 2
+      g2. | d'2. | 
+      bes4 a g8 f~ | f4 d c8 b~ |
+      b2.  | d'2. |
+      bes4 a g8 f~ | f2 f8 d~ | 
+      d2 r8 g | b4 a g | 
+      f4 ees ees8 f~ | f2 r8 g |
+      bes4 a g8 f~ | f ees f4 f8 g~ |
+      g2.~ | g2 r4 |
     }
   }
 }
@@ -287,14 +332,34 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
       a4 c8 f c4 |
       g4 c8 e c4 |
       b4 d8 g d4 |
-      b4 d8 g d4 |
-      bes4 d8 g d4 |
+      b4 r2 |
+      <bes d g>2. |
+      <bes ees g>2. |
+      r4 <a c f>4^. r4 |
       bes4 ees8 g ees4 |
       a,4 c8 f c4 |
-      bes4 ees8 g ees4 |
-      a,4 c8 f c4 |
-      b4 d8 g d4 |
-      b4 d8 g d4 |
+      \chordmode {
+        g4 g8 g8 g4 |
+        g4 g8 g8 g4 |
+      }
+      % chorus
+      \chordmode {
+        g4 g8 g8 g4 |
+        g4 g8 g8 g4 |
+        ees4 ees8 ees8 ees4 |
+        f4 f8 f8 f4 |
+        g4 g8 g8 g4 |
+        g4 g8 g8 g4 |
+        f4 f8 f8 f4 |
+        f4 f8 f8 f4 |
+        g4 g8 g8 g4 |
+        g4 g8 g8 g4 |
+        ees4. ees8 ees4 |
+        f4. f8 f4 |
+        ees4. ees8 ees4 |
+        f4. f8 f4 |
+      }
+      
     }
   }
 }
