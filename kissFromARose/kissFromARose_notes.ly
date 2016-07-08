@@ -191,13 +191,23 @@ OboeNotes = \transpose \originPitch \targetPitchOboe {
       <<
         \new Voice = "first" {\voiceOne
           f8~ | f2 r4 | r4 e2 | g4 f e8 d~ | d4 e e8 f~ | 
-          f2 r4 | r4 e2 | g4 f e8 d~ | d4 e e8 f~ |
+          f2 r4 | r4 e2 | g4 f e8 d~ | d4 e e8 f~ | f4
         }
         \new Voice = "second" {\voiceTwo
           f8~ | f2 r8 e | e8 e4. e4 | c2 bes8 a | g4 f e8 f~ |
-          f2 c'8 e | e8 e4. e4 | c2 bes8 a | g4 f e8 f~ |
+          f2 c'8 e | e8 e4. e4 | c2 bes8 a | g4 f e8 f~ | f4
         }
       >>
+      r4 r8 d | b' c b c b c |
+      d4 f, d' | d c b |
+      d8 b g'8 fis4 d8 | b2 c4 |
+      d c d | f d f | g4 r2 | r4 r4 r8 b,8 |
+      c bes c bes c cis | d f, f f f fis |
+      g2~ g8 d | g8 a g a g a | r4 bes8 a8 a4~ |
+      a8 bes8 r g g' fis | b,4. g8 g' fis | 
+      bes,2 g4 | bes4. c8 bes4 | 
+      a4 g f | bes4. c8 bes4 | 
+      a4. g8~ g8 f8 | g2. | r2 bes'4 |
     }
   }
 }
@@ -251,20 +261,28 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
       % chorus 2 
       g8 f d2 | f8 d f d f g |
       d'4 c bes8 a~ | a4 f e8 d~ |
-      d2 r8 d8 | f d f g b c |
-      d4 c bes8 a~ | a2 f8 g~ | 
-      g2 r8 b | d4 c b | 
-      d4 c bes8 a~ | a2 r8 g |
-      d'4 c bes8 a~ | a bes f4 f8 g~ |
-      g2.~ | g2 r4 |
+      d2 r8 d8 | f d f g b a |
+      g4 a bes | a4. g8 f4 | 
+      g2 r4 | R2. | 
+      g4 a bes | a4. g8 f4 |
+      g4 a bes | a4. g8 a4 |
+      b2.~ | b2 r4 |
       % intermezzo |
       R2.*8 |
       % bridge
       f2. | e'2. | g4 f e8 d~ | d4. r4. |
       f,2. | e'2. | g4 f e8 d~ | d4. r4. |
       f,2. | e'2. | g4 f e8 d~ | d4. r4. |
-      f,2. | e'2. | g4 f e8 d~ | d4. r4. |
-      
+      f,2. | e'2. | g4 f e8 d~ | d4 e4 e8 f8~ |
+      % verse 3
+      f2 r4 | R2. | d8 c bes4 d8 c8~ |
+      c4. f,8 f g~ | g4 g'8 fis8~ fis4~ | fis2 r4 |
+      d4 c bes | c bes a | g4 r2 | R2. | R2. | 
+      c8 bes c bes c b~ | b2 r4 | 
+      b8 c b c b c | d c c2 | r2 r8 bes8 |
+      g' fis b,4. b8 | g' fis bes,2 |
+      d4. ees8 d4 | c bes a  | d4. ees8 d4 | c4. bes8~ bes8 a8  | 
+      b2. | r2 bes4 |
     }
   }
 }
@@ -313,10 +331,10 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
       g2. | d'2. | 
       bes4 a g8 f~ | f4 d c8 b~ |
       b2.  | d'2. |
-      bes4 a g8 f~ | f2 f8 d~ | 
-      d2 r8 g | b4 a g | 
-      f4 ees ees8 f~ | f2 r8 g |
-      bes4 a g8 f~ | f ees f4 f8 g~ |
+      d4 c bes8 a~ | a2 f8 g~ | 
+      g2 r8 b | d4 c b | 
+      d4 c bes8 a~ | a2 r8 g |
+      d'4 c bes8 a~ | a bes f4 f8 g~ |
       g2.~ | g2 r4 |
       % intermezzo
       R2.*8 |
@@ -325,6 +343,8 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
       c4 f,2 | c'2. | e4 d c8 bes~ | bes4 a bes8 c~ |
       c4 f,2 | c'2. | e4 d c8 bes~ | bes4 a bes8 c~ |
       c4 g8 f4. | c'2. | e4 d c8 bes~ | bes4 a bes8 c~ |
+      % verse 3
+      
     }
   }
 }
