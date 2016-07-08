@@ -22,7 +22,10 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
   s2.^\markup{interlude} |
   s2.*3 |
   s2.^\markup{verse 2} |
-  s2.*24 |
+  s2.*8 |
+  s4 s2^\markup{(break melody)} | 
+  s4 s2^\markup{(tutti back)} |
+  s2.*14 |
   \bar "||"
   s2.^\markup{chorus}\segno |
   s2.*15 |
@@ -183,7 +186,18 @@ OboeNotes = \transpose \originPitch \targetPitchOboe {
       b2. | r2 g'8 a | 
       bes2. | a4 f2 | bes2. | a2. |
       % bridge
-      
+      r2. | r4 e2 | g4 f e8 d~ | d4 e e8 f~ | 
+      f2 r4 | r4 e2 | g4 f e8 d~ | d4 e e8 
+      <<
+        \new Voice = "first" {\voiceOne
+          f8~ | f2 r4 | r4 e2 | g4 f e8 d~ | d4 e e8 f~ | 
+          f2 r4 | r4 e2 | g4 f e8 d~ | d4 e e8 f~ |
+        }
+        \new Voice = "second" {\voiceTwo
+          f8~ | f2 r8 e | e8 e4. e4 | c2 bes8 a | g4 f e8 f~ |
+          f2 c'8 e | e8 e4. e4 | c2 bes8 a | g4 f e8 f~ |
+        }
+      >>
     }
   }
 }
@@ -243,6 +257,14 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
       d4 c bes8 a~ | a2 r8 g |
       d'4 c bes8 a~ | a bes f4 f8 g~ |
       g2.~ | g2 r4 |
+      % intermezzo |
+      R2.*8 |
+      % bridge
+      f2. | e'2. | g4 f e8 d~ | d4. r4. |
+      f,2. | e'2. | g4 f e8 d~ | d4. r4. |
+      f,2. | e'2. | g4 f e8 d~ | d4. r4. |
+      f,2. | e'2. | g4 f e8 d~ | d4. r4. |
+      
     }
   }
 }
@@ -296,6 +318,13 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
       f4 ees ees8 f~ | f2 r8 g |
       bes4 a g8 f~ | f ees f4 f8 g~ |
       g2.~ | g2 r4 |
+      % intermezzo
+      R2.*8 |
+      % bridge
+      r4 f2 | c'2. | e4 d c8 bes~ | bes4 a bes8 c~ |
+      c4 f,2 | c'2. | e4 d c8 bes~ | bes4 a bes8 c~ |
+      c4 f,2 | c'2. | e4 d c8 bes~ | bes4 a bes8 c~ |
+      c4 g8 f4. | c'2. | e4 d c8 bes~ | bes4 a bes8 c~ |
     }
   }
 }
@@ -358,8 +387,80 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
         f4. f8 f4 |
         ees4. ees8 ees4 |
         f4. f8 f4 |
+        g2.~ |
+        g2 
       }
-      
+      g8 a |
+      bes4. c8 bes4 | a4 g f | g2.~ | g2 g'8 d |
+      % verse 2
+      g,4 b8 d b4 |
+      g4 b8 d b4 |
+      g4 bes8 d bes4 |
+      f4 a8 d a4 |
+      g4 b8 d b4 |
+      g4 b8 d b4 |
+      g4 b8 d b4 |
+      \chordmode{
+        ees2. | f |
+      }
+      <g b d>4^. r2 | r4  <g c d>4 g |
+      g4 bes8 d bes4 |
+      f4 a8 d a4 |
+      g4 b8 d b4 |
+      g4 b8 d b4 |
+      g4 bes8 d bes4 |
+      f4 a8 d a4 |
+      \chordmode{g2. | g:m }
+      g4 bes8 d bes4 |
+      f4 <a c f>4^. r4 |
+      g4 bes8 d bes4 |
+      f4 a8 d a4 |
+      \chordmode {
+        g4 g8 g8 g4 |
+        g4 g8 g8 g4 |
+      }
+      % chorus
+      \chordmode {
+        g4 g8 g8 g4 |
+        g4 g8 g8 g4 |
+        ees4 ees8 ees8 ees4 |
+        f4 f8 f8 f4 |
+        g4 g8 g8 g4 |
+        g4 g8 g8 g4 |
+        f4 f8 f8 f4 |
+        f4 f8 f8 f4 |
+        g4 g8 g8 g4 |
+        g4 g8 g8 g4 |
+        ees4. ees8 ees4 |
+        f4. f8 f4 |
+        ees4. ees8 ees4 |
+        f4. f8 f4 |
+        g2.~ |
+        g2 
+      }
+      % intermezzo
+      g8 a |
+      bes4. c8 bes4 | 
+      a4 g f | g2 g8 f | g2 g8 a |
+      bes4. c8 bes4 | a4 f4 a4 |
+      bes4. c8 bes4 | a g f |
+      % bridge
+      f8 a c f c4 |
+      f,8 g c e c4 |
+      c,8 e g c g4 |
+      bes,8 f' bes d bes4 |
+      f8 a c f c4 |
+      f,8 g c e c4 |
+      c,8 e g c g4 |
+      bes,8 f' bes d bes4 | 
+      f8 a c f c4 |
+      f,8 g c e c4 |
+      c,8 e g c g4 |
+      bes,8 f' bes d bes4 |
+      f8 a c f c4 |
+      f,8 g c e c4 |
+      c,8 e g c g4 |
+      bes,8 f' bes d bes4 | 
     }
   }
 }
