@@ -35,7 +35,7 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
   s2.*15 |
   s2.^\markup{verse 3} |
   s2.*22 |
-  s2.^\markup{D.S. al chorus and fade}\segno 
+  s2.^\markup{D.S. al chorus x 2 and intro}\segno 
 }
 
 global = { % Use for tempo and key changes
@@ -101,9 +101,20 @@ chordSeq = \chordmode {
 }
 
 DrumsUp = \drummode {
+  \partial 4 {s4} |
+  s2.
 }
 
 DrumsDown = \drummode {
+  % intro
+  \partial 4 {r4} |
+  R2. * 8 |
+  % verse 1
+  <bd hh>4  hh hh | <ss hh> hh hh8 bd |
+  <bd hh>4 hh hh8 bd | <bd ss hh >4 hh hh | 
+  <bd hh> hh hh | <ss hh> hh8 ss hh bd |
+  <bd hho>4 hh hh | ss^\markup{etc...} r2 |
+  R2. * 124
 }
 
 DrumsNotes = {
@@ -171,7 +182,16 @@ OboeNotes = \transpose \originPitch \targetPitchOboe {
       r4. bes8 g' fis | b,4. b8 g' fis | 
       bes,2 g4 | bes4. c8 bes4 | 
       a4 g f | bes4. c8 bes4 | 
-      a4 g f | g2. | r2 bes'4 |
+      a4 g f | 
+      <<
+        \new Voice = "oboe" {\voiceOne
+          g2. | r2 bes'4 |
+        }
+        \new Voice = "violin" {\voiceTwo
+          g,8 bes a f g bes |
+          a bes c d e fis |
+        }
+      >>
       % chorus 2
       g8 f d2 | f8 d f d f d |
       g4 f d8 c~ | c4 bes a8 g~ |
@@ -201,13 +221,22 @@ OboeNotes = \transpose \originPitch \targetPitchOboe {
       r4 r8 d | b' c b c b c |
       d4 f, d' | d c b |
       d8 b g'8 fis4 d8 | b2 c4 |
-      d c d | f d f | g4 r2 | r4 r4 r8 b,8 |
+      d c d | f d f | g4 r2 | r4 c,4. b8 |
       c bes c bes c cis | d f, f f f fis |
       g2~ g8 d | g8 a g a g a | r4 bes8 a8 a4~ |
       a8 bes8 r g g' fis | b,4. g8 g' fis | 
       bes,2 g4 | bes4. c8 bes4 | 
       a4 g f | bes4. c8 bes4 | 
-      a4. g8~ g8 f8 | g2. | r2 bes'4 |
+      a4. g8~ g8  
+      <<
+        \new Voice = "oboe" {\voiceOne
+          f8~ | f8 g8~ g2 | r2 bes'4 |
+        }
+        \new Voice = "violin" {\voiceTwo
+          s8 | g,8 bes a f g bes |
+          a bes c d e fis |
+        }
+      >>
     }
   }
 }
@@ -277,12 +306,12 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
       % verse 3
       f2 r4 | R2. | d8 c bes4 d8 c8~ |
       c4. f,8 f g~ | g4 g'8 fis8~ fis4~ | fis2 r4 |
-      d4 c bes | c bes a | g4 r2 | R2. | R2. | 
+      d4 c bes | c bes a | g4 r2 | r4 bes4. r8 | R2. | 
       c8 bes c bes c b~ | b2 r4 | 
       b8 c b c b c | d c c2 | r2 r8 bes8 |
       g' fis b,4. b8 | g' fis bes,2 |
-      d4. ees8 d4 | c bes a  | d4. ees8 d4 | c4. bes8~ bes8 a8  | 
-      b2. | r2 bes4 |
+      d4. ees8 d4 | c bes a  | d4. ees8 d4 | c4. bes8~ bes8 a8~ | 
+      a8 b8~ b2 | r2 bes4 |
     }
   }
 }
@@ -342,9 +371,15 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
       r4 f2 | c'2. | e4 d c8 bes~ | bes4 a bes8 c~ |
       c4 f,2 | c'2. | e4 d c8 bes~ | bes4 a bes8 c~ |
       c4 f,2 | c'2. | e4 d c8 bes~ | bes4 a bes8 c~ |
-      c4 g8 f4. | c'2. | e4 d c8 bes~ | bes4 a bes8 c~ |
+      c4 g8 f4. | c'2. | e4 d c8 bes~ | bes4 a2 |
       % verse 3
-      
+      g2 .| R2. | ees4 f g | f g a |
+      g2. | b2. | d4 c bes | a f ees | 
+      d4 r2 | r4 f4. d8 |
+      ees2. | f | g8 a bes a g f | 
+      g2. | ees2. | f2. | g8 b d b g4 | 
+      r4 g4 f | ees2. | f2. | ees | f |
+      g2.~ | g2. | 
     }
   }
 }
@@ -481,6 +516,32 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
       f,8 g c e c4 |
       c,8 e g c g4 |
       bes,8 f' bes d bes4 | 
+      % verse 3 
+      g4 b8 d b4 |
+      g4 b8 d b4 |
+      g4 bes8 d bes4 |
+      f4 a8 d a4 |
+      g4 b8 d b4 |
+      g4 b8 d b4 |
+      \chordmode{
+        ees2. | f |
+      }
+      <g b d>4^. r2 | r4  <f, bes f' g c f>4. r8 |
+      g'4 bes8 d bes4 |
+      f4 a8 d a4 |
+      g4 b8 d b4 |
+      g4 b8 d b4 |
+      g4 bes8 d bes4 |
+      f4 a8 d a4 |
+      \chordmode{g2. | g:m }
+      g4 bes8 d bes4 |
+      f4 <a c f>4^. r4 |
+      g4 bes8 d bes4 |
+      f4 a8 d a4 |
+      \chordmode {
+        g4 g8 g8 g4 |
+        g4 g8 g8 g4 |
+      }
     }
   }
 }
@@ -495,6 +556,7 @@ PianoNotes = \transpose \originPitch \targetPitchPiano {
 
       \clef \clefPiano
       \compressFullBarRests
+      \partial 4 {r4} | R2. * 140
     }
   }
 }
