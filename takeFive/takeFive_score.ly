@@ -87,10 +87,10 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 17)%
 \book{
   \bookOutputSuffix Oboe
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 17)%
 
   \bookpart{
     \header{
@@ -108,13 +108,13 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 19)%
 \book{
   \bookOutputSuffix TenorSax
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 19)%
 
   \bookpart{
-    \header{
+    \header{	
       subtitle = title
       instrument = TenorSax
       }
@@ -129,10 +129,10 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 19)%
 \book{
   \bookOutputSuffix Trombone
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 19)%
 
   \bookpart{
     \header{
@@ -171,10 +171,10 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 17)%
 \book{
   \bookOutputSuffix Piano
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 17)%
 
   \bookpart{
     \header{
