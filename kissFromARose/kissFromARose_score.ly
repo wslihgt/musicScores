@@ -7,24 +7,28 @@ targetPitchOboe = c'
 targetPitchGuitar = c'
 targetPitchDrums = c'
 targetPitchTrombone = d''
+targetPitchViolin = c'
 targetPitchTenorSax = d''
 targetPitchPiano = c'
 originPitchOboe = c'
 originPitchGuitar = c'
 originPitchDrums = c'
 originPitchTrombone = bes,
+originPitchViolin = c'
 originPitchTenorSax = bes,
 originPitchPiano = c'
 midiInstrOboe = "soprano sax"
 midiInstrGuitar = "electric guitar (jazz)"
 midiInstrDrums = "synth drum"
 midiInstrTrombone = "trombone"
+midiInstrViolin = "violin"
 midiInstrTenorSax = "tenor sax"
 midiInstrPiano = "acoustic grand"
 clefOboe = treble
 clefGuitar = treble
 clefDrums = drums
 clefTrombone = treble
+clefViolin = treble
 clefTenorSax = treble
 clefPiano = treble
 %% INCLUDE the musical notes (and any variables further used in the books)
@@ -79,6 +83,27 @@ clefPiano = treble
       \new StaffGroup \keepWithTag #'Drums \musicPieceOne
       \header{
 	instrumentName = Drums
+      }
+    }
+  }
+  %% ... other bookparts
+}
+
+
+#(set-global-staff-size 20)%
+\book{
+  \bookOutputSuffix Violin
+  #(set-global-staff-size 20)%
+
+  \bookpart{
+    \header{
+      subtitle = title
+      instrument = Violin
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'Violin \musicPieceOne
+      \header{
+	instrumentName = Violin
       }
     }
   }
