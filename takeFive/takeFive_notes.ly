@@ -131,6 +131,22 @@ DrumsNotes = {
 }   %**********************************
 
 
+ViolinNotes = \transpose \originPitch \targetPitchViolin {
+  \new Voice {
+    \global
+    \relative c''{
+      \set Staff.instrumentName = #"Violin "
+      \set Staff.midiInstrument = \midiInstrViolin
+      \transposition \originPitchViolin % for MIDI files? to be verified
+
+      \clef \clefViolin
+      \compressFullBarRests
+
+      \bar "|."
+    }
+  }
+}
+
 OboeNotes = \transpose \originPitch \targetPitchOboe {
   \new Voice {
     \global
@@ -501,6 +517,9 @@ musicPieceOne = {
     \tag #'Drums \transpose \originPitch \targetPitchDrums {
       \new ChordNames {\chordSeq}}
 
+    \tag #'Violin \transpose \originPitch \targetPitchViolin {
+      \new ChordNames {\chordSeq}}
+
     \tag #'Oboe \transpose \originPitch \targetPitchOboe {
       \new ChordNames {\chordSeq}}
 
@@ -517,6 +536,7 @@ musicPieceOne = {
       \new ChordNames {\chordSeq}}
 
     \tag #'score \tag #'Drums \new DrumStaff { << \globalStyle \structure \DrumsNotes >> }
+    \tag #'score \tag #'Violin \new Staff { << \globalStyle \structure \ViolinNotes >> }
     \tag #'score \tag #'Oboe \new Staff { << \globalStyle \structure \OboeNotes >> }
     \tag #'score \tag #'TenorSax \new Staff { << \globalStyle \structure \TenorSaxNotes >> }
     \tag #'score \tag #'Trombone \new Staff { << \globalStyle \structure \TromboneNotes >> }
