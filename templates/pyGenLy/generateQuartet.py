@@ -51,8 +51,10 @@ def generateNotesAndScore(instruments,
 
     
     if filename is not None:
-        notesly += gt.generateVariablesEmacs(masterfilename=filename+'_score.ly')
-        notesly += gt.generateVariablesFrescobaldi(masterfilename=filename+'_score')
+        notesly += gt.generateVariablesEmacs(
+            masterfilename=filename+'_score.ly')
+        notesly += gt.generateVariablesFrescobaldi(
+            masterfilename=filename+'_score')
         f = open(outdir+'/'+filename+'_notes.ly', 'w')
         f.writelines(notesly)
         f.close()
@@ -96,19 +98,21 @@ def generateWashingMachines(**kwargs):
     """Refer to generateQuartet.generateNotesAndScore
     for list of arguments.
     """
-    instruments = ('Drums', 'Oboe', 'TenorSax', 'Trombone', 'Guitar', 'Piano')
+    instruments = ('Drums', 'Violin', 'Oboe',
+                   'TenorSax', 'Trombone', 'Guitar', 'Piano')
     # target pitch, relative to c':
     targetPitchDic = dict(
         zip(instruments,
-            ('c\'', 'c\'', 'd\'\'', 'd\'\'\'', 'c\'', 'c\'')))
+            ('c\'', 'c\'', 'c\'', 'd\'\'', 'd\'\'\'', 'c\'', 'c\'')))
     
     clefDic = dict(
         zip(instruments,
-            ('drums', 'treble', 'treble', 'treble', 'treble', 'treble')))
+            ('drums', 'treble', 'treble',
+             'treble', 'treble', 'treble', 'treble')))
     
     midiInstrDic = dict(
         zip(instruments,
-            ('synth drum', 'soprano sax', 'tenor sax', 'trombone',
+            ('synth drum', 'violin', 'soprano sax', 'tenor sax', 'trombone',
              'electric guitar (jazz)',
              'acoustic grand')))
     
