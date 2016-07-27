@@ -141,8 +141,62 @@ ViolinNotes = \transpose \originPitch \targetPitchViolin {
 
       \clef \clefViolin
       \compressFullBarRests
-
-      \bar "|."
+      R1*5/4*7 |
+      r2. bes8 ees ges aes |
+      % A
+      a( bes) a aes( ges4) bes, des |
+      ees2. f16( ges f ees des4) |
+      ees2. des16( ees des bes aes4) |
+      bes2. bes8 ees ges aes |
+      a( bes) a aes( ges4) bes, des |
+      ees2. des16( ees des bes aes4) |
+      bes2. f'16( ges f ees des4) |
+      ees2. r2 |
+      % B
+      ees8 ges4 ees8 ces4 aes8 bes ces c | 
+      des8 f4 des8 bes4 ges8 aes a bes |
+      ces8 ees4 ces8 aes4 f8 ges aes a |
+      bes8 a bes ces des4 des8 c des d |
+      ees8 ges4 ees8 ces4 aes8 bes ces c | 
+      des8 f4 des8 bes4 ges8 aes a bes |
+      ces8 ees4 ces8 aes4 f8 aes des ces |
+      bes2. bes8 ees ges aes |
+      % A
+      a( bes) a aes( ges4) bes, des |
+      ees2. f16( ges f ees des4) |
+      ees2. des16( ees des bes aes4) |
+      bes2. bes8 ees ges aes |
+      a( bes) a aes( ges4) bes, des |
+      ees2. des16( ees des bes aes4) |
+      bes2. f'16( ges f ees des4) |
+      ees2. bes8 ees ges aes |
+      % A'
+      a8( bes) a aes( ges4) bes, des |
+      ees2. f16( ges f ees des4) |
+      ees2. des16( ees des bes aes4) |
+      bes2. bes8 ees ges aes |
+      a( bes) a aes( ges4) bes, des |
+      ees2. des16( ees des bes aes4) |
+      bes2. f'16( ges f ees des4) |
+      ees2. r2 |
+      % B'
+      ees8 ges4~ ges4. f4 ces8 c | 
+      des8 f4~ f4. ees4 a,8 bes |
+      ces8 ees4~ ees4. des4 r4 |
+      r2. des8 c des d |
+      ees8 ges4~ ges4. f4 ces8 c | 
+      des8 f4~ f4. ees4 a,8 bes |
+      ces8 ees4~ ees4. bes4 r4 |
+      r2. des8 f bes des |
+      % A'
+      c( des) ees c( bes4) des, f |
+      aes4. ges4. r2 | % f16( ges f ees des4) |
+      ees2. des16( ees des bes aes4) |
+      bes2. bes8 ees ges aes |
+      a( bes) a aes( ges4) bes, des |
+      ees2. des16( ees des bes aes4) |
+      bes2. f'16( ges f ees des4) |
+      ees2. r2 |
     }
   }
 }
