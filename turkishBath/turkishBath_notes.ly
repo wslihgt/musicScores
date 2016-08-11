@@ -38,7 +38,7 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
 
 global = { % Use for tempo and key changes
   \time 7/4
-  \tempo 4 = 120
+  \tempo 4 = 136
   \key f \minor
 }
 
@@ -97,27 +97,33 @@ DrumsUp = \drummode {
     hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc |
   }
   % theme
+  \repeat unfold 3 {
+    hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc |
+  }
+  hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 s4. |
   \repeat unfold 4 {
     hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc |
   }
-  \repeat unfold 4 {
+  \repeat unfold 3 {
     hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc |
   }
-  \repeat unfold 4 {
-    hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc |
-  }
+  hho8 hhc hho8 hhc hho8 hhc hho8 s8 s2. |
   % bridge
-  \repeat unfold 6 {
+  \repeat unfold 3 {
     hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc |
   }
-  \repeat unfold 4 {
+  hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 s4.|
+  \repeat unfold 2 {
+    hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc hho8 hhc |
+  }
+  \repeat unfold 3 {
     cymca8 cymcb cymca8 cymcb cymca8 cymcb cymca8 cymcb 
     cymca8 cymcb cymca8 cymcb cymca8 cymcb |
   }
+  cymca8 cymcb cymca8 cymcb cymca8 cymcb cymca8 s8 s2. |
   % solo / riffs
   \repeat unfold 12 {
-    hho8 hhc hho8 hhc hho8 hhc hho8 hhc 
-    hho8 hhc hho8 hhc hho8 hhc |
+    s1 s2. |
   }
 }
 
@@ -153,7 +159,7 @@ DrumsDown = \drummode {
     toml toml toml toml tomfl tomfl tomfl tomfl |
   % solo / riffs
   \repeat unfold 12 {
-    bd4 sn bd sn bd8 sn8 r8 bd8 sn8 r  |
+    <bd cymca>4 sn bd8 sn16 sn sn8 <bd cymca>8 r8 bd8 sn8 bd8 sn bd |
   }  
 }
 
