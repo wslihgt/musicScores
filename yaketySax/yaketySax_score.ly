@@ -6,14 +6,14 @@ originPitch = c' %%c' %%bes'%% f %% c'
 targetPitchOboe = c'
 targetPitchGuitar = c'
 targetPitchDrums = c'
-targetPitchTrombone = d''
+targetPitchTrombone = d'''
 targetPitchViolin = c'
 targetPitchTenorSax = d''
 targetPitchPiano = c'
 originPitchOboe = c'
 originPitchGuitar = c'
 originPitchDrums = c'
-originPitchTrombone = bes,
+originPitchTrombone = bes,,
 originPitchViolin = c'
 originPitchTenorSax = bes,
 originPitchPiano = c'
@@ -21,7 +21,7 @@ midiInstrOboe = "soprano sax"
 midiInstrGuitar = "electric guitar (jazz)"
 midiInstrDrums = "synth drum"
 midiInstrTrombone = "trombone"
-midiInstrViolin = "soprano sax"% "violin"
+midiInstrViolin = "violin"
 midiInstrTenorSax = "tenor sax"
 midiInstrPiano = "acoustic grand"
 clefOboe = treble
@@ -32,7 +32,7 @@ clefViolin = treble
 clefTenorSax = treble
 clefPiano = treble
 %% INCLUDE the musical notes (and any variables further used in the books)
-\include "turkishBath_notes.ly" % Put the name of the *_notes.ly
+\include "yaketySax_notes.ly" % Put the name of the *_notes.ly
 
 \paper{
   print-all-headers = "true"
@@ -45,7 +45,7 @@ clefPiano = treble
 \book{
   \bookOutputSuffix "score"
   \header {
-    title = "Turkish Bath"
+    title = "Yakety Sax"
     }
   #(set-global-staff-size 14)
   \bookpart{
@@ -90,10 +90,10 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 18)%
+#(set-global-staff-size 20)%
 \book{
   \bookOutputSuffix Violin
-  #(set-global-staff-size 18)%
+  #(set-global-staff-size 20)%
 
   \bookpart{
     \header{
@@ -111,10 +111,10 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 18)%
+#(set-global-staff-size 20)%
 \book{
   \bookOutputSuffix Oboe
-  #(set-global-staff-size 18)%
+  #(set-global-staff-size 20)%
 
   \bookpart{
     \header{
@@ -132,10 +132,10 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 18)%
+#(set-global-staff-size 20)%
 \book{
   \bookOutputSuffix TenorSax
-  #(set-global-staff-size 18)%
+  #(set-global-staff-size 20)%
 
   \bookpart{
     \header{
@@ -153,10 +153,10 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 18)%
+#(set-global-staff-size 20)%
 \book{
   \bookOutputSuffix Trombone
-  #(set-global-staff-size 18)%
+  #(set-global-staff-size 20)%
 
   \bookpart{
     \header{
@@ -174,10 +174,10 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 18)%
+#(set-global-staff-size 20)%
 \book{
   \bookOutputSuffix Guitar
-  #(set-global-staff-size 18)%
+  #(set-global-staff-size 20)%
 
   \bookpart{
     \header{

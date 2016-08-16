@@ -16,14 +16,15 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
   s1*7/4^\markup{Start cue} |
   \bar "||"
   s1*7/4^\markup{Intro Accomp.} |
-  s1*7/4*3 |
+  s1*7/4*3 | \break
   \repeat volta 2 {
     s1*7/4^\markup{Theme} |
-    s1*7/4*7 |
-    s1*7/4*4 |
+    s1*7/4*3 |\break
+    s1*7/4*4 |\break
+    s1*7/4*4 |\break
   }
   s1*7/4^\markup{Bridge} |
-  s1*7/4*9 |
+  s1*7/4*9 |\break
   %2 gt - gt+tb (bass)
   %2 tpt - tenor
   %2 trb - oboe
@@ -31,7 +32,8 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
   %2 tpt 8 - oboe ++ ?
   \repeat volta 2 {
     s1*7/4^\markup{Solos/Riffs (2nd time)} |
-    s1*7/4*7 |
+    s1*7/4*3 |\break
+    s1*7/4*4 |\break
     s1*7/4*4 |
   }
 }
