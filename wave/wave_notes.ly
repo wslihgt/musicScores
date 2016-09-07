@@ -12,23 +12,26 @@ globalStyle = { % Use for various rendering styles that apply to all parts
 }
 
 structure = { % Use to give annotations, mainly, also checking meaure consistency
-  s1^\markup{intro} \breathe |
+  s1^\markup{intro}  |
   s1*3 |
   s1^\markup{A} |
   s1*11 |
   s1^\markup{B} |
   s1*7 |
+  \bar "||"
   s1^\markup{A'} |
   s1*11 |
+  \bar "||"
+  s1^\markup{outro}  |
+  s1*7 |
   \bar "|."
 }
 
 global = { % Use for tempo and key changes
   \time 4/4
-  \tempo 4 = 100
+  \tempo 4 = 120
   \key d \major 
 }
-
 
 chordSeq = \chordmode {
   % intro
@@ -47,15 +50,23 @@ chordSeq = \chordmode {
   d1:maj7 | bes:dim7 | a:m7 | d:7.9- | \break 
   g:maj7 | g:m6 | fis2:13 fis:aug7 | b:9 b:7.9- | \break
   b:m7/e e:7 | bes:7 a:aug7 | d:m7 g:13 | d:m7 g:13 |
+  % outro
+  d2:m7 g:13 |
+  d2:m7 g:13 |
+  d2:m7 g:13 |
+  d2:m7 g:13 | \break
+  d2:m7 g:13 |
+  d2:m7 g:13 |
+  d2:m7 g:13 |
+  d2:m7 g:13 | \break
 }
-
 
 DrumsUp = \drummode {
   R1*4 wbh4. wbh4. wbh4 |
 }
 
 DrumsDown = \drummode {
-  \repeat unfold 4 {
+  \repeat unfold 22 {
     bd4 sn8 bd bd sn r bd  | sn4 bd8 sn r bd sn bd | 
   }
 }
@@ -90,7 +101,16 @@ ViolinNotes = \transpose \originPitch \targetPitchViolin {
       ais1 | b2 c4 b  | 
       a4. gis8 ~ gis2 | aes8 bes c d ees f4. | e1~ | e |
       % bridge
-      
+      f,4. e8 d c8~ c bes8~ | bes4. c8 d f8~ f e~ |
+      e1~ | e |
+      ees4. d8 c bes8~ bes aes8~ | aes4. bes8 c ees8~ ees d~ |
+      d1 | cis4 r2. |
+      % A'
+      d2. cis8 b | bes des e g bes4 a8 c8~ | 
+      c1 | c1 | d2 b | bes c | 
+      ais1 | b2 c4 b  | 
+      a4. gis8 ~ gis2 | aes8 bes c d ees f4. | e1~ | e |
+      R1*8|
     }
   }
 }
@@ -123,7 +143,8 @@ OboeNotes = \transpose \originPitch \targetPitchOboe {
       a g g fis8 g~ | g4. fis8 g a4. | 
       fis1 | r8 fis eis fis a aes g fis |
       fis4. d8~ d b d e | f d c aes g f~ f f~ |
-      f d8~ d2. | R1
+      f d8~ d2. | R1 |
+      R1*8
     }
   }
 }
@@ -142,11 +163,24 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
       c4 c b4. c8~  | c c8~ c c8 b b b r |  
       % A
       fis4^. r8 fis fis fis r g8~ | g8 g8~ g8 g8~ g8 g8~ g8 g8~ |
-      g4 r8 g g g r8 fis~ | fis1 | g4 r8 g g g r8 e~ | 
+      g4 r8 g g g r8 fis~ | fis1 | g4 r8 g g g r8 e'~ | 
       e4. e8~ e e8~ e e | cis2 d | dis1 | 
       d4. d8 d d r4 | d4 d cis cis |
       c4 c b4. c8~  | c c8~ c c8 b b b r | 
       % B
+      g4. a8 bes d8~ d c8~ | c4. d8 c bes~ bes a~ | a1~ | a |
+      f4. g8 aes c8~ c bes8~ | bes4. c8 bes aes~ aes g~ | g1~ | g |
+      % A'
+      fis4^. r8 fis fis fis r g8~ | g8 g8~ g8 g8~ g8 g8~ g8 g8~ |
+      g4 r8 g g g r8 fis~ | fis1 | g4 r8 g g g r8 e'~ | 
+      e4. e8~ e e8~ e e | cis2 d | dis1 | 
+      d4. d8 d d r4 | d4 d cis cis |
+      c4 c b4. c8~  | c c8~ c c8 b b b r | 
+      % outro 
+      c4 c b4. c8~  | c c8~ c c8 b b b r | 
+      c4 c b4. c8~  | c c8~ c c8 b b b r |  
+      c4 c b4. c8~  | c c8~ c c8 b b b r | 
+      c4 c b4. c8~  | c c8~ c c8 b b b r |  
     }
   }
 }
@@ -166,8 +200,22 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
       % A
       d4^. r8 d d d r e8~ | e8 e8~ e8 e8~ e8 e8~ e8 e8~ |
       e4 r8 e e e r8 d~ | d2 fis | g4 r8 b b b r8 bes~ | 
-      bes4. bes8~ bes bes8~ bes bes | fis1 | b, | 
-      e4 r8 e e e r4 | bes4 bes a a | d4 d g4. d8~ | d d8~ d g8~ g2 |
+      bes4. bes8~ bes bes8~ bes bes | fis1 | b | 
+      e4 r8 e e e r4 | bes4 bes a a | d,4 d g4. d8~ | d d8~ d g8~ g2 |
+      % B
+      bes,4. d8 g a8~ a bes8~ | bes4. bes8 a g~ g f~ | f1~ | f |
+      aes,4. c8 f g8~ g aes8~ | aes4. aes8 g f~ f ees~ | ees1 | e4 r2. |
+      % A'
+      d4^. r8 d d d r e8~ | e8 e8~ e8 e8~ e8 e8~ e8 e8~ |
+      e4 r8 e e e r8 d~ | d2 fis | g4 r8 b b b r8 bes~ | 
+      bes4. bes8~ bes bes8~ bes bes | fis1 | b | 
+      e4 r8 e e e r4 | bes4 bes a a | 
+      d,4 d g4. d8~ | d d8~ d g8~ g2 |
+      % outro 
+      d4 d g4. d8~ | d d8~ d g8~ g2 |
+      d4 d g4. d8~ | d d8~ d g8~ g2 |
+      d4 d g4. d8~ | d d8~ d g8~ g2 |
+      d4 d g4. d8~ | d d8~ d g8~ g2 |
     }
   }
 }
@@ -201,6 +249,8 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
       fis1 | r8 fis eis fis a aes g fis |
       fis4. d8~ d b d e | f d c aes g f~ f f~ |
       f d8~ d2. | R1
+      % outro
+      R1 * 8 
     }
   }
 }
