@@ -8,6 +8,7 @@ composer = "J.S. Bach"
 \header{  title = \pieceTitle
   composer = \composer
 }
+subtitle = "Wasching Machines"
 
 globalStyle = { % Use for various rendering styles that apply to all parts
   \accidentalStyle "modern-cautionary"
