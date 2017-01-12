@@ -22,12 +22,16 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
       {s1 * 2 |}
   } \break
   \bar "||"
-  s1^\markup{\circle B} | s1 * 7 | \break
-  s1 * 8 | \break
+  s1^\markup{\circle B} | s1 * 3 | \break 
+  s1 * 4 | \break
+  s1 * 4 | \break
+  s1 * 4 | \break
   \bar "||"
-  s1^\markup{\circle A'} | s1 * 6 | s1^\markup {\eyeglasses}
+  s1^\markup{\circle A'} | s1 * 3 | \break 
+  s1*3 | s1^\markup {\eyeglasses}
   \bar "||" \break
-  s1^\markup{\eyeglasses Coda} | s1 * 7
+  s1^\markup{\eyeglasses Coda} | s1 * 3 | \break
+  s1 * 4 |
   \bar "|."\break
 }
 
