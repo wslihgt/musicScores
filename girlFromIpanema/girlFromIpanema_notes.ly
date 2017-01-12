@@ -158,7 +158,7 @@ OboeNotes = \transpose \originPitch \targetPitchOboe {
       % A' 
       g4. e8 e d~ d g~ | g g~ g e e4 d |
       g4 e4 e4 d8 g~ | g g~ g e e4 d |
-      a4. f8 f d~ d c'~ | \tuplet 6/4 2 {c4 e, e e d e~} |
+      a'4. f8 f d~ d c'~ | \tuplet 6/4 2 {c4 e, e e d e~} |
       e1~ | e |
       % Coda
       \tuplet 6/4 2 {c'4 e, e e d e~} | e1 | 
@@ -196,7 +196,7 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
       % A' 
       g4. e8 e d~ d g~ | g g~ g e e4 d |
       g4 e4 e4 d8 g~ | g g~ g e e4 d |
-      a4. f8 f d~ d c'~ | \tuplet 6/4 2 {c4 e, e e d e~} |
+      a'4. f8 f d~ d c'~ | \tuplet 6/4 2 {c4 e, e e d e~} |
       e1~ | e |
       % Coda
       \tuplet 6/4 2 {c'4 e, e e d e~} | e1 | 
