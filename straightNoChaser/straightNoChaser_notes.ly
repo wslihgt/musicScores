@@ -75,19 +75,19 @@ ViolinNotes = \transpose \originPitch \targetPitchViolin {
       \compressFullBarRests
       \partial 8 f,8 |
       % A
-      bes c des d r f, bes c | des d ees des~ des4 r8 f, |
-      bes c des d r f, bes c | des d r f, bes c des r8 | 
-      r8 f, bes c des d ees des~ | des1 |
-      r8 f, bes c des d r8 f, | bes c des d r8 f, bes c |
-      des d ees f, ges g aes a~ | a bes b c des d ees f, |
-      bes c des d~ d2 | r2. r8 f, |
+      bes c des d-^ r f, bes c | des d ees des--~ des4 r8 f, |
+      bes c des d-^ r f, bes c | des d-^ r f, bes c des-- r8 | 
+      r8 f, bes c des d ees des--~ | des1 |
+      r8 f, bes c des d-^ r8 f, | bes c des d-^ r8 f, bes c |
+      des d ees f, ges g aes a--~ | a bes b c des d ees f, |
+      bes c des d--~ d2 | r2. r8 f, |
       % A'
-      bes c des d r f, bes c | des d ees des~ des4 r8 f, |
-      bes c des d r f, bes c | des d r f, bes c des r8 | 
-      r8 f, bes c des d ees des~ | des1 |
-      r8 f, bes c des d r8 f, | bes c des d r8 f, bes c |
-      des d ees f, ges g aes a~ | a bes b c des d ees f, |
-      bes c des d~ d2 | r2. r4 |
+      bes c des d-^ r f, bes c | des d ees des--~ des4 r8 f, |
+      bes c des d-^ r f, bes c | des d-^ r f, bes c des-- r8 | 
+      r8 f, bes c des d ees des--~ | des1 |
+      r8 f, bes c des d-^ r8 f, | bes c des d-^ r8 f, bes c |
+      des d ees f, ges g aes a--~ | a bes b c des d ees f, |
+      bes c des d--~ d2 | r2. r4 |
     }
   }
 }
@@ -104,19 +104,19 @@ OboeNotes = \transpose \originPitch \targetPitchOboe {
       \compressFullBarRests
       \partial 8 f,8 |
       % A
-      bes c des d r f, bes c | des d ees des~ des4 r8 f, |
-      bes c des d r f, bes c | des d r f, bes c des r8 | 
-      r8 f, bes c des d ees des~ | des1 |
-      r8 f, bes c des d r8 f, | bes c des d r8 f, bes c |
-      des d ees f, ges g aes a~ | a bes b c des d ees f, |
-      bes c des d~ d2 | r2. r8 f, |
+      bes c des d-^ r f, bes c | des d ees des--~ des4 r8 f, |
+      bes c des d-^ r f, bes c | des d-^ r f, bes c des-- r8 | 
+      r8 f, bes c des d ees des--~ | des1 |
+      r8 f, bes c des d-^ r8 f, | bes c des d-^ r8 f, bes c |
+      des d ees f, ges g aes a--~ | a bes b c des d ees f, |
+      bes c des d--~ d2 | r2. r8 f, |
       % A'
-      bes c des aes r f bes c | des bes aes g~ g4 r8 f |
-      bes c des aes r f bes c | des aes r f bes c g r8 | 
-      r8 f bes c des bes aes g~ | g1 |
-      r8 f bes c des aes r8 f | bes c des aes r8 f bes c |
-      des d ees f, ges g aes c,~ | c des d ees f ges g f |
-      bes c des aes~ aes2 | r2. r4 |
+      bes c des aes-^ r f bes c | des bes aes g--~ g4 r8 f |
+      bes c des aes-^ r f bes c | des aes-^ r f bes c g-- r8 | 
+      r8 f bes c des bes aes g--~ | g1 |
+      r8 f bes c des aes-^ r8 f | bes c des aes-^ r8 f bes c |
+      des d ees f, ges g aes c,~-- | c des d ees e f ges f |
+      bes c des aes--~ aes2 | r2. r4 |
     }
   }
 }
@@ -133,19 +133,19 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
       \compressFullBarRests
       \partial 8 f,,8 |
       % A
-      bes c des d r f, bes c | des d ees des~ des4 r8 f, |
-      bes c des d r f, bes c | des d r f, bes c des r8 | 
-      r8 f, bes c des d ees des~ | des1 |
-      r8 f, bes c des d r8 f, | bes c des d r8 f, bes c |
-      des d ees f, ges g aes a~ | a bes b c des d ees f, |
-      bes c des d~ d2 | r2. r8 f, |
+      bes c des d-^ r f, bes c | des d ees des--~ des4 r8 f, |
+      bes c des d-^ r f, bes c | des d-^ r f, bes c des-- r8 | 
+      r8 f, bes c des d ees des--~ | des1 |
+      r8 f, bes c des d-^ r8 f, | bes c des d-^ r8 f, bes c |
+      des d ees f, ges g aes a--~ | a bes b c des d ees f, |
+      bes c des d--~ d2 | r2. r8 f, |
       % A'
-      bes c des f r f, bes c | des f g ees~ ees4 r8 f, |
-      bes c des f r f, bes c | des f r f, bes c ees r8 | 
-      r8 f, bes c des f g ees~ | ees1 |
-      r8 f, bes c des f r8 f, | bes c des f r8 f, bes c |
-      des d ees f, ges g aes a~ | a bes b c des d ees f, |
-      bes c des f~ f2 | r2. r4 |
+      bes c des f-^ r f, bes c | des f g ees--~ ees4 r8 f, |
+      bes c des f-^ r f, bes c | des f-^ r f, bes c ees-- r8 | 
+      r8 f, bes c des f g ees--~ | ees1 |
+      r8 f, bes c des f-^ r8 f, | bes c des f-^ r8 f, bes c |
+      des d ees f, ges g aes a--~ | a bes b c des d ees f, |
+      bes c des f--~ f2 | r2. r4 |
     }
   }
 }
@@ -162,19 +162,19 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
       \compressFullBarRests
       \partial 8 f,,8 |
       % A
-      bes c des d r f, bes c | des d ees des~ des4 r8 f, |
-      bes c des d r f, bes c | des d r f, bes c des r8 | 
-      r8 f, bes c des d ees des~ | des1 |
-      r8 f, bes c des d r8 f, | bes c des d r8 f, bes c |
-      des d ees f, ges g aes a~ | a bes b c des d ees f, |
-      bes c des d~ d2 | r2. r8 f, |
+      bes c des d-^ r f, bes c | des d ees des--~ des4 r8 f, |
+      bes c des d-^ r f, bes c | des d-^ r f, bes c des-- r8 | 
+      r8 f, bes c des d ees des--~ | des1 |
+      r8 f, bes c des d-^ r8 f, | bes c des d-^ r8 f, bes c |
+      des d ees f, ges g aes a--~ | a bes b c des d ees f, |
+      bes c des d--~ d2 | r2. r8 f, |
       % A'
-      bes c des bes r f bes c | des d des ees~ ees4 r8 f, |
-      bes c des bes r f bes c | des bes r f bes c ees r8 | 
-      r8 f, bes c des d des ees~ | ees1 |
-      r8 f, bes c des d r8 f, | bes c des d r8 f, bes c |
-      des d ees f, ges g aes a~ | a bes b c des d ees f, |
-      bes c des d~ d2 | r2. r4 |
+      bes c des bes-^ r f bes c | des d des ees--~ ees4 r8 f, |
+      bes c des bes-^ r f bes c | des bes-^ r f bes c ees-- r8 | 
+      r8 f, bes c des d des ees--~ | ees1 |
+      r8 f, bes c des bes-^ r8 f | bes c des bes-^ r8 f bes c |
+      des d ees f, ges g aes a--~ | a bes b c des d ees f, |
+      bes c des bes--~ bes2 | r2. r4 |
     }
   }
 }
@@ -185,8 +185,8 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
     \relative c''{
       \set Staff.instrumentName = #"Guitar "
       \set Staff.midiInstrument = \midiInstrGuitar
-      \set Staff.midiMinimumVolume = #0.2
-      \set Staff.midiMaximumVolume = #0.4
+      \set Staff.midiMinimumVolume = #0.3
+      \set Staff.midiMaximumVolume = #0.5
       \transposition \originPitchGuitar % for MIDI files? to be verified
 
       \clef \clefGuitar
