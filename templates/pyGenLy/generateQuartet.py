@@ -92,7 +92,6 @@ def generateOboeQuartet(*args, **kwargs):
                                  clefDic=clefDic, midiInstrDic=midiInstrDic,
                                  ensemble='quatuor',
                                  **kwargs)
-    
 
 def generateWashingMachines(**kwargs):
     """Refer to generateQuartet.generateNotesAndScore
@@ -122,3 +121,33 @@ def generateWashingMachines(**kwargs):
                                  ensemble='Wasching Machines',
                                  **kwargs)
     
+def generateSegaBand(**kwargs):
+    """sets the following arguments in generateQuartet.generateNotesAndScore call:
+
+      instruments: Drums, Singer, Guitar, Bass, SaxAlto
+
+      clefDic
+
+      targetPitchDic
+
+      midiInstrDic
+    """
+    instruments = ('Drums', 'Singer', 'SaxAlto', 'Guitar', 'Bass')
+    # target pitch, relative to c':
+    targetPitchDic = dict(
+        zip(instruments,
+            ('c\'', 'c\'', 'a\'', 'c\'', 'c\'')))
+    
+    clefDic = dict(
+        zip(instruments,
+            ('drums', 'treble', 'treble', 'treble', 'bass')))
+    
+    midiInstrDic = dict(
+        zip(instruments,
+            ('synth drum', 'violin', 'alto sax', 'electric guitar (jazz)', 'bass')))
+    
+    return generateNotesAndScore(instruments=instruments,
+                                 targetPitchDic=targetPitchDic,
+                                 clefDic=clefDic, midiInstrDic=midiInstrDic,
+                                 ensemble='Sega band',
+                                 **kwargs)
