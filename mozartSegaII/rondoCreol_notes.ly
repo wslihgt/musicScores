@@ -56,6 +56,23 @@ DrumsUp = \drummode {
     {cymr8 r4 r4. r2. | }
     {cymr4. r4. cymr4. cymra4.}
   }
+  % theme B
+  \repeat unfold 3
+  {
+    r8 hh8 r8 r8 hh8 r8 r8 hh8 r8 r4. |
+    r4. hh8 r4 r4. hh8 r4 |
+  }
+  r8 hh8 r8 r8 hh8 r8 r8 hh8 r8 r4. |
+  r1. |
+  % theme A'
+  \repeat unfold 4
+  {
+    r8 hh8 r8 r8 hh8 r8 r8 hh8 r8 r8 hh8 r8 |
+  }
+  cymr4. cymra4. cymr cymrb | 
+  cymr4. cymra4. cymr cymrb | 
+  r8 hh8 r8 r8 hh8 r8 r8 hh8 r8 r8 hh8 r8 |
+  {cymr4. cymrb4. cymr4. cymra4.}
 }
 
 DrumsDown = \drummode {
@@ -74,7 +91,20 @@ DrumsDown = \drummode {
   \alternative
   {
     {bd8 sn16 sn r8 sn8 sn4 r2. | }
-    { |}
+    {bd8 r4 r4. r2.  |}
+  }
+  % theme B
+  \repeat unfold 3
+  {
+    bd4 bd8 bd sn4 bd4 bd8 bd sn8 sn |
+    bd4 tomh8~ tomh toml4 tomh4 toml8 sn4. |
+  }
+  bd4 bd8 bd sn4 bd4 bd8 bd sn8 sn |
+  bd8 tomh4 tomh8 tomh4 toml8 toml4 tomfl8 tomfl tomfl |
+  % theme A'
+  \repeat unfold 8
+  {
+    bd4 bd8 bd sn4 bd4 bd8 bd sn4 |
   }
 }
 
@@ -136,14 +166,21 @@ SingerNotes = \transpose \originPitch \targetPitchSinger {
       c2. b2.\trill |
       a2. \breathe a4. b |
       % theme C
-      cis2. a4. b |
-      cis2. a4. b |
-      cis8 cis b a gis4 fis8 fis gis a b4 |
-      gis4 e8 fis e4 \breathe a4. b |
-      cis2. a4. b |
-      cis2. a4. b |
-      cis4 b8 a gis4 fis8 b4 gis8 e4 | 
-      b'4. r4. r2.  | 
+      \repeat volta 2
+      {
+        cis2. a4. b |
+        cis2. a4. b |
+        cis8 cis b a gis4 fis8 fis gis a b4 |
+        gis4 e8 fis e4 \breathe a4. b |
+        cis2. a4. b |
+        cis2. a4. b |
+        cis4 b8 a gis4 fis8 b4 gis8 e4 | 
+      }
+      \alternative
+      {
+        {a4. r4. r2. |}
+        {a4. r4. a b |} 
+      }
       % theme D
       
     }
@@ -191,15 +228,32 @@ SaxAltoNotes = \transpose \originPitch \targetPitchSaxAlto {
       a2. e | 
       c2. \breathe cis4. e |
       % theme C
-      a2. cis,4. e |
-      a2. cis,4. e |
-      a8 a gis fis gis4 fis8 fis gis a b4 |
-      gis4 e8 fis e4 \breathe a4. b |
-      cis2. a4. b |
-      cis2. a4. b |
-      cis4 b8 a gis4 fis8 b4 gis8 e4 | 
-      b'4. r4. r2.  | 
+      \repeat volta 2
+      {
+        a2. cis,4. e |
+        a2. cis,4. e |
+        a8 a gis fis d4 d8 cis d dis fis4 |
+        e4 b8~ b4. \breathe cis4. e |
+        a2. cis,4. e |
+        a2. cis,4. e |
+        a8 a gis fis d4 a8 b4 b8 d4 |
+      }
+      \alternative
+      {
+        {cis4. r4. cis4. e |}
+        {cis4. r4. r4. \tuplet 4/6 {cis'16 d cis b } |} 
+      }
       % theme D
+      \tuplet 4/6 {a b a gis} \tuplet 4/6 {fis a gis fis} 
+      \tuplet 4/6 {eis fis gis eis} \tuplet 4/6 {cis dis eis cis } |
+      \tuplet 4/6 {fis eis fis gis} \tuplet 4/6 {a gis a b} 
+      \tuplet 4/6 {cis bis cis bis} \tuplet 4/6 {cis16 d cis b }|
+      \tuplet 4/6 {a b a gis} \tuplet 4/6 {fis a gis fis} 
+      \tuplet 4/6 {e fis gis e} \tuplet 4/6 {cis dis e cis } |
+      \tuplet 4/6 {dis e fis dis} \tuplet 4/6 {bis cis dis bis} 
+      cis4. \tuplet 4/6 {cis'16 d cis b} |
+      
+      
     }
   }
 }
@@ -253,6 +307,8 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
         r8 a:m r8 r8 a:m r8 r8 d:dim7 r8 r8 d:dim7 r8 |
         r8 a:m r8 r8 a:m r8 r8 e:7 r8 r8 e:7 r8 |
         a4.:m  r4. r2. |
+        % theme C
+        
       }
     }
   }
@@ -287,8 +343,34 @@ BassNotes = \transpose \originPitch \targetPitchBass {
       \alternative
       {
         {e4 f8~ f fis4 g4. r|}
-        {|}
+        {e4. r4. r2.| }
       }
+      c'4. g c g |
+      b g b g |
+      c g c g |
+      b g b g |
+      a e' a, e'|
+      gis, d' gis, d' |
+      a e' a, e'|
+      gis, d' e4. r4. |
+      % theme A' 
+      a,4 e8~ e b'4~ b4 e,8~ e a4~ | 
+      a4 e8~ e b'4~ b8 e,4~ e8 a a |
+      a4 e8~ e b'4~ b4 e,8~ e f4 | 
+      f4. c' f, c' |
+      e, e d d | 
+      c c d d |
+      e a e gis |
+      a r r2. |
+      % theme C mariage!
+      a4 cis8~ cis e4 a, cis8~ cis e4 |
+      a,4 cis8~ cis e4 a, cis8~ cis e4 |
+      a,4 cis8~ cis e4 a,4 d8~ d fis4 |
+      e4 d8~ d b4 gis4. r4. |
+      a4 cis8~ cis e4 a, cis8~ cis e4 |
+      a,4 cis8~ cis e4 a, cis8~ cis e4 |
+      a,4 cis8~ cis e4 d4. e, |
+      a4 cis8~ cis e4 a4. r4. | 
     }
   }
 }
