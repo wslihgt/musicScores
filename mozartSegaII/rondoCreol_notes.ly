@@ -73,6 +73,24 @@ DrumsUp = \drummode {
   cymr4. cymra4. cymr cymrb | 
   r8 hh8 r8 r8 hh8 r8 r8 hh8 r8 r8 hh8 r8 |
   {cymr4. cymrb4. cymr4. cymra4.}
+  % theme C
+  \repeat volta 2
+  {
+    \repeat unfold 7
+    {
+      cymr4 cymr8~ cymr cymr4~ cymr8 cymr8 r8 r8 cymr8 r8 |
+    }
+  }
+  \alternative
+  {
+    {cymr8 r4 r8 cymr16 cymr cymr8 cymr r4 r4. |}
+    {cymr4 cymr8~ cymr cymr4 cymr4. r4. |}
+  }
+  % theme D
+  \repeat unfold 4
+  {
+    r8 hh8 r8 r8 hh8 r8 r8 hh8 r8 r8 hh8 r8 |
+  }
 }
 
 DrumsDown = \drummode {
@@ -102,6 +120,25 @@ DrumsDown = \drummode {
   bd4 bd8 bd sn4 bd4 bd8 bd sn8 sn |
   bd8 tomh4 tomh8 tomh4 toml8 toml4 tomfl8 tomfl tomfl |
   % theme A'
+  \repeat unfold 8
+  {
+    bd4 bd8 bd sn4 bd4 bd8 bd sn4 |
+  }
+  % theme C
+  \repeat volta 2 
+  {
+      \repeat unfold 6
+      {
+        bd4 bd8 bd sn4 bd4 bd8 bd sn4 |
+      }
+      bd8 sn4 bd8 sn4 bd8 sn4 bd8 sn4  |
+  }
+  \alternative
+  {
+    {bd8 sn16 sn r8 sn8 sn4 r2. | }
+    {bd8 r4 r4. r2.  |}
+  }
+  % theme D
   \repeat unfold 8
   {
     bd4 bd8 bd sn4 bd4 bd8 bd sn4 |
@@ -308,6 +345,24 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
         r8 a:m r8 r8 a:m r8 r8 e:7 r8 r8 e:7 r8 |
         a4.:m  r4. r2. |
         % theme C
+        \repeat volta 2
+        {
+          a2. a |
+          a a |
+          a d4. b:7 |
+          e2. r2. |
+          a a | 
+          a a |
+          a d4. e |
+        }
+        \alternative
+        {
+          {a2. r |}
+          {a2. gis2.:7 | } % gis2.:7 sounds good too! should be cis2.:7?
+        }
+        % theme D
+        r8 fis:m r r fis:m r r cis:7 r cis:7 r |
+        r8 fis:m r r fis:m r r cis:7 r cis:7 r |
         
       }
     }
