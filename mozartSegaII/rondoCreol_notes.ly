@@ -24,14 +24,17 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
   s1. * 7 |
   s1.^\markup{\circle 4 theme C } | % should be a repeat here
   s1. * 7 | s1. | % repeat measure
-  s1.^\markup{\circle 5 theme D} | 
+  s1.^\markup{\circle 5 theme D - fast? paroles rap/ragga/gangsta style?} | 
   s1. * 7 |
-  s1.^\markup{\circle 5 theme D variante} |
-  s1. * 7 |
+  % s1.^\markup{\circle 5 theme D variante} |
+  % s1. * 7 |
   s1.^\markup{\circle 6 theme E} | 
   s1. * 7 |
   s1.^\markup{\circle 5 theme D'} |
   s1. * 7 |
+  s1.^\markup{\circle 4 theme C - finish with this?} | % should be a repeat here
+  s1. * 7 | % repeat measure - to finish? repeat ad lib.?
+  \bar "|."
 }
 
 global = { % Use for tempo and key changes
@@ -215,11 +218,21 @@ SingerNotes = \transpose \originPitch \targetPitchSinger {
       }
       \alternative
       {
-        {a4. r4. r2. |}
-        {a4. r4. a b |} 
+        {a4. r4. a b |}
+        {a4. r4. r2.  |} 
       }
       % theme D
-      
+      R1.^\markup{tacet} | R1. * 6 |
+      r2. e'8 e d cis b4 | 
+      % theme E
+      a4 b8 cis d e8~ e fis4 gis a8 |
+      a4 gis8 fis e4 e8 d4 cis8 b4 |
+      a4 b8 cis d e8~ e fis4 gis8 a4 |
+      ais4 b8~ b8 \breathe e, e e e d cis b4 |
+      a4 b8 cis d e8~ e fis4 gis a8 |
+      a4 gis8 fis e4 e8 d d cis8 b4 |
+      cis8 cis e a, a cis b b d gis, b4 |
+      a4. r4. 
     }
   }
 }
@@ -278,7 +291,7 @@ SaxAltoNotes = \transpose \originPitch \targetPitchSaxAlto {
       \alternative
       {
         {cis4. r4. cis4. e |}
-        {cis4. r4. r4. \tuplet 4/6 {cis'16 d cis b } |} 
+        {cis4. r4. r4. \tuplet 4/6 {cis'16^\markup{"double tempo" feeling} d cis b }|} 
       }
       % theme D
       \tuplet 4/6 {a b a gis} \tuplet 4/6 {fis a gis fis} 
@@ -289,7 +302,25 @@ SaxAltoNotes = \transpose \originPitch \targetPitchSaxAlto {
       \tuplet 4/6 {e fis gis e} \tuplet 4/6 {cis dis e cis } |
       \tuplet 4/6 {dis e fis dis} \tuplet 4/6 {bis cis dis bis} 
       cis4. \tuplet 4/6 {cis'16 d cis b} |
-      
+      % or repeat volta?
+      \tuplet 4/6 {a b a gis} \tuplet 4/6 {fis a gis fis} 
+      \tuplet 4/6 {eis fis gis eis} \tuplet 4/6 {cis dis eis cis } |
+      \tuplet 4/6 {fis eis fis gis} \tuplet 4/6 {a gis a b} 
+      \tuplet 4/6 {cis bis cis bis} \tuplet 4/6 {cis16 d cis b }|
+      \tuplet 4/6 {a b a gis} \tuplet 4/6 {fis a gis fis} 
+      \tuplet 4/6 {e fis gis e} \tuplet 4/6 {cis dis e cis } |
+      \tuplet 4/6 {dis e fis dis} \tuplet 4/6 {bis cis dis bis} 
+      e8^\markup{normal tempo feeling again} e d cis b4 |
+      % theme E
+      a4 b8 cis d e8~ e fis4 gis a8 |
+      a4 gis8 fis e4 e8 d4 cis8 b4 |
+      a4 b8 cis d e8~ e fis4 gis8 a4 |
+      ais4 b8~ b8 \breathe e, e e e d cis b4 |
+      a4 b8 cis d e8~ e fis4 gis a8 |
+      a4 gis8 fis e4 e8 d^\markup{"ah ti fille n'a rien que..."} d cis8 b4 |
+      cis8 cis e a, a cis b b d gis, b4 |
+      a4. r4. 
+      % theme D'
       
     }
   }
@@ -361,9 +392,16 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
           {a2. gis2.:7 | } % gis2.:7 sounds good too! should be cis2.:7?
         }
         % theme D
-        r8 fis:m r r fis:m r r cis:7 r cis:7 r |
-        r8 fis:m r r fis:m r r cis:7 r cis:7 r |
-        
+        r8 fis:m r r fis:m r r cis:7 r r cis:7 r |
+        r8 fis:m r r fis:m r r cis:7 r r cis:7 r |
+        r8 fis:m r r fis:m r r cis:m r r cis:m r |
+        r8 gis:7 r r gis:7 r cis4.:m r4. |
+        r8 fis:m r r fis:m r r cis:7 r r cis:7 r |
+        r8 fis:m r r fis:m r r cis:7 r r cis:7 r |
+        r8 fis:m r r fis:m r r cis:m r r cis:m r |
+        r8 gis:7 r r gis:7 r cis4.:m r4. |
+        % theme E
+        r8 cis r r cis r r cis:7 r r cis:7 r |
       }
     }
   }
@@ -418,14 +456,30 @@ BassNotes = \transpose \originPitch \targetPitchBass {
       e a e gis |
       a r r2. |
       % theme C mariage!
-      a4 cis8~ cis e4 a, cis8~ cis e4 |
-      a,4 cis8~ cis e4 a, cis8~ cis e4 |
-      a,4 cis8~ cis e4 a,4 d8~ d fis4 |
-      e4 d8~ d b4 gis4. r4. |
-      a4 cis8~ cis e4 a, cis8~ cis e4 |
-      a,4 cis8~ cis e4 a, cis8~ cis e4 |
-      a,4 cis8~ cis e4 d4. e, |
-      a4 cis8~ cis e4 a4. r4. | 
+      \repeat volta 2 
+      {
+        a4 cis8~ cis e4 a, cis8~ cis e4 |
+        a,4 cis8~ cis e4 a, cis8~ cis e4 |
+        a,4 cis8~ cis e4 a,4 d8~ d fis4 |
+        e4 d8~ d b4 gis4. r4. |
+        a4 cis8~ cis e4 a, cis8~ cis e4 |
+        a,4 cis8~ cis e4 a, cis8~ cis e4 |
+        a,4 cis8~ cis e4 d4. e, |
+      }
+      \alternative
+      {
+        {a4 cis8~ cis e4 a4. r4. |}
+        {a4. e4. cis2. |}
+      }
+      fis4. cis' gis cis |
+      fis,4. cis' eis, cis' |
+      fis,4. cis' gis cis |
+      gis4. dis' cis4. r |
+      fis,4. cis' gis cis |
+      fis,4. cis' eis, cis' |
+      fis,4. cis' gis cis |
+      gis4. dis' cis4. r |
+      
     }
   }
 }
