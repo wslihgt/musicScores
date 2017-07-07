@@ -10,7 +10,7 @@ targetPitchBass = c'
 targetPitchDrums = c'
 originPitchGuitar = c'
 originPitchSinger = c'
-originPitchSaxAlto = ees
+originPitchSaxAlto = dis %ees
 originPitchBass = c'
 originPitchDrums = c'
 midiInstrGuitar = "electric guitar (jazz)"
@@ -48,7 +48,7 @@ clefDrums = drums
       \new StaffGroup \keepWithTag #'score \musicPieceOne
       \layout {
 	#(layout-set-staff-size 14)}
-      \midi { }
+      % \midi { }
     }
     \score {
       \unfoldRepeats \new StaffGroup \keepWithTag #'score \musicPieceOne

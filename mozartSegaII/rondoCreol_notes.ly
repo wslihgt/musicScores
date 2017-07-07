@@ -519,7 +519,7 @@ BassNotes = \transpose \originPitch \targetPitchBass {
         a4 cis8~ cis e4 a, cis8~ cis e4 |
         a,4 cis8~ cis e4 a, cis8~ cis e4 |
         a,4 cis8~ cis e4 a,4 d8~ d fis4 |
-        e4 d8~ d b4 gis4. r4. |
+        e4 d8~ d b4 a4. r4. |
         a4 cis8~ cis e4 a, cis8~ cis e4 |
         a,4 cis8~ cis e4 a, cis8~ cis e4 |
         a,4 cis8~ cis e4 d4. e, |
@@ -550,7 +550,7 @@ BassNotes = \transpose \originPitch \targetPitchBass {
       a,4 cis8~ cis e4 a, cis8~ cis e4 |
       a,4 cis8~ cis e4 a, cis8~ cis e4 |
       a,4 cis8~ cis e4 a,4 d8~ d fis4 |
-      e4 d8~ d b4 gis4. r4. |
+      e4 d8~ d b4 a4. r4. |
       a4 cis8~ cis e4 a, cis8~ cis e4 |
       a,4 cis8~ cis e4 a, cis8~ cis e4 |
       a,4 cis8~ cis e4 d4. e, |
