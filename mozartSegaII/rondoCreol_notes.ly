@@ -30,9 +30,9 @@ structure = { % Use to give annotations, mainly, also checking meaure consistenc
   % s1. * 7 |
   s1.^\markup{\circle 6 theme E} | 
   s1. * 7 |
-  s1.^\markup{\circle 5 theme D'} |
-  s1. * 7 |
-  s1.^\markup{\circle 4 theme C - finish with this?} | % should be a repeat here
+  %s1.^\markup{\circle 7 theme D'} |
+  %s1. * 7 |
+  s1.^\markup{\circle 7 theme C - finish with this?} | % should be a repeat here
   s1. * 7 | % repeat measure - to finish? repeat ad lib.?
   \bar "|."
 }
@@ -90,10 +90,21 @@ DrumsUp = \drummode {
     {cymr4 cymr8~ cymr cymr4 cymr4. r4. |}
   }
   % theme D
-  \repeat unfold 4
+  \repeat unfold 8
   {
     r8 hh8 r8 r8 hh8 r8 r8 hh8 r8 r8 hh8 r8 |
   }
+  % theme E
+  \repeat unfold 8
+  {
+    r8 hh8 r8 r8 hh8 r8 r8 hh8 r8 r8 hh8 r8 |
+  }
+  % theme C final
+  \repeat unfold 7
+  {
+    cymr4 cymr8~ cymr cymr4~ cymr8 cymr8 r8 r8 cymr8 r8 |
+  }
+  cymr8 cymr16 cymr cymr8 cymr8 cymr16 cymr cymr8 cymr8 r4 r4.
 }
 
 DrumsDown = \drummode {
@@ -134,7 +145,7 @@ DrumsDown = \drummode {
       {
         bd4 bd8 bd sn4 bd4 bd8 bd sn4 |
       }
-      bd8 sn4 bd8 sn4 bd8 sn4 bd8 sn4  |
+      bd8 sn4 bd8 sn4 bd8 sn4 bd8 sn4 |
   }
   \alternative
   {
@@ -142,10 +153,24 @@ DrumsDown = \drummode {
     {bd8 r4 r4. r2.  |}
   }
   % theme D
-  \repeat unfold 8
+  \repeat unfold 7
   {
     bd4 bd8 bd sn4 bd4 bd8 bd sn4 |
   }
+  bd4 bd8 bd sn4 bd8 tomh16 tomh tomh8 toml toml tomfl |
+  % theme E 
+  \repeat unfold 7
+  {
+    bd4 bd8 bd sn4 bd4 bd8 bd sn4 |
+  }
+  bd4 bd8 bd sn4 bd8 tomh16 tomh tomh8 toml toml tomfl |
+  % theme C final
+  \repeat unfold 6
+  {
+    bd4 bd8 bd sn4 bd4 bd8 bd sn4 |
+  }
+  bd8 sn4 bd8 sn4 bd8 sn4 bd8 sn4 |
+  bd8 r4 r4. r2.
 }
 
 DrumsNotes = {
@@ -232,7 +257,16 @@ SingerNotes = \transpose \originPitch \targetPitchSinger {
       a4 b8 cis d e8~ e fis4 gis a8 |
       a4 gis8 fis e4 e8 d d cis8 b4 |
       cis8 cis e a, a cis b b d gis, b4 |
-      a4. r4. 
+      a4. r4. a4. b |
+      % theme C final
+      cis2. a4. b |
+      cis2. a4. b |
+      cis8 cis b a gis4 fis8 fis gis a b4 |
+      gis4 e8 fis e4 \breathe a4. b |
+      cis2. a4. b |
+      cis2. a4. b |
+      cis4 b8 a gis4 fis8 b4 gis8 e4 | 
+      a4 cis8~ cis e4 a4. r4.  
     }
   }
 }
@@ -313,15 +347,22 @@ SaxAltoNotes = \transpose \originPitch \targetPitchSaxAlto {
       e8^\markup{normal tempo feeling again} e d cis b4 |
       % theme E
       a4 b8 cis d e8~ e fis4 gis a8 |
-      a4 gis8 fis e4 e8 d4 cis8 b4 |
+      cis4 b8 a gis4 gis8 fis4 e8 d4 |
       a4 b8 cis d e8~ e fis4 gis8 a4 |
       ais4 b8~ b8 \breathe e, e e e d cis b4 |
       a4 b8 cis d e8~ e fis4 gis a8 |
-      a4 gis8 fis e4 e8 d^\markup{"ah ti fille n'a rien que..."} d cis8 b4 |
-      cis8 cis e a, a cis b b d gis, b4 |
-      a4. r4. 
-      % theme D'
-      
+      cis4 b8 a gis4 gis8 fis^\markup{"ah ti fille n'a rien que..."} fis e8 d4 |
+      e8 e a cis, cis e d d e b d4 |
+      cis4. r4. cis e | 
+      % theme C final
+      a2. cis,4. e |
+      a2. cis,4. e |
+      a8 a gis fis d4 d8 cis d dis fis4 |
+      e4 b8~ b4. \breathe cis4. e |
+      a2. cis,4. e |
+      a2. cis,4. e |
+      a8 a gis fis d4 a8 b4 b8 d4 |
+      a'4 e8~ e d4 cis4. r4. 
     }
   }
 }
@@ -332,6 +373,7 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
     \relative c''{
       \set Staff.instrumentName = #"Guitar "
       \set Staff.midiInstrument = \midiInstrGuitar
+      \set Staff.midiMaximumVolume = #0.5
       \transposition \originPitchGuitar % for MIDI files? to be verified
 
       \clef \clefGuitar
@@ -401,7 +443,23 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
         r8 fis:m r r fis:m r r cis:m r r cis:m r |
         r8 gis:7 r r gis:7 r cis4.:m r4. |
         % theme E
-        r8 cis r r cis r r cis:7 r r cis:7 r |
+        r8 a r r a r r a r r a r |
+        r8 e:7 r r e:7 r r e:7 r r e:7 r |
+        r8 a r r a r r a r r a r |
+        r8 e:7 r r e:7 r r e:7 r r e:7 r |
+        r8 a r r a r r a r r a r |
+        r8 e:7 r r e:7 r r e:7 r r e:7 r |
+        r8 a r r a r r e:7 r r e:7 r |
+        r8 a r r a r r2. |
+        % theme C final
+        a2. a |
+        a a |
+        a d4. b:7 |
+        e2. r2. |
+        a a | 
+        a a |
+        a d4. e |
+        a4. r8 a a a4. r4. |
       }
     }
   }
@@ -479,7 +537,24 @@ BassNotes = \transpose \originPitch \targetPitchBass {
       fis,4. cis' eis, cis' |
       fis,4. cis' gis cis |
       gis4. dis' cis4. r |
-      
+      % theme E 
+      a4. r8 a4 e4. a |
+      b4. r8 gis4 e4 fis8 gis e4 |
+      a4. r8 a4 e4. a |
+      b4. r8 gis4 e4 fis8 gis e4 |
+      a4. r8 a4 e4. a |
+      b4. r8 gis4 e4 fis8 gis e4 |
+      a4. a e e |
+      a4. r r2. | 
+      % theme C final
+      a,4 cis8~ cis e4 a, cis8~ cis e4 |
+      a,4 cis8~ cis e4 a, cis8~ cis e4 |
+      a,4 cis8~ cis e4 a,4 d8~ d fis4 |
+      e4 d8~ d b4 gis4. r4. |
+      a4 cis8~ cis e4 a, cis8~ cis e4 |
+      a,4 cis8~ cis e4 a, cis8~ cis e4 |
+      a,4 cis8~ cis e4 d4. e, |
+      a4. r8 a a a4. r
     }
   }
 }
