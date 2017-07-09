@@ -185,88 +185,141 @@ DrumsNotes = {
   >>
 }   %**********************************
 
+parolesViveMaries = 
+{
+  \lyricmode
+  {
+    "Vive les" "Ma" -- | % starts on upbeat
+    "riés !" "Vive Leila" "Vive Ma" -- |
+    "ré !" "Nou va" "Chan" -- |
+    "té," oui nou va dan -- sé, oui nou va bien |
+    ri go -- _ "lé !" "Vive les" "Ma" -- | % starts on upbeat
+    "riés ! Bon" -- "heur A" -- "mour San" -- |
+    "té !" "Nos a" -- "mis" |
+    Lei -- la Jean- Chris -- tophe se sont u -- |
+  }
+}
 
-SingerNotes = \transpose \originPitch \targetPitchSinger {
-  \new Voice {
-    \global
-    \relative c''{
-      \set Staff.instrumentName = #"Singer "
-      \set Staff.midiInstrument = \midiInstrSinger
-      \transposition \originPitchSinger % for MIDI files? to be verified
+parolesViveMariesRepeat = 
+{
+  \parolesViveMaries
+  \lyricmode
+  {
+    "nis !" "Vive les" "Ma" -- |
+    "nis !"
+  }
+}
 
-      \clef \clefSinger
-      \compressFullBarRests
-      R1.*7 |
-      r2. b8 a4 gis8 a4 |
-      % theme A
-      \repeat volta 2{
-        c4 r8 r4. d8 c4 b8 c4 |
-        e4 r8 r4. f8 e4 dis8 e4 |
-        b'8 a4 gis8 a4 b8 a4 gis8 a4 |
-        c4 r8 r4. a4. c |
-        b4 b8 a g4 r2. | 
-        b4 b8 a g4 r2. | 
-        b4. a g fis |
-      }
-      \alternative{
-        {e4. r4. b8 a4 gis8 a4 |}
-        {e'4. r4. \breathe e4. f  |}
-      }
-      % theme B
-      g4 g8 g8 g a8~ a8 a g f e4 |
-      d4. r4. e4. f |
-      g4 g8 g8 g a8~ a8 a g f e4 |
-      d4. r4. c4. d |
-      e4 e8 e8 f4~ f8 f8 e d c4 |
-      b4. r4. c4. d |
-      e4 e8 e8 f4~ f8 f8 e d c4 |
-      b4. r4. \breathe b8 a4 gis8 a4 |
-      % theme A'
-      c4 r8 r4. d8 c4 b8 c4 |
-      e4 r8 r4. f8 e4 dis8 e4 |
-      b'8 a4 gis8 a4 b8 a4 gis8 a4 |
-      c4 r8 r4. a4. b |
-      c b a gis |
-      a e f d |
-      c2. b2.\trill |
-      a2. \breathe a4. b |
-      % theme C
-      \repeat volta 2
-      {
-        cis2. a4. b |
-        cis2. a4. b |
-        cis8 cis b a gis4 fis8 fis gis a b4 |
-        gis4 e8 fis e4 \breathe a4. b |
-        cis2. a4. b |
-        cis2. a4. b |
-        cis4 b8 a gis4 fis8 b4 gis8 e4 | 
-      }
-      \alternative
-      {
-        {a4. r4. a b |}
-        {a4. r4. r2.  |} 
-      }
-      % theme D
-      R1.^\markup{tacet} | R1. * 6 |
-      r2. e'8 e d cis b4 | 
-      % theme E
-      a4 b8 cis d e8~ e fis4 gis a8 |
-      a4 gis8 fis e4 e8 d4 cis8 b4 |
-      a4 b8 cis d e8~ e fis4 gis8 a4 |
-      ais4 b8~ b8 \breathe e, e e e d cis b4 |
-      a4 b8 cis d e8~ e fis4 gis a8 |
-      a4 gis8 fis e4 e8 d d cis8 b4 |
-      cis8 cis e a, a cis b b d gis, b4 |
-      a4. r4. a4. b |
-      % theme C final
+parolesViveMariesNoRepeat = 
+{
+  \parolesViveMaries
+  \lyricmode
+  {
+    "nis !" 
+  }
+}
+
+chantUn = {
+  \clef \clefSinger
+  \compressFullBarRests
+  R1.*7 |
+  r2. b8 a4 gis8 a4 |
+  % theme A
+  \repeat volta 2
+  {
+    c4 r8 r4. d8 c4 b8 c4 |
+    e4 r8 r4. f8 e4 dis8 e4 |
+    b'8 a4 gis8 a4 b8 a4 gis8 a4 |
+    c4 r8 r4. a4. c |
+    b4 b8 a g4 r2. | 
+    b4 b8 a g4 r2. | 
+    b4. a g fis |
+  }
+  \alternative{
+    {e4. r4. b8 a4 gis8 a4 |}
+    {e'4. r4. \breathe e4. f |}
+  }
+  % theme B
+  g4 g8 g8 g a8~ a8 a g f e4 |
+  d4. r4. e4. f |
+  g4 g8 g8 g a8~ a8 a g f e4 |
+  d4. r4. c4. d |
+  e4 e8 e8 f4~ f8 f8 e d c4 |
+  b4. r4. c4. d |
+  e4 e8 e8 f4~ f8 f8 e d c4 |
+  b4. r4. \breathe b8 a4 gis8 a4 |
+  % theme A'
+  c4 r8 r4. d8 c4 b8 c4 |
+  e4 r8 r4. f8 e4 dis8 e4 |
+  b'8 a4 gis8 a4 b8 a4 gis8 a4 |
+  c4 r8 r4. a4. b |
+  c b a gis |
+  a e f d |
+  c2. b2.\trill |
+  a2. \breathe 
+  {
+    a4. b |
+    % theme C
+    \repeat volta 2
+    {
       cis2. a4. b |
       cis2. a4. b |
       cis8 cis b a gis4 fis8 fis gis a b4 |
       gis4 e8 fis e4 \breathe a4. b |
       cis2. a4. b |
       cis2. a4. b |
-      cis4 b8 a gis4 fis8 b4 gis8 e4 | 
-      a4 cis8~ cis e4 a4. r4.  
+      cis4 b8 a gis4 fis8 b4 gis8 e4 |
+    }
+    \alternative
+    {
+      {a4. r4. a b |}
+      {a4. r4. r2. |}
+    }
+  }
+  \addlyrics
+  {
+    \parolesViveMariesRepeat
+  }
+  % theme D
+  R1.^\markup{tacet} | R1. * 6 |
+  r2. e'8 e d cis b4 |
+  % theme E
+  a4 b8 cis d e8~ e fis4 gis a8 |
+  a4 gis8 fis e4 e8 d4 cis8 b4 |
+  a4 b8 cis d e8~ e fis4 gis8 a4 |
+  ais4 b8~ b8 \breathe e, e e e d cis b4 |
+  a4 b8 cis d e8~ e fis4 gis a8 |
+  a4 gis8 fis e4 e8 d d cis8 b4 |
+  cis8 cis e a, a cis b b d gis, b4 |
+  a4. r4.
+  {
+    a4. b |
+    % theme C final
+    cis2. a4. b |
+    cis2. a4. b |
+    cis8 cis b a gis4 fis8 fis gis a b4 |
+    gis4 e8 fis e4 \breathe a4. b |
+    cis2. a4. b |
+    cis2. a4. b |
+    cis4 b8 a gis4 fis8 b4 gis8 e4 | 
+    a4 cis8~ cis e4 a4. r4.  
+  }
+  \addlyrics
+  {
+    \parolesViveMariesNoRepeat
+  }
+}
+
+SingerNotes = \transpose \originPitch \targetPitchSinger {
+  \new Voice = "mainUn" {
+    \global
+    \relative c''{
+      \set Staff.instrumentName = #"Singer "
+      \set Staff.midiInstrument = \midiInstrSinger
+      \transposition \originPitchSinger % for MIDI files? to be verified
+
+      \chantUn
+
     }
   }
 }
