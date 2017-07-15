@@ -1,6 +1,6 @@
 \version "2.18.2"
 
-pieceTitle = "Rondo a la cr'eol"
+pieceTitle = "Rondo a la créol"
 composer = "Mozart"
 
 \header{  title = \pieceTitle
@@ -220,7 +220,6 @@ parolesViveMariesNoRepeat =
 }
 
 chantUn = {
-  \clef \clefSinger
   \compressFullBarRests
   R1.*7 |
   r2. b8 a4 gis8 a4 |
@@ -310,6 +309,93 @@ chantUn = {
   }
 }
 
+chantDeux = 
+{
+  \compressFullBarRests
+  R1. * 8 |
+  % theme A
+  \repeat volta 2 
+  {
+    R1. * 4 |
+    g4 g8 fis e4 r2. |
+    g4 g8 fis e4 r2. |
+    g4. fis e dis |
+  }
+  \alternative
+  {
+    {g,4 a8~ a ais4 b4. r4. |}
+    {g4. r4. \breathe c4. d |}
+  }
+  % theme B
+  e4 e8 e8 e f8~ f8 f e d c4 |
+  b4. g4. c4. d |
+  e4 e8 e8 e f8~ f8 f e d c4 |
+  b4. r4. a4. b |
+  c4 c8 c8 d4~ d8 d8 c b a4 |
+  gis4. e4. a4. b |
+  c4 c8 c8 d4~ d8 d8 c b a4 |
+  gis4. r4. \breathe r2. |
+  % theme A'
+  R1. * 3 |
+  r2. c'4. d |
+  e d c b | 
+  c a d gis, |
+  a2. e | 
+  c2. \breathe cis4. e |
+  % theme C
+  \repeat volta 2
+  {
+    a2. cis,4. e |
+    a2. cis,4. e |
+    a8 a gis fis d4 d8 cis d dis fis4 |
+    e4 b8~ b4. \breathe cis4. e |
+    a2. cis,4. e |
+    a2. cis,4. e |
+    a8 a gis fis d4 a8 b4 b8 d4 |
+  }
+  \alternative
+  {
+    {cis4. r4. cis4. e |}
+    {cis4. r4. r4. \tuplet 4/6 {cis'16^\markup{"double tempo" feeling} d cis b }|} 
+  }
+  % theme D
+  \tuplet 4/6 {a b a gis} \tuplet 4/6 {fis a gis fis} 
+  \tuplet 4/6 {eis fis gis eis} \tuplet 4/6 {cis dis eis cis } |
+  \tuplet 4/6 {fis eis fis gis} \tuplet 4/6 {a gis a b} 
+  \tuplet 4/6 {cis bis cis bis} \tuplet 4/6 {cis16 d cis b }|
+  \tuplet 4/6 {a b a gis} \tuplet 4/6 {fis a gis fis} 
+  \tuplet 4/6 {e fis gis e} \tuplet 4/6 {cis dis e cis } |
+  \tuplet 4/6 {dis e fis dis} \tuplet 4/6 {bis cis dis bis} 
+  cis4. \tuplet 4/6 {cis'16 d cis b} |
+  % or repeat volta?
+  \tuplet 4/6 {a b a gis} \tuplet 4/6 {fis a gis fis} 
+  \tuplet 4/6 {eis fis gis eis} \tuplet 4/6 {cis dis eis cis } |
+  \tuplet 4/6 {fis eis fis gis} \tuplet 4/6 {a gis a b} 
+  \tuplet 4/6 {cis bis cis bis} \tuplet 4/6 {cis16 d cis b }|
+  \tuplet 4/6 {a b a gis} \tuplet 4/6 {fis a gis fis} 
+  \tuplet 4/6 {e fis gis e} \tuplet 4/6 {cis dis e cis } |
+  \tuplet 4/6 {dis e fis dis} \tuplet 4/6 {bis cis dis bis} 
+  e8^\markup{normal tempo feeling again} e d cis b4 |
+  % theme E
+  a4 b8 cis d e8~ e fis4 gis a8 |
+  cis4 b8 a gis4 gis8 fis4 e8 d4 |
+  a4 b8 cis d e8~ e fis4 gis8 a4 |
+  ais4 b8~ b8 \breathe e, e e e d cis b4 |
+  a4 b8 cis d e8~ e fis4 gis a8 |
+  cis4 b8 a gis4 gis8 fis^\markup{"ah ti fille n'a rien que..."} fis e8 d4 |
+  e8 e a cis, cis e d d e b d4 |
+  cis4. r4. cis e | 
+  % theme C final
+  a2. cis,4. e |
+  a2. cis,4. e |
+  a8 a gis fis d4 d8 cis d dis fis4 |
+  e4 b8~ b4. \breathe cis4. e |
+  a2. cis,4. e |
+  a2. cis,4. e |
+  a8 a gis fis d4 a8 b4 b8 d4 |
+  a'4 e8~ e d4 cis4. r4. 
+}
+
 SingerNotes = \transpose \originPitch \targetPitchSinger {
   \new Voice = "mainUn" {
     \global
@@ -318,8 +404,50 @@ SingerNotes = \transpose \originPitch \targetPitchSinger {
       \set Staff.midiInstrument = \midiInstrSinger
       \transposition \originPitchSinger % for MIDI files? to be verified
 
+      \clef \clefSinger
       \chantUn
+    }
+  }
+}
 
+SaxSopUnNotes = \transpose \originPitch \targetPitchSaxSop {
+  \new Voice = "mainUn" {
+    \global
+    \relative c''{
+      \set Staff.instrumentName = #"SaxSop 1 "
+      \set Staff.midiInstrument = \midiInstrSaxSop
+      \transposition \originPitchSaxSop % for MIDI files? to be verified
+
+      \clef \clefSaxSop
+      \chantUn
+    }
+  }
+}
+
+SaxAltoUnNotes = \transpose \originPitch \targetPitchSaxAlto {
+  \new Voice = "mainUn" {
+    \global
+    \relative c'{
+      \set Staff.instrumentName = #"SaxAlto 1 "
+      \set Staff.midiInstrument = \midiInstrSaxAlto
+      \transposition \originPitchSaxAlto % for MIDI files? to be verified
+
+      \clef \clefSaxAlto
+      \chantUn
+    }
+  }
+}
+
+SaxSopDeuxNotes = \transpose \originPitch \targetPitchSaxSop {
+  \new Voice {
+    \global
+    \relative c'''{
+      \set Staff.instrumentName = #"SaxSop 2 "
+      \set Staff.midiInstrument = \midiInstrSaxSop
+      \transposition \originPitchSaxSop % for MIDI files? to be verified
+
+      \clef \clefSaxSop
+      \chantDeux
     }
   }
 }
@@ -328,94 +456,12 @@ SaxAltoNotes = \transpose \originPitch \targetPitchSaxAlto {
   \new Voice {
     \global
     \relative c''{
-      \set Staff.instrumentName = #"SaxAlto "
+      \set Staff.instrumentName = #"SaxAlto 2 "
       \set Staff.midiInstrument = \midiInstrSaxAlto
       \transposition \originPitchSaxAlto % for MIDI files? to be verified
 
       \clef \clefSaxAlto
-      \compressFullBarRests
-      R1. * 8 |
-      % theme A
-      \repeat volta 2 
-      {
-        R1. * 4 |
-        g4 g8 fis e4 r2. |
-        g4 g8 fis e4 r2. |
-        g4. fis e dis |
-      }
-      \alternative
-      {
-        {g,4 a8~ a ais4 b4. r4. |}
-        {g4. r4. \breathe c4. d |}
-      }
-      % theme B
-      e4 e8 e8 e f8~ f8 f e d c4 |
-      b4. g4. c4. d |
-      e4 e8 e8 e f8~ f8 f e d c4 |
-      b4. r4. a4. b |
-      c4 c8 c8 d4~ d8 d8 c b a4 |
-      gis4. e4. a4. b |
-      c4 c8 c8 d4~ d8 d8 c b a4 |
-      gis4. r4. \breathe r2. |
-      % theme A'
-      R1. * 3 |
-      r2. c'4. d |
-      e d c b | 
-      c a d gis, |
-      a2. e | 
-      c2. \breathe cis4. e |
-      % theme C
-      \repeat volta 2
-      {
-        a2. cis,4. e |
-        a2. cis,4. e |
-        a8 a gis fis d4 d8 cis d dis fis4 |
-        e4 b8~ b4. \breathe cis4. e |
-        a2. cis,4. e |
-        a2. cis,4. e |
-        a8 a gis fis d4 a8 b4 b8 d4 |
-      }
-      \alternative
-      {
-        {cis4. r4. cis4. e |}
-        {cis4. r4. r4. \tuplet 4/6 {cis'16^\markup{"double tempo" feeling} d cis b }|} 
-      }
-      % theme D
-      \tuplet 4/6 {a b a gis} \tuplet 4/6 {fis a gis fis} 
-      \tuplet 4/6 {eis fis gis eis} \tuplet 4/6 {cis dis eis cis } |
-      \tuplet 4/6 {fis eis fis gis} \tuplet 4/6 {a gis a b} 
-      \tuplet 4/6 {cis bis cis bis} \tuplet 4/6 {cis16 d cis b }|
-      \tuplet 4/6 {a b a gis} \tuplet 4/6 {fis a gis fis} 
-      \tuplet 4/6 {e fis gis e} \tuplet 4/6 {cis dis e cis } |
-      \tuplet 4/6 {dis e fis dis} \tuplet 4/6 {bis cis dis bis} 
-      cis4. \tuplet 4/6 {cis'16 d cis b} |
-      % or repeat volta?
-      \tuplet 4/6 {a b a gis} \tuplet 4/6 {fis a gis fis} 
-      \tuplet 4/6 {eis fis gis eis} \tuplet 4/6 {cis dis eis cis } |
-      \tuplet 4/6 {fis eis fis gis} \tuplet 4/6 {a gis a b} 
-      \tuplet 4/6 {cis bis cis bis} \tuplet 4/6 {cis16 d cis b }|
-      \tuplet 4/6 {a b a gis} \tuplet 4/6 {fis a gis fis} 
-      \tuplet 4/6 {e fis gis e} \tuplet 4/6 {cis dis e cis } |
-      \tuplet 4/6 {dis e fis dis} \tuplet 4/6 {bis cis dis bis} 
-      e8^\markup{normal tempo feeling again} e d cis b4 |
-      % theme E
-      a4 b8 cis d e8~ e fis4 gis a8 |
-      cis4 b8 a gis4 gis8 fis4 e8 d4 |
-      a4 b8 cis d e8~ e fis4 gis8 a4 |
-      ais4 b8~ b8 \breathe e, e e e d cis b4 |
-      a4 b8 cis d e8~ e fis4 gis a8 |
-      cis4 b8 a gis4 gis8 fis^\markup{"ah ti fille n'a rien que..."} fis e8 d4 |
-      e8 e a cis, cis e d d e b d4 |
-      cis4. r4. cis e | 
-      % theme C final
-      a2. cis,4. e |
-      a2. cis,4. e |
-      a8 a gis fis d4 d8 cis d dis fis4 |
-      e4 b8~ b4. \breathe cis4. e |
-      a2. cis,4. e |
-      a2. cis,4. e |
-      a8 a gis fis d4 a8 b4 b8 d4 |
-      a'4 e8~ e d4 cis4. r4. 
+      \chantDeux
     }
   }
 }
@@ -613,11 +659,14 @@ BassNotes = \transpose \originPitch \targetPitchBass {
 }
 musicPieceOne = {
   <<
-    \tag #'score \tag #'Drums \new DrumStaff { << \globalStyle \structure \DrumsNotes >> }
+    \tag #'score \tag #'Drums \tag #'Accomp \new DrumStaff { << \globalStyle \structure \DrumsNotes >> }
     \tag #'score \tag #'Singer \new Staff { << \globalStyle \structure \SingerNotes >> }
+    \tag #'score \tag #'SaxSopUn \new Staff { << \globalStyle \structure \SaxSopUnNotes >> }
+    \tag #'score \tag #'SaxAltoUn \new Staff { << \globalStyle \structure \SaxAltoUnNotes >> }
+    \tag #'score \tag #'SaxSopDeux \new Staff { << \globalStyle \structure \SaxSopDeuxNotes >> }
     \tag #'score \tag #'SaxAlto \new Staff { << \globalStyle \structure \SaxAltoNotes >> }
-    \tag #'score \tag #'Guitar \new Staff { << \globalStyle \structure \GuitarNotes >> }
-    \tag #'score \tag #'Bass \new Staff { << \globalStyle \structure \BassNotes >> }
+    \tag #'score \tag #'Guitar \tag #'Accomp \new Staff { << \globalStyle \structure \GuitarNotes >> }
+    \tag #'score \tag #'Bass \tag #'Accomp \new Staff { << \globalStyle \structure \BassNotes >> }
   >>
 }
 %%% Local Variables

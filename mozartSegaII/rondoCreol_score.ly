@@ -5,22 +5,26 @@ originPitch = c' %%c' %%bes'%% f %% c'
 
 targetPitchGuitar = c'
 targetPitchSinger = c'
+targetPitchSaxSop = d'
 targetPitchSaxAlto = a'
 targetPitchBass = c'
 targetPitchDrums = c'
 originPitchGuitar = c'
 originPitchSinger = c'
+originPitchSaxSop = bes %ees
 originPitchSaxAlto = dis %ees
 originPitchBass = c'
 originPitchDrums = c'
 midiInstrGuitar = "electric guitar (jazz)"
 midiInstrSinger = "flute"
 midiInstrSaxAlto = "alto sax"
+midiInstrSaxSop = "soprano sax"
 midiInstrBass = "electric bass (finger)"
 midiInstrDrums = "synth drum"
 clefGuitar = treble
 clefSinger = treble
 clefSaxAlto = treble
+clefSaxSop = treble
 clefBass = bass
 clefDrums = drums
 %% INCLUDE the musical notes (and any variables further used in the books)
@@ -35,9 +39,27 @@ clefDrums = drums
 %%
 %%    add as many bookparts as there are pieces in the music
 \book{
+  \bookOutputSuffix "accompaniment"
+  \header {
+    title = \title
+    }
+  #(set-global-staff-size 14)
+  \bookpart{
+    \header{
+      subtitle = "Sega band"
+      }
+    \score {
+      \unfoldRepeats \new StaffGroup \keepWithTag #'Accomp \musicPieceOne
+      \midi { }
+    }
+  }
+  % ... other bookparts come here
+}
+
+\book{
   \bookOutputSuffix "score"
   \header {
-    title = "Rondo a la cr'eol"
+    title = \title
     }
   #(set-global-staff-size 14)
   \bookpart{
@@ -106,6 +128,65 @@ clefDrums = drums
   %% ... other bookparts
 }
 
+#(set-global-staff-size 20)%
+\book{
+  \bookOutputSuffix SaxSopUn
+  #(set-global-staff-size 20)%
+
+  \bookpart{
+    \header{
+      subtitle = \title
+      instrument = "Sax Sop 1"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'SaxSopUn \musicPieceOne
+      \header{
+	instrumentName = "Sax Sop 1"
+      }
+    }
+  }
+  %% ... other bookparts
+}
+
+#(set-global-staff-size 20)%
+\book{
+  \bookOutputSuffix SaxAltoUn
+  #(set-global-staff-size 20)%
+
+  \bookpart{
+    \header{
+      subtitle = \title
+      instrument = "Sax Alto 1"
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'SaxAltoUn \musicPieceOne
+      \header{
+	instrumentName = "Sax Alto 1"
+      }
+    }
+  }
+  %% ... other bookparts
+}
+
+#(set-global-staff-size 20)%
+\book{
+  \bookOutputSuffix SaxSopDeux
+  #(set-global-staff-size 20)%
+
+  \bookpart{
+    \header{
+      subtitle = title
+      instrument = SaxSopDeux
+      }
+    \score {
+      \new StaffGroup \keepWithTag #'SaxSopDeux \musicPieceOne
+      \header{
+	instrumentName = SaxSopDeux
+      }
+    }
+  }
+  %% ... other bookparts
+}
 
 #(set-global-staff-size 20)%
 \book{
@@ -126,7 +207,6 @@ clefDrums = drums
   }
   %% ... other bookparts
 }
-
 
 #(set-global-staff-size 20)%
 \book{
