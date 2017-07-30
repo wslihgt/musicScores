@@ -41,7 +41,7 @@ clefDrums = drums
 \book{
   \bookOutputSuffix "accompaniment"
   \header {
-    title = \title
+    title = \pieceTitle
     }
   #(set-global-staff-size 14)
   \bookpart{
@@ -59,7 +59,7 @@ clefDrums = drums
 \book{
   \bookOutputSuffix "score"
   \header {
-    title = \title
+    title = \pieceTitle
     }
   #(set-global-staff-size 14)
   \bookpart{
@@ -135,7 +135,7 @@ clefDrums = drums
 
   \bookpart{
     \header{
-      subtitle = \title
+      subtitle = \pieceTitle
       instrument = "Sax Sop 1"
       }
     \score {
@@ -155,7 +155,7 @@ clefDrums = drums
 
   \bookpart{
     \header{
-      subtitle = \title
+      subtitle = \pieceTitle
       instrument = "Sax Alto 1"
       }
     \score {
