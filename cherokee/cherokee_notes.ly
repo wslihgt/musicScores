@@ -13,10 +13,19 @@ globalStyle = { % Use for various rendering styles that apply to all parts
 
 structure = { % Use to give annotations, mainly, also checking meaure consistency
   s1^\markup{Intro - Lullaby} |
-  s1*19 |
+  s1*7 | \break
+  %s1*4 | \break
+  s1*8 | \break
+  %s1*4 | \break
+  s1*4 | \break
   s1^\markup{Intro - all aboard!} |
-  s1*3 |
+  s1*3 | \break
   s1^\markup{A}
+  s1*3 | \break
+  s1*4 | \break
+  s1*4 | \break
+  s1*4 | \break
+  s1*4 | \break
 }
 
 global = { % Use for tempo and key changes
@@ -27,38 +36,87 @@ global = { % Use for tempo and key changes
 
 
 chordSeq = \chordmode {
-  r1 * 20 | 
+  \repeat volta 2 
+  {
+    r1 * 12 |
+  }
+  \alternative
+  {
+    {r1 * 4 | }
+    {r1 * 4 | }
+  }
   r1 * 4 |
-  bes1:maj7 | bes2:maj7 f2:aug7 |
-  f1:m7 | bes:7 |
-  ees:maj7 | ees:maj7 | 
-  aes:7 | aes:7 |
-  bes:5 | d2:m7 g:7 |
-  c1:7 | c:7 |
-  c:m7 | f2:m75 g:7 |
-  c1:m7 | f1:aug7 
-  c:m7 | f:7 |
-  bes1:5 | bes:5
+  \repeat volta 2 
+  {
+    bes1:maj7 | bes2:maj7 f2:aug7 |
+    f1:m7 | bes:7 |
+    ees:maj7 | ees:maj7 |
+    aes:7 | aes:7 |
+    bes:5 | d2:m7 g:7 |
+    c1:7 | c:7 |
+  }
+  \alternative
+  {
+    {
+      c:m7 | f2:m75 g:7 |
+      c1:m7 | f1:aug7  |
+    }
+    {
+      c:m7 | f:7 |
+      bes1:5 | bes:5 |
+    }
+  }
 }
 
 
 DrumsUp = \drummode {
-  \repeat unfold 20 {toml2 toml4 toml | }
+  \repeat volta 2 
+  {
+    \repeat unfold 12 {toml2 toml4 toml | }
+  }
+  \alternative
+  {
+    {\repeat unfold 4 {toml2 toml4 toml | }}
+    {\repeat unfold 4 {toml2 toml4 toml | }}
+  }
   hh2 hh | hh4 hh hh hh |
-  hhc16 hhc hhc hhc hhc hhc hhc hhc 
-    hhc16 hhc hho8 hhc16 hhc hho8 |
-    hhc16 hhc hhc hhc hhc hhc hhc hhc 
-    hhc16 hhc hho8 hhc16 hhc hho8 |
-  \repeat unfold 20 {
-    hhc16 hhc hhc hhc hhc hhc hhc hhc 
-    hhc16 hhc hho8 hhc16 hhc hho8 }
+  hhc16 hhc hhc hhc hhc hhc hhc hhc
+  hhc16 hhc hho8 hhc16 hhc hho8 |
+  hhc16 hhc hhc hhc hhc hhc hhc hhc
+  hhc16 hhc hho8 hhc16 hhc hho8 |
+  \repeat volta 2 
+  {
+    \repeat unfold 12 {hhc16 hhc hhc hhc hhc hhc hhc hhc 
+    hhc16 hhc hho8 hhc16 hhc hho8 | }
+  }
+  \alternative
+  {
+    {\repeat unfold 4 {hhc16 hhc hhc hhc hhc hhc hhc hhc 
+    hhc16 hhc hho8 hhc16 hhc hho8 | }}
+    {\repeat unfold 4 {hhc16 hhc hhc hhc hhc hhc hhc hhc 
+    hhc16 hhc hho8 hhc16 hhc hho8 | }}
+  }
 }
 
 DrumsDown = \drummode {
-  \repeat unfold 20 {bd2 bd4 bd | }
+  \repeat volta 2
+  {
+    \repeat unfold 12 {bd2 bd4 bd | }
+  }
+  \alternative
+  {
+    {\repeat unfold 4 {bd2 bd4 bd | }}
+    {\repeat unfold 4 {bd2 bd4 bd | }}
+  }
   R1 * 4
-  \repeat unfold 10 {
-    bd4 sn4 bd sn | bd8. bd16 sn8 bd r2 | 
+  \repeat volta 2
+  {
+    \repeat unfold 6 {bd4 sn4 bd sn | bd8. bd16 sn8 bd r2 |}
+  }
+  \alternative
+  {
+    {\repeat unfold 2 {bd4 sn4 bd sn | bd8. bd16 sn8 bd r2 | }}
+    {\repeat unfold 2 {bd4 sn4 bd sn | bd8. bd16 sn8 bd r2 | }}
   }
 }
 
@@ -155,6 +213,29 @@ SopranoSaxNotes = \transpose \originPitch \targetPitchSopranoSax {
 
       \clef \clefSopranoSax
       \compressFullBarRests
+      \repeat volta 2 
+      {
+        a1 | d2 ees | f1 | f1 | 
+        d1 | bes2 bes | bes1 | ges1 |
+        f1 | a2 d | e1 | e1 |
+      }
+      \alternative
+      {
+        {ees1 | d2 b | bes1 | a1 |}
+        {c1 | f,1 | bes~ | bes |}
+      }
+      R1*4 |
+      \repeat volta 2 
+      {
+        a1 | d2 ees | f1 | f1 | 
+        d1 | bes2 bes | bes1 | ges1 |
+        f1 | a2 d | e1 | e1 |
+      }
+      \alternative
+      {
+        {ees1 | d2 b | bes1 | a1 |}
+        {c'1 | f,1 | bes~ | bes |}
+      }
     }
   }
 }
@@ -162,13 +243,36 @@ SopranoSaxNotes = \transpose \originPitch \targetPitchSopranoSax {
 TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
   \new Voice {
     \global
-    \relative c''{
+    \relative c'{
       \set Staff.instrumentName = #"TenorSax "
       \set Staff.midiInstrument = \midiInstrTenorSax
       \transposition \originPitchTenorSax % for MIDI files? to be verified
 
       \clef \clefTenorSax
       \compressFullBarRests
+      \repeat volta 2
+      {
+        f1 | bes2 a | aes1 | g1 |
+        g1 | g2 d | ees1 | ees1 |
+        d1 | f2 g | bes1 | g1 |
+      }
+      \alternative
+      {
+        {bes1 | aes2 g | g1 | ees1 |}
+        {c1 | f,1 | bes~ | bes |}
+      }
+      R1*4 |
+      \repeat volta 2
+      {
+        f1 | bes2 a | aes1 | g1 |
+        g1 | g2 d | ees1 | ees1 |
+        d1 | f2 g | bes1 | g1 |
+      }
+      \alternative
+      {
+        {bes1 | aes2 g | g1 | ees1 |}
+        {c'1 | f,1 | bes~ | bes |}
+      }
     }
   }
 }
@@ -183,19 +287,19 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
 
       \clef \clefTrombone
       \compressFullBarRests
-      \repeat volta 2 
+      \repeat volta 2
       {
-        bes1 | a2 f | f1 | bes1 | 
-        bes1 | aes2 g | ges1 | aes1 |
-        bes1 | d2 des | c1 | g1 |
+        bes1 | d2 cis | c2 f, | bes1 |
+        ees,1 | ees2 bes' | aes1 | aes1 |
+        bes1 | c2 b | c1 | c1 |
       }
       \alternative
       {
-        {bes1 | aes2 g | ees1 | f1 |}
-        {c'1 | f,1 | bes~ | bes |}
+        {c1 | f,2 g | c1 | f,1 |}
+        {c1 | f,1 | bes~ | bes |}
       }
       R1*4 |
-      \repeat volta 2 
+      \repeat volta 2
       {
         d1 | f2 g | bes1 | g1 | f1 | d2 f | d1 | c1 |
         bes1 | d2 f | d'1 | bes1 |
@@ -205,7 +309,6 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
         {g1 | f2 d | c1 | cis1 |}
         {g'1 | d1 | bes~ | bes |}
       }
-      
     }
   }
 }
@@ -262,7 +365,7 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
       \alternative
       {
         {
-          
+          R1*4
         }
         {
           R1*4
@@ -283,9 +386,6 @@ PianoNotes = \transpose \originPitch \targetPitchPiano {
 
       \clef \clefPiano
       \compressFullBarRests
-      R1*4 c
-
-      \bar "|."
     }
   }
 }

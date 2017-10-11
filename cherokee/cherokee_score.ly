@@ -60,6 +60,10 @@ clefPiano = treble
       \new StaffGroup \keepWithTag #'score \musicPieceOne
       \layout {
 	#(layout-set-staff-size 14)}
+      %\midi { }
+    }
+    \score {
+      \unfoldRepeats \new StaffGroup \keepWithTag #'score \musicPieceOne
       \midi { }
     }
   }
