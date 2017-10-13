@@ -136,7 +136,7 @@ DrumsNotes = {
 ViolinNotes = \transpose \originPitch \targetPitchViolin {
   \new Voice {
     \global
-    \relative c''{
+    \relative c'''{
       \set Staff.instrumentName = #"Violin "
       \set Staff.midiInstrument = \midiInstrViolin
       \transposition \originPitchViolin % for MIDI files? to be verified
@@ -171,7 +171,7 @@ ViolinNotes = \transpose \originPitch \targetPitchViolin {
 OboeNotes = \transpose \originPitch \targetPitchOboe {
   \new Voice {
     \global
-    \relative c''{
+    \relative c'''{
       \set Staff.instrumentName = #"Oboe "
       \set Staff.midiInstrument = \midiInstrOboe
       \transposition \originPitchOboe % for MIDI files? to be verified
@@ -222,7 +222,7 @@ SopranoSaxNotes = \transpose \originPitch \targetPitchSopranoSax {
       \alternative
       {
         {ees1 | d2 b | bes1 | a1 |}
-        {c1 | f,1 | bes~ | bes |}
+        {ees'1 | a,1 | f~ | f |}
       }
       R1*4 |
       \repeat volta 2 
@@ -234,7 +234,7 @@ SopranoSaxNotes = \transpose \originPitch \targetPitchSopranoSax {
       \alternative
       {
         {ees1 | d2 b | bes1 | a1 |}
-        {c'1 | f,1 | bes~ | bes |}
+        {ees'1 | a,1 | f~ | f |}
       }
     }
   }
@@ -252,26 +252,26 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
       \compressFullBarRests
       \repeat volta 2
       {
-        f1 | bes2 a | aes1 | g1 |
+        f1 | bes2 a | aes1 | aes1 |
         g1 | g2 d | ees1 | ees1 |
         d1 | f2 g | bes1 | g1 |
       }
       \alternative
       {
         {bes1 | aes2 g | g1 | ees1 |}
-        {c1 | f,1 | bes~ | bes |}
+        {bes1 | ees,1 | d~ | d |}
       }
       R1*4 |
       \repeat volta 2
       {
-        f1 | bes2 a | aes1 | g1 |
+        f'1 | bes2 a | aes1 | g1 |
         g1 | g2 d | ees1 | ees1 |
         d1 | f2 g | bes1 | g1 |
       }
       \alternative
       {
         {bes1 | aes2 g | g1 | ees1 |}
-        {c'1 | f,1 | bes~ | bes |}
+        {bes1 | ees,1 | d~ | d |}
       }
     }
   }
@@ -296,18 +296,19 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
       \alternative
       {
         {c1 | f,2 g | c1 | f,1 |}
-        {c1 | f,1 | bes~ | bes |}
+        {c'1 | f,1 | bes~ | bes |}
       }
       R1*4 |
       \repeat volta 2
       {
-        d1 | f2 g | bes1 | g1 | f1 | d2 f | d1 | c1 |
-        bes1 | d2 f | d'1 | bes1 |
+        bes1 | d2 cis | c2 f, | bes1 |
+        ees,1 | ees2 bes' | aes1 | aes1 |
+        bes1 | c2 b | c1 | c1 |
       }
       \alternative
       {
-        {g1 | f2 d | c1 | cis1 |}
-        {g'1 | d1 | bes~ | bes |}
+        {c1 | f,2 g | c1 | f,1 |}
+        {c'1 | f,1 | bes~ | bes |}
       }
     }
   }
@@ -365,10 +366,24 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
       \alternative
       {
         {
-          R1*4
+          b16:m7 c8.:m7 c8.:m7 c16:m7~
+          c16:m7 c8:m7 c16:m7 c8:m7 c8:m7 |
+          e16:m7 f8.:m13 f8.:m13 g16:7~
+          g16:7 g8:7 g16:7 g8:7 g8:7 |
+          b16:m7 c8.:m7 c8.:m7 c16:m7~
+          c16:m7 c8:m7 c16:m7 c8:m7 c8:m7 |
+          e16:aug7 f8.:aug7 f8.:aug7 f16:aug7~
+          f16:aug7 f8:aug7 f16:aug7 f8:aug7 f8:aug7 |
         }
         {
-          R1*4
+          b16:m7 c8.:m7 c8.:m7 c16:m7~
+          c16:m7 c8:m7 c16:m7 c8:m7 c8:m7 |
+          e16:m7 f8.:7 f8.:7 f16:7~
+          f16:7 f8:7 f16:7 f8:7 f8:7 |
+          a16:maj7 bes8.:maj7 bes8.:maj7 bes16:maj7~
+          bes16:maj7 bes8:maj7 bes16:maj7 bes8:maj7 bes8:maj7 | 
+          a16:maj7 bes8.:maj7 bes8.:maj7 bes16:maj7~
+          bes16:maj7 bes8:maj7 bes16:maj7 bes8:maj7 bes8:maj7 | 
         }
       }
       }
