@@ -260,13 +260,13 @@ OboeNotes = \transpose \originPitch \targetPitchOboe {
         {g'1 | d1 | bes~ | bes |}
       }
       % break B
-      dis'1~ | dis2 cis | cis4 ais fis2~ | fis2 cis' |
+      dis1~ | dis2 cis | cis4 ais fis2~ | fis2 cis' |
       cis4 a fis2~ | fis b2 | e,1~ | e1 |
       b'1~ | b2 a | a4 fis d2~ | d2 a' | 
       a4 f d2~ | d g | c,1 | cis |
       % theme A'
       d1 | f2 g | bes1 | g1 | f1 | d2 f | d1 | c1 |
-      bes1 | d2 f | d'1 | bes1 | g1 | d1 | bes~ | bes |
+      bes1 | d2 f | d'1 | bes1 | g1 | a1 | bes~ | bes |
     }
   }
 }
@@ -305,12 +305,12 @@ SopranoSaxNotes = \transpose \originPitch \targetPitchSopranoSax {
         {ees'1 | a,1 | f~ | f |}
       }
       % break B
-      gis'1~ | dis2 cis | cis4 ais fis2~ | fis2 cis' |
-      cis4 a fis2~ | fis b2 | e,1~ | e1 |
-      b'1~ | b2 a | a4 fis d2~ | d2 a' | 
+      b2 gis2~ | gis2 gis | gis4 fis e2 | dis2 d |
+      a'4 fis e2 | d d2 | cis1~ | cis1 |
+      b'1~ | b2 a | a4 fis d2~ | d2 a' |
       a4 f d2~ | d g | c,1 | cis |
       % theme A'
-      a1 | d2 ees | f1 | f1 | 
+      a1 | d2 ees | f1 | f1 |
       d1 | bes2 bes | bes1 | ges1 |
       f1 | a2 d | e1 | e1 |
       ees'1 | a,1 | f~ | f |
@@ -352,8 +352,8 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
         {bes1 | ees,1 | d~ | d |}
       }
       % break B
-      fis'1~ | dis2 cis | cis4 ais fis2~ | fis2 cis' |
-      cis4 a fis2~ | fis b2 | e,1~ | e1 |
+      gis'2 e~ | e2 dis | e4 dis cis2 | b2 b |
+      cis4 d e2~ | e fis2 | gis1~ | gis1 |
       b'1~ | b2 a | a4 fis d2~ | d2 a' | 
       a4 f d2~ | d g | c,1 | cis |
       % theme A'
