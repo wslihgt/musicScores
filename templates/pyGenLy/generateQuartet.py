@@ -97,21 +97,21 @@ def generateWashingMachines(**kwargs):
     """Refer to generateQuartet.generateNotesAndScore
     for list of arguments.
     """
-    instruments = ('Drums', 'Violin', 'Oboe',
+    instruments = ('Drums', 'Violin', 'Oboe', 'SopranoSax',
                    'TenorSax', 'Trombone', 'Guitar', 'Piano')
     # target pitch, relative to c':
     targetPitchDic = dict(
         zip(instruments,
-            ('c\'', 'c\'', 'c\'', 'd\'\'', 'd\'\'\'', 'c\'', 'c\'')))
+            ('c\'', 'c\'', 'c\'', 'd\'', 'd\'\'', 'd\'\'\'', 'c\'', 'c\'')))
     
     clefDic = dict(
         zip(instruments,
-            ('drums', 'treble', 'treble',
+            ('drums', 'treble', 'treble', 'treble',
              'treble', 'treble', 'treble', 'treble')))
     
     midiInstrDic = dict(
         zip(instruments,
-            ('synth drum', 'violin', 'soprano sax', 'tenor sax', 'trombone',
+            ('synth drum', 'violin', 'soprano sax', 'soprano sax', 'tenor sax', 'trombone',
              'electric guitar (jazz)',
              'acoustic grand')))
     
