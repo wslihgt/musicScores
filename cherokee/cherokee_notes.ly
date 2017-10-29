@@ -305,8 +305,8 @@ SopranoSaxNotes = \transpose \originPitch \targetPitchSopranoSax {
         {ees'1 | a,1 | f~ | f |}
       }
       % break B
-      b2 gis2~ | gis2 gis | gis4 fis e2 | dis2 d |
-      a'4 fis e2 | d d2 | cis1~ | cis1 |
+      gis'2 e~ | e2 dis | e4 dis cis2 | b2 b |
+      cis4 d e2~ | e fis2 | gis1~ | gis1 |
       b'1~ | b2 a | a4 fis d2~ | d2 a' |
       a4 f d2~ | d g | c,1 | cis |
       % theme A'
@@ -351,9 +351,9 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
         {bes1 | aes2 g | g1 | ees1 |}
         {bes1 | ees,1 | d~ | d |}
       }
-      % break B
-      gis'2 e~ | e2 dis | e4 dis cis2 | b2 b |
-      cis4 d e2~ | e fis2 | gis1~ | gis1 |
+      % break Bsm
+      b'2 gis2~ | gis2 gis | gis4 fis e2 | dis2 d |
+      a'4 fis e2 | d d2 | cis1~ | cis1 |
       b'1~ | b2 a | a4 fis d2~ | d2 a' | 
       a4 f d2~ | d g | c,1 | cis |
       % theme A'
@@ -429,13 +429,75 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
       \alternative
       {{R1*4}{R1*4}}
       R1*2
-      \chordmode{
+      \chordmode
+      {
         a16:maj7 bes8.:maj7 bes8.:maj7 bes16:maj7~
         bes16:maj7 bes8:maj7 bes16:maj7 bes8:maj7 bes8:maj7 | 
         a16:maj7 bes8.:maj7 bes8.:maj7 bes16:maj7~
         bes16:maj7 bes8:maj7 bes16:maj7 bes8:maj7 bes8:maj7 |  
-      \repeat volta 2
-      {
+        \repeat volta 2
+        {
+          a16:maj7 bes8.:maj7 bes8.:maj7 bes16:maj7~
+          bes16:maj7 bes8:maj7 bes16:maj7 bes8:maj7 bes8:maj7 | 
+          a16:maj7 bes8.:maj7 bes8.:maj7 f16:aug7~
+          f16:aug7 f8:aug7 f16:aug7 f8:aug7 f8:aug7 |
+          e16:m7 f8.:m7 f8.:m7 f16:m7~
+          f16:m7 f8:m7 f16:m7 f8:m7 f8:m7 |
+          a16:7 bes8.:7 bes8.:7 bes16:7~
+          bes16:7 bes8:7 bes16:7 bes8:7 bes8:7 | 
+          d16:maj7 ees8.:maj7 ees8.:maj7 ees16:maj7~
+          ees16:maj7 ees8:maj7 ees16:maj7 ees8:maj7 ees8:maj7 |
+          d16:maj7 ees8.:maj7 ees8.:maj7 ees16:maj7~
+          ees16:maj7 ees8:maj7 ees16:maj7 ees8:maj7 ees8:maj7 | 
+          g16:7 aes8.:7 aes8.:7 aes16:7~
+          aes16:7 aes8:7 aes16:7 aes8:7 aes8:7 |
+          g16:7 aes8.:7 aes8.:7 aes16:7~
+          aes16:7 aes8:7 aes16:7 aes8:7 aes8:7 |
+          a16:maj7 bes8.:maj7 bes8.:maj7 bes16:maj7~
+          bes16:maj7 bes8:maj7 bes16:maj7 bes8:maj7 bes8:maj7 | 
+          cis16:m7 d8.:m7 d8.:m7 g16:7~
+          g16:7 g8:7 g16:7 g8:7 g8:7 |
+          b16:m7 c8.:7 c8.:7 c16:7~
+          c16:7 c8:7 c16:7 c8:7 c8:7 |
+          b16:m7 c8.:7 c8.:7 c16:7~
+          c16:7 c8:7 c16:7 c8:7 c8:7 |
+        }
+        \alternative
+        {
+          {
+            b16:m7 c8.:m7 c8.:m7 c16:m7~
+            c16:m7 c8:m7 c16:m7 c8:m7 c8:m7 |
+            e16:m7 f8.:m13 f8.:m13 g16:7~
+            g16:7 g8:7 g16:7 g8:7 g8:7 |
+            b16:m7 c8.:m7 c8.:m7 c16:m7~
+            c16:m7 c8:m7 c16:m7 c8:m7 c8:m7 |
+            e16:aug7 f8.:aug7 f8.:aug7 f16:aug7~
+            f16:aug7 f8:aug7 f16:aug7 f8:aug7 f8:aug7 |
+          }
+          {
+            b16:m7 c8.:m7 c8.:m7 c16:m7~
+            c16:m7 c8:m7 c16:m7 c8:m7 c8:m7 |
+            e16:m7 f8.:7 f8.:7 f16:7~
+            f16:7 f8:7 f16:7 f8:7 f8:7 |
+            a16:maj7 bes8.:maj7 bes8.:maj7 bes16:maj7~
+            bes16:maj7 bes8:maj7 bes16:maj7 bes8:maj7 bes8:maj7 | 
+            a16:maj7 bes8.:maj7 bes8.:maj7 bes16:maj7~
+            bes16:maj7 bes8:maj7 bes16:maj7 bes8:maj7 bes8:maj7 | 
+          }
+        }
+        % break B
+        cis4.:m7 cis4.:m7 cis4:m7 | 
+        fis4.:7 fis4.:7 fis4:7 | 
+        b4.:maj7 b4.:maj7 b4:maj7 |
+        b4.:maj7 b4.:maj7 b4:maj7 | 
+        b4.:m7 b4.:m7 b4:m7 |
+        e4.:7 e4.:7 e4:7 |
+        a4.:maj7 a4.:maj7 a4:maj7 |
+        a4.:maj7 a4.:maj7 a4:maj7 |
+        a4.:m7 a4.:m7 a4:m7 |
+        d1:7 | g:maj7 | g:maj7 |
+        g:m7 | c:7 | c:m7 | f:aug7 |
+        % theme A'
         a16:maj7 bes8.:maj7 bes8.:maj7 bes16:maj7~
         bes16:maj7 bes8:maj7 bes16:maj7 bes8:maj7 bes8:maj7 | 
         a16:maj7 bes8.:maj7 bes8.:maj7 f16:aug7~
@@ -460,30 +522,6 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
         c16:7 c8:7 c16:7 c8:7 c8:7 |
         b16:m7 c8.:7 c8.:7 c16:7~
         c16:7 c8:7 c16:7 c8:7 c8:7 |
-      }
-      \alternative
-      {
-        {
-          b16:m7 c8.:m7 c8.:m7 c16:m7~
-          c16:m7 c8:m7 c16:m7 c8:m7 c8:m7 |
-          e16:m7 f8.:m13 f8.:m13 g16:7~
-          g16:7 g8:7 g16:7 g8:7 g8:7 |
-          b16:m7 c8.:m7 c8.:m7 c16:m7~
-          c16:m7 c8:m7 c16:m7 c8:m7 c8:m7 |
-          e16:aug7 f8.:aug7 f8.:aug7 f16:aug7~
-          f16:aug7 f8:aug7 f16:aug7 f8:aug7 f8:aug7 |
-        }
-        {
-          b16:m7 c8.:m7 c8.:m7 c16:m7~
-          c16:m7 c8:m7 c16:m7 c8:m7 c8:m7 |
-          e16:m7 f8.:7 f8.:7 f16:7~
-          f16:7 f8:7 f16:7 f8:7 f8:7 |
-          a16:maj7 bes8.:maj7 bes8.:maj7 bes16:maj7~
-          bes16:maj7 bes8:maj7 bes16:maj7 bes8:maj7 bes8:maj7 | 
-          a16:maj7 bes8.:maj7 bes8.:maj7 bes16:maj7~
-          bes16:maj7 bes8:maj7 bes16:maj7 bes8:maj7 bes8:maj7 | 
-        }
-      }
       }
     }
   }
