@@ -77,14 +77,14 @@ clefPiano = treble
 % TODO: make more automatisms with variables? possible to put more logic?
 %
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 14)%
 \book{
   \bookOutputSuffix Drums
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 14)%
 
   \bookpart{
     \header{
-      subtitle = title
+      subtitle = \pieceTitle
       instrument = Drums
       }
     \score {
@@ -98,14 +98,14 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 14)%
 \book{
   \bookOutputSuffix Violin
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 14)%
 
   \bookpart{
     \header{
-      subtitle = title
+      subtitle = \pieceTitle
       instrument = Violin
       }
     \score {
@@ -119,14 +119,14 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 14)%
 \book{
   \bookOutputSuffix Oboe
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 14)%
 
   \bookpart{
     \header{
-      subtitle = title
+      subtitle = \pieceTitle
       instrument = Oboe
       }
     \score {
@@ -140,14 +140,14 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 14)%
 \book{
   \bookOutputSuffix SopranoSax
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 14)%
 
   \bookpart{
     \header{
-      subtitle = title
+      subtitle = \pieceTitle
       instrument = SopranoSax
       }
     \score {
@@ -161,14 +161,14 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 14)%
 \book{
   \bookOutputSuffix TenorSax
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 14)%
 
   \bookpart{
     \header{
-      subtitle = title
+      subtitle = \pieceTitle
       instrument = TenorSax
       }
     \score {
@@ -182,14 +182,14 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 14)%
 \book{
   \bookOutputSuffix Trombone
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 14)%
 
   \bookpart{
     \header{
-      subtitle = title
+      subtitle = \pieceTitle
       instrument = Trombone
       }
     \score {
@@ -203,14 +203,14 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 14)%
 \book{
   \bookOutputSuffix Guitar
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 14)%
 
   \bookpart{
     \header{
-      subtitle = title
+      subtitle = \pieceTitle
       instrument = Guitar
       }
     \score {
@@ -224,14 +224,14 @@ clefPiano = treble
 }
 
 
-#(set-global-staff-size 20)%
+#(set-global-staff-size 14)%
 \book{
   \bookOutputSuffix Piano
-  #(set-global-staff-size 20)%
+  #(set-global-staff-size 14)%
 
   \bookpart{
     \header{
-      subtitle = title
+      subtitle = \pieceTitle
       instrument = Piano
       }
     \score {
