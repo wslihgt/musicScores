@@ -522,6 +522,14 @@ GuitarNotes = \transpose \originPitch \targetPitchGuitar {
         c16:7 c8:7 c16:7 c8:7 c8:7 |
         b16:m7 c8.:7 c8.:7 c16:7~
         c16:7 c8:7 c16:7 c8:7 c8:7 |
+        b16:m7 c8.:m7 c8.:m7 c16:m7~
+        c16:m7 c8:m7 c16:m7 c8:m7 c8:m7 |
+        e16:m7 f8.:7 f8.:7 f16:7~
+        f16:7 f8:7 f16:7 f8:7 f8:7 |
+        a16:maj7 bes8.:maj7 bes8.:maj7 bes16:maj7~
+        bes16:maj7 bes8:maj7 bes16:maj7 bes8:maj7 bes8:maj7 | 
+        a16:maj7 bes8.:maj7 bes8.:maj7 bes16:maj7~
+        bes16:maj7 bes8:maj7 bes16:maj7 bes8:maj7 bes8:maj7 | 
       }
     }
   }
