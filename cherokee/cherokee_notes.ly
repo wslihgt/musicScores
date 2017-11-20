@@ -262,7 +262,7 @@ OboeNotes = \transpose \originPitch \targetPitchOboe {
       % break B
       dis1~ | dis2 cis | cis4 ais fis2~ | fis2 cis' |
       cis4 a fis2~ | fis b2 | e,1~ | e1 |
-      b'1~ | b2 a | a4 fis d2~ | d2 a' | 
+      b''1~ | b2 a | a4 fis d2~ | d2 a' | 
       a4 f d2~ | d g | c,1 | cis |
       % theme A'
       d1 | f2 g | bes1 | g1 | f1 | d2 f | d1 | c1 |
@@ -305,15 +305,15 @@ SopranoSaxNotes = \transpose \originPitch \targetPitchSopranoSax {
         {ees'1 | a,1 | f~ | f |}
       }
       % break B
-      gis'2 e~ | e2 dis | e4 dis cis2 | b2 b |
-      cis4 d e2~ | e fis2 | gis1~ | gis1 |
-      b'1~ | b2 a | a4 fis d2~ | d2 a' |
-      a4 f d2~ | d g | c,1 | cis |
+      e1 | e | dis4 e dis2 | dis2 dis |
+      d4 ees d2~ | d d2 | cis1~ | cis1 |
+      c'1 | c2 c | d4 c b2~ | b2 b |
+      bes4 c bes2~ | bes1 | bes1 | a |
       % theme A'
       a1 | d2 ees | f1 | f1 |
       d1 | bes2 bes | bes1 | ges1 |
       f1 | a2 d | e1 | e1 |
-      ees'1 | a,1 | f~ | f |
+      ees1 | a,1 | f~ | f |
     }
   }
 }
@@ -351,13 +351,13 @@ TenorSaxNotes = \transpose \originPitch \targetPitchTenorSax {
         {bes1 | aes2 g | g1 | ees1 |}
         {bes1 | ees,1 | d~ | d |}
       }
-      % break Bsm
-      b'2 gis2~ | gis2 gis | gis4 fis e2 | dis2 d |
-      a'4 fis e2 | d d2 | cis1~ | cis1 |
-      b'1~ | b2 a | a4 fis d2~ | d2 a' | 
-      a4 f d2~ | d g | c,1 | cis |
+      % break B
+      gis1 | ais | ais4 gis ais2~ | ais2 ais |
+      a4 fis a2~ | a gis2 | gis1 | fis1 |
+      g'1 | fis2 fis | fis4 e fis2~ | fis2 e | 
+      f4 g f2 | e1 | ees | ees |
       % theme A'
-      f'1 | bes2 a | aes1 | g1 |
+      f,1 | bes2 a | aes1 | g1 |
       g1 | g2 d | ees1 | ees1 |
       d1 | f2 g | bes1 | g1 |
       bes1 | ees,1 | d~ | d |
@@ -399,10 +399,10 @@ TromboneNotes = \transpose \originPitch \targetPitchTrombone {
         {c'1 | f,1 | bes~ | bes |}
       }
       % break B
-      cis1 | ais2 fis | gis4 ais b2~ | b2 a |
-      gis4 a b2 | gis e | a1~ | a1 |
-      a1 | fis2 d | e4 fis g2~ | g2 f | 
-      e4 f g2 | e c | c2 ees | f1 |
+      cis1 | fis, | b~ | b2 b |
+      b1 | e, | a1~ | a1 |
+      a1 | d | g,1 | g1 | 
+      g | c | c | f,1 |
       % theme A'
       bes1 | d2 cis | c2 f, | bes1 |
       ees,1 | ees2 bes' | aes1 | aes1 |
